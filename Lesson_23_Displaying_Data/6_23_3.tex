@@ -1,0 +1,99 @@
+% DISPLAYING DATA: HISTOGRAMS \& BOX PLOTS - WORKSHEET 3
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Displaying Data: Histograms \& Box Plots}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
+{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.23.3}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% MASTERY: COMPLEX PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Mastery: Challenging Scenarios}}
+\end{tcolorbox}
+
+\vspace{3mm}
+\noindent
+Apply your knowledge to solve these advanced, multi-step problems.
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Analyzing and Comparing Distributions}}
+\end{tcolorbox}
+
+\noindent
+Solve the problems. Show all work.
+
+\vspace{3mm}
+\begin{enumerate}[itemsep=1.5cm, leftmargin=0.6cm]
+\item The box plots below represent the heights (in inches) of players on two basketball teams. \\
+- Team A: Min = 68, $Q_1$ = 70, Med = 74, $Q_3$ = 76, Max = 80 \\
+- Team B: Min = 66, $Q_1$ = 72, Med = 73, $Q_3$ = 78, Max = 82 \\
+\textbf{a)} Which team has the tallest player? What is their height? \blanklong \\
+\textbf{b)} Which team has a larger interquartile range (IQR)? Calculate both. \blanklong \\
+\textbf{c)} Write a sentence comparing the average heights of the two teams. \blanklong
+\vspace{1.5cm}
+\item Construct a frequency table and describe how you would draw a histogram for the following data representing test scores: 55, 62, 70, 72, 75, 78, 82, 85, 88, 92, 95, 98. Use intervals of 10 (e.g., 50-59, 60-69, etc.).
+\vspace{1.5cm}
+\end{enumerate}
+\newpage
+\end{document}

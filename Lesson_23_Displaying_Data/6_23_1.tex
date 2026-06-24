@@ -1,0 +1,112 @@
+% DISPLAYING DATA: HISTOGRAMS \& BOX PLOTS - WORKSHEET 1
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Displaying Data: Histograms \& Box Plots}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
+{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.23.1}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INTRODUCTION — BEGINNING
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Beginning: Basic Skills}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Finding Quartiles}}
+\end{tcolorbox}
+
+\noindent
+For the sorted data set: 3, 5, 6, 8, 9, 11, 14. Find each value.
+
+\vspace{3mm}
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=1cm, leftmargin=0.6cm]
+\item \text{Minimum} = \blank
+\item Q_1 \text{ (Lower Quartile)} = \blank
+\item \text{Median} = \blank
+\item Q_3 \text{ (Upper Quartile)} = \blank
+\item \text{Maximum} = \blank
+\item \text{IQR} = \blank
+\end{enumerate}
+\end{multicols}
+\newpage
+
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Reading Histograms}}
+\end{tcolorbox}
+
+\noindent
+An interval chart shows quiz score frequencies: 0-5 scores (2 students), 6-10 scores (8 students), 11-15 scores (12 students), 16-20 scores (4 students).
+
+\vspace{3mm}
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=1cm, leftmargin=0.6cm]
+\item \text{How many total students took the quiz?} \rightarrow \blank
+\item \text{Which interval has the highest frequency?} \rightarrow \blank
+\item \text{How many students scored 11 or higher?} \rightarrow \blank
+\item \text{Can we tell if any student scored exactly 15?} \rightarrow \blank
+\end{enumerate}
+\end{multicols}
+\newpage
+\end{document}

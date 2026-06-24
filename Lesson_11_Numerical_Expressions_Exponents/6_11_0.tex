@@ -1,0 +1,139 @@
+% NUMERICAL EXPRESSIONS \& EXPONENTS - WORKSHEET 0
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Numerical Expressions \& Exponents}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
+{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.11.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% SECTION 1: EXPONENTS AND THE ORDER OF OPERATIONS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Exponents and the Order of Operations (Foundation)}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+1. \textbf{Exponential Notation:} $b^n = b \times b \times \dots \times b$ ($n$ times). Here, $b$ is the \textbf{base} and $n$ is the \textbf{exponent}. Example: $2^3 = 2 \times 2 \times 2 = 8$. \\
+2. \textbf{Order of Operations (PEMDAS/GEMS):} \\
+- **P**arenthesis / Groupings \\
+- **E**xponents \\
+- **M**ultiplication \& **D**ivision (from left to right) \\
+- **A**ddition \& **S**ubtraction (from left to right)
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Worked Example:}
+
+\medskip
+\noindent
+Evaluate the expression: $3 \times 4^2 - (5 + 2 \times 3)$\\
+\textbf{Solution:} \\
+1) Grouping first: $5 + 2 \times 3 = 5 + 6 = 11$. \\
+2) Exponents: $4^2 = 16$. \\
+3) Multiplications/Divisions: $3 \times 16 = 48$. \\
+4) Additions/Subtractions: $48 - 11 = 37$.
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 1
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 1: Exponents and Parentheses Pitfalls}
+
+\medskip
+
+\noindent
+\textbf{a) A student evaluates $2 \times 3^2$ as $6^2 = 36$. Explain the student's error. What is the correct value, and why?}
+
+\vspace{2cm}
+
+\noindent
+\textbf{b) Insert grouping symbols (parentheses) to make this equation true: $2 + 3 \times 4^2 - 5 = 75$.}
+
+\vspace{2cm}
+\end{tcolorbox}
+\newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 2
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 2: Comparing Exponential Growth}
+
+\medskip
+
+\noindent
+\textbf{a) Compare $3^4$ and $4^3$. Which is larger? By how much? Show your calculations.}
+
+\vspace{2cm}
+
+\noindent
+\textbf{b) Write an expression for the total number of small boxes if there are 3 large crates, each containing 3 boxes, each containing 3 cartons, each containing 3 small boxes. Evaluate it.}
+
+\vspace{2cm}
+\end{tcolorbox}
+\newpage
+\end{document}

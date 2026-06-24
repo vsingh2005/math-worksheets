@@ -1,0 +1,135 @@
+% VOLUME OF RECTANGULAR PRISMS - WORKSHEET 0
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Volume of Rectangular Prisms}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
+{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.18.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% SECTION 1: VOLUME OF RECTANGULAR PRISMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Volume of Rectangular Prisms (Foundation)}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+1. \textbf{Volume:} The amount of 3D space a solid shape occupies, measured in cubic units. \\
+2. \textbf{Formulas for Rectangular Prisms:} \\
+- $Volume = length \times width \times height = l \times w \times h$ \\
+- $Volume = Base \ Area \times height = B \times h$ \\
+3. \textbf{Fractional Side Lengths:} The same formula applies when side lengths are fractions or decimals. You can also think of packing the prism with small unit cubes (e.g., of side length $\frac{1}{2}$ unit).
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Worked Example:}
+
+\medskip
+\noindent
+Find the volume of a rectangular prism with length $3\frac{1}{2}$ inches, width 2 inches, and height $1\frac{1}{2}$ inches.\\
+\textbf{Solution:} \\
+$$Volume = l \times w \times h = \frac{7}{2} \times 2 \times \frac{3}{2} = \frac{42}{4} = 10\frac{1}{2}\text{ cubic inches.}$$
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 1
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 1: Unit Cube Packing}
+
+\medskip
+
+\noindent
+\textbf{a) A rectangular box has dimensions 3 cm by 2 cm by 1.5 cm. If we pack it with cubes that have a side length of $\frac{1}{2}$ cm, how many small cubes will fit? Explain how this count relates to the volume formula.}
+
+\vspace{2cm}
+
+\noindent
+\textbf{b) A prism has a square base with sides of length $2.5$ meters. If its volume is $25$ cubic meters, find its height. Show your algebraic equation.}
+
+\vspace{2cm}
+\end{tcolorbox}
+\newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 2
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 2: Scaling Prism Volume}
+
+\medskip
+
+\noindent
+\textbf{a) If you double the length, width, and height of a rectangular prism, what happens to its volume? Try it with a $2 \times 3 \times 4$ prism and show the mathematical ratio of the new volume to the old volume.}
+
+\vspace{2cm}
+
+\noindent
+\textbf{b) Find the volume of a cube with side lengths of $\frac{3}{4}$ foot. Express your answer as a simplified fraction.}
+
+\vspace{2cm}
+\end{tcolorbox}
+\newpage
+\end{document}

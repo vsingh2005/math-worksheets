@@ -1,0 +1,304 @@
+%CONVERTING MEASUREMENT UNITS - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Converting Measurement Units}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.5.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% SECTION 1: CONVERSION AS A RATIO
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Conversion as a Ratio (Foundation)}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+To convert between units, we use a \textbf{conversion ratio} or \textbf{conversion factor}. This is a ratio that equals 1 because the units are equal.
+
+\begin{itemize}
+    \item 12 inches = 1 foot, so the ratio $\dfrac{12 \text{ inches}}{1 \text{ foot}} = 1$
+    \item 5,280 feet = 1 mile, so the ratio $\dfrac{5,280 \text{ feet}}{1 \text{ mile}} = 1$
+    \item 100 centimeters = 1 meter, so the ratio $\dfrac{100 \text{ cm}}{1 \text{ m}} = 1$
+\end{itemize}
+
+\medskip
+
+\noindent
+\textbf{Key Idea:} Multiply by a conversion ratio to change units without changing the actual measurement.
+
+\vspace{4mm}
+
+% ==========================================================
+% CUSTOMARY UNITS
+% ==========================================================
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Customary Units (inches, feet, miles, pounds, etc.)}
+
+\medskip
+
+\noindent
+\textbf{Length:}
+\begin{itemize}
+    \item 12 inches (in) = 1 foot (ft)
+    \item 3 feet = 1 yard (yd)
+    \item 5,280 feet = 1 mile (mi)
+\end{itemize}
+
+\noindent
+\textbf{Weight:}
+\begin{itemize}
+    \item 16 ounces (oz) = 1 pound (lb)
+\end{itemize}
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% WORKED EXAMPLE 1
+% ==========================================================
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example 1: Convert Feet to Inches}
+
+\medskip
+
+\textbf{Problem:} Convert 5 feet to inches.
+
+\medskip
+
+\noindent
+\textbf{Solution:}
+
+\begin{enumerate}
+    \item Identify the conversion ratio: $\dfrac{12 \text{ inches}}{1 \text{ foot}}$
+    
+    \item Multiply: $5 \text{ feet} \times \dfrac{12 \text{ inches}}{1 \text{ foot}} = \dfrac{5 \times 12}{1} \text{ inches} = 60 \text{ inches}$
+    
+    \item Answer: 5 feet = \textbf{60 inches}
+\end{enumerate}
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% THINKING PROBLEM 1
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 1: Multiple Unit Conversions}
+
+\medskip
+
+\noindent
+A rope is 3 yards long.
+
+\noindent
+\textbf{a)} Convert to feet. (Hint: 3 yd $\times$ \blank = \blank ft)
+
+\vspace{1.5cm}
+
+\noindent
+\textbf{b)} Convert that answer to inches. (Hint: Take your answer from part a, multiply by 12)
+
+\vspace{1.5cm}
+
+\noindent
+\textbf{c)} So 3 yards = \blank inches.
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% SECTION 2: METRIC UNITS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Metric System}}
+\end{tcolorbox}
+
+\noindent
+The metric system is based on powers of 10, making conversions easier.
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Metric Conversions}
+
+\medskip
+
+\noindent
+\textbf{Length:}
+\begin{itemize}
+    \item 10 millimeters (mm) = 1 centimeter (cm)
+    \item 100 centimeters = 1 meter (m)
+    \item 1,000 meters = 1 kilometer (km)
+\end{itemize}
+
+\noindent
+\textbf{Mass/Weight:}
+\begin{itemize}
+    \item 1,000 grams (g) = 1 kilogram (kg)
+\end{itemize}
+
+\noindent
+\textbf{Capacity:}
+\begin{itemize}
+    \item 1,000 milliliters (mL) = 1 liter (L)
+\end{itemize}
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% WORKED EXAMPLE 2
+% ==========================================================
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example 2: Convert Meters to Centimeters}
+
+\medskip
+
+\textbf{Problem:} Convert 4 meters to centimeters.
+
+\medskip
+
+\noindent
+\textbf{Solution:}
+
+\medskip
+
+\noindent
+$4 \text{ m} \times \dfrac{100 \text{ cm}}{1 \text{ m}} = 4 \times 100 \text{ cm} = 400 \text{ cm}$
+
+\medskip
+
+\noindent
+\textbf{Answer:} 4 meters = \textbf{400 centimeters}
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% THINKING PROBLEM 2
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 2: Metric Chain Conversion}
+
+\medskip
+
+\noindent
+How many millimeters are in 2 kilometers?
+
+\noindent
+\textbf{a)} Convert 2 km to meters.
+
+\vspace{1.3cm}
+
+\noindent
+\textbf{b)} Convert that to centimeters.
+
+\vspace{1.3cm}
+
+\noindent
+\textbf{c)} Convert that to millimeters.
+
+\vspace{1.3cm}
+
+\noindent
+\textbf{d)} So 2 km = \blank mm.
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% THINKING PROBLEM 3
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 3: Real-World Application}
+
+\medskip
+
+\noindent
+A truck can carry 2 tons (where 1 ton = 2,000 pounds).
+
+\noindent
+\textbf{a)} How many pounds can the truck carry?
+
+\vspace{1.5cm}
+
+\noindent
+\textbf{b)} If each box weighs 16 pounds, how many boxes can fit? (Hint: Divide total weight by weight per box)
+
+\vspace{1.8cm}
+
+\end{tcolorbox}
+
+\end{document}

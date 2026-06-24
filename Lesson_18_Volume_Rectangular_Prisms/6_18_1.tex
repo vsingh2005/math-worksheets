@@ -1,0 +1,110 @@
+% VOLUME OF RECTANGULAR PRISMS - WORKSHEET 1
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Volume of Rectangular Prisms}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
+{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.18.1}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INTRODUCTION — BEGINNING
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Beginning: Basic Skills}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Prisms with Integer Dimensions}}
+\end{tcolorbox}
+
+\noindent
+Calculate the volume.
+
+\vspace{3mm}
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=1cm, leftmargin=0.6cm]
+\item l=5\text{ cm}, w=3\text{ cm}, h=4\text{ cm} \rightarrow V = \blank
+\item l=8\text{ in}, w=2\text{ in}, h=10\text{ in} \rightarrow V = \blank
+\item l=6\text{ m}, w=6\text{ m}, h=6\text{ m} \rightarrow V = \blank
+\item l=12\text{ ft}, w=5\text{ ft}, h=2\text{ ft} \rightarrow V = \blank
+\end{enumerate}
+\end{multicols}
+\newpage
+
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Prisms with Fractional Dimensions}}
+\end{tcolorbox}
+
+\noindent
+Calculate the volume. Write answers as fractions or decimals.
+
+\vspace{3mm}
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=1cm, leftmargin=0.6cm]
+\item l=\frac{1}{2}\text{ in}, w=\frac{2}{3}\text{ in}, h=\frac{3}{4}\text{ in} \rightarrow V = \blank
+\item l=2\frac{1}{2}\text{ cm}, w=2\text{ cm}, h=3\frac{1}{5}\text{ cm} \rightarrow V = \blank
+\item l=1.5\text{ m}, w=0.8\text{ m}, h=2\text{ m} \rightarrow V = \blank
+\item l=\frac{5}{8}\text{ ft}, w=\frac{1}{2}\text{ ft}, h=\frac{4}{5}\text{ ft} \rightarrow V = \blank
+\end{enumerate}
+\end{multicols}
+\newpage
+\end{document}

@@ -1,0 +1,121 @@
+% ORDERING \& ABSOLUTE VALUE - WORKSHEET 0
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Ordering \& Absolute Value}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
+{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.10.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% SECTION 1: COMPARING, ORDERING, AND ABSOLUTE VALUE
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Comparing, Ordering, and Absolute Value (Foundation)}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+1. \textbf{Comparing:} On a number line, values increase from left to right. $-5 < -2$ because $-5$ is to the left of $-2$. \\
+2. \textbf{Absolute Value:} The distance of a number from 0 on a number line, denoted as $|x|$. Absolute value is always positive or zero. Example: $|-5| = 5$, and $|5| = 5$. \\
+3. \textbf{Order vs. Absolute Value:} A number with a smaller value can have a larger absolute value. For instance, $-10 < -2$, but $|-10| > |-2|$ (meaning a debt of \$10$ is larger than a debt of \$2$).
+
+\vspace{4mm}
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 1
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 1: Debts and Absolute Values}
+
+\medskip
+
+\noindent
+\textbf{a) A bank account has a balance of $-\$50$. Another has a balance of $-\$15$. Write an inequality to compare the balances. Then, write an inequality to compare the absolute values of the balances. Explain what these mean in terms of debt.}
+
+\vspace{2cm}
+
+\noindent
+\textbf{b) Sort the following numbers from least to greatest: $-3.5, \ -2.1, \ |-4.2|, \ 0, \ -\frac{1}{2}, \ |1.8|$.}
+
+\vspace{2cm}
+\end{tcolorbox}
+\newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 2
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 2: Inequalities and Magnitudes}
+
+\medskip
+
+\noindent
+\textbf{a) If $a < b$ and both $a$ and $b$ are negative numbers, what can you say about $|a|$ and $|b|$? Draw a number line to justify your answer.}
+
+\vspace{2cm}
+
+\noindent
+\textbf{b) Find all integers $x$ such that $|x| < 4$ and $x > -2$.}
+
+\vspace{2cm}
+\end{tcolorbox}
+\newpage
+\end{document}

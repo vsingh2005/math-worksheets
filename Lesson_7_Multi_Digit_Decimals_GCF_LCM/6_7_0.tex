@@ -1,0 +1,136 @@
+% MULTI-DIGIT DECIMALS \& GCF/LCM - WORKSHEET 0
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Multi-Digit Decimals \& GCF/LCM}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
+{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.7.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% SECTION 1: MULTI-DIGIT DECIMALS AND GCF/LCM
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Multi-Digit Decimals and GCF/LCM (Foundation)}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+1. \textbf{Decimal Operations:} Line up decimals for addition and subtraction. For multiplication, count total decimal places. For division, multiply divisor by a power of 10 to make it a whole number. \\
+2. \textbf{GCF (Greatest Common Factor):} The largest factor shared by two numbers. \\
+3. \textbf{LCM (Least Common Multiple):} The smallest multiple shared by two numbers. \\
+4. \textbf{Distributive Property:} Rewrite a sum using GCF. Example: $18 + 24 = 6(3 + 4)$.
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Worked Example:}
+
+\medskip
+\noindent
+Find the GCF and LCM of 12 and 18, then write their sum $12 + 18$ using the Distributive Property.\\
+\textbf{Solution:} \\
+Factors of 12: 1, 2, 3, 4, 6, 12. Factors of 18: 1, 2, 3, 6, 9, 18. \textbf{GCF = 6}.\\
+Multiples of 12: 12, 24, 36, 48. Multiples of 18: 18, 36, 54. \textbf{LCM = 36}.\\
+Distributive property: $12 + 18 = 6(2 + 3)$.
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 1
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 1: GCF vs. LCM Word Problems}
+
+\medskip
+
+\noindent
+\textbf{a) A bakery wants to package 36 chocolate chip cookies and 48 sugar cookies into boxes so that each box has the same number of each cookie and no cookies are left over. What is the greatest number of boxes they can make? Explain your reasoning.}
+
+\vspace{2cm}
+
+\noindent
+\textbf{b) Hot dogs are sold in packages of 10, and hot dog buns are sold in packages of 8. What is the smallest number of hot dogs and buns you must buy to have an equal number of each?}
+
+\vspace{2cm}
+\end{tcolorbox}
+\newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 2
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 2: Decimal Division Insights}
+
+\medskip
+
+\noindent
+\textbf{a) Why does multiplying the divisor and dividend by the same power of 10 keep the quotient of a decimal division problem unchanged? Explain using fractions.}
+
+\vspace{2cm}
+
+\noindent
+\textbf{b) Express the sum $48 + 72$ in the form $a(b+c)$ where $a$ is the GCF of 48 and 72.}
+
+\vspace{2cm}
+\end{tcolorbox}
+\newpage
+\end{document}

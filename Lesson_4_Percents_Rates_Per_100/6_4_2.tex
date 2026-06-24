@@ -1,0 +1,228 @@
+%PERCENTS AS RATES PER 100 - WORKSHEET 2
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Percents as Rates per 100}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.4.2}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% QUICK REVIEW
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Quick Review: Percents}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Percent = a ratio out of 100. Three types of problems: \\
+(1) Find a percent \textbf{of} a number (multiply), \\
+(2) Find the \textbf{whole} given part and percent (divide), \\
+(3) Find what \textbf{percent} one is of another (divide).
+
+\vspace{4mm}
+
+% ==========================================================
+% PART A — FINDING THE WHOLE
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Find the Whole (Given Part \& Percent)}}
+\end{tcolorbox}
+
+\noindent
+Divide the part by the percent (as a decimal). Show your work.
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=1.4cm, leftmargin=0.6cm]
+
+\item 15 is 30\% of what number?
+
+\vspace{1.3cm}
+
+\item 24 is 50\% of what number?
+
+\vspace{1.3cm}
+
+\item 8 is 20\% of what number?
+
+\vspace{1.3cm}
+
+\item 45 is 75\% of what number?
+
+\vspace{1.3cm}
+
+\item 12 is 25\% of what number?
+
+\vspace{1.3cm}
+
+\item 36 is 60\% of what number?
+
+\vspace{1.3cm}
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART B — FINDING WHAT PERCENT
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Find What Percent}}
+\end{tcolorbox}
+
+\noindent
+Divide part by whole, then multiply by 100\%. Show your work.
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=1.5cm, leftmargin=0.6cm]
+
+\item What percent of 50 is 10?
+
+\vspace{1.3cm}
+
+\item What percent of 100 is 75?
+
+\vspace{1.3cm}
+
+\item What percent of 40 is 8?
+
+\vspace{1.3cm}
+
+\item What percent of 25 is 20?
+
+\vspace{1.3cm}
+
+\item What percent of 80 is 20?
+
+\vspace{1.3cm}
+
+\item What percent of 200 is 50?
+
+\vspace{1.3cm}
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART C — ALL THREE TYPES MIXED
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Mixed Percent Problems}}
+\end{tcolorbox}
+
+\noindent
+Identify which type of problem it is. Then solve. Show your work.
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=1.6cm, leftmargin=0.6cm]
+
+\item 40\% of 90 = \blank
+
+\item 18 is 60\% of what number? \blank
+
+\item What percent of 60 is 12? \blank\; \%
+
+\item 35\% of 200 = \blank
+
+\item 32 is 80\% of what number? \blank
+
+\item What percent of 50 is 35? \blank\; \%
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART D — REAL-WORLD APPLICATIONS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Real-World Scenarios}}
+\end{tcolorbox}
+
+\noindent
+Solve each problem. Show your work and identify which type (part, whole, or percent).
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=2cm, leftmargin=0.6cm]
+
+\item A school has 600 students. 45\% are sixth graders. How many sixth graders are there?
+
+\vspace{1.8cm}
+
+\item A discount store is selling shirts for 60\% off the original price. If the original price was \$40, what is the sale price? (Hint: If 60\% off, the sale price is 40\% of original)
+
+\vspace{1.8cm}
+
+\item Out of 150 students surveyed, 90 prefer chocolate ice cream. What percent prefer chocolate?
+
+\vspace{1.8cm}
+
+\item A basketball player made 24 free throws out of 30 attempts. What percent did the player make?
+
+\vspace{1.8cm}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,205 @@
+%CONVERTING MEASUREMENT UNITS - WORKSHEET 3
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Converting Measurement Units}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.5.3}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INTRODUCTION — MASTERY
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Mastery: Complex Unit Conversion}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Solve advanced multi-step unit conversion problems involving reasoning with ratios and real-world applications.
+
+\vspace{4mm}
+
+% ==========================================================
+% PART A — COMPLEX CHAIN CONVERSIONS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Chain Conversions}}
+\end{tcolorbox}
+
+\noindent
+Convert through multiple units to solve. Show all work.
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=2.2cm, leftmargin=0.6cm]
+
+\item How many inches are in 2 miles? (12 in = 1 ft, 5,280 ft = 1 mi) Show all steps.
+
+\vspace{2cm}
+
+\item How many millimeters are in 3 kilometers? (10 mm = 1 cm, 100 cm = 1 m, 1,000 m = 1 km)
+
+\vspace{2cm}
+
+\item A package weighs 5 pounds. Convert to ounces, then to grams if 1 oz $\approx$ 28 grams. How many grams?
+
+\vspace{2cm}
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART B — RATE AND CONVERSION PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Converting Rates and Speeds}}
+\end{tcolorbox}
+
+\noindent
+Solve problems involving conversions and rates.
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=2.2cm, leftmargin=0.6cm]
+
+\item A car travels 60 miles per hour. How many feet per hour? (Hint: Convert miles to feet)
+
+\vspace{2cm}
+
+\item Water flows at 1,000 milliliters per minute. How many liters per hour? (1,000 mL = 1 L, 60 minutes = 1 hour)
+
+\vspace{2cm}
+
+\item A runner completes 5 kilometers in 30 minutes. How many meters per minute?
+
+\vspace{2cm}
+
+\item A printer prints 60 inches per second. How many feet per second?
+
+\vspace{2cm}
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART C — PROBLEM SOLVING WITH CONVERSIONS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Apply to Real Problems}}
+\end{tcolorbox}
+
+\noindent
+Solve. Show all conversion steps and reasoning.
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=2.3cm, leftmargin=0.6cm]
+
+\item A room is 4 yards long and 3 yards wide. What is the perimeter in feet? What is the area in square feet?
+
+\vspace{2.2cm}
+
+\item A swimming pool is 50 meters long. How many feet is that? (1 meter $\approx$ 3.3 feet)
+
+\vspace{2.2cm}
+
+\item A package of meat weighs 3 pounds 8 ounces (3 lb 8 oz). Convert to total ounces.
+
+\vspace{2.2cm}
+
+\item A hiking trail is 12 miles long. A hiker travels 3 miles per hour. How many hours does it take? Express your answer in hours and minutes.
+
+\vspace{2.2cm}
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART D — CHALLENGE: MIXED UNITS AND REASONING
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Challenge Problems}}
+\end{tcolorbox}
+
+\noindent
+Reason through complex unit conversion scenarios.
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=2.4cm, leftmargin=0.6cm]
+
+\item A rope is 15 feet long. You need to cut it into pieces that are each 8 inches long. How many whole pieces can you cut? How many inches of rope are left over?
+
+\vspace{2.3cm}
+
+\item An aquarium holds 40 liters of water. If you fill it with a pump that delivers 500 milliliters per second, how many seconds will it take to fill? (Convert to same units first)
+
+\vspace{2.3cm}
+
+\item Two cities are 120 miles apart. A car travels 40 miles per hour. If the car travels 5 hours before stopping, how many miles are left to drive? How far from the destination in kilometers? (1 mile $\approx$ 1.6 km)
+
+\vspace{2.5cm}
+
+\end{enumerate}
+
+\end{document}

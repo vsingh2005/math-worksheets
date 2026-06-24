@@ -1,0 +1,208 @@
+%UNIT RATES & SPEED - WORKSHEET 1
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit Rates \& Speed}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.2.1}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INTRODUCTION — WHAT IS A UNIT RATE?
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Understanding Unit Rates (Day 1)}}
+\end{tcolorbox}
+
+\vspace{4mm}
+
+\noindent
+A \textbf{unit rate} is a ratio that compares two quantities where one quantity is \textbf{1}. 
+For example, if you buy 3 apples for \$6, the unit rate is \$2 per apple. This tells us how much ONE apple costs.
+
+\vspace{4mm}
+
+\begin{tcolorbox}[
+    colback=white,
+    colframe=black!25,
+    boxrule=0.6pt,
+    arc=4mm,
+    left=6mm,
+    right=6mm,
+    top=5mm,
+    bottom=5mm
+]
+\textbf{Finding Unit Rates}
+\begin{enumerate}[leftmargin=8mm, itemsep=4mm]
+    \item \textbf{Write the Ratio:} Start with the relationship between two quantities.
+    
+    \textbf{Example:} 4 miles in 2 hours $\rightarrow$ $\dfrac{4 \text{ miles}}{2 \text{ hours}}$
+
+    \item \textbf{Divide Both by the Second Quantity:} To find the unit rate, divide both the top and bottom by the bottom number.
+    
+    $\dfrac{4 \text{ miles}}{2 \text{ hours}} = \dfrac{4 \div 2}{2 \div 2} = \dfrac{2 \text{ miles}}{1 \text{ hour}}$
+    
+    \item \textbf{Write as a Unit Rate:} The unit rate is \textbf{2 miles per hour} or \textbf{2 mph}.
+
+    \item \textbf{Use Unit Rates to Solve:} If you travel 2 miles per hour, how far in 5 hours?
+    
+    $2 \text{ miles/hour} \times 5 \text{ hours} = 10 \text{ miles}$
+\end{enumerate}
+\end{tcolorbox}
+
+\medskip
+\noindent
+\textbf{Key Words:} per, each, every hour, per item, miles per hour (mph), cost per item
+
+\newpage
+
+% ==========================================================
+% PART A — IDENTIFY AND CALCULATE UNIT RATES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Calculate Unit Rates}}
+\end{tcolorbox}
+
+\noindent
+Find each unit rate.
+
+\begin{enumerate}[itemsep=1.3cm, leftmargin=0.6cm]
+\item 12 cookies in 3 minutes\\
+Unit rate: \blankshorter \; \textbf{cookies per minute}
+
+\item 120 miles in 4 hours\\
+Unit rate: \blankshorter \; \textbf{miles per hour}
+
+\item 8 dollars for 2 pounds\\
+Unit rate: \$ \blankshorter \; \textbf{per pound}
+
+\item 15 pages in 5 days\\
+Unit rate: \blankshorter \; \textbf{pages per day}
+
+\item 24 students in 6 groups\\
+Unit rate: \blankshorter \; \textbf{students per group}
+
+\item 36 pencils in 9 boxes\\
+Unit rate: \blankshorter \; \textbf{pencils per box}
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART B — WORD PROBLEMS WITH UNIT RATES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Using Unit Rates to Solve Problems}}
+\end{tcolorbox}
+
+\noindent
+Find the unit rate, then answer the question. Show your work.
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=2cm, leftmargin=0.6cm]
+\item A car travels 200 miles in 4 hours. What is the car's speed (miles per hour)? If the car continues at this speed, how far will it travel in 6 hours?\\
+\vspace{2cm}
+
+\item At a bakery, 36 cupcakes cost \$18. What is the price per cupcake? How much would 15 cupcakes cost?\\
+\vspace{2cm}
+
+\item A runner completes 3 miles in 30 minutes. What is her rate in miles per minute? How far will she run in 50 minutes at this rate?\\
+\vspace{2cm}
+
+\item A water pump fills 60 gallons in 5 minutes. What is the pump's rate in gallons per minute? How many gallons will it fill in 12 minutes?\\
+\vspace{2.5cm}
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART C — COMPARING UNIT RATES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Which is the Better Deal?}}
+\end{tcolorbox}
+
+\noindent
+Find the unit rate for each option. Circle the better choice.
+
+\vspace{3mm}
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=1.4cm, leftmargin=0.6cm]
+\item Store A: 8 notebooks for \$16\\
+Store B: 5 notebooks for \$15\\
+Better deal: \textbf{A} or \textbf{B}
+
+\item Store X: 12 granola bars for \$8\\
+Store Y: 18 granola bars for \$11\\
+Better deal: \textbf{X} or \textbf{Y}
+
+\item Restaurant 1: 2 pizzas for \$22\\
+Restaurant 2: 3 pizzas for \$30\\
+Better deal: \textbf{1} or \textbf{2}
+
+\item Pack A: 24 pencils for \$6\\
+Pack B: 20 pencils for \$4\\
+Better deal: \textbf{A} or \textbf{B}
+
+\end{enumerate}
+\end{multicols}
+
+\end{document}

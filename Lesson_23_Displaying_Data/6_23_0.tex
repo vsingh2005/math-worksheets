@@ -1,0 +1,126 @@
+% DISPLAYING DATA: HISTOGRAMS \& BOX PLOTS - WORKSHEET 0
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Displaying Data: Histograms \& Box Plots}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
+{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.23.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% SECTION 1: HISTOGRAMS AND BOX-AND-WHISKER PLOTS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Histograms and Box-and-Whisker Plots (Foundation)}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+1. \textbf{Histogram:} A bar graph where data is grouped into intervals (bins) of equal size. The height of each bar represents the frequency of data in that interval. Bins must not overlap. \\
+2. \textbf{Box Plot (Box-and-Whisker):} Summarizes data using a 5-number summary: \\
+- **Minimum:** The smallest value. \\
+- **Lower Quartile ($Q_1$):** The median of the lower half of data. \\
+- **Median ($Q_2$):** The middle value of the data. \\
+- **Upper Quartile ($Q_3$):** The median of the upper half of data. \\
+- **Maximum:** The largest value. \\
+3. \textbf{Interquartile Range (IQR):} $Q_3 - Q_1$ (represents the middle $50\%$ of the data).
+
+\vspace{4mm}
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 1
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 1: Constructing the 5-Number Summary}
+
+\medskip
+
+\noindent
+\textbf{a) A list of test scores is: 65, 70, 75, 80, 85, 90, 95, 100. Find the 5-number summary (Min, $Q_1$, Median, $Q_3$, Max) and calculate the IQR. Explain your process.}
+
+\vspace{2cm}
+
+\noindent
+\textbf{b) Describe the difference between a bar chart and a histogram. Can you find the exact values of the individual data points from a histogram? Explain.}
+
+\vspace{2cm}
+\end{tcolorbox}
+\newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 2
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 2: Box Plot Interpretations}
+
+\medskip
+
+\noindent
+\textbf{a) A box plot has a very long right whisker and a short left whisker. What does this tell you about the shape and spread of the data distribution?}
+
+\vspace{2cm}
+
+\noindent
+\textbf{b) If a data set has 12 values, how many values fall within the box of its box plot? Explain.}
+
+\vspace{2cm}
+\end{tcolorbox}
+\newpage
+\end{document}

@@ -1,0 +1,190 @@
+%CONVERTING MEASUREMENT UNITS - WORKSHEET 1
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Converting Measurement Units}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.5.1}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INTRODUCTION — BEGINNING
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Beginning: Simple Unit Conversions}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Use conversion ratios to convert between units. Multiply by a ratio where the units cancel.
+
+\vspace{4mm}
+
+% ==========================================================
+% PART A — CUSTOMARY LENGTH CONVERSIONS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Customary Length: Inches, Feet, Yards}}
+\end{tcolorbox}
+
+\noindent
+Convert. Use: 12 inches = 1 foot, 3 feet = 1 yard.
+
+\vspace{3mm}
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=1.3cm, leftmargin=0.6cm]
+\item 3 feet = \blank \; inches
+\item 2 yards = \blank \; feet
+\item 24 inches = \blank \; feet
+\item 36 feet = \blank \; yards
+\item 6 feet = \blank \; inches
+\item 5 yards = \blank \; feet
+\end{enumerate}
+\end{multicols}
+
+\newpage
+
+% ==========================================================
+% PART B — METRIC LENGTH CONVERSIONS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Metric Length: mm, cm, m, km}}
+\end{tcolorbox}
+
+\noindent
+Convert. Use: 10 mm = 1 cm, 100 cm = 1 m, 1000 m = 1 km.
+
+\vspace{3mm}
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=1.3cm, leftmargin=0.6cm]
+\item 5 meters = \blank \; cm
+\item 200 cm = \blank \; m
+\item 3 cm = \blank \; mm
+\item 50 mm = \blank \; cm
+\item 2 km = \blank \; m
+\item 6 meters = \blank \; mm
+\end{enumerate}
+\end{multicols}
+
+\newpage
+
+% ==========================================================
+% PART C — WEIGHT CONVERSIONS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Weight Conversions}}
+\end{tcolorbox}
+
+\noindent
+Convert using: 16 oz = 1 lb, 1000 g = 1 kg.
+
+\vspace{3mm}
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=1.3cm, leftmargin=0.6cm]
+\item 2 pounds = \blank \; oz
+\item 32 oz = \blank \; lb
+\item 5 kg = \blank \; g
+\item 3000 g = \blank \; kg
+\item 3 pounds = \blank \; oz
+\item 2 kg = \blank \; g
+\end{enumerate}
+\end{multicols}
+
+\newpage
+
+% ==========================================================
+% PART D — REAL-WORLD CONVERSIONS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Apply Conversions}}
+\end{tcolorbox}
+
+\noindent
+Solve each problem.
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=1.8cm, leftmargin=0.6cm]
+
+\item A bookshelf is 4 feet wide. How many inches is that?
+
+\vspace{1.2cm}
+
+\item A ribbon is 200 centimeters long. How many meters is that?
+
+\vspace{1.2cm}
+
+\item A box of cereal weighs 24 ounces. How many pounds is that?
+
+\vspace{1.2cm}
+
+\item A runner jogs 3 kilometers. How many meters is that?
+
+\vspace{1.2cm}
+
+\item A piece of string is 500 millimeters. How many centimeters is that?
+
+\vspace{1.2cm}
+
+\end{enumerate}
+
+\end{document}

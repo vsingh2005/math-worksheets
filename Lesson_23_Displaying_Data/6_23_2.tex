@@ -1,0 +1,114 @@
+% DISPLAYING DATA: HISTOGRAMS \& BOX PLOTS - WORKSHEET 2
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Displaying Data: Histograms \& Box Plots}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
+{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.23.2}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% QUICK REVIEW
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Quick Review: Displaying Data: Histograms \& Box Plots}}
+\end{tcolorbox}
+
+\vspace{3mm}
+\noindent
+Let's practice intermediate calculations and word problems. Keep steps neat!
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Box Plot Calculations}}
+\end{tcolorbox}
+
+\noindent
+Find the 5-number summary for this data set: 12, 5, 8, 20, 15, 14, 18, 10.
+
+\vspace{3mm}
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=1cm, leftmargin=0.6cm]
+\item \text{Sorted Data: } \blanklong
+\item \text{Min} = \blank \quad Q_1 = \blank
+\item \text{Median} = \blank \quad Q_3 = \blank
+\item \text{Max} = \blank \quad \text{IQR} = \blank
+\end{enumerate}
+\end{multicols}
+\newpage
+
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Frequency Tables}}
+\end{tcolorbox}
+
+\noindent
+Fill in the frequencies from this list of data: 4, 8, 12, 15, 7, 9, 14, 18, 22, 11, 13, 6.
+
+\vspace{3mm}
+\begin{enumerate}[itemsep=1.2cm, leftmargin=0.6cm]
+\item \text{Interval 0-9: Frequency} = \blank
+\vspace{1cm}
+\item \text{Interval 10-19: Frequency} = \blank
+\vspace{1cm}
+\item \text{Interval 20-29: Frequency} = \blank
+\vspace{1cm}
+\end{enumerate}
+\newpage
+\end{document}

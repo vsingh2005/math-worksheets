@@ -1,0 +1,105 @@
+% AREA OF IRREGULAR POLYGONS - WORKSHEET 1
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Area of Irregular Polygons}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
+{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.17.1}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INTRODUCTION — BEGINNING
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Beginning: Basic Skills}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Simple Decomposition}}
+\end{tcolorbox}
+
+\noindent
+Calculate the area of each shape. Assume all corners are right angles.
+
+\vspace{3mm}
+\begin{enumerate}[itemsep=1cm, leftmargin=0.6cm]
+\item An L-shaped block: vertical stem $12\text{ in} \times 4\text{ in}$, horizontal foot $6\text{ in} \times 3\text{ in}$ extending to the right. $Area = \blank$
+\item A T-shaped block: horizontal top $8\text{ cm} \times 2\text{ cm}$, vertical leg $6\text{ cm} \times 2\text{ cm}$ centered underneath. $Area = \blank$
+\item A rectangle $10\text{ m} \times 8\text{ m}$ with a corner rectangle $3\text{ m} \times 4\text{ m}$ cut out. $Area = \blank$
+\end{enumerate}
+\newpage
+
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Basic Coordinate Area}}
+\end{tcolorbox}
+
+\noindent
+Find the area of the polygon plotted on the grid.
+
+\vspace{3mm}
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=1cm, leftmargin=0.6cm]
+\item \text{Vertices: } (1,1), (5,1), (5,4). Area = \blank
+\item \text{Vertices: } (-2,-2), (2,-2), (2,3), (-2,3). Area = \blank
+\end{enumerate}
+\end{multicols}
+\newpage
+\end{document}

@@ -1,0 +1,109 @@
+% MANAGING MONEY: BUDGETS, PERCENTS \& DISCOUNTS - WORKSHEET 1
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Managing Money: Budgets, Percents \& Discounts}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
+{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.24.1}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INTRODUCTION — BEGINNING
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Beginning: Basic Skills}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Calculating Discounts}}
+\end{tcolorbox}
+
+\noindent
+Find the sale price of each item.
+
+\vspace{3mm}
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=1cm, leftmargin=0.6cm]
+\item \text{Book: } \$20, \ 10\% \text{ off. Sale Price} = \blank
+\item \text{Shoes: } \$60, \ 20\% \text{ off. Sale Price} = \blank
+\item \text{Shirt: } \$30, \ 25\% \text{ off. Sale Price} = \blank
+\item \text{Game: } \$50, \ 40\% \text{ off. Sale Price} = \blank
+\end{enumerate}
+\end{multicols}
+\newpage
+
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Calculating Sales Tax}}
+\end{tcolorbox}
+
+\noindent
+Find the tax and total price.
+
+\vspace{3mm}
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=1cm, leftmargin=0.6cm]
+\item \text{Price = } \$40, \text{ Tax Rate = } 5\%. \text{ Tax} = \blank
+\item \text{Price = } \$100, \text{ Tax Rate = } 8.5\%. \text{ Total} = \blank
+\item \text{Price = } \$25, \text{ Tax Rate = } 6\%. \text{ Total} = \blank
+\end{enumerate}
+\end{multicols}
+\newpage
+\end{document}

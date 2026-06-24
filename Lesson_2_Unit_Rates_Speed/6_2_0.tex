@@ -1,0 +1,508 @@
+%UNIT RATES & SPEED - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit Rates \& Speed}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.2.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% SECTION 1: WHAT IS A RATIO?
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Understanding Ratios (Foundation for Unit Rates)}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+A \textbf{ratio} compares two quantities. For example:
+
+\begin{itemize}
+    \item ``There are 3 apples for every 2 oranges'' — written as \textbf{3:2} or $\dfrac{3}{2}$
+    \item ``A car travels 120 miles in 2 hours'' — written as \textbf{120:2} or $\dfrac{120}{2}$
+    \item ``A recipe needs 2 cups flour for every 1 cup sugar'' — written as \textbf{2:1} or $\dfrac{2}{1}$
+\end{itemize}
+
+\medskip
+
+\noindent
+\textbf{Key Idea:} In all these ratios, we're comparing \textbf{two different things} (apples to oranges, miles to hours, flour to sugar).
+
+\vspace{3mm}
+
+% ==========================================================
+% SECTION 2: WHAT IS A UNIT RATE?
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{What is a Unit Rate?}}
+\end{tcolorbox}
+
+\noindent
+A \textbf{unit rate} is a special ratio where the \textbf{second quantity is 1}. 
+
+\begin{itemize}
+    \item If there are 3 apples for every 2 oranges, the unit rate is $\dfrac{3}{2} = 1.5$ apples \textbf{per orange}
+    \item If a car travels 120 miles in 2 hours, the unit rate is $\dfrac{120}{2} = 60$ miles \textbf{per hour}
+    \item If a recipe needs 2 cups flour for 1 cup sugar, the unit rate is $\dfrac{2}{1} = 2$ cups flour \textbf{per cup sugar}
+\end{itemize}
+
+\medskip
+
+\noindent
+\textbf{The key word: ``per'' means ``for every 1 of''} \\
+\textbf{Unit rates tell us about a single item or unit.}
+
+\vspace{3mm}
+
+% ==========================================================
+% WORKED EXAMPLE 1
+% ==========================================================
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example 1: Finding Unit Rate from a Simple Ratio}
+
+\medskip
+
+\textbf{Problem:} A grocery store sells 4 bananas for \$2. What is the unit price (price per banana)?
+
+\medskip
+
+\noindent
+\textbf{Solution:}
+
+\begin{enumerate}
+    \item Write the ratio: $\dfrac{\$2}{4 \text{ bananas}}$
+    
+    \item To find the unit rate, divide both the top and bottom by the bottom number:
+    
+    $\dfrac{\$2}{4 \text{ bananas}} = \dfrac{\$2 \div 4}{4 \div 4} = \dfrac{\$0.50}{1 \text{ banana}}$
+    
+    \item The unit rate is \textbf{\$0.50 per banana} or \textbf{\$0.50 for each banana}.
+\end{enumerate}
+
+\medskip
+
+\noindent
+\textbf{Check:} If each banana costs \$0.50, then 4 bananas cost $4 \times \$0.50 = \$2$ ✓
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% PRACTICE SET 1: FINDING UNIT RATES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Practice: Find Each Unit Rate}}
+\end{tcolorbox}
+
+\noindent
+Show your work by dividing both quantities by the second number.
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=1.5cm, leftmargin=0.6cm]
+
+\item 12 cookies in 3 minutes. Unit rate: \blankshorter \; cookies per minute
+
+\item \$15 for 5 pounds. Unit rate: \$ \blankshorter \; per pound
+
+\item 150 miles in 3 hours. Unit rate: \blankshorter \; miles per hour
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% SECTION 3: SPEED — A SPECIAL UNIT RATE
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Speed: Comparing Distance and Time}}
+\end{tcolorbox}
+
+\noindent
+\textbf{Speed} is a unit rate that compares \textbf{distance} to \textbf{time}. Common speed units include:
+\begin{itemize}
+    \item Miles per hour (mph)
+    \item Kilometers per hour (km/h)
+    \item Meters per second (m/s)
+    \item Feet per second (ft/s)
+\end{itemize}
+
+\medskip
+
+\noindent
+The relationship between distance, rate (speed), and time is:
+
+$$\boxed{\text{Distance} = \text{Speed} \times \text{Time}}$$
+
+\noindent
+This can be rearranged:
+$$\text{Speed} = \frac{\text{Distance}}{\text{Time}} \quad \text{and} \quad \text{Time} = \frac{\text{Distance}}{\text{Speed}}$$
+
+\vspace{4mm}
+
+% ==========================================================
+% WORKED EXAMPLE 2
+% ==========================================================
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example 2: Finding Speed}
+
+\medskip
+
+\textbf{Problem:} A runner completes 6 miles in 1 hour. What is her speed in miles per hour?
+
+\medskip
+
+\noindent
+\textbf{Solution:}
+
+\medskip
+
+\noindent
+Speed $= \dfrac{\text{Distance}}{\text{Time}} = \dfrac{6 \text{ miles}}{1 \text{ hour}} = 6$ mph
+
+\medskip
+
+\noindent
+\textbf{Interpretation:} The runner travels 6 miles every hour.
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% WORKED EXAMPLE 3
+% ==========================================================
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example 3: Using Speed to Find Distance}
+
+\medskip
+
+\textbf{Problem:} A car travels at 60 mph for 3 hours. How far does it go?
+
+\medskip
+
+\noindent
+\textbf{Solution:}
+
+\medskip
+
+\noindent
+Distance $= \text{Speed} \times \text{Time} = 60 \text{ mph} \times 3 \text{ hours} = 180$ miles
+
+\medskip
+
+\noindent
+\textbf{Interpretation:} At 60 miles per hour, after 3 hours the car has traveled 180 miles total.
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% PRACTICE SET 2: SPEED PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Practice: Speed, Distance, and Time}}
+\end{tcolorbox}
+
+\noindent
+Use the formula Distance = Speed $\times$ Time. Show your work.
+
+\vspace{3mm}
+
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=1.5cm, leftmargin=0.6cm]
+
+\item Speed: 50 mph\\
+Time: 4 hours\\
+Distance: \blank \; miles
+
+\item Distance: 210 miles\\
+Speed: 70 mph\\
+Time: \blank \; hours
+
+\item Distance: 48 miles\\
+Time: 2 hours\\
+Speed: \blank \; mph
+
+\item Speed: 12 m/s\\
+Time: 5 seconds\\
+Distance: \blank \; m
+
+\end{enumerate}
+\end{multicols}
+
+\newpage
+
+% ==========================================================
+% SECTION 4: COMPARING UNIT RATES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Why Unit Rates Matter: Making Comparisons}}
+\end{tcolorbox}
+
+\noindent
+Unit rates help us compare things fairly. Imagine you're at a store and see:
+
+\begin{itemize}
+    \item Option A: 8 notebooks for \$12
+    \item Option B: 6 notebooks for \$9
+\end{itemize}
+
+\noindent
+Which is the better deal? \textbf{Without unit rates, this is hard to tell.} But with unit rates:
+
+\begin{itemize}
+    \item Option A: $\dfrac{\$12}{8} = \$1.50$ per notebook
+    \item Option B: $\dfrac{\$9}{6} = \$1.50$ per notebook
+\end{itemize}
+
+\noindent
+\textbf{They're the same price!} Unit rates let us compare fairly.
+
+\vspace{4mm}
+
+% ==========================================================
+% THINKING PROBLEM 1
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 1: Multiple Representations}
+
+\medskip
+
+\noindent
+Three stores sell granola bars at different rates:
+\begin{itemize}
+    \item Store A: 24 bars for \$12
+    \item Store B: 18 bars for \$9
+    \item Store C: 12 bars for \$7.20
+\end{itemize}
+
+\noindent
+\textbf{a)} Find the unit price (cost per bar) for each store. Show your work.
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b)} Which store has the best deal? Which has the worst deal?
+
+\vspace{1.5cm}
+
+\noindent
+\textbf{c)} How much would you save by buying 60 bars from the cheapest store instead of the most expensive?
+
+\vspace{1.8cm}
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% THINKING PROBLEM 2
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 2: Real-World Speed Comparison}
+
+\medskip
+
+\noindent
+Two athletes run the same distance at different speeds:
+\begin{itemize}
+    \item Runner A: 300 meters in 60 seconds
+    \item Runner B: 400 meters in 80 seconds
+\end{itemize}
+
+\noindent
+\textbf{a)} Calculate the speed (meters per second) for each runner.
+
+\vspace{2cm}
+
+\noindent
+\textbf{b)} Who is faster? By how many meters per second?
+
+\vspace{1.5cm}
+
+\noindent
+\textbf{c)} If Runner A runs for 5 minutes at her constant speed, how far will she go? (Hint: 5 minutes = 300 seconds)
+
+\vspace{2cm}
+
+\noindent
+\textbf{d)} If Runner B runs for 5 minutes at his constant speed, how far will he go?
+
+\vspace{2cm}
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% SECTION 5: UNIT RATES WITH FRACTIONS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Unit Rates with Fractions}}
+\end{tcolorbox}
+
+\noindent
+Sometimes unit rates involve fractions. For example, when time or quantity is given as a fraction.
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example 4: Unit Rate with a Fraction}
+
+\medskip
+
+\textbf{Problem:} A worker paints 15 square meters in $\dfrac{1}{3}$ hour. What is the painting rate in square meters per hour?
+
+\medskip
+
+\noindent
+\textbf{Solution:}
+
+\begin{enumerate}
+    \item Write the ratio: $\dfrac{15 \text{ sq m}}{\frac{1}{3} \text{ hour}}$
+    
+    \item To find the unit rate, divide by the fraction. Remember: divide by a fraction means multiply by its reciprocal.
+    
+    $\dfrac{15}{\frac{1}{3}} = 15 \times \dfrac{3}{1} = 15 \times 3 = 45$ square meters per hour
+    
+    \item The unit rate is \textbf{45 square meters per hour}.
+\end{enumerate}
+
+\medskip
+
+\noindent
+\textbf{Check:} If the rate is 45 sq m per hour, then in $\dfrac{1}{3}$ hour: $45 \times \dfrac{1}{3} = 15$ sq m ✓
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% PRACTICE SET 3: FRACTIONS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Practice: Unit Rates with Fractions}}
+\end{tcolorbox}
+
+\noindent
+Remember: to divide by a fraction, multiply by its reciprocal.
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=1.5cm, leftmargin=0.6cm]
+
+\item 10 miles in $\dfrac{1}{2}$ hour. Unit rate: \blankshorter \; miles per hour
+
+\item \$18 for $\dfrac{2}{3}$ pound. Unit rate: \$ \blankshorter \; per pound
+
+\item 6 pages in $\dfrac{1}{4}$ hour. Unit rate: \blankshorter \; pages per hour
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% THINKING PROBLEM 3
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 3: Which is More Efficient?}
+
+\medskip
+
+\noindent
+Two machines fill bottles with juice:
+\begin{itemize}
+    \item Machine A: Fills 45 bottles in $\dfrac{1}{2}$ hour
+    \item Machine B: Fills 35 bottles in $\dfrac{1}{3}$ hour
+\end{itemize}
+
+\noindent
+\textbf{a)} Find the unit rate (bottles per hour) for each machine.
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b)} Which machine is more efficient? By how many bottles per hour?
+
+\vspace{1.5cm}
+
+\noindent
+\textbf{c)} At this rate, how many bottles would each machine fill in 2 hours?
+
+\vspace{2cm}
+
+\noindent
+\textbf{d)} If Machine B needs to fill 700 bottles, how many hours will it take? (Hint: Use Time = Bottles $\div$ Rate)
+
+\vspace{2.5cm}
+
+\end{tcolorbox}
+
+\end{document}

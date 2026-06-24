@@ -1,0 +1,139 @@
+% EQUIVALENT EXPRESSIONS \& PROPERTIES - WORKSHEET 0
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Equivalent Expressions \& Properties}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
+{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{6.13.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% SECTION 1: ALGEBRAIC PROPERTIES AND EQUIVALENCY
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Algebraic Properties and Equivalency (Foundation)}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+1. \textbf{Properties:} \\
+- **Commutative Property:** $a + b = b + a$, $ab = ba$ \\
+- **Associative Property:** $(a+b)+c = a+(b+c)$, $(ab)c = a(bc)$ \\
+- **Distributive Property:** $a(b+c) = ab + ac$, and $ab + ac = a(b+c)$ \\
+2. \textbf{Combining Like Terms:} Add or subtract coefficients of terms with the same variable. Example: $3x + 5 + 2x - 1 = 5x + 4$.
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Worked Example:}
+
+\medskip
+\noindent
+Expand the expression $4(2x + 3)$ using the Distributive Property, then check equivalence by substituting $x=2$.\\
+\textbf{Solution:} \\
+1) Expand: $4 \times 2x + 4 \times 3 = 8x + 12$. \\
+2) Check for $x=2$: \\
+- Original: $4(2(2) + 3) = 4(4 + 3) = 4(7) = 28$. \\
+- Expanded: $8(2) + 12 = 16 + 12 = 28$. \\
+- Since both equal 28, the expressions are equivalent.
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 1
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 1: Factoring Expressions}
+
+\medskip
+
+\noindent
+\textbf{a) Factor the expression $12x + 18y$ by finding the GCF of the coefficients. Show your steps.}
+
+\vspace{2cm}
+
+\noindent
+\textbf{b) Are the expressions $2(3x + 4)$ and $6x + 4$ equivalent? Explain why or why not using numerical evidence.}
+
+\vspace{2cm}
+\end{tcolorbox}
+\newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 2
+% ==========================================================
+\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 2: Simplifying Expressions}
+
+\medskip
+
+\noindent
+\textbf{a) Simplify $5x + 3(x + 2) - 4$. Show your work and state which property you used at each step.}
+
+\vspace{2cm}
+
+\noindent
+\textbf{b) Write an expression for the perimeter of a triangle with side lengths $2x$, $x+3$, and $3x-1$. Simplify it.}
+
+\vspace{2cm}
+\end{tcolorbox}
+\newpage
+\end{document}
