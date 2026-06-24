@@ -10,19 +10,6 @@
 \usepackage{amsmath, amssymb}
 \usepackage{fancyhdr}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{enumitem}
-\usepackage{geometry}
-\usepackage{tikz}
-\usepackage{needspace}
-\usepackage{multicol}
-
-\usetikzlibrary{arrows.meta, calc}
-
-% ----------------------------------------------------------
-% PAGE SETUP
-% ----------------------------------------------------------
-\usepackage{times}
 \geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
 
 % ----------------------------------------------------------
@@ -35,17 +22,11 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\small\bfseries Measures of Center: Mean, Median \& Mode}
-\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
-{kss.png}}}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{6.22.3}
 
 \renewcommand{\footrulewidth}{0.2pt}
-
-% ----------------------------------------------------------
-% THEME COLOR
-% ----------------------------------------------------------
-\definecolor{customteal}{HTML}{2fbdb9}
 
 % ----------------------------------------------------------
 % HELPER MACROS
@@ -64,35 +45,115 @@
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
 % ==========================================================
-% MASTERY: COMPLEX PROBLEMS
+% PART A: OUTLIER DATA ANALYSIS CHALLENGE
 % ==========================================================
-\begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Mastery: Challenging Scenarios}}
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part A: Outlier Data Analysis Challenge}}
 \end{tcolorbox}
 
 \vspace{3mm}
-\noindent
-Apply your knowledge to solve these advanced, multi-step problems.
-
-\vspace{4mm}
-
-\begin{tcolorbox}[colback=customteal!20]
-\large\textcolor{black}{\textbf{Data Analysis Challenge}}
-\end{tcolorbox}
 
 \noindent
-Solve. Show all steps.
+Solve the seedling growth challenge. Show all calculations.
 
-\vspace{3mm}
-\begin{enumerate}[itemsep=1.5cm, leftmargin=0.6cm]
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.2cm, leftmargin=0.6cm]
 \item A science class measures the heights of 8 seedlings (in centimeters): \\
 $$2.4, \ 3.1, \ 2.8, \ 4.5, \ 3.1, \ 0.2, \ 3.5, \ 3.6$$
-\textbf{a)} Calculate the mean and median height of the seedlings. \blanklong \\
-\textbf{b)} Identify the outlier in this data set. If you remove the outlier, find the new mean and median. \blanklong \\
-\textbf{c)} Describe how the outlier affected the mean compared to the median. \blanklong
-\vspace{1.5cm}
-\item The mean weight of three packages is 12 pounds. Two of the packages weigh 10 pounds and 15 pounds. Find the weight of the third package.
-\vspace{1.5cm}
+\textbf{a)} Calculate the mean and median height of the seedlings. \\
+\blanklong \\
+\textbf{b)} Identify the outlier in this dataset. If you remove this outlier, calculate the new mean and median. \\
+\blanklong \\
+\textbf{c)} Explain how the outlier affected the mean compared to the median. Which measure is more resistant to outliers? \\
+\blanklong
 \end{enumerate}
+
 \newpage
+
+% ==========================================================
+% PART B: FINDING MISSING WEIGHT
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part B: Finding a Missing Weight}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Use mean equations to find the missing variables.
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item The mean weight of three packages is $12$ pounds. Two of the packages weigh $10$ pounds and $15$ pounds. Find the weight of the third package.
+\vspace{1.5cm}
+
+\item The mean temperature of 5 consecutive days is $68^\circ$F. The temperatures of the first four days are $65^\circ$F, $72^\circ$F, $70^\circ$F, and $63^\circ$F. Find the temperature on the 5th day.
+\vspace{1.5cm}
+
+\item A group of 6 friends has a mean height of $60$ inches. A 7th friend who is $67$ inches tall joins them. What is the new mean height of the group?
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART C: FREQUENCY TABLE ANALYSIS
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part C: Frequency Table Analysis}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Calculate measures of center from organized data.
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item The table below shows the number of books read by students in a week: \\
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Books Read} & 0 & 1 & 2 & 3 \\ \hline
+\textbf{Number of Students} & 3 & 5 & 2 & 2 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{0.5cm}
+\textbf{a)} Convert this table into a list of individual data points. \\
+\blanklong \\
+\textbf{b)} Find the median number of books read. \\
+\blanklong \\
+\textbf{c)} Calculate the mean number of books read. \\
+\blanklong
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART D: GRADING SYSTEM DESIGN
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part D: Grading System Design}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Apply averages to solve the school scenario.
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item Maria has test scores of $82, 85,$ and $89$ on her first three math tests. \\
+\textbf{a)} What is her current average score? \\
+\blanklong \\
+\textbf{b)} She wants her average after 4 tests to be at least $86$. Write and solve an equation to find the minimum score she must get on the 4th test. \\
+\blanklong \\
+\textbf{c)} If the 4th test is the final exam and counts as double (meaning it is entered twice into the gradebook), write and solve the new equation to find the minimum score she must get to achieve a final average of at least $86$. \\
+\blanklong
+\end{enumerate}
+
 \end{document}

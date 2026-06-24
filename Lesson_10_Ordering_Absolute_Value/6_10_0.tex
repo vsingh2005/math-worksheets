@@ -35,17 +35,11 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\small\bfseries Ordering \& Absolute Value}
-\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
-{kss.png}}}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{6.10.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
-
-% ----------------------------------------------------------
-% THEME COLOR
-% ----------------------------------------------------------
-\definecolor{customteal}{HTML}{2fbdb9}
 
 % ----------------------------------------------------------
 % HELPER MACROS
@@ -66,7 +60,7 @@
 % ==========================================================
 % SECTION 1: COMPARING, ORDERING, AND ABSOLUTE VALUE
 % ==========================================================
-\begin{tcolorbox}[colback=customteal!20]
+\begin{tcolorbox}[colback=black!10]
     \large\textcolor{black}{\textbf{Comparing, Ordering, and Absolute Value (Foundation)}}
 \end{tcolorbox}
 
@@ -75,14 +69,31 @@
 \noindent
 1. \textbf{Comparing:} On a number line, values increase from left to right. $-5 < -2$ because $-5$ is to the left of $-2$. \\
 2. \textbf{Absolute Value:} The distance of a number from 0 on a number line, denoted as $|x|$. Absolute value is always positive or zero. Example: $|-5| = 5$, and $|5| = 5$. \\
-3. \textbf{Order vs. Absolute Value:} A number with a smaller value can have a larger absolute value. For instance, $-10 < -2$, but $|-10| > |-2|$ (meaning a debt of \$10$ is larger than a debt of \$2$).
+3. \textbf{Order vs. Absolute Value:} A number with a smaller value can have a larger absolute value. For instance, $-10 < -2$, but $|-10| > |-2|$ (meaning a debt of \$10 is larger than a debt of \$2).
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Worked Example 1: Comparing Balances}
+
+\medskip
+\noindent
+\textbf{Problem:} Account A has a balance of $-\$40$, and Account B has $-\$15$. Compare their values using an inequality, and explain who has more debt.
+
+\medskip
+\noindent
+\textbf{Solution:} \\
+1) Compare the values: $-40 < -15$. \\
+2) Compare the absolute values to find the magnitude of debt: $|-40| = 40$ and $|-15| = 15$. Since $40 > 15$, Account A has a larger absolute debt. \\
+3) Answer: Account A has a lower balance ($-40 < -15$), which means they owe more money (\$40 debt vs. \$15 debt).
+\end{tcolorbox}
 
 \vspace{4mm}
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 1
 % ==========================================================
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 1: Debts and Absolute Values}
 
 \medskip
@@ -97,12 +108,45 @@
 
 \vspace{2cm}
 \end{tcolorbox}
+
 \newpage
+
+% ==========================================================
+% SECTION 2: OPPOSITES AND DISTANCE
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Opposites and Distance on the Number Line}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+1. \textbf{Opposites:} Two numbers that are the same distance from 0 but on opposite sides. The opposite of $x$ is $-x$. The opposite of a negative number is positive: $-(-x) = x$. \\
+2. \textbf{Distance:} Absolute value tells us the distance between a number and 0. To find the distance between a positive number and a negative number, we add their absolute values.
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Worked Example 2: Distance Between Elevations}
+
+\medskip
+\noindent
+\textbf{Problem:} A bird flies at 25 feet above sea level ($+25$), and a fish swims at 10 feet below sea level ($-10$). What is the distance between them?
+
+\medskip
+\noindent
+\textbf{Solution:} \\
+1) Find the absolute values of each position: $|25| = 25$ and $|-10| = 10$. \\
+2) Since they are on opposite sides of sea level (0), add the absolute values to find the total distance: $25 + 10 = 35$ feet. \\
+3) Answer: The distance between the bird and the fish is \textbf{35 feet}.
+\end{tcolorbox}
+
+\vspace{4mm}
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 2
 % ==========================================================
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 2: Inequalities and Magnitudes}
 
 \medskip
@@ -110,12 +154,54 @@
 \noindent
 \textbf{a) If $a < b$ and both $a$ and $b$ are negative numbers, what can you say about $|a|$ and $|b|$? Draw a number line to justify your answer.}
 
-\vspace{2cm}
+\vspace{2.5cm}
 
 \noindent
 \textbf{b) Find all integers $x$ such that $|x| < 4$ and $x > -2$.}
 
 \vspace{2cm}
 \end{tcolorbox}
+
 \newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 3
+% ==========================================================
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 3: Real-World Scenarios}
+
+\medskip
+
+\noindent
+\textbf{a) A hiker is at an elevation of $-50$ meters. A climber is at $+120$ meters. Write an inequality comparing their elevations. Then, find the vertical distance between the two people.}
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b) The temperature in City A is $-15^\circ\text{F}$ and in City B is $-8^\circ\text{F}$. Write an inequality comparing their temperatures. Which city is experiencing a colder climate? Use absolute value to support your reasoning.}
+
+\vspace{2.5cm}
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 4
+% ==========================================================
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 4: Absolute Value Logic}
+
+\medskip
+
+\noindent
+\textbf{a) Let $x$ be an integer. If $|x| = 5$, what are the possible values of $x$? How do these values represent the concept of opposites?}
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b) Can the absolute value of a number ever be less than the number itself? Give an example or explain why this is impossible.}
+
+\vspace{2.5cm}
+\end{tcolorbox}
+
 \end{document}

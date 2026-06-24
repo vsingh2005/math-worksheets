@@ -12,17 +12,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{enumitem}
-\usepackage{geometry}
-\usepackage{tikz}
-\usepackage{needspace}
-\usepackage{multicol}
-
-\usetikzlibrary{arrows.meta, calc}
-
-% ----------------------------------------------------------
-% PAGE SETUP
-% ----------------------------------------------------------
-\usepackage{times}
 \geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
 
 % ----------------------------------------------------------
@@ -35,17 +24,11 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\small\bfseries Statistical Questions \& Data Distributions}
-\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
-{kss.png}}}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{6.21.3}
 
 \renewcommand{\footrulewidth}{0.2pt}
-
-% ----------------------------------------------------------
-% THEME COLOR
-% ----------------------------------------------------------
-\definecolor{customteal}{HTML}{2fbdb9}
 
 % ----------------------------------------------------------
 % HELPER MACROS
@@ -64,34 +47,108 @@
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
 % ==========================================================
-% MASTERY: COMPLEX PROBLEMS
+% PART A: DESIGNING A SURVEY \& DISTRIBUTION ANALYSIS
 % ==========================================================
-\begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Mastery: Challenging Scenarios}}
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part A: Designing a Survey \& Distribution Analysis}}
 \end{tcolorbox}
 
 \vspace{3mm}
-\noindent
-Apply your knowledge to solve these advanced, multi-step problems.
-
-\vspace{4mm}
-
-\begin{tcolorbox}[colback=customteal!20]
-\large\textcolor{black}{\textbf{Designing a Survey and Distribution Analysis}}
-\end{tcolorbox}
 
 \noindent
-Solve the problems.
+Solve the survey planning problem. Show all steps and justify your choices.
 
-\vspace{3mm}
-\begin{enumerate}[itemsep=1.5cm, leftmargin=0.6cm]
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.2cm, leftmargin=0.6cm]
 \item You want to survey students about the amount of sleep they get on school nights. \\
-\textbf{a)} Write a statistical question you could use for this survey. \blanklong \\
-\textbf{b)} Give a set of hypothetical data for 10 students that shows a symmetric distribution around 8 hours. \blanklong \\
-\textbf{c)} Give a set of data for 10 students that is skewed right (meaning a few students get way more sleep). \blanklong
-\vspace{1.5cm}
-\item A dot plot of weekly homework hours for Class A shows dots distributed evenly from 2 to 6 hours. Class B has dot plot showing most students do 5 hours, with one student doing 1 hour and one student doing 10 hours. Compare the spread and variability of homework hours in the two classes.
-\vspace{1.5cm}
+\textbf{a)} Write a statistical question you could use for this survey. \\
+\blanklong \\
+\textbf{b)} Give a set of hypothetical data for 10 students that shows a symmetric distribution around 8 hours of sleep. \\
+\blanklong \\
+\textbf{c)} Give a set of hypothetical data for 10 students that is skewed right (meaning most get around 6-7 hours, but a few get much more). \\
+\blanklong
 \end{enumerate}
+
 \newpage
+
+% ==========================================================
+% PART B: HOMEWORK HOURS DATA COMPARISON
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part B: Homework Hours Data Comparison}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Compare the homework distributions of the two classes described below.
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item A dot plot of weekly homework hours for Class A shows dots distributed evenly from $2$ to $6$ hours. \\
+Class B has a dot plot showing most students do $5$ hours, with one student doing $1$ hour and one student doing $10$ hours. \\
+\textbf{a)} Determine the range for each class. \\
+\blanklong \\
+\textbf{b)} Compare the spread and variability of homework hours in the two classes. Which class has more predictable homework times? \\
+\blanklong \\
+\textbf{c)} Describe the distribution shape of both classes. \\
+\blanklong
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART C: OUTLIER ANALYSIS \& MEASURES OF SPREAD
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part C: Outlier Analysis \& Measures of Spread}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Answer the questions on how outliers change statistical properties.
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item Consider the dataset of phone screen times (in hours) of 8 students: $1, 2, 2, 2.5, 3, 3, 3.5, 4$. \\
+\textbf{a)} Draw a representation of the distribution shape. \\
+\blanklong \\
+\textbf{b)} A new student joins and has a daily screen time of $12$ hours. Add this to the dataset. What is the new range? \\
+\blanklong \\
+\textbf{c)} Explain how this new outlier affects the shape of the distribution. Is it still symmetric or has it skewed? \\
+\blanklong
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART D: REAL-WORLD METRIC TRACKING
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part D: Real-World Metric Tracking}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Solve the real-world tracking problem.
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item A manufacturing plant measures the life of two different brands of light bulbs in hours. \\
+Brand X: $1000, 1010, 1020, 1020, 1030, 1040$. \\
+Brand Y: $800, 950, 1000, 1050, 1100, 1250$. \\
+\textbf{a)} Find the range of bulb life for both brands. \\
+\blanklong \\
+\textbf{b)} Which brand of light bulb has higher variability? Explain why higher variability might be undesirable for a customer. \\
+\blanklong \\
+\textbf{c)} Describe the shape of the data distribution for Brand X (Symmetric, Skewed Left, or Skewed Right). \\
+\blanklong
+\end{enumerate}
+
 \end{document}

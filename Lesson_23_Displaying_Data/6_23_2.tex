@@ -12,17 +12,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{enumitem}
-\usepackage{geometry}
-\usepackage{tikz}
-\usepackage{needspace}
-\usepackage{multicol}
-
-\usetikzlibrary{arrows.meta, calc}
-
-% ----------------------------------------------------------
-% PAGE SETUP
-% ----------------------------------------------------------
-\usepackage{times}
 \geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
 
 % ----------------------------------------------------------
@@ -35,17 +24,11 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\small\bfseries Displaying Data: Histograms \& Box Plots}
-\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
-{kss.png}}}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{6.23.2}
 
 \renewcommand{\footrulewidth}{0.2pt}
-
-% ----------------------------------------------------------
-% THEME COLOR
-% ----------------------------------------------------------
-\definecolor{customteal}{HTML}{2fbdb9}
 
 % ----------------------------------------------------------
 % HELPER MACROS
@@ -64,51 +47,125 @@
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
 % ==========================================================
-% QUICK REVIEW
+% PART A: BOX PLOT CALCULATIONS
 % ==========================================================
-\begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Quick Review: Displaying Data: Histograms \& Box Plots}}
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part A: Box Plot Calculations}}
 \end{tcolorbox}
 
 \vspace{3mm}
-\noindent
-Let's practice intermediate calculations and word problems. Keep steps neat!
-
-\vspace{4mm}
-
-\begin{tcolorbox}[colback=customteal!20]
-\large\textcolor{black}{\textbf{Box Plot Calculations}}
-\end{tcolorbox}
 
 \noindent
-Find the 5-number summary for this data set: 12, 5, 8, 20, 15, 14, 18, 10.
+Calculate the 5-number summary and IQR for the following dataset.
 
-\vspace{3mm}
-\begin{multicols}{2}
-\begin{enumerate}[itemsep=1cm, leftmargin=0.6cm]
-\item \text{Sorted Data: } \blanklong
-\item \text{Min} = \blank \quad Q_1 = \blank
-\item \text{Median} = \blank \quad Q_3 = \blank
-\item \text{Max} = \blank \quad \text{IQR} = \blank
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.0cm, leftmargin=0.6cm]
+\item Raw data: $12, 5, 8, 20, 15, 14, 18, 10$. \\
+Sorted Data: \blanklong
+\vspace{0.5cm}
+
+\item Find the Minimum and Maximum. \\
+Min = \blankshorter \quad Max = \blankshorter
+
+\item Find the Median. \\
+Median = \blankshorter
+
+\item Find the Quartiles $Q_1$ and $Q_3$. \\
+$Q_1$ = \blankshorter \quad $Q_3$ = \blankshorter
+
+\item Calculate the IQR. \\
+IQR = \blankshorter
 \end{enumerate}
-\end{multicols}
+
 \newpage
 
-\begin{tcolorbox}[colback=customteal!20]
-\large\textcolor{black}{\textbf{Frequency Tables}}
+% ==========================================================
+% PART B: FREQUENCY TABLES
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part B: Frequency Tables}}
 \end{tcolorbox}
 
+\vspace{3mm}
+
 \noindent
-Fill in the frequencies from this list of data: 4, 8, 12, 15, 7, 9, 14, 18, 22, 11, 13, 6.
+Count and write the frequency of values falling within each interval. \\
+Data: $4, 8, 12, 15, 7, 9, 14, 18, 22, 11, 13, 6$.
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.2cm, leftmargin=0.6cm]
+\item Interval $0\text{--}9$: \\
+Frequency = \blankshorter
+
+\item Interval $10\text{--}19$: \\
+Frequency = \blankshorter
+
+\item Interval $20\text{--}29$: \\
+Frequency = \blankshorter
+
+\item What is the total frequency of all three intervals? \\
+Total Frequency = \blankshorter
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART C: ANALYZING A HISTOGRAM
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part C: Analyzing a Histogram}}
+\end{tcolorbox}
 
 \vspace{3mm}
-\begin{enumerate}[itemsep=1.2cm, leftmargin=0.6cm]
-\item \text{Interval 0-9: Frequency} = \blank
-\vspace{1cm}
-\item \text{Interval 10-19: Frequency} = \blank
-\vspace{1cm}
-\item \text{Interval 20-29: Frequency} = \blank
-\vspace{1cm}
+
+\noindent
+A researcher surveys the runtime (in minutes) of 20 movies and displays it in a histogram: \\
+- $80\text{--}89$ min: 3 movies \\
+- $90\text{--}99$ min: 8 movies \\
+- $100\text{--}109$ min: 6 movies \\
+- $110\text{--}119$ min: 3 movies
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item What percentage of movies run for $100$ minutes or more? \\
+\blanklong
+
+\item Describe the overall shape of this distribution (symmetric, skewed left, skewed right). \\
+\blanklong
+
+\item If a movie runs for $120$ minutes, which bin would it go in? (Recall: bins must not overlap). \\
+\blanklong
 \end{enumerate}
+
 \newpage
+
+% ==========================================================
+% PART D: COMPARING SPREAD AND BOX SIZE
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part D: Comparing Spread and Box Size}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Solve the comparison problems.
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item Box Plot X: Min = 10, $Q_1$ = 20, Median = 25, $Q_3$ = 30, Max = 45. \\
+Box Plot Y: Min = 5, $Q_1$ = 15, Median = 30, $Q_3$ = 40, Max = 50. \\
+Which box plot represents a dataset with a larger middle $50\%$ spread? Support your answer with calculations.
+\vspace{1cm}
+
+\item In Box Plot X, what is the range? What is the IQR? Which measurement is smaller?
+\vspace{1.5cm}
+
+\item Explain why a box plot cannot tell you if there are duplicate values in the dataset.
+\end{enumerate}
+
 \end{document}

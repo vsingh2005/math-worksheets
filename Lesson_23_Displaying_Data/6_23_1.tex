@@ -35,17 +35,11 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\small\bfseries Displaying Data: Histograms \& Box Plots}
-\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
-{kss.png}}}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{6.23.1}
 
 \renewcommand{\footrulewidth}{0.2pt}
-
-% ----------------------------------------------------------
-% THEME COLOR
-% ----------------------------------------------------------
-\definecolor{customteal}{HTML}{2fbdb9}
 
 % ----------------------------------------------------------
 % HELPER MACROS
@@ -64,49 +58,133 @@
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
 % ==========================================================
-% INTRODUCTION — BEGINNING
+% PART A: FINDING QUANTILES \& IQR
 % ==========================================================
-\begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Beginning: Basic Skills}}
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part A: Finding Quartiles \& IQR}}
 \end{tcolorbox}
 
 \vspace{3mm}
-
-\begin{tcolorbox}[colback=customteal!20]
-\large\textcolor{black}{\textbf{Finding Quartiles}}
-\end{tcolorbox}
 
 \noindent
-For the sorted data set: 3, 5, 6, 8, 9, 11, 14. Find each value.
+For the sorted dataset: $3, 5, 6, 8, 9, 11, 14$. Find each value.
 
-\vspace{3mm}
-\begin{multicols}{2}
-\begin{enumerate}[itemsep=1cm, leftmargin=0.6cm]
-\item \text{Minimum} = \blank
-\item Q_1 \text{ (Lower Quartile)} = \blank
-\item \text{Median} = \blank
-\item Q_3 \text{ (Upper Quartile)} = \blank
-\item \text{Maximum} = \blank
-\item \text{IQR} = \blank
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.0cm, leftmargin=0.6cm]
+\item Minimum = \blank \quad Maximum = \blank
+\vspace{0.5cm}
+
+\item Median ($Q_2$) = \blank
+\vspace{0.5cm}
+
+\item Lower Quartile ($Q_1$) = \blank
+\vspace{0.5cm}
+
+\item Upper Quartile ($Q_3$) = \blank
+\vspace{0.5cm}
+
+\item Interquartile Range (IQR) = \blank
 \end{enumerate}
-\end{multicols}
+
 \newpage
 
-\begin{tcolorbox}[colback=customteal!20]
-\large\textcolor{black}{\textbf{Reading Histograms}}
+% ==========================================================
+% PART B: READING HISTOGRAMS
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part B: Reading Histograms}}
 \end{tcolorbox}
 
+\vspace{3mm}
+
 \noindent
-An interval chart shows quiz score frequencies: 0-5 scores (2 students), 6-10 scores (8 students), 11-15 scores (12 students), 16-20 scores (4 students).
+An interval chart shows quiz score frequencies: \\
+- $0\text{--}5$ scores: 2 students \\
+- $6\text{--}10$ scores: 8 students \\
+- $11\text{--}15$ scores: 12 students \\
+- $16\text{--}20$ scores: 4 students
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.2cm, leftmargin=0.6cm]
+\item How many total students took the quiz? \\
+\blanklong
+
+\item Which interval has the highest frequency? \\
+\blanklong
+
+\item How many students scored 11 or higher? \\
+\blanklong
+
+\item Can we tell from this data if any student scored exactly 15? Explain why or why not. \\
+\blanklong
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART C: CONSTRUCTING FREQUENCY TABLES
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part C: Constructing Frequency Tables}}
+\end{tcolorbox}
 
 \vspace{3mm}
-\begin{multicols}{2}
-\begin{enumerate}[itemsep=1cm, leftmargin=0.6cm]
-\item \text{How many total students took the quiz?} \rightarrow \blank
-\item \text{Which interval has the highest frequency?} \rightarrow \blank
-\item \text{How many students scored 11 or higher?} \rightarrow \blank
-\item \text{Can we tell if any student scored exactly 15?} \rightarrow \blank
+
+\noindent
+Organize the raw data into the frequency table. \\
+Raw data (daily step counts in thousands): $3, 8, 12, 14, 5, 7, 19, 11, 15, 6, 9, 13$.
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item Complete the table:
+\begin{center}
+\begin{tabular}{|l|c|r|}
+\hline
+\textbf{Steps Interval} & \textbf{Tally} & \textbf{Frequency} \\ \hline
+$0\text{--}4$ thousand & & \blank \\ \hline
+$5\text{--}9$ thousand & & \blank \\ \hline
+$10\text{--}14$ thousand & & \blank \\ \hline
+$15\text{--}19$ thousand & & \blank \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{1.0cm}
+
+\item What is the most common interval? \\
+\blanklong
+
+\item What percentage of days did the person walk $10$ thousand or more steps? \\
+\blanklong
 \end{enumerate}
-\end{multicols}
+
 \newpage
+
+% ==========================================================
+% PART D: BOX PLOT QUARTILES \& PERCENTAGES
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part D: Box Plot Quartiles \& Percentages}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Understand the division of data in a box plot.
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item A box plot divides a dataset into four equal sections. What percentage of the data lies: \\
+\textbf{a)} Within the box ($Q_1$ to $Q_3$)? \blank \\
+\textbf{b)} Above the median? \blank \\
+\textbf{c)} Below the lower quartile ($Q_1$)? \blank
+
+\item A box plot representing math test percentages has $Q_1 = 60\%$, Median $= 75\%$, $Q_3 = 85\%$. \\
+\textbf{a)} What percentage of students scored above $60\%$? \blanklong \\
+\textbf{b)} What percentage of students scored between $60\%$ and $85\%$? \blanklong
+\end{enumerate}
+
 \end{document}

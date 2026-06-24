@@ -35,17 +35,11 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\small\bfseries Managing Money: Budgets, Percents \& Discounts}
-\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
-{kss.png}}}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{6.24.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
-
-% ----------------------------------------------------------
-% THEME COLOR
-% ----------------------------------------------------------
-\definecolor{customteal}{HTML}{2fbdb9}
 
 % ----------------------------------------------------------
 % HELPER MACROS
@@ -66,7 +60,7 @@
 % ==========================================================
 % SECTION 1: FINANCIAL LITERACY: BUDGETS, PERCENTS, AND DISCOUNTS
 % ==========================================================
-\begin{tcolorbox}[colback=customteal!20]
+\begin{tcolorbox}[colback=black!10]
     \large\textcolor{black}{\textbf{Financial Literacy: Budgets, Percents, and Discounts (Foundation)}}
 \end{tcolorbox}
 
@@ -75,17 +69,32 @@
 \noindent
 1. \textbf{Budgeting:} A plan to balance income (money earned) and expenses (money spent). \\
 2. \textbf{Percentage Discounts:} To find a discount, convert the percentage to a decimal and multiply by the original price. \\
-- $Discount = Price \times Rate$ \\
-- $Sale \ Price = Original \ Price - Discount$ \\
+- $\text{Discount} = \text{Price} \times \text{Rate}$ \\
+- $\text{Sale Price} = \text{Original Price} - \text{Discount}$ \\
 3. \textbf{Sales Tax:} An additional percentage charged on top of the sale price. \\
-4. \textbf{Simple Interest:} Money earned or paid for borrowing money. $Interest = Principal \times Rate \times Time \ (I = Prt)$.
+4. \textbf{Simple Interest:} Money earned or paid for borrowing money. $\text{Interest} = \text{Principal} \times \text{Rate} \times \text{Time}$ ($I = Prt$).
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Worked Example:}
+
+\medskip
+\noindent
+A book is originally priced at $\$20$. It is on sale for $15\%$ off. If the sales tax is $5\%$, calculate the final price.\\
+\textbf{Solution:}\\
+1) $\text{Discount} = \$20 \times 0.15 = \$3$.\\
+2) $\text{Sale Price} = \$20 - \$3 = \$17$.\\
+3) $\text{Tax} = \$17 \times 0.05 = \$0.85$.\\
+4) $\text{Final Price} = \$17 + \$0.85 = \$17.85$.
+\end{tcolorbox}
 
 \vspace{4mm}
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 1
 % ==========================================================
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 1: Analyzing Discounts and Tax}
 
 \medskip
@@ -93,7 +102,7 @@
 \noindent
 \textbf{a) A jacket originally costs \$80. It is on sale for $25\%$ off. The sales tax is $8\%$. A shopper calculates the final price by subtracting the discount and then adding the tax. Calculate the final price. Show all steps.}
 
-\vspace{2cm}
+\vspace{2.5cm}
 
 \noindent
 \textbf{b) Explain whether applying a $20\%$ discount and then a $10\%$ tax is the same as applying the tax first and then the discount. Provide mathematical proof.}
@@ -105,7 +114,7 @@
 % ==========================================================
 % DEEPER THINKING PROBLEM 2
 % ==========================================================
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 2: Simple Interest Scenarios}
 
 \medskip
@@ -113,12 +122,62 @@
 \noindent
 \textbf{a) You deposit \$500 in a savings account that earns $4\%$ simple interest per year. How much interest will you earn in 3 years? What is the total balance of the account?}
 
-\vspace{2cm}
+\vspace{3.5cm}
 
 \noindent
 \textbf{b) Build a simple monthly budget for a student who earns \$120 doing chores. They want to save $25\%$, spend $50\%$ on entertainment, and $25\%$ on school supplies. Show the dollar amount for each category.}
 
-\vspace{2cm}
+\vspace{3.5cm}
 \end{tcolorbox}
 \newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 3
+% ==========================================================
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 3: Budgeting with Surplus}
+
+\medskip
+
+\noindent
+\textbf{a) A teenager has a part-time job earning $\$400$ a month. They must budget for fixed expenses: phone bill $(\$50)$ and bus pass $(\$30)$. They want to save $30\%$ of their income. How much money remains for variable spending (food, fun)?}
+
+\vspace{3cm}
+
+\noindent
+\textbf{b) If their phone bill increases by $20\%$ next month, what is the new phone expense, and how does it affect their remaining variable spending amount?}
+
+\vspace{3cm}
+
+\noindent
+\textbf{c) What percentage of their total monthly income is spent on the bus pass?}
+
+\vspace{2.5cm}
+\end{tcolorbox}
+\newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 4
+% ==========================================================
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 4: Multiple Discounts}
+
+\medskip
+
+\noindent
+\textbf{a) A department store offers a coupon for ``an additional $10\%$ off the sale price.'' A pair of headphones originally costs $\$120$ and is already marked down by $30\%$. Find the final price using the coupon. Show your calculations.}
+
+\vspace{3cm}
+
+\noindent
+\textbf{b) Is receiving $30\%$ off and then another $10\%$ off the same as receiving a single $40\%$ discount? Show mathematical proofs for both scenarios on the $\$120$ item.}
+
+\vspace{3.0cm}
+
+\noindent
+\textbf{c) Explain in words why successive discounts do not add up to their sum percentage.}
+
+\vspace{2.5cm}
+\end{tcolorbox}
+
 \end{document}

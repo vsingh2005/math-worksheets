@@ -35,17 +35,11 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\small\bfseries Numerical Expressions \& Exponents}
-\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
-{kss.png}}}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{6.11.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
-
-% ----------------------------------------------------------
-% THEME COLOR
-% ----------------------------------------------------------
-\definecolor{customteal}{HTML}{2fbdb9}
 
 % ----------------------------------------------------------
 % HELPER MACROS
@@ -66,7 +60,7 @@
 % ==========================================================
 % SECTION 1: EXPONENTS AND THE ORDER OF OPERATIONS
 % ==========================================================
-\begin{tcolorbox}[colback=customteal!20]
+\begin{tcolorbox}[colback=black!10]
     \large\textcolor{black}{\textbf{Exponents and the Order of Operations (Foundation)}}
 \end{tcolorbox}
 
@@ -75,15 +69,15 @@
 \noindent
 1. \textbf{Exponential Notation:} $b^n = b \times b \times \dots \times b$ ($n$ times). Here, $b$ is the \textbf{base} and $n$ is the \textbf{exponent}. Example: $2^3 = 2 \times 2 \times 2 = 8$. \\
 2. \textbf{Order of Operations (PEMDAS/GEMS):} \\
-- **P**arenthesis / Groupings \\
-- **E**xponents \\
-- **M**ultiplication \& **D**ivision (from left to right) \\
-- **A**ddition \& **S**ubtraction (from left to right)
+- \textbf{P}arenthesis / Groupings \\
+- \textbf{E}xponents \\
+- \textbf{M}ultiplication \& \textbf{D}ivision (from left to right) \\
+- \textbf{A}ddition \& \textbf{S}ubtraction (from left to right)
 
 \vspace{4mm}
 
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Worked Example:}
+\textbf{Worked Example 1:}
 
 \medskip
 \noindent
@@ -100,7 +94,7 @@ Evaluate the expression: $3 \times 4^2 - (5 + 2 \times 3)$\\
 % ==========================================================
 % DEEPER THINKING PROBLEM 1
 % ==========================================================
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 1: Exponents and Parentheses Pitfalls}
 
 \medskip
@@ -118,9 +112,43 @@ Evaluate the expression: $3 \times 4^2 - (5 + 2 \times 3)$\\
 \newpage
 
 % ==========================================================
+% SECTION 2: COMPLEX FRACTION EXPRESSIONS
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Complex Fraction Expressions and Order of Operations}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+1. \textbf{Fraction Bars as Grouping Symbols:} A horizontal fraction bar acts as a grouping symbol. You must simplify the entire numerator and the entire denominator before performing the final division. \\
+2. \textbf{Parentheses inside Parentheses:} When nested grouping symbols are used, evaluate from the innermost set to the outermost set.
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Worked Example 2:}
+
+\medskip
+\noindent
+Evaluate the expression: $\dfrac{(5 - 2)^3 + 3}{10 - 2^2}$\\
+\textbf{Solution:} \\
+1) Simplify the Numerator: \\
+- Inside parenthesis: $5 - 2 = 3$. \\
+- Apply exponent: $3^3 = 27$. \\
+- Add: $27 + 3 = 30$. \\
+2) Simplify the Denominator: \\
+- Apply exponent: $2^2 = 4$. \\
+- Subtract: $10 - 4 = 6$. \\
+3) Divide Numerator by Denominator: $\dfrac{30}{6} = 5$.
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
 % DEEPER THINKING PROBLEM 2
 % ==========================================================
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 2: Comparing Exponential Growth}
 
 \medskip
@@ -128,7 +156,7 @@ Evaluate the expression: $3 \times 4^2 - (5 + 2 \times 3)$\\
 \noindent
 \textbf{a) Compare $3^4$ and $4^3$. Which is larger? By how much? Show your calculations.}
 
-\vspace{2cm}
+\vspace{2.5cm}
 
 \noindent
 \textbf{b) Write an expression for the total number of small boxes if there are 3 large crates, each containing 3 boxes, each containing 3 cartons, each containing 3 small boxes. Evaluate it.}
@@ -136,4 +164,44 @@ Evaluate the expression: $3 \times 4^2 - (5 + 2 \times 3)$\\
 \vspace{2cm}
 \end{tcolorbox}
 \newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 3
+% ==========================================================
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 3: Writing Expressions from Verbal Descriptions}
+
+\medskip
+
+\noindent
+\textbf{a) Translate the phrase ``the sum of 4 squared and the quotient of 12 and 3'' into a numerical expression. Evaluate the expression.}
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b) A student is trying to write an expression for ``the product of 5 and the difference between 9 and 2 squared''. They write $5 \times 9 - 2^2$. Explain why this is incorrect, and write the correct expression.}
+
+\vspace{2.5cm}
+\end{tcolorbox}
+\newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 4
+% ==========================================================
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 4: Real-World Formulas and Exponents}
+
+\medskip
+
+\noindent
+\textbf{a) The surface area of a cube with side length $s$ is given by the formula $6s^2$. If a cube has a side length of 5 inches, write a numerical expression for its surface area. Evaluate it.}
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b) A square table has a side length of 4 feet. A larger square table has a side length of 8 feet. Write an expression comparing their areas using exponents. How many times larger is the area of the second table?}
+
+\vspace{2.5cm}
+\end{tcolorbox}
+
 \end{document}

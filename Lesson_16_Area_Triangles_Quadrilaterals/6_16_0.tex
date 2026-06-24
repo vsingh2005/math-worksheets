@@ -35,17 +35,11 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\small\bfseries Area of Triangles \& Quadrilaterals}
-\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
-{kss.png}}}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{6.16.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
-
-% ----------------------------------------------------------
-% THEME COLOR
-% ----------------------------------------------------------
-\definecolor{customteal}{HTML}{2fbdb9}
 
 % ----------------------------------------------------------
 % HELPER MACROS
@@ -64,30 +58,29 @@
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
 % ==========================================================
-% SECTION 1: AREA OF TRIANGLES AND QUADRILATERALS
+% SECTION 1: AREA OF TRIANGLES AND PARALLELOGRAMS
 % ==========================================================
-\begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Area of Triangles and Quadrilaterals (Foundation)}}
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Area of Triangles and Parallelograms (Foundation)}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
 \noindent
-1. \textbf{Parallelogram:} $Area = base \times height = b \times h$ \\
-2. \textbf{Triangle:} $Area = \frac{1}{2} \times base \times height = \frac{1}{2}bh$ \\
-- *Why?* A triangle is exactly half of a parallelogram with the same base and height. \\
-3. \textbf{Trapezoid:} $Area = \frac{1}{2}(base_1 + base_2) \times height = \frac{1}{2}(a+b)h$
+1. \textbf{Parallelogram:} $\text{Area} = \text{base} \times \text{height} = b \times h$. \\
+2. \textbf{Triangle:} $\text{Area} = \frac{1}{2} \times \text{base} \times \text{height} = \frac{1}{2}bh$. \\
+- \textit{Concept:} A triangle is exactly half of a parallelogram with the same base and height.
 
 \vspace{4mm}
 
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Worked Example:}
+\textbf{Worked Example 1:}
 
 \medskip
 \noindent
 Find the area of a triangle with a base of 6 cm and a height of 4 cm.\\
 \textbf{Solution:} \\
-$$Area = \frac{1}{2} \times 6 \times 4 = 12\text{ cm}^2.$$
+$$\text{Area} = \frac{1}{2} \times 6 \times 4 = 12\text{ cm}^2.$$
 \end{tcolorbox}
 
 \vspace{4mm}
@@ -95,7 +88,7 @@ $$Area = \frac{1}{2} \times 6 \times 4 = 12\text{ cm}^2.$$
 % ==========================================================
 % DEEPER THINKING PROBLEM 1
 % ==========================================================
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 1: Deriving the Triangle Formula}
 
 \medskip
@@ -103,7 +96,7 @@ $$Area = \frac{1}{2} \times 6 \times 4 = 12\text{ cm}^2.$$
 \noindent
 \textbf{a) Draw a parallelogram and draw a diagonal. Explain visually why the area of the resulting triangle is half the area of the parallelogram.}
 
-\vspace{2cm}
+\vspace{2.5cm}
 
 \noindent
 \textbf{b) A trapezoid has parallel bases of lengths 6 inches and 10 inches, and a height of 5 inches. Show how you can decompose this trapezoid into a rectangle and two triangles to find its area. Compare your result with the formula.}
@@ -113,9 +106,37 @@ $$Area = \frac{1}{2} \times 6 \times 4 = 12\text{ cm}^2.$$
 \newpage
 
 % ==========================================================
+% SECTION 2: AREA OF TRAPEZOIDS AND POLYGONS
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Area of Trapezoids and Decomposing Polygons (Foundation)}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+1. \textbf{Trapezoid:} $\text{Area} = \frac{1}{2}(b_1 + b_2)h$. \\
+- \textit{Concept:} The area is the average of the two parallel bases multiplied by the height. \\
+2. \textbf{Decomposing Polygons:} Any complex polygon can be split (decomposed) into triangles and rectangles to calculate its total area.
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Worked Example 2:}
+
+\medskip
+\noindent
+Find the area of a trapezoid with parallel bases of 8 cm and 12 cm, and a height of 5 cm.\\
+\textbf{Solution:} \\
+$$\text{Area} = \frac{1}{2}(8 + 12) \times 5 = \frac{1}{2}(20) \times 5 = 10 \times 5 = 50\text{ cm}^2.$$
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
 % DEEPER THINKING PROBLEM 2
 % ==========================================================
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 2: Finding Missing Dimensions}
 
 \medskip
@@ -123,7 +144,7 @@ $$Area = \frac{1}{2} \times 6 \times 4 = 12\text{ cm}^2.$$
 \noindent
 \textbf{a) A triangle has an area of 24 square inches. If its base is 8 inches, write an equation to find its height $h$ and solve it.}
 
-\vspace{2cm}
+\vspace{2.5cm}
 
 \noindent
 \textbf{b) A parallelogram has an area of 60 square centimeters. If its height is 12 cm, find its base.}
@@ -131,4 +152,44 @@ $$Area = \frac{1}{2} \times 6 \times 4 = 12\text{ cm}^2.$$
 \vspace{2cm}
 \end{tcolorbox}
 \newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 3
+% ==========================================================
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 3: Area of Rhombuses and Kites}
+
+\medskip
+
+\noindent
+\textbf{a) A rhombus has diagonals of lengths $d_1 = 8$ cm and $d_2 = 10$ cm. Decompose the rhombus into two triangles along one of its diagonals, and prove that the total area is given by the formula $\text{Area} = \frac{1}{2}d_1 d_2$.}
+
+\vspace{3cm}
+
+\noindent
+\textbf{b) Calculate the area of a kite with diagonals of lengths 12 inches and 16 inches.}
+
+\vspace{2cm}
+\end{tcolorbox}
+\newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 4
+% ==========================================================
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 4: Real-World Design Constraints}
+
+\medskip
+
+\noindent
+\textbf{a) An accent wall is in the shape of a trapezoid with parallel bases of 10 feet and 14 feet, and a height of 8 feet. Find the total area of the wall in square feet.}
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b) If one can of paint covers 50 square feet and costs \$18.50, write a numerical expression to calculate the total cost of paint needed to paint the wall. How many cans must you buy, and what is the total cost?}
+
+\vspace{2.5cm}
+\end{tcolorbox}
+
 \end{document}

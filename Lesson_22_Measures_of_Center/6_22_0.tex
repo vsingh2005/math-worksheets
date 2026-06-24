@@ -35,17 +35,11 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\small\bfseries Measures of Center: Mean, Median \& Mode}
-\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
-{kss.png}}}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{6.22.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
-
-% ----------------------------------------------------------
-% THEME COLOR
-% ----------------------------------------------------------
-\definecolor{customteal}{HTML}{2fbdb9}
 
 % ----------------------------------------------------------
 % HELPER MACROS
@@ -66,7 +60,7 @@
 % ==========================================================
 % SECTION 1: MEAN, MEDIAN, MODE, AND RANGE
 % ==========================================================
-\begin{tcolorbox}[colback=customteal!20]
+\begin{tcolorbox}[colback=black!10]
     \large\textcolor{black}{\textbf{Mean, Median, Mode, and Range (Foundation)}}
 \end{tcolorbox}
 
@@ -81,10 +75,23 @@
 
 \vspace{4mm}
 
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Worked Example:}
+
+\medskip
+\noindent
+Find the mean and median of the dataset: $3, 4, 4, 5, 9$.\\
+\textbf{Solution:}\\
+- Mean: $\frac{3 + 4 + 4 + 5 + 9}{5} = \frac{25}{5} = 5.$\\
+- Median: The numbers are already in order: $3, 4, \mathbf{4}, 5, 9$. The middle number is $4$.
+\end{tcolorbox}
+
+\vspace{4mm}
+
 % ==========================================================
 % DEEPER THINKING PROBLEM 1
 % ==========================================================
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 1: Outliers and Centers}
 
 \medskip
@@ -92,7 +99,7 @@
 \noindent
 \textbf{a) A small company has 5 employees with salaries: \$30,000, \$32,000, \$35,000, \$38,000, and \$150,000 (the owner). Calculate the mean and median salary. Which measure better represents the salary of a typical employee? Explain why.}
 
-\vspace{2cm}
+\vspace{2.5cm}
 
 \noindent
 \textbf{b) Create a data set of 6 numbers with a mean of 10 and a median of 8. Show your verification steps.}
@@ -104,7 +111,7 @@
 % ==========================================================
 % DEEPER THINKING PROBLEM 2
 % ==========================================================
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 2: Mean as Balance Point}
 
 \medskip
@@ -112,12 +119,62 @@
 \noindent
 \textbf{a) A student has test scores of 85, 90, and 88. What score do they need on the 4th test to have a mean score of 90?}
 
-\vspace{2cm}
+\vspace{3cm}
 
 \noindent
 \textbf{b) Can a data set have more than one mode? Can it have no mode? Provide examples for both situations.}
 
-\vspace{2cm}
+\vspace{3cm}
 \end{tcolorbox}
 \newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 3
+% ==========================================================
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 3: Shifting Data Values}
+
+\medskip
+
+\noindent
+\textbf{a) Consider the dataset: $5, 7, 8, 12, 18$. Calculate the mean and median. If we add $3$ to every single number in the dataset, what are the new mean and median? Explain the pattern you observe.}
+
+\vspace{3cm}
+
+\noindent
+\textbf{b) If we multiply every number in the dataset ($5, 7, 8, 12, 18$) by $2$, what will be the new mean and median? Show your work.}
+
+\vspace{3cm}
+
+\noindent
+\textbf{c) Can the mean of a dataset be a number that is not actually in the dataset? Provide a simple example to support your answer.}
+
+\vspace{2.5cm}
+\end{tcolorbox}
+\newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 4
+% ==========================================================
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 4: Designing Custom Datasets}
+
+\medskip
+
+\noindent
+\textbf{a) Design a dataset of $5$ non-negative integers where the mean is $12$, the median is $10$, and the mode is $8$. Verify your answer by showing all three calculations.}
+
+\vspace{3cm}
+
+\noindent
+\textbf{b) Design a dataset of $5$ integers where the mean is $15$ and the range is $20$. Show your numbers and verify the mean and range.}
+
+\vspace{3cm}
+
+\noindent
+\textbf{c) Is it possible for a dataset to have a mean that is smaller than all but one of the numbers in the dataset? If yes, provide an example; if no, explain why.}
+
+\vspace{2.5cm}
+\end{tcolorbox}
+
 \end{document}

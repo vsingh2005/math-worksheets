@@ -35,17 +35,11 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\small\bfseries Displaying Data: Histograms \& Box Plots}
-\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
-{kss.png}}}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{6.23.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
-
-% ----------------------------------------------------------
-% THEME COLOR
-% ----------------------------------------------------------
-\definecolor{customteal}{HTML}{2fbdb9}
 
 % ----------------------------------------------------------
 % HELPER MACROS
@@ -66,28 +60,43 @@
 % ==========================================================
 % SECTION 1: HISTOGRAMS AND BOX-AND-WHISKER PLOTS
 % ==========================================================
-\begin{tcolorbox}[colback=customteal!20]
+\begin{tcolorbox}[colback=black!10]
     \large\textcolor{black}{\textbf{Histograms and Box-and-Whisker Plots (Foundation)}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
 \noindent
-1. \textbf{Histogram:} A bar graph where data is grouped into intervals (bins) of equal size. The height of each bar represents the frequency of data in that interval. Bins must not overlap. \\
+1. \textbf{Histogram:} A bar graph where data is grouped into intervals (bins) of equal size. Bins must not overlap. The height of each bar represents the frequency. \\
 2. \textbf{Box Plot (Box-and-Whisker):} Summarizes data using a 5-number summary: \\
-- **Minimum:** The smallest value. \\
-- **Lower Quartile ($Q_1$):** The median of the lower half of data. \\
-- **Median ($Q_2$):** The middle value of the data. \\
-- **Upper Quartile ($Q_3$):** The median of the upper half of data. \\
-- **Maximum:** The largest value. \\
+- \textbf{Minimum:} The smallest value. \\
+- \textbf{Lower Quartile ($Q_1$):} The median of the lower half of data. \\
+- \textbf{Median ($Q_2$):} The middle value of the data. \\
+- \textbf{Upper Quartile ($Q_3$):} The median of the upper half of data. \\
+- \textbf{Maximum:} The largest value. \\
 3. \textbf{Interquartile Range (IQR):} $Q_3 - Q_1$ (represents the middle $50\%$ of the data).
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Worked Example:}
+
+\medskip
+\noindent
+Find the 5-number summary of: $2, 4, 5, 6, 8, 9, 10$.\\
+\textbf{Solution:}\\
+- Median ($Q_2$) is the middle value: $6$.\\
+- Lower half is $\{2, 4, 5\}$, so $Q_1 = 4$.\\
+- Upper half is $\{8, 9, 10\}$, so $Q_3 = 9$.\\
+- Min $= 2$, Max $= 10$. IQR $= 9 - 4 = 5$.
+\end{tcolorbox}
 
 \vspace{4mm}
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 1
 % ==========================================================
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 1: Constructing the 5-Number Summary}
 
 \medskip
@@ -95,7 +104,7 @@
 \noindent
 \textbf{a) A list of test scores is: 65, 70, 75, 80, 85, 90, 95, 100. Find the 5-number summary (Min, $Q_1$, Median, $Q_3$, Max) and calculate the IQR. Explain your process.}
 
-\vspace{2cm}
+\vspace{2.5cm}
 
 \noindent
 \textbf{b) Describe the difference between a bar chart and a histogram. Can you find the exact values of the individual data points from a histogram? Explain.}
@@ -107,7 +116,7 @@
 % ==========================================================
 % DEEPER THINKING PROBLEM 2
 % ==========================================================
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 2: Box Plot Interpretations}
 
 \medskip
@@ -115,12 +124,62 @@
 \noindent
 \textbf{a) A box plot has a very long right whisker and a short left whisker. What does this tell you about the shape and spread of the data distribution?}
 
-\vspace{2cm}
+\vspace{3cm}
 
 \noindent
 \textbf{b) If a data set has 12 values, how many values fall within the box of its box plot? Explain.}
 
-\vspace{2cm}
+\vspace{3cm}
 \end{tcolorbox}
 \newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 3
+% ==========================================================
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 3: Comparing Visual Summaries}
+
+\medskip
+
+\noindent
+\textbf{a) Explain why a school counselor might prefer to use a box plot rather than a histogram to compare the exam scores of two different grade levels.}
+
+\vspace{3cm}
+
+\noindent
+\textbf{b) A researcher notices that a dataset has an outlier that is extremely high. Explain how this outlier will affect the box plot's whiskers and the box itself. Will it change the IQR?}
+
+\vspace{3cm}
+
+\noindent
+\textbf{c) What percentage of the data points always lie between the minimum value and the median in a box plot? Does this change if the data is skewed?}
+
+\vspace{2.5cm}
+\end{tcolorbox}
+\newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 4
+% ==========================================================
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 4: Analyzing Outliers via IQR}
+
+\medskip
+
+\noindent
+\textbf{a) A standard math rule defines an outlier as any value that is more than $1.5 \times \text{IQR}$ below $Q_1$ or above $Q_3$. If a dataset has $Q_1 = 20$ and $Q_3 = 30$, what is the IQR? What are the boundaries for a value to be considered an outlier?}
+
+\vspace{3cm}
+
+\noindent
+\textbf{b) If a student scored $5$ points in the dataset described above, is their score an outlier according to the formula? Show your work.}
+
+\vspace{3cm}
+
+\noindent
+\textbf{c) Explain why the IQR is considered a more stable measure of spread than the range when outliers are present.}
+
+\vspace{2.5cm}
+\end{tcolorbox}
+
 \end{document}

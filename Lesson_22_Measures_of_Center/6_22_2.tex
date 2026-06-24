@@ -12,17 +12,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{enumitem}
-\usepackage{geometry}
-\usepackage{tikz}
-\usepackage{needspace}
-\usepackage{multicol}
-
-\usetikzlibrary{arrows.meta, calc}
-
-% ----------------------------------------------------------
-% PAGE SETUP
-% ----------------------------------------------------------
-\usepackage{times}
 \geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
 
 % ----------------------------------------------------------
@@ -35,17 +24,11 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\small\bfseries Measures of Center: Mean, Median \& Mode}
-\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
-{kss.png}}}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{6.22.2}
 
 \renewcommand{\footrulewidth}{0.2pt}
-
-% ----------------------------------------------------------
-% THEME COLOR
-% ----------------------------------------------------------
-\definecolor{customteal}{HTML}{2fbdb9}
 
 % ----------------------------------------------------------
 % HELPER MACROS
@@ -64,49 +47,128 @@
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
 % ==========================================================
-% QUICK REVIEW
+% PART A: CHOOSING THE BEST MEASURE OF CENTER
 % ==========================================================
-\begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Quick Review: Measures of Center: Mean, Median \& Mode}}
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part A: Choosing the Best Measure of Center}}
 \end{tcolorbox}
 
 \vspace{3mm}
-\noindent
-Let's practice intermediate calculations and word problems. Keep steps neat!
-
-\vspace{4mm}
-
-\begin{tcolorbox}[colback=customteal!20]
-\large\textcolor{black}{\textbf{Choosing the Best Measure of Center}}
-\end{tcolorbox}
 
 \noindent
-Circle the best measure of center for each situation.
+Select the best measure of center for each situation (\textbf{Mean}, \textbf{Median}, or \textbf{Mode}) and justify your choice.
 
-\vspace{3mm}
-\begin{enumerate}[itemsep=1.2cm, leftmargin=0.6cm]
-\item Weekly pocket money: \$5, \$5, \$7, \$6, \$10, \$100. \quad \text{\textbf{Mean}} \quad \text{\textbf{Median}} \quad \text{\textbf{Mode}}
-\vspace{1cm}
-\item Shoe sizes of customers: 6, 7, 7, 7, 8, 9, 10. \quad \text{\textbf{Mean}} \quad \text{\textbf{Median}} \quad \text{\textbf{Mode}}
-\vspace{1cm}
-\item Daily high temperatures in a week: 72, 75, 74, 76, 75. \quad \text{\textbf{Mean}} \quad \text{\textbf{Median}} \quad \text{\textbf{Mode}}
-\vspace{1cm}
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.0cm, leftmargin=0.6cm]
+\item Weekly pocket money of 6 students: $\$5, \$5, \$7, \$6, \$10, \$100$. \\
+Best Measure: \blankshorter \\
+Justification: \blanklong
+
+\item Shoe sizes of customers in a store: $6, 7, 7, 7, 8, 9, 10$. \\
+Best Measure: \blankshorter \\
+Justification: \blanklong
+
+\item Daily high temperatures in a city over a week: $72^\circ, 75^\circ, 74^\circ, 76^\circ, 75^\circ$. \\
+Best Measure: \blankshorter \\
+Justification: \blanklong
+
+\item Favorite colors of 30 students in an art class. \\
+Best Measure: \blankshorter \\
+Justification: \blanklong
 \end{enumerate}
+
 \newpage
 
-\begin{tcolorbox}[colback=customteal!20]
-\large\textcolor{black}{\textbf{Mean Word Problems}}
+% ==========================================================
+% PART B: MEAN WORD PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part B: Mean Word Problems}}
 \end{tcolorbox}
 
+\vspace{3mm}
+
 \noindent
-Solve each problem.
+Solve each word problem. Show all work and steps clearly.
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item A basketball player scores $18, 22, 15,$ and $25$ points in four games. \\
+\textbf{a)} What is their mean score per game? \\
+\blanklong \\
+\textbf{b)} If they want their mean score to be $21$ points after 5 games, how many points must they score in the 5th game? \\
+\blanklong
+
+\item A group of 5 students has heights of $58$ in, $60$ in, $62$ in, $59$ in, and $61$ in. \\
+\textbf{a)} Order the heights from shortest to tallest. \\
+\blanklong \\
+\textbf{b)} Find the median height. \\
+\blanklong
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART C: MEDIANS OF EVEN & ODD DATASETS
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part C: Medians of Even \& Odd Datasets}}
+\end{tcolorbox}
 
 \vspace{3mm}
-\begin{enumerate}[itemsep=1.2cm, leftmargin=0.6cm]
-\item A basketball player scores 18, 22, 15, and 25 points in four games. What is their mean score?
-\vspace{1cm}
-\item A group of 5 students has heights of 58 in, 60 in, 62 in, 59 in, and 61 in. Find the median height.
-\vspace{1cm}
+
+\noindent
+Find the median for each dataset. Note if the dataset size is even or odd.
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item Quiz scores of 7 students: $8, 9, 7, 10, 6, 9, 8$. \\
+Sorted Data: \blanklong \\
+Median = \blankshorter
+
+\item Number of hours spent online by 8 teenagers: $3, 1, 5, 2, 4, 3, 6, 8$. \\
+Sorted Data: \blanklong \\
+Median = \blankshorter
+
+\item Hourly wage of 6 tutors: $\$15, \$25, \$20, \$18, \$30, \$22$. \\
+Sorted Data: \blanklong \\
+Median = \blankshorter
+
+\item Plant growth measurements (in cm) of 5 plants: $1.2, 3.5, 2.1, 4.0, 3.2$. \\
+Sorted Data: \blanklong \\
+Median = \blankshorter
 \end{enumerate}
+
 \newpage
+
+% ==========================================================
+% PART D: REAL-WORLD DATASETS
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part D: Real-world Cost Analysis}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Solve the word problems.
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item A grocery store records the price of a gallon of milk at 6 different local stores: \\
+$$\$3.20, \ \$3.40, \ \$3.50, \ \$3.20, \ \$3.90, \ \$4.10$$
+Calculate the mean, median, and mode prices.
+\vspace{1.5cm}
+
+\item The weights of 5 dogs at a vet clinic are: $12\text{ lbs}, 45\text{ lbs}, 15\text{ lbs}, 12\text{ lbs},$ and $16\text{ lbs}$. \\
+\textbf{a)} Calculate the mean and median dog weight. \\
+\blanklong \\
+\textbf{b)} Which value changes more if a $120\text{-lb}$ Great Dane enters the clinic? \\
+\blanklong
+\end{enumerate}
+
 \end{document}

@@ -10,19 +10,6 @@
 \usepackage{amsmath, amssymb}
 \usepackage{fancyhdr}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{enumitem}
-\usepackage{geometry}
-\usepackage{tikz}
-\usepackage{needspace}
-\usepackage{multicol}
-
-\usetikzlibrary{arrows.meta, calc}
-
-% ----------------------------------------------------------
-% PAGE SETUP
-% ----------------------------------------------------------
-\usepackage{times}
 \geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
 
 % ----------------------------------------------------------
@@ -35,17 +22,11 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\small\bfseries Displaying Data: Histograms \& Box Plots}
-\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
-{kss.png}}}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{6.23.3}
 
 \renewcommand{\footrulewidth}{0.2pt}
-
-% ----------------------------------------------------------
-% THEME COLOR
-% ----------------------------------------------------------
-\definecolor{customteal}{HTML}{2fbdb9}
 
 % ----------------------------------------------------------
 % HELPER MACROS
@@ -64,36 +45,123 @@
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
 % ==========================================================
-% MASTERY: COMPLEX PROBLEMS
+% PART A: ANALYZING AND COMPARING DISTRIBUTIONS
 % ==========================================================
-\begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Mastery: Challenging Scenarios}}
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part A: Analyzing and Comparing Distributions}}
 \end{tcolorbox}
 
 \vspace{3mm}
-\noindent
-Apply your knowledge to solve these advanced, multi-step problems.
-
-\vspace{4mm}
-
-\begin{tcolorbox}[colback=customteal!20]
-\large\textcolor{black}{\textbf{Analyzing and Comparing Distributions}}
-\end{tcolorbox}
 
 \noindent
-Solve the problems. Show all work.
+Solve the basketball heights comparisons. Show all calculations.
 
-\vspace{3mm}
-\begin{enumerate}[itemsep=1.5cm, leftmargin=0.6cm]
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.2cm, leftmargin=0.6cm]
 \item The box plots below represent the heights (in inches) of players on two basketball teams. \\
 - Team A: Min = 68, $Q_1$ = 70, Med = 74, $Q_3$ = 76, Max = 80 \\
 - Team B: Min = 66, $Q_1$ = 72, Med = 73, $Q_3$ = 78, Max = 82 \\
-\textbf{a)} Which team has the tallest player? What is their height? \blanklong \\
-\textbf{b)} Which team has a larger interquartile range (IQR)? Calculate both. \blanklong \\
-\textbf{c)} Write a sentence comparing the average heights of the two teams. \blanklong
-\vspace{1.5cm}
-\item Construct a frequency table and describe how you would draw a histogram for the following data representing test scores: 55, 62, 70, 72, 75, 78, 82, 85, 88, 92, 95, 98. Use intervals of 10 (e.g., 50-59, 60-69, etc.).
-\vspace{1.5cm}
+\textbf{a)} Which team has the tallest player? What is their height? \\
+\blanklong \\
+\textbf{b)} Which team has a larger interquartile range (IQR)? Calculate both. \\
+\blanklong \\
+\textbf{c)} Calculate the overall range of heights for both Team A and Team B. \\
+\blanklong \\
+\textbf{d)} Write a sentence comparing the average heights of the two teams. \\
+\blanklong
 \end{enumerate}
+
 \newpage
+
+% ==========================================================
+% PART B: FREQUENCY TABLE \& HISTOGRAM PLANNING
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part B: Frequency Table \& Histogram Planning}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Construct a frequency table and plan a histogram representation.
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item Raw data of test scores: $55, 62, 70, 72, 75, 78, 82, 85, 88, 92, 95, 98$. \\
+\textbf{a)} Complete the frequency table below using intervals of 10:
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Scores Interval} & \textbf{Frequency} \\ \hline
+$50\text{--}59$ & \blankshorter \\ \hline
+$60\text{--}69$ & \blankshorter \\ \hline
+$70\text{--}79$ & \blankshorter \\ \hline
+$80\text{--}89$ & \blankshorter \\ \hline
+$90\text{--}99$ & \blankshorter \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{0.5cm}
+
+\textbf{b)} Describe how you would label the x-axis and y-axis of the histogram. \\
+\blanklong \\
+\textbf{c)} What is the interval that contains the median score? \\
+\blanklong
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART C: BOX PLOT CONSTRUCTION FROM RAW DATA
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part C: Box Plot Construction From Raw Data}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Calculate the 5-number summary to construct a box plot.
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item A gym recorded the number of push-ups performed by 11 members: \\
+$$15, \ 22, \ 18, \ 19, \ 30, \ 25, \ 28, \ 24, \ 20, \ 17, \ 21$$
+\textbf{a)} Sort the dataset in order. \\
+\blanklong \\
+\textbf{b)} Find the Min, $Q_1$, Median, $Q_3$, and Max. \\
+\blanklong \\
+\textbf{c)} Calculate the IQR. \\
+\blanklong
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART D: CRITICAL DATA INTERPRETATION
+% ==========================================================
+\begin{tcolorbox}[colback=black!10]
+    \large\textcolor{black}{\textbf{Part D: Critical Data Interpretation}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Solve the data representation challenge.
+
+\vspace{5mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item Class A and Class B have the exact same median grade of $80\%$ on a science test. However, Class A has an IQR of $5\%$, while Class B has an IQR of $20\%$. \\
+\textbf{a)} What does the difference in IQR tell you about the variability of scores in both classes? \\
+\blanklong \\
+\textbf{b)} Which class is more likely to have scores below failing ($60\%$)? Explain why. \\
+\blanklong \\
+\textbf{c)} If Class B's minimum score is $45\%$, and its maximum score is $98\%$, find its overall range of scores. \\
+\blanklong
+\end{enumerate}
+
 \end{document}

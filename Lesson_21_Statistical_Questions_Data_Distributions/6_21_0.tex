@@ -35,17 +35,11 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\small\bfseries Statistical Questions \& Data Distributions}
-\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]
-{kss.png}}}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{6.21.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
-
-% ----------------------------------------------------------
-% THEME COLOR
-% ----------------------------------------------------------
-\definecolor{customteal}{HTML}{2fbdb9}
 
 % ----------------------------------------------------------
 % HELPER MACROS
@@ -66,7 +60,7 @@
 % ==========================================================
 % SECTION 1: STATISTICAL QUESTIONS AND DISTRIBUTION CHARACTERISTICS
 % ==========================================================
-\begin{tcolorbox}[colback=customteal!20]
+\begin{tcolorbox}[colback=black!10]
     \large\textcolor{black}{\textbf{Statistical Questions and Distribution Characteristics (Foundation)}}
 \end{tcolorbox}
 
@@ -74,19 +68,32 @@
 
 \noindent
 1. \textbf{Statistical Question:} A question that anticipates variability in the data (i.e., there is not just one single answer). \\
-- *Non-statistical:* ``How old am I?'' (only 1 answer) \\
-- *Statistical:* ``How old are the students in my class?'' (answers will vary) \\
+- \textit{Non-statistical:} ``How old am I?'' (only 1 answer) \\
+- \textit{Statistical:} ``How old are the students in my class?'' (answers will vary) \\
 2. \textbf{Data Distribution:} Summarized by its: \\
-- **Center:** The average or middle value (mean, median). \\
-- **Spread:** How spread out the data is (range, interquartile range). \\
-- **Shape:** Symmetric, skewed left (long tail on left), or skewed right (long tail on right).
+- \textbf{Center:} The average or middle value (mean, median). \\
+- \textbf{Spread:} How spread out the data is (range, interquartile range). \\
+- \textbf{Shape:} Symmetric (balanced sides), skewed left (tail on left), or skewed right (tail on right).
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Worked Example:}
+
+\medskip
+\noindent
+Identify if ``How many books did each student read last month?'' is statistical or non-statistical, and predict its shape if most read 1-2 books but one student read 20.\\
+\textbf{Solution:}
+- It is a \textbf{statistical question} because we expect the number of books read by different students to vary.
+- Since most values are small (1-2) and there is a single very high value (20), the distribution will be \textbf{skewed right}.
+\end{tcolorbox}
 
 \vspace{4mm}
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 1
 % ==========================================================
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 1: Identifying Statistical Questions}
 
 \medskip
@@ -96,7 +103,7 @@
 1) ``How many teeth did each first-grader lose this year?'' \\
 2) ``How many states are in the United States?''}
 
-\vspace{2cm}
+\vspace{2.5cm}
 
 \noindent
 \textbf{b) A dot plot showing test scores has a cluster of dots around 90, a few dots down to 60, and no dots below 60. Describe the shape, center, and spread of this data distribution.}
@@ -108,7 +115,7 @@
 % ==========================================================
 % DEEPER THINKING PROBLEM 2
 % ==========================================================
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 2: Data Bias and Variability}
 
 \medskip
@@ -116,12 +123,62 @@
 \noindent
 \textbf{a) Explain how a sample group can affect the variability of answers. For example, compare asking ``How many books do you read?'' to members of a book club vs. random shoppers.}
 
-\vspace{2cm}
+\vspace{3cm}
 
 \noindent
 \textbf{b) Create a statistical question about your classmates' favorite sports. Describe what data values you might collect and how you expect them to vary.}
 
-\vspace{2cm}
+\vspace{3cm}
 \end{tcolorbox}
 \newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 3
+% ==========================================================
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 3: Interpreting Dot Plot Data Lists}
+
+\medskip
+
+\noindent
+\textbf{a) A teacher surveys a small group of students on how many pets they have. The data collected is: $0, 1, 1, 1, 2, 2, 3, 5$. Draw a simple textual representation of the dot plot and find the range of the data.}
+
+\vspace{3cm}
+
+\noindent
+\textbf{b) Describe the distribution's shape (skewed left, skewed right, or symmetric). Explain how the value $5$ impacts the spread and shape of this data.}
+
+\vspace{3cm}
+
+\noindent
+\textbf{c) Write a non-statistical question related to pets, and explain why it is non-statistical.}
+
+\vspace{2.5cm}
+\end{tcolorbox}
+\newpage
+
+% ==========================================================
+% DEEPER THINKING PROBLEM 4
+% ==========================================================
+\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 4: Comparing Two Distributions}
+
+\medskip
+
+\noindent
+\textbf{a) Class A has daily recess active minutes of: $20, 20, 20, 20, 20, 20, 20$. Class B has: $10, 15, 20, 20, 20, 25, 30$. Contrast the variability of both classes. Which class has more spread, and why?}
+
+\vspace{3cm}
+
+\noindent
+\textbf{b) Describe the shape of Class A's distribution vs. Class B's distribution. Is Class A skewed, symmetric, or does it have no variability?}
+
+\vspace{3.0cm}
+
+\noindent
+\textbf{c) If you wanted to describe the typical active minutes for a 6th grader, would a single number or a distribution of numbers be more informative? Why?}
+
+\vspace{2.5cm}
+\end{tcolorbox}
+
 \end{document}
