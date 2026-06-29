@@ -1,0 +1,120 @@
+%FOUR OPERATIONS WITH RATIONAL NUMBERS - WORKSHEET 0
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 3: Rational Number Operations: Four Operations with Rational Numbers}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.8.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INSTRUCTIONAL SECTION
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Instruction: Order of Operations with Rational Numbers}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+When evaluating expressions that include addition, subtraction, multiplication, and division with rational numbers (decimals, fractions, and integers), you must strictly follow the \textbf{Order of Operations (PEMDAS)}:
+
+\begin{enumerate}
+    \item \textbf{P}arentheses (and other grouping symbols like brackets or fraction bars)
+    \item \textbf{E}xponents
+    \item \textbf{M}ultiply and \textbf{D}ivide (from left to right)
+    \item \textbf{A}dd and \textbf{S}ubtract (from left to right)
+\end{enumerate}
+
+\textbf{Example:} Evaluate $\left(-\dfrac{1}{2}\right) + \dfrac{3}{4} \times \left(-2\right)$
+
+\begin{itemize}
+    \item \textbf{Step 1 (Multiply):} $\dfrac{3}{4} \times \left(-\dfrac{2}{1}\right) = -\dfrac{6}{4} = -1\dfrac{1}{2}$
+    \item \textbf{Step 2 (Add):} $\left(-\dfrac{1}{2}\right) + \left(-1\dfrac{1}{2}\right) = -2$
+\end{itemize}
+
+\vspace{5mm}
+
+% ==========================================================
+% PRACTICE PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Practice: Step-by-Step Evaluation}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Evaluate each expression using the order of operations. Show every step of your work.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=4cm, leftmargin=0.6cm]
+
+\item $(-3) \times \left(\dfrac{1}{2} - \dfrac{3}{4}\right) =$
+
+\item $4.5 - (-2.5) \times 3 =$
+
+\item $\dfrac{-10 + 2(-4)}{-3} =$
+
+\item $\left(-\dfrac{2}{3}\right) \div \dfrac{1}{6} + 5 =$
+
+\item $12 \div (-3) - (-4) \times (-2) =$
+
+\end{enumerate}
+
+\end{document}

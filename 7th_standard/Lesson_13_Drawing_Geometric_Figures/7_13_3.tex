@@ -1,0 +1,139 @@
+%DRAWING GEOMETRIC FIGURES - WORKSHEET 3
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 6: Scale \& Construction: Drawing Geometric Figures}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.13.3}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A - ALGEBRA AND GEOMETRY
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Solving for Angles Algebraically}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Use the fact that the sum of angles in a triangle is $180^\circ$ to write an equation and solve for $x$. Then find the measure of each angle.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item In a triangle, the angles measure $x^\circ$, $(2x)^\circ$, and $(x + 20)^\circ$.
+\begin{itemize}
+    \item Equation: \blanklong
+    \item $x =$ \blank
+    \item Angle Measures: \blank
+\end{itemize}
+
+\item In a right triangle, one of the acute angles is $15^\circ$ larger than the other acute angle. 
+\begin{itemize}
+    \item Equation: \blanklong
+    \item $x =$ \blank
+    \item Angle Measures: \blank
+\end{itemize}
+
+\end{enumerate}
+
+\vspace{2cm}
+
+% ==========================================================
+% PART B - CRITICAL THINKING
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Justify Your Reasoning}}
+\end{tcolorbox}
+
+\noindent
+Answer each question and provide a mathematical justification.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item Can a triangle have two obtuse angles (angles strictly greater than $90^\circ$)? Explain why or why not.
+
+\item An isosceles triangle has one angle that measures $100^\circ$. What must the other two angles measure? Explain how you know.
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART C - CHALLENGE PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part C: The Ambiguous Case}}
+\end{tcolorbox}
+
+\noindent
+Sometimes giving two sides and an angle doesn't create a unique triangle. Think critically to solve this problem.
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item A student is told to draw a triangle with sides measuring $5\text{ cm}$ and $8\text{ cm}$. They are also told that one of the angles in the triangle must be exactly $30^\circ$. Is there only \textit{one} specific triangle that can be drawn with these three pieces of information, or could the student draw more than one different-looking triangle that fits these rules? Explain your reasoning. (Hint: Think about where the angle could be placed).
+
+\end{enumerate}
+
+\end{document}

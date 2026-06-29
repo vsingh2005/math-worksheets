@@ -1,0 +1,111 @@
+%STATISTICAL SAMPLING & INFERENCE - WORKSHEET 1
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 8: Sampling \& Inference: Statistical Sampling}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.19.1}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A - MAKING INFERENCES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Proportional Inferences}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+You can use the results of a random sample to make an \textbf{inference} (a smart prediction) about the entire population using a proportion.
+\[ \dfrac{\text{Number in Sample with Trait}}{\text{Total Sample Size}} = \dfrac{\text{Predicted Number in Population}}{\text{Total Population Size}} \]
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item A middle school has $800$ students. You randomly sample $50$ students and find that $12$ of them ride the bus to school. Based on this sample, predict how many students in the entire school ride the bus.
+
+\item A factory produces $5,000$ lightbulbs every day. The quality control manager randomly tests $200$ lightbulbs and finds that $3$ of them are defective. Predict the total number of defective lightbulbs produced in one day.
+
+\end{enumerate}
+
+\vspace{4.5cm}
+
+% ==========================================================
+% PART B - EVALUATING SAMPLES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Evaluating the Quality of a Sample}}
+\end{tcolorbox}
+
+\noindent
+Read the scenario and answer the questions.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item A city planner wants to know if residents think the city needs more public parks. They post a survey on the website of a local "Save the Trees" environmental group. 
+\begin{itemize}
+    \item Will this survey give an accurate prediction of the entire city's opinion? Why or why not? \blanklong
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}

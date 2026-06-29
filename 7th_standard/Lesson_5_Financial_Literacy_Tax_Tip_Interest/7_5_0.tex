@@ -1,0 +1,386 @@
+%UNIT 2: PERCENTS & APPLICATIONS - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Financial Literacy: Tax, Tip & Interest}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.5.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% SECTION 1: TAX, TIP, AND MARKUPS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Percent Additions: Tax, Tip, \& Markup}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+In financial math, some percents are \textbf{added} to the original cost. 
+\begin{itemize}
+    \item \textbf{Sales Tax:} An extra charge added by the government on purchases.
+    \item \textbf{Tip (Gratuity):} Extra money given to a service worker (like a waiter or driver) for their service.
+    \item \textbf{Markup:} The amount a store increases the wholesale price of an item to make a profit.
+\end{itemize}
+
+\vspace{2mm}
+\noindent
+There are \textbf{two methods} to solve percent addition problems:
+\begin{enumerate}
+    \item \textbf{Two-Step Method:} Find the percent of the original price first, then add it to the original price.
+    \item \textbf{One-Step Method:} Add the percent to $100\%$, convert to a decimal, and multiply. (For example, a $7\%$ tax means you pay $107\%$ of the price, or $1.07 \times \text{Price}$).
+\end{enumerate}
+
+\vspace{4mm}
+
+% ==========================================================
+% VISUAL REPRESENTATION / WORKED EXAMPLE 1
+% ==========================================================
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Example: Dining Out}
+
+\medskip
+
+\noindent
+\textbf{Problem:} A meal at a restaurant costs $\$32.00$. You want to leave a $15\%$ tip. What is the total cost of the meal?
+
+\medskip
+
+\begin{multicols}{2}
+\noindent
+\textbf{Method 1: Two-Step}
+\begin{align*}
+    \text{Tip} &= 15\% \text{ of } \$32.00 \\
+    &= 0.15 \times 32.00 \\
+    &= \$4.80 \\[1mm]
+    \text{Total} &= \text{Original} + \text{Tip} \\
+    &= 32.00 + 4.80 \\
+    &= \$36.80
+\end{align*}
+
+\columnbreak
+
+\noindent
+\textbf{Method 2: One-Step}
+\begin{align*}
+    \text{Total Percent} &= 100\% + 15\% \\
+    &= 115\% \\
+    &= 1.15 \text{ (as a decimal)} \\[1mm]
+    \text{Total Cost} &= 1.15 \times 32.00 \\
+    &= \$36.80
+\end{align*}
+\end{multicols}
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% SECTION 2: DISCOUNTS AND MARKDOWNS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Percent Subtractions: Discounts \& Markdowns}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Some percents are \textbf{subtracted} from the original cost.
+\begin{itemize}
+    \item \textbf{Discount / Markdown:} A reduction in the original price of an item (usually during a sale).
+\end{itemize}
+
+\vspace{2mm}
+\noindent
+Just like percent additions, you can use two methods:
+\begin{enumerate}
+    \item \textbf{Two-Step Method:} Find the discount amount first, then subtract it from the original price.
+    \item \textbf{One-Step Method:} Subtract the discount percent from $100\%$, convert to a decimal, and multiply. (For example, a $20\%$ discount means you pay $80\%$ of the original price, or $0.80 \times \text{Price}$).
+\end{enumerate}
+
+\vspace{4mm}
+
+% ==========================================================
+% WORKED EXAMPLE 2
+% ==========================================================
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Example: Buying a Skateboard}
+
+\medskip
+
+\noindent
+\textbf{Problem:} A skateboard is originally priced at $\$80.00$. It is on sale for $25\%$ off. What is the sale price?
+
+\medskip
+
+\begin{multicols}{2}
+\noindent
+\textbf{Method 1: Two-Step}
+\begin{align*}
+    \text{Discount} &= 25\% \text{ of } \$80.00 \\
+    &= 0.25 \times 80.00 \\
+    &= \$20.00 \\[1mm]
+    \text{Sale Price} &= \text{Original} - \text{Discount} \\
+    &= 80.00 - 20.00 \\
+    &= \$60.00
+\end{align*}
+
+\columnbreak
+
+\noindent
+\textbf{Method 2: One-Step}
+\begin{align*}
+    \text{Percent Paid} &= 100\% - 25\% \\
+    &= 75\% \\
+    &= 0.75 \text{ (as a decimal)} \\[1mm]
+    \text{Sale Price} &= 0.75 \times 80.00 \\
+    &= \$60.00
+\end{align*}
+\end{multicols}
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% COMMISSION DEFINITION
+% ==========================================================
+\begin{tcolorbox}[colback=white, colframe=customteal, boxrule=1pt, arc=2mm]
+\textbf{What is Commission?} 
+
+\smallskip
+\noindent
+\textbf{Commission} is a fee paid to a salesperson for helping to make a sale. It is usually a percent of the total sales amount. 
+\[
+\text{Commission} = \text{Commission Rate (as a decimal)} \times \text{Total Sales}
+\]
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% SECTION 3: SIMPLE INTEREST
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Simple Interest: $I = Prt$}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+When you deposit money in a bank, the bank pays you for keeping your money there. When you borrow money, you must pay back the original amount plus an extra fee. This extra money is called \textbf{interest}.
+
+\vspace{3mm}
+
+\begin{center}
+\begin{tcolorbox}[colback=white, colframe=black, width=12cm, arc=3mm, align=center]
+    \Large\textbf{Simple Interest Formula}
+    \vspace{2mm}
+    \[ \mathbf{I = Prt} \]
+    \normalsize
+    \begin{itemize}[leftmargin=2.5cm, labelsep=0.3cm]
+        \item[\textbf{I}] = Interest earned or owed (in dollars)
+        \item[\textbf{P}] = Principal (the starting amount of money)
+        \item[\textbf{r}] = Annual interest rate (written as a \textbf{decimal})
+        \item[\textbf{t}] = Time (written in \textbf{years})
+    \end{itemize}
+\end{tcolorbox}
+\end{center}
+
+\vspace{3mm}
+
+% ==========================================================
+% WORKED EXAMPLE 3
+% ==========================================================
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Example: Savings Account Interest}
+
+\medskip
+
+\noindent
+\textbf{Problem:} You deposit $\$500$ into a savings account that earns $3\%$ simple interest annually. How much interest will you earn after $4$ years? What will your total balance be?
+
+\medskip
+
+\noindent
+\textbf{Step 1: Identify your variables.}
+\[ P = \$500, \quad r = 3\% = 0.03, \quad t = 4 \text{ years} \]
+
+\noindent
+\textbf{Step 2: Use the formula to find the interest ($I$).}
+\[ I = P \cdot r \cdot t \]
+\[ I = 500 \cdot 0.03 \cdot 4 \]
+\[ I = 15 \cdot 4 = \$60 \]
+
+\noindent
+\textbf{Step 3: Calculate the total balance.}
+\[ \text{Total Balance} = \text{Principal} + \text{Interest} = 500 + 60 = \$560 \]
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% PRACTICE PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{In-Class Practice}}
+\end{tcolorbox}
+
+\noindent
+Show all of your work for each problem. Be sure to label your final answer clearly.
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=2.2cm, leftmargin=0.6cm]
+
+\item \textbf{Sales Tax:} An iPad costs $\$420.00$. If the sales tax rate is $8\%$, how much sales tax will you pay? What is the total cost of the iPad?
+\vspace{1.5cm}
+\begin{itemize}
+    \item Tax Amount: \blank
+    \item Total Cost: \blank
+\end{itemize}
+
+\item \textbf{Gratuity (Tip):} A group of friends has a dinner bill of $\$64.50$. They want to leave an $18\%$ tip. 
+\vspace{1.5cm}
+\begin{itemize}
+    \item Tip Amount: \blank
+    \item Total Cost: \blank
+\end{itemize}
+
+\item \textbf{Commission:} A real estate agent earns a $3\%$ commission on every house they sell. If they sell a house for $\$280,000$, how much commission do they earn?
+\vspace{1.5cm}
+\begin{itemize}
+    \item Commission Earned: \blank
+\end{itemize}
+
+\item \textbf{Markdown:} A winter coat originally priced at $\$120.00$ is marked down by $40\%$. What is the sale price of the coat?
+\vspace{1.5cm}
+\begin{itemize}
+    \item Sale Price: \blank
+\end{itemize}
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% DEEPER THINKING / MULTI-STEP
+% ==========================================================
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 1: Two-Step Percentages}
+
+\medskip
+
+\noindent
+An electronics store is having a weekend sale. A pair of headphones with an original price of $\$150.00$ is discounted by $20\%$. 
+
+\medskip
+\noindent
+\textbf{a)} What is the sale price of the headphones?
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b)} You have to pay a $6\%$ sales tax on the sale price of the headphones. How much tax do you pay?
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{c)} What is the final total cost of the headphones?
+
+\vspace{2cm}
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 2: Watch the Time!}
+
+\medskip
+
+\noindent
+You borrow $\$1,200$ from a bank at a simple interest rate of $5\%$. You plan to pay it back in \textbf{18 months}. 
+
+\medskip
+\noindent
+\textbf{a)} Convert 18 months into years ($t$). (Hint: How many months are in a year?)
+\[ t = \text{\blankshorter\ years} \]
+
+\vspace{1cm}
+
+\noindent
+\textbf{b)} Calculate the total interest ($I$) you will owe after 18 months.
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{c)} What is the total amount you will have to pay back to the bank?
+
+\vspace{2cm}
+
+\end{tcolorbox}
+
+\end{document}

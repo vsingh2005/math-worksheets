@@ -1,0 +1,115 @@
+%INTRODUCTION TO PROBABILITY - WORKSHEET 2
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 9: Probability}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.21.2}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A - UNDERSTANDING 'NOT'
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: The Probability of an Event NOT Happening}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+The probability of an event happening PLUS the probability of it NOT happening always equals $1$ (or $100\%$). 
+\[ P(\text{Event}) + P(\text{Not Event}) = 1 \]
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item The probability of rain tomorrow is $40\%$. What is the probability that it will NOT rain? \blank
+
+\item You have a deck of $52$ cards. The probability of drawing a heart is $\frac{1}{4}$. What is the probability of NOT drawing a heart? \blank
+
+\item A weather forecaster says there is a $0.15$ chance of snow. What is the chance of no snow? \blank
+
+\end{enumerate}
+
+\vspace{4.5cm}
+
+% ==========================================================
+% PART B - CRITICAL THINKING WITH DATA
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Analyzing Experimental Data}}
+\end{tcolorbox}
+
+\noindent
+Read the scenario and analyze the probabilities.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item A student flips a coin $50$ times and records the results. They get Heads $35$ times and Tails $15$ times.
+\begin{itemize}
+    \item What is the experimental probability of getting Heads? \blank
+    \item What is the theoretical probability of getting Heads? \blank
+    \item Do these two probabilities match? If the student flipped the coin $10,000$ times instead, would you expect the experimental probability of Heads to stay exactly at $\frac{35}{50}$ ($70\%$)? Why or why not?
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}

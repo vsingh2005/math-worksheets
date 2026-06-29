@@ -1,0 +1,118 @@
+%SCALE DRAWINGS - WORKSHEET 1
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 6: Scale \& Construction: Scale Drawings}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.12.1}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A - FINDING THE SCALE FACTOR
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Finding the Scale Factor}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Determine the scale factor used to create the scale drawing from the actual object. Simplify your ratio.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item The actual length of a car is $180\text{ inches}$. A toy model of the car has a length of $5\text{ inches}$. What is the scale of the toy car?
+
+\item The distance from the school to the library is $2.5\text{ miles}$. On a map, this distance is $0.5\text{ inches}$. Write the scale of the map as $1\text{ inch} = \dots$
+
+\item A rectangular swimming pool has an actual width of $15\text{ meters}$. On a blueprint, the pool's width is $3\text{ cm}$. What is the scale factor?
+
+\end{enumerate}
+
+\vspace{5cm}
+
+% ==========================================================
+% PART B - COMPUTING AREA
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Computing Actual Areas}}
+\end{tcolorbox}
+
+\noindent
+Use the scale to find the actual area of the shapes. Remember to convert the length and width to actual dimensions \textbf{BEFORE} multiplying!
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item \textbf{Scale:} $1\text{ cm} = 4\text{ m}$ \\
+A scale drawing of a rectangular room has a length of $5\text{ cm}$ and a width of $3\text{ cm}$.
+\begin{itemize}
+    \item Actual Length: \blank
+    \item Actual Width: \blank
+    \item Actual Area of the Room: \blank
+\end{itemize}
+
+\item \textbf{Scale:} $1\text{ inch} = 12\text{ feet}$ \\
+A blueprint shows a triangular garden with a base of $2.5\text{ inches}$ and a height of $3\text{ inches}$. Find the actual area of the garden.
+
+\end{enumerate}
+
+\end{document}

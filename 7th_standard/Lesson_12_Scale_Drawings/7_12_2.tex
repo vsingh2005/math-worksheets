@@ -1,0 +1,117 @@
+%SCALE DRAWINGS - WORKSHEET 2
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 6: Scale \& Construction: Scale Drawings}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.12.2}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A - REPRODUCING AT A DIFFERENT SCALE
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Changing the Scale}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Sometimes you need to redraw a map or a blueprint using a new scale. Find the actual dimensions first, then use the new scale to find the new drawing dimensions.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item A blueprint of a house was drawn using a scale of $1\text{ inch} = 5\text{ feet}$. On this blueprint, the living room is $4\text{ inches}$ long.
+\begin{itemize}
+    \item What is the actual length of the living room? \blanklong
+    \item If you redraw the blueprint using a scale of $1\text{ inch} = 10\text{ feet}$, how long will the living room be on the \textit{new} blueprint? \blanklong
+\end{itemize}
+
+\item On a map with a scale of $1\text{ cm} = 25\text{ miles}$, the distance between two cities is $6\text{ cm}$.
+\begin{itemize}
+    \item What is the actual distance between the cities? \blanklong
+    \item A new map is created with a scale of $1\text{ cm} = 50\text{ miles}$. What is the distance between the two cities on the new map? \blanklong
+\end{itemize}
+
+\end{enumerate}
+
+\vspace{3cm}
+
+% ==========================================================
+% PART B - MULTI-STEP WORD PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Area and Perimeter Challenges}}
+\end{tcolorbox}
+
+\noindent
+Solve each problem. Be sure to show your proportions and calculations.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item A landscaper is drawing a plan for a rectangular park. The scale is $\dfrac{1}{2}\text{ inch} = 10\text{ yards}$. On the plan, the park is $3\text{ inches}$ wide and $4.5\text{ inches}$ long. Find the actual perimeter of the park in yards.
+
+\item An architect drew a square courtyard with a side length of $5\text{ cm}$ using a scale of $1\text{ cm} = 3\text{ m}$. What is the actual area of the courtyard in square meters?
+
+\end{enumerate}
+
+\end{document}

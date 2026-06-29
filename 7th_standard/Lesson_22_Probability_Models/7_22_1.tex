@@ -1,0 +1,118 @@
+%PROBABILITY MODELS - WORKSHEET 1
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 9: Probability}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.22.1}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A - CREATING A MODEL
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Building Probability Models}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Create a probability model by listing every possible outcome and calculating the exact probability for each.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item A bag contains $3$ red blocks, $2$ blue blocks, and $5$ yellow blocks. You pull one block at random. Create the probability model.
+\begin{itemize}
+    \item $P(\text{Red}) = $ \blank
+    \item $P(\text{Blue}) = $ \blank
+    \item $P(\text{Yellow}) = $ \blank
+    \item Do the probabilities add up to exactly $1$? \blank
+\end{itemize}
+
+\item You have a spinner with $8$ equal sections numbered $1$ through $8$. You spin it once. 
+\begin{itemize}
+    \item $P(\text{Even Number}) = $ \blank
+    \item $P(\text{Odd Number}) = $ \blank
+    \item Is this model uniform or non-uniform? \blank
+\end{itemize}
+
+\end{enumerate}
+
+\vspace{4.5cm}
+
+% ==========================================================
+% PART B - FINDING FLAWS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Evaluating Models}}
+\end{tcolorbox}
+
+\noindent
+Explain why the proposed probability model is mathematically incorrect.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item A student creates a probability model for drawing a card from a deck and says: $P(\text{Heart}) = 0.3$, $P(\text{Diamond}) = 0.3$, $P(\text{Spade}) = 0.3$, and $P(\text{Club}) = 0.3$. What is wrong with this model? Explain.
+
+\end{enumerate}
+
+\end{document}

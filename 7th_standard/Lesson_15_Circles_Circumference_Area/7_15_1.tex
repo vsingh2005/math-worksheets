@@ -1,0 +1,113 @@
+%CIRCLES: CIRCUMFERENCE AND AREA - WORKSHEET 1
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 7: Measurement \& Angles: Circles: Circumference \& Area}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.15.1}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A - WORKING BACKWARDS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Working Backwards}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Use the given information to find the missing dimensions. Use $\pi \approx 3.14$.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item The circumference of a circle is $31.4\text{ cm}$. What is the diameter?
+
+\item The circumference of a circle is $50.24\text{ inches}$. What is the radius?
+
+\item The area of a circle is $78.5\text{ square meters}$. What is the radius? (Hint: Divide by $\pi$ first, then think about what number squared equals your result).
+
+\end{enumerate}
+
+\vspace{5cm}
+
+% ==========================================================
+% PART B - REAL WORLD PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Real-World Applications}}
+\end{tcolorbox}
+
+\noindent
+Solve each word problem. Make sure to identify whether the problem is asking for Circumference or Area.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item A circular dining table has a diameter of $6\text{ feet}$. You want to buy a tablecloth that perfectly covers the top of the table. How many square feet of fabric is needed?
+
+\item A dog is tied to a post in the backyard with a leash that is $10\text{ feet}$ long. What is the total area of the grass that the dog can reach?
+
+\item A Ferris wheel has a radius of $40\text{ feet}$. How far will you travel in one complete rotation on the Ferris wheel?
+
+\end{enumerate}
+
+\end{document}

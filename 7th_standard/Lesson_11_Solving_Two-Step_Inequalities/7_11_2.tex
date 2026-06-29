@@ -1,0 +1,152 @@
+%SOLVING TWO-STEP INEQUALITIES - WORKSHEET 2
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 5: Equations \}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.11.2}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A - PRACTICE
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Practice with Decimals and Fractions}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Solve each inequality and graph the solution.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item $-0.5x + 3 \ge 7$ \\
+\begin{tikzpicture}
+\draw[<->] (-12,0) -- (-4,0);
+\foreach \x in {-11,-10,-9,-8,-7,-6,-5}
+  \draw (\x,0.1) -- (\x,-0.1) node[below] {\x};
+\end{tikzpicture}
+
+\item $\dfrac{2}{3}x - 5 < -1$ \\
+\begin{tikzpicture}
+\draw[<->] (2,0) -- (10,0);
+\foreach \x in {3,4,5,6,7,8,9}
+  \draw (\x,0.1) -- (\x,-0.1) node[below] {\x};
+\end{tikzpicture}
+
+\item $1.5y + 4.5 \le -1.5$ \\
+\begin{tikzpicture}
+\draw[<->] (-8,0) -- (0,0);
+\foreach \x in {-7,-6,-5,-4,-3,-2,-1}
+  \draw (\x,0.1) -- (\x,-0.1) node[below] {\x};
+\end{tikzpicture}
+
+\end{enumerate}
+
+\vspace{1cm}
+
+% ==========================================================
+% PART B - ERROR ANALYSIS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Spot the Mistake}}
+\end{tcolorbox}
+
+\noindent
+Identify and correct the mistake in the student's solution.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item \textbf{Problem:} Solve $-3x - 5 > 10$.\\
+\textbf{Student's Work:} \\
+$-3x > 15$\\
+$x > -5$\\
+\textbf{Correction:}
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART C - REASONING AND PROBLEM SOLVING
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part C: Real-World Inequalities}}
+\end{tcolorbox}
+
+\noindent
+Write an inequality to solve each scenario.
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item A club is having a car wash to raise money. They need to raise at least $\$300$. They have already received $\$45$ in donations. They charge $\$8$ per car wash. Write and solve an inequality to find the minimum number of cars they must wash to reach their goal.
+
+\item Your cell phone plan gives you $5$ gigabytes of data for $\$40$ a month, plus $\$10$ for each additional gigabyte of data you use. You want to keep your cell phone bill strictly less than $\$75$ this month. Write and solve an inequality to find the maximum number of additional gigabytes you can use.
+
+\item You have a $\$50$ gift card to an online music store. You buy a premium membership for $\$15$ and then want to download songs that cost $\$1.25$ each. What is the greatest number of songs you can download without exceeding the gift card balance?
+
+\end{enumerate}
+
+\end{document}

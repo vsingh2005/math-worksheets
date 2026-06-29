@@ -1,0 +1,320 @@
+%UNIT 3: RATIONAL NUMBER OPERATIONS - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, left=1in, right=1in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Adding & Subtracting Rational Numbers}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.6.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% SECTION 1: ADDING & SUBTRACTING RATIONAL NUMBERS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Adding \& Subtracting Rational Numbers}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+A \textbf{rational number} is any number that can be written as a fraction $\frac{a}{b}$, where $a$ and $b$ are integers and $b \neq 0$. This includes positive and negative fractions, decimals, and integers.
+
+\begin{itemize}
+    \item \textbf{Adding with Same Signs:} Add their absolute values. The sum has the same sign as the addends.
+    \item \textbf{Adding with Different Signs:} Subtract the smaller absolute value from the larger absolute value. The sum has the sign of the number with the larger absolute value.
+    \item \textbf{Subtracting Rational Numbers:} Add the additive inverse (opposite) of the number being subtracted: $a - b = a + (-b)$.
+\end{itemize}
+
+\vspace{4mm}
+
+% ==========================================================
+% VISUAL REPRESENTATION: NUMBER LINE
+% ==========================================================
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Visualizing on a Number Line}
+
+\medskip
+
+\noindent
+To model rational number operations on a number line:
+\begin{enumerate}
+    \item Always start at $0$.
+    \item Move \textbf{right} for positive numbers, and \textbf{left} for negative numbers.
+\end{enumerate}
+
+\medskip
+
+\noindent
+\textbf{Example:} Model and evaluate $-1.5 + 2.5$
+
+\vspace{3mm}
+
+\begin{center}
+\begin{tikzpicture}[x=1.8cm, y=1cm]
+  % Draw number line axis
+  \draw[latex-latex, thick] (-2.5,0) -- (2.5,0);
+  
+  % Draw ticks and labels
+  \foreach \x in {-2,-1,0,1,2} {
+    \draw (\x, 0.1) -- (\x, -0.1) node[below=2pt] {\small\x};
+  }
+  \foreach \x in {-1.5,-0.5,0.5,1.5} {
+    \draw (\x, 0.05) -- (\x, -0.05) node[below=2pt] {\tiny\x};
+  }
+  
+  % Arrow 1: 0 to -1.5
+  \draw[red, -{Latex[length=2mm]}, thick] (0, 0.4) -- (-1.5, 0.4);
+  \node[red, above] at (-0.75, 0.4) {\small $-1.5$};
+  
+  % Arrow 2: -1.5 to 1.0
+  \draw[blue, -{Latex[length=2mm]}, thick] (-1.5, 0.9) -- (1, 0.9);
+  \node[blue, above] at (-0.25, 0.9) {\small $+2.5$};
+  
+  % Final point marker
+  \filldraw[black] (1,0) circle (2.5pt);
+  \draw[dashed, black!60] (1,0) -- (1,0.9);
+  \node[above right] at (1, 0.1) {\textbf{End at 1}};
+\end{tikzpicture}
+\end{center}
+
+\medskip
+
+\noindent
+\textbf{Result:} $-1.5 + 2.5 = 1$
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% PRACTICE 1: COMPUTING WITH RATIONAL NUMBERS
+% ==========================================================
+\newpage
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Practice: Adding \& Subtracting Rational Numbers}}
+\end{tcolorbox}
+
+\noindent
+Evaluate each expression. Show your step-by-step calculations. Convert fractions to common denominators when necessary.
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+
+\item Evaluate: $-\dfrac{3}{4} + \left(-\dfrac{1}{2}\right)$
+\vspace{1cm}
+\begin{itemize}
+    \item Common Denominator Setup: \blanklong
+    \vspace{0.5cm}
+    \item Final Answer: \blank
+\end{itemize}
+
+\item Evaluate: $-4.25 - (-1.5)$
+\vspace{1cm}
+\begin{itemize}
+    \item Rewrite as Addition: \blanklong
+    \vspace{0.5cm}
+    \item Final Answer: \blank
+\end{itemize}
+
+\item Model the expression $2 - 3.5$ on the number line below and find the final value.
+\vspace{5mm}
+\begin{center}
+\begin{tikzpicture}[x=1.8cm, y=1cm]
+  \draw[latex-latex, thick] (-3.5,0) -- (3.5,0);
+  \foreach \x in {-3,-2,-1,0,1,2,3} {
+    \draw (\x, 0.1) -- (\x, -0.1) node[below=2pt] {\small\x};
+  }
+  \foreach \x in {-2.5,-1.5,-0.5,0.5,1.5,2.5} {
+    \draw (\x, 0.05) -- (\x, -0.05);
+  }
+\end{tikzpicture}
+\end{center}
+\vspace{0.5cm}
+\begin{itemize}
+    \item Final Answer: \blank
+\end{itemize}
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% SECTION 2: REAL-WORLD CONTEXTS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Real-World Contexts}}
+\end{tcolorbox}
+
+\noindent
+Rational numbers are essential for describing real-world situations involving changes above and below a reference point ($0$).
+
+\begin{itemize}
+    \item \textbf{Temperature:} Above zero is positive ($+15.5^\circ\text{C}$), below zero is negative ($-4.2^\circ\text{C}$).
+    \item \textbf{Elevation:} Above sea level is positive ($+250\text{ ft}$), below sea level is negative ($-12\text{ ft}$).
+    \item \textbf{Finance:} Money earned/saved is positive ($+\$50.00$), debt or spent money is negative ($-\$25.50$).
+\end{itemize}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example: Elevation Change}
+
+\medskip
+
+\textbf{Problem:} A researcher in a submarine begins at an elevation of $-45.5$ meters (below sea level). The submarine then descends another $20\dfrac{1}{4}$ meters. What is the submarine's new elevation?
+
+\medskip
+
+\noindent
+\textbf{Solution:}
+\begin{enumerate}
+    \item Represent the initial elevation as a negative decimal: $-45.5$
+    \item Represent the descent as subtracting a positive value or adding a negative value. Convert $20\dfrac{1}{4}$ to decimal: $20.25$
+    \item Set up the equation:
+    \[
+    -45.5 - 20.25 = -45.5 + (-20.25)
+    \]
+    \item Add the absolute values and keep the negative sign:
+    \[
+    45.5 + 20.25 = 65.75 \implies -65.75
+    \]
+\end{enumerate}
+
+\noindent
+\textbf{Answer:} The submarine's new elevation is $-65.75$ meters (or $65.75$ meters below sea level).
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% THINKING PROBLEM 1
+% ==========================================================
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 1: Bank Account Balances}
+
+\medskip
+
+\noindent
+At the beginning of the month, Marcus has a bank account balance of $-\$18.50$ (he is in debt). 
+\begin{itemize}
+    \item On Monday, he deposits a check worth $\$45.00$.
+    \item On Wednesday, he withdraws $\$32.75$ to buy a video game.
+\end{itemize}
+
+\noindent
+\textbf{a)} Write an addition expression that models Marcus's bank activity for the week.
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b)} What is Marcus's bank balance after he deposits the check on Monday?
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{c)} What is Marcus's final bank balance after the withdrawal on Wednesday? Is his balance positive or negative?
+
+\vspace{2.5cm}
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% PRACTICE 2: MULTI-STEP PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Multi-Step Real-World Problems}}
+\end{tcolorbox}
+
+\noindent
+Apply your knowledge of rational number operations to solve the following multi-step problems. Show all work!
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 2: Temperature Fluctuations}
+
+\medskip
+
+\noindent
+In Anchorage, Alaska, the temperature at 6:00 AM was $-8.4^\circ\text{F}$. 
+\noindent
+\vspace{0.3cm}
+
+\textbf{a)} By noon, the temperature rose by $12\dfrac{1}{2}^\circ\text{F}$. What was the temperature at noon? (Convert the fraction to a decimal to solve).
+
+\vspace{3.5cm}
+
+\textbf{b)} From noon to 8:00 PM, the temperature dropped by $7.3^\circ\text{F}$. What was the temperature at 8:00 PM?
+
+\vspace{3.5cm}
+
+\textbf{c)} What was the total, overall change in temperature from 6:00 AM to 8:00 PM? Show how you can find this answer using two different methods.
+
+\vspace{4.5cm}
+
+\end{tcolorbox}
+
+\end{document}

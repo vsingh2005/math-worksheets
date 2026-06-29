@@ -1,0 +1,145 @@
+%SOLVING TWO-STEP INEQUALITIES - WORKSHEET 0
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 5: Equations \}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.11.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INSTRUCTIONAL SECTION
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Instruction: Solving and Graphing Inequalities}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Solving a two-step inequality is just like solving a two-step equation, with one \textbf{MAJOR EXCEPTION}:
+\begin{itemize}
+    \item \textbf{THE FLIP RULE:} If you multiply or divide both sides by a \textbf{negative} number, you MUST flip the inequality symbol! (e.g. $<$ becomes $>$)
+\end{itemize}
+
+\vspace{2mm}
+\noindent
+\textbf{Graphing Inequalities on a Number Line:}
+\begin{itemize}
+    \item \textbf{Open Circle ($\circ$):} Use for $<$ or $>$ (does not include the number).
+    \item \textbf{Closed Circle ($\bullet$):} Use for $\le$ or $\ge$ (includes the number).
+    \item \textbf{Arrow:} Shade the number line in the direction of the values that make the inequality true.
+\end{itemize}
+
+\vspace{3mm}
+\noindent
+\textbf{Example:} $-2x + 5 \ge 11$
+\begin{itemize}
+    \item \textbf{Step 1:} Subtract 5 from both sides. $\rightarrow -2x \ge 6$
+    \item \textbf{Step 2:} Divide by -2 and \textbf{FLIP THE SYMBOL}. $\rightarrow x \le -3$
+\end{itemize}
+
+\vspace{5mm}
+
+% ==========================================================
+% PRACTICE PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Practice: Solve and Graph}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Solve each inequality. Then, graph the solution set on the number line provided.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3cm, leftmargin=0.6cm]
+
+\item $3x - 4 < 8$ \\
+\begin{tikzpicture}
+\draw[<->] (-5,0) -- (5,0);
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+  \draw (\x,0.1) -- (\x,-0.1) node[below] {\x};
+\end{tikzpicture}
+
+\item $-5y + 10 \le -15$ \\
+\begin{tikzpicture}
+\draw[<->] (0,0) -- (10,0);
+\foreach \x in {1,2,3,4,5,6,7,8,9}
+  \draw (\x,0.1) -- (\x,-0.1) node[below] {\x};
+\end{tikzpicture}
+
+\item $\dfrac{m}{2} + 6 > 9$ \\
+\begin{tikzpicture}
+\draw[<->] (-2,0) -- (8,0);
+\foreach \x in {-1,0,1,2,3,4,5,6,7}
+  \draw (\x,0.1) -- (\x,-0.1) node[below] {\x};
+\end{tikzpicture}
+
+\item $-\dfrac{x}{4} - 2 \ge 1$ \\
+\begin{tikzpicture}
+\draw[<->] (-16,0) -- (-6,0);
+\foreach \x in {-15,-14,-13,-12,-11,-10,-9,-8,-7}
+  \draw (\x,0.1) -- (\x,-0.1) node[below] {\x};
+\end{tikzpicture}
+
+\end{enumerate}
+
+\end{document}

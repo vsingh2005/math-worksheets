@@ -1,0 +1,115 @@
+%STATISTICAL SAMPLING & INFERENCE - WORKSHEET 2
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 8: Sampling \& Inference: Statistical Sampling}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.19.2}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A - MULTIPLE SAMPLES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Variation in Samples}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Different random samples from the same population will not always give the exact same results. This is called \textbf{variation}. However, they should generally cluster around a similar number.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item Three different students each took a random sample of $20$ jellybeans from a giant jar of $1,000$ jellybeans to see how many were red.
+\begin{itemize}
+    \item Student A got $4$ red jellybeans. Prediction for the whole jar: \blank
+    \item Student B got $6$ red jellybeans. Prediction for the whole jar: \blank
+    \item Student C got $5$ red jellybeans. Prediction for the whole jar: \blank
+    \item Based on these three samples, what is a reasonable estimate for the actual number of red jellybeans in the jar? \blank
+\end{itemize}
+
+\end{enumerate}
+
+\vspace{4cm}
+
+% ==========================================================
+% PART B - CHOOSING THE BEST SAMPLE
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Designing a Survey}}
+\end{tcolorbox}
+
+\noindent
+Think critically about how to design a fair sample.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item A town is deciding whether to build a new public swimming pool or a new library. They want to survey $200$ residents. Describe a way to choose a \textbf{biased} sample, and then describe a way to choose a \textbf{random} sample.
+\begin{itemize}
+    \item Biased Sample Method: \blanklong
+    \item Random Sample Method: \blanklong
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,112 @@
+%STATISTICAL SAMPLING & INFERENCE - WORKSHEET 3
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 8: Sampling \& Inference: Statistical Sampling}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.19.3}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A - THE CAPTURE-RECAPTURE METHOD
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Estimating Wildlife Populations}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Biologists use a method called \textbf{Capture-Recapture} to estimate how many animals live in a certain area without having to count every single one.
+\begin{enumerate}
+    \item Capture a sample of animals, tag them, and release them.
+    \item Wait a while, then capture a second sample.
+    \item Set up a proportion: $\dfrac{\text{Tagged Animals in 2nd Sample}}{\text{Total Animals in 2nd Sample}} = \dfrac{\text{Total Tagged Initially}}{\text{Estimated Total Population}}$
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item Researchers catch and tag $60$ fish in a lake. A week later, they catch a second sample of $80$ fish. Of those $80$ fish, $12$ have tags. Estimate the total number of fish in the lake.
+
+\item Park rangers tag $45$ deer in a forest. Later, they observe $100$ deer and notice that $15$ of them are tagged. Estimate the total deer population.
+
+\end{enumerate}
+
+\vspace{4.5cm}
+
+% ==========================================================
+% PART B - CRITICAL THINKING
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Challenging Scenarios}}
+\end{tcolorbox}
+
+\noindent
+Think deeply about sampling errors.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item A streaming service wants to know what genre of movies its users prefer. They email a survey to all $100,000$ users. Only $500$ people reply, and $80\%$ of them say "Horror". Can the company safely conclude that $80\%$ of ALL their users prefer Horror movies? What is the problem with this type of sample? (Hint: Think about who actually takes the time to reply).
+
+\end{enumerate}
+
+\end{document}

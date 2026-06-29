@@ -1,0 +1,116 @@
+%COMPARING TWO POPULATIONS - WORKSHEET 0
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 8: Sampling \}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.20.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INSTRUCTIONAL SECTION
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Instruction: Center and Spread}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+When comparing two different populations (e.g., the heights of 7th graders vs. 8th graders), we look at two main things:
+\begin{enumerate}
+    \item \textbf{Measures of Center (Mean or Median):} Tells you what is "typical" or "average." A higher mean means that group is generally larger/taller/faster overall.
+    \item \textbf{Measures of Variability/Spread (Range or Mean Absolute Deviation):} Tells you how spread out the data is. A larger spread means the data is less predictable and more varied. A smaller spread means the data is tightly clustered and more consistent.
+\end{enumerate}
+
+\vspace{5mm}
+
+% ==========================================================
+% PRACTICE PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Practice: Interpreting Data Summaries}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Read the data summaries and answer the questions.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=4.5cm, leftmargin=0.6cm]
+
+\item A teacher compared the test scores of her morning class and her afternoon class.
+\begin{itemize}
+    \item \textbf{Morning Class:} Mean = $82\%$, Range = $25\%$
+    \item \textbf{Afternoon Class:} Mean = $74\%$, Range = $10\%$
+\end{itemize}
+\textbf{A.} Which class did better overall on average? \blank \\
+\textbf{B.} Which class had more consistent (less spread out) scores? \blank
+
+\item Two different brands of batteries were tested to see how many hours they last.
+\begin{itemize}
+    \item \textbf{Brand X:} Median = $45\text{ hours}$, Mean Absolute Deviation = $2\text{ hours}$
+    \item \textbf{Brand Y:} Median = $45\text{ hours}$, Mean Absolute Deviation = $12\text{ hours}$
+\end{itemize}
+If you need a battery that you are \textit{very certain} will last close to $45$ hours, which brand should you buy? Why?
+
+\end{enumerate}
+
+\end{document}

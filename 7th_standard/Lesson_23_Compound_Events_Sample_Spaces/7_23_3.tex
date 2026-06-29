@@ -1,0 +1,123 @@
+%COMPOUND EVENTS & SAMPLE SPACES - WORKSHEET 3
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 9: Probability}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.23.3}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A - INDEPENDENT PROBABILITY MULTIPLICATION
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Calculating Compound Probability directly}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+To find the probability of two independent events BOTH happening, you can multiply their individual probabilities together: $P(A \text{ and } B) = P(A) \times P(B)$.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item You flip a coin and roll a standard $6$-sided die.
+\begin{itemize}
+    \item What is the probability of getting Heads? \blank
+    \item What is the probability of rolling a $4$? \blank
+    \item Multiply them together: What is $P(\text{Heads AND a 4})$? \blank
+\end{itemize}
+
+\item A jar has $3$ red marbles and $2$ blue marbles. You pick one, PUT IT BACK, and pick again.
+\begin{itemize}
+    \item What is $P(\text{Red})$ on the first pick? \blank
+    \item What is $P(\text{Blue})$ on the second pick? \blank
+    \item What is $P(\text{Red, then Blue})$? \blank
+\end{itemize}
+
+\end{enumerate}
+
+\vspace{4.5cm}
+
+% ==========================================================
+% PART B - DEPENDENT EVENTS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Without Replacement}}
+\end{tcolorbox}
+
+\noindent
+If you DO NOT put the item back, the total number of items changes for the second event!
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item Using the same jar as above ($3$ red, $2$ blue). You pick one marble, KEEP IT, and pick again.
+\begin{itemize}
+    \item What is $P(\text{Red})$ on the first pick? \blank
+    \item If you kept that red marble, how many total marbles are left? \blank
+    \item Now what is the new probability of picking a Blue marble on the second pick? \blank
+    \item Multiply to find $P(\text{Red, then Blue WITHOUT replacement})$. \blank
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}

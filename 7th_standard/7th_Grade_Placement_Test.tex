@@ -1,0 +1,239 @@
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{booktabs}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.1in, bottom=1.1in, left=1in, right=1in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{44pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries 7th Grade Math Curriculum --- Comprehensive Placement Test}
+\fancyfoot[C]{\thepage}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blankshorter}{\underline{\hspace{2.0cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{7th Grade Math Placement Test}}\\[4pt]
+    {\large Diagnostic Assessment Across All Curriculum Domains}
+\end{center}
+
+\vspace{4mm}
+\textbf{Name:} \underline{\hspace{6cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{4cm}}\\
+\vspace{2mm}
+
+\begin{tcolorbox}[colback=black!5, colframe=black!40, arc=2mm, title=\textbf{Instructions for Students}]
+This placement exam tests skills across all 5 major math domains of the 7th-grade curriculum. Read each problem carefully. Show your work for short-answer and multi-step questions to receive partial credit.
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% DOMAIN 1: RATIOS, PROPORTIONS & PERCENTS
+% ==========================================================
+\begin{tcolorbox}[colback=white, colframe=black, arc=2mm]
+    \textbf{Domain 1: Ratios, Proportions \& Percents (Lessons 1--5)}
+\end{tcolorbox}
+
+\begin{enumerate}[leftmargin=0.6cm, itemsep=3.5cm]
+
+\item \textbf{[Multiple Choice | Lesson 1]} A recipe calls for $\frac{1}{2}$ cup of sugar for every $\frac{2}{3}$ cup of flour. What is the unit rate of sugar to flour?
+\begin{enumerate}[label=\Alph*)]
+    \item $\frac{3}{4}$ cup of sugar per cup of flour
+    \item $\frac{4}{3}$ cups of sugar per cup of flour
+    \item $\frac{1}{3}$ cup of sugar per cup of flour
+    \item $\frac{2}{5}$ cup of sugar per cup of flour
+\end{enumerate}
+\textbf{Answer Choice:} \blankshorter
+
+\item \textbf{[Short Answer | Lesson 2]} Determine if the relationship between the variables $x$ and $y$ is proportional. If so, find the constant of proportionality ($k$).
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Hours Worked ($x$)} & 2 & 5 & 8 \\ \hline
+\textbf{Total Pay ($y$)} & \$30 & \$75 & \$120 \\ \hline
+\end{tabular}
+\end{center}
+\textbf{Is it proportional? (Yes/No):} \blankshorter \quad \textbf{If yes, $k =$} \blankshorter
+
+\item \textbf{[Short Answer | Lesson 3]} Write an equation in the form $y = kx$ to represent the proportional relationship described in Question 2.
+\\ \\
+\textbf{Equation:} \blanklong
+
+\item \textbf{[Short Answer | Lesson 4 \& 5]} A skateboard originally costs $\$80$. It is on sale for $25\%$ off. After the discount, a $5\%$ sales tax is applied to the sale price.
+\\ \\
+\textbf{a)} What is the sale price of the skateboard? \blankshorter \\ \\
+\textbf{b)} What is the final total cost including tax?
+\\ \\
+\textbf{Final Cost:} \blanklong
+
+\end{enumerate}
+\vspace{0.5cm}
+
+% ==========================================================
+% DOMAIN 2: THE NUMBER SYSTEM
+% ==========================================================
+\begin{tcolorbox}[colback=white, colframe=black, arc=2mm]
+    \textbf{Domain 2: The Number System (Lessons 6--8)}
+\end{tcolorbox}
+
+\begin{enumerate}[leftmargin=0.6cm, itemsep=3.5cm, start=5]
+
+\item \textbf{[Short Answer | Lesson 6]} Solve the rational number expression below. Show your steps:
+$$-15.5 + 4.2 - (-8.3)$$
+\vspace{1.5cm} \\
+\textbf{Answer:} \blanklong
+
+\item \textbf{[Short Answer | Lesson 7]} Multiply the following fractions. Write your final answer in simplest form:
+$$-\frac{3}{4} \times \left( -1\frac{1}{2} \right)$$
+\vspace{1.5cm} \\
+\textbf{Answer:} \blanklong
+
+\item \textbf{[Multiple Choice | Lesson 8]} The temperature in Anchorage at 6:00 AM was $-12^\circ\text{F}$. By noon, the temperature had dropped $5^\circ\text{F}$. By 4:00 PM, it rose $8^\circ\text{F}$. What was the temperature at 4:00 PM?
+\begin{enumerate}[label=\Alph*)]
+    \item $1^\circ\text{F}$
+    \item $-15^\circ\text{F}$
+    \item $-9^\circ\text{F}$
+    \item $-25^\circ\text{F}$
+\end{enumerate}
+\textbf{Answer Choice:} \blankshorter
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+% ==========================================================
+% DOMAIN 3: EXPRESSIONS, EQUATIONS & INEQUALITIES
+% ==========================================================
+\begin{tcolorbox}[colback=white, colframe=black, arc=2mm]
+    \textbf{Domain 3: Expressions, Equations \& Inequalities (Lessons 9--11)}
+\end{tcolorbox}
+
+\begin{enumerate}[leftmargin=0.6cm, itemsep=3.5cm, start=8]
+
+\item \textbf{[Short Answer | Lesson 9]} Simplify the linear expression by distributing and combining like terms:
+$$3(2x - 5) - 4x + 7$$
+\vspace{1.5cm} \\
+\textbf{Simplified Expression:} \blanklong
+
+\item \textbf{[Short Answer | Lesson 10]} Solve the two-step equation for $x$:
+$$\frac{x}{4} - 6 = 2$$
+\vspace{1.5cm} \\
+\textbf{$x =$} \blanklong
+
+\item \textbf{[Multiple Choice | Lesson 11]} Which number line graph correctly represents the solution to the inequality $-3x + 5 \leq -4$?
+\begin{enumerate}[label=\Alph*)]
+    \item A closed circle at $3$, arrow pointing to the right ($x \geq 3$)
+    \item An open circle at $3$, arrow pointing to the left ($x < 3$)
+    \item A closed circle at $3$, arrow pointing to the left ($x \leq 3$)
+    \item An open circle at $3$, arrow pointing to the right ($x > 3$)
+\end{enumerate}
+\textbf{Answer Choice:} \blankshorter
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+% ==========================================================
+% DOMAIN 4: GEOMETRY
+% ==========================================================
+\begin{tcolorbox}[colback=white, colframe=black, arc=2mm]
+    \textbf{Domain 4: Geometry (Lessons 12--18)}
+\end{tcolorbox}
+
+\begin{enumerate}[leftmargin=0.6cm, itemsep=3.5cm, start=11]
+
+\item \textbf{[Short Answer | Lesson 15]} A circular garden has a diameter of $14\text{ meters}$. Use $\pi \approx \frac{22}{7}$ to find the circumference and the area of the garden.
+\\ \\
+\textbf{Circumference:} \blanklong \quad \textbf{Area:} \blanklong
+
+\item \textbf{[Short Answer | Lesson 16]} Two angles are supplementary. One angle measures $(4x - 10)^\circ$ and the other measures $(2x + 10)^\circ$. Set up an equation and solve for $x$.
+\vspace{1.5cm} \\
+\textbf{$x =$} \blanklong
+
+\item \textbf{[Long Answer | Lesson 17 \& 18]} Consider a triangular prism. The triangular base has a width of $6\text{ cm}$ and a height of $4\text{ cm}$. The length (or depth) of the prism is $10\text{ cm}$.
+\\ \\
+\textbf{a)} Calculate the area of the triangular base ($B$).
+\\ \\
+\textbf{Base Area ($B$):} \blanklong \\ \\
+\textbf{b)} Calculate the total volume ($V$) of the triangular prism.
+\\ \\
+\textbf{Volume ($V$):} \blanklong
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+% ==========================================================
+% DOMAIN 5: STATISTICS & PROBABILITY
+% ==========================================================
+\begin{tcolorbox}[colback=teal!5, colframe=teal!60!black, arc=2mm]
+    \textbf{Domain 5: Statistics \& Probability (Lessons 19--23)}
+\end{tcolorbox}
+
+\begin{enumerate}[leftmargin=0.6cm, itemsep=3.5cm, start=14]
+
+\item \textbf{[Multiple Choice | Lesson 19]} Which of the following methods provides the most representative sample to determine the favorite lunch food of all 7th graders at a middle school?
+\begin{enumerate}[label=\Alph*)]
+    \item Surveying 20 students in the school band.
+    \item Surveying every 5th 7th grader who walks into the cafeteria.
+    \item Surveying 50 8th graders.
+    \item Surveying 15 students who bring their lunch from home.
+\end{enumerate}
+\textbf{Answer Choice:} \blankshorter
+
+\newpage
+
+\item \textbf{[Short Answer | Lesson 21]} A standard six-sided die is rolled. What is the theoretical probability of rolling a number greater than 4? Write your answer as a fraction in simplest form.
+\vspace{1.5cm} \\
+\textbf{Probability:} \blanklong
+
+\item \textbf{[Long Answer | Lesson 23]} A local sub shop offers a lunch special. Customers can choose one type of bread (White, Wheat, or Wrap) and one type of meat (Turkey or Ham).
+\\ \\
+\textbf{a)} Draw a tree diagram or make an organized list to show the sample space of all possible sandwich combinations.
+\vspace{3.5cm} \\ \\
+\textbf{b)} If a customer randomly selects a combination, what is the probability they choose a sandwich with Wheat bread?
+\\ \\
+\textbf{Probability:} \blanklong
+
+\end{enumerate}
+
+\end{document}

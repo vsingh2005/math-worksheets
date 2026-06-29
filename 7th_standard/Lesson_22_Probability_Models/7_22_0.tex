@@ -1,0 +1,123 @@
+%PROBABILITY MODELS - WORKSHEET 0
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 9: Probability}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.22.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INSTRUCTIONAL SECTION
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Instruction: Uniform and Non-Uniform Models}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+A \textbf{Probability Model} is just a list of all the possible outcomes of an event and the probability of each outcome occurring. The sum of all probabilities in a model MUST exactly equal $1$.
+
+\vspace{2mm}
+\noindent
+\textbf{Types of Models:}
+\begin{itemize}
+    \item \textbf{Uniform Probability Model:} Every single outcome has the exact same chance of happening. (e.g., flipping a fair coin or rolling a standard die).
+    \item \textbf{Non-Uniform Probability Model:} Some outcomes are more likely to happen than others. (e.g., a spinner where the "Red" section takes up half the circle, but "Blue" only takes up a quarter).
+\end{itemize}
+
+\vspace{5mm}
+
+% ==========================================================
+% PRACTICE PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Practice: Identifying Models}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Determine whether the described scenario represents a uniform or non-uniform probability model. Explain your reasoning.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=4.5cm, leftmargin=0.6cm]
+
+\item A teacher writes the names of all $25$ students on separate identical slips of paper, puts them in a hat, and draws one name.
+\begin{itemize}
+    \item Uniform or Non-Uniform? \blank
+    \item Why? \blanklong
+\end{itemize}
+
+\item A weather report predicts a $70\%$ chance of rain and a $30\%$ chance of no rain.
+\begin{itemize}
+    \item Uniform or Non-Uniform? \blank
+    \item Why? \blanklong
+\end{itemize}
+
+\item You draw a single card from a standard deck of $52$ playing cards. (Looking at individual cards, not suits or colors).
+\begin{itemize}
+    \item Uniform or Non-Uniform? \blank
+    \item Why? \blanklong
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}

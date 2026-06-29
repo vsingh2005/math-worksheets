@@ -1,0 +1,129 @@
+%CIRCLES: CIRCUMFERENCE AND AREA - WORKSHEET 0
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 7: Measurement \& Angles: Circles: Circumference \& Area}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.15.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INSTRUCTIONAL SECTION
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Instruction: Circle Vocabulary and Formulas}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+\textbf{Key Terms:}
+\begin{itemize}
+    \item \textbf{Radius ($r$):} The distance from the center to the edge.
+    \item \textbf{Diameter ($d$):} The distance straight across the circle, through the center. ($d = 2r$)
+    \item \textbf{Circumference ($C$):} The distance around the outside of the circle (the perimeter).
+    \item \textbf{Area ($A$):} The amount of space inside the circle.
+\end{itemize}
+
+\vspace{2mm}
+\noindent
+\textbf{Formulas (Use $\pi \approx 3.14$):}
+\begin{itemize}
+    \item \textbf{Circumference:} $C = \pi d$ \quad or \quad $C = 2 \pi r$
+    \item \textbf{Area:} $A = \pi r^2$
+\end{itemize}
+
+\vspace{5mm}
+
+% ==========================================================
+% PRACTICE PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Practice: Finding Circumference and Area}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Use the formulas to find the circumference and area for each circle. Show your setup. Round to the nearest tenth if necessary.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=4.5cm, leftmargin=0.6cm]
+
+\item A circle has a \textbf{radius} of $5\text{ cm}$.
+\begin{itemize}
+    \item Diameter = \blank
+    \item Circumference = \blank
+    \item Area = \blank
+\end{itemize}
+
+\item A circle has a \textbf{diameter} of $12\text{ in}$.
+\begin{itemize}
+    \item Radius = \blank
+    \item Circumference = \blank
+    \item Area = \blank
+\end{itemize}
+
+\item A circle has a \textbf{radius} of $3\text{ m}$. Find its Circumference and Area.
+
+\item A circle has a \textbf{diameter} of $10\text{ ft}$. Find its Circumference and Area.
+
+\end{enumerate}
+
+\end{document}

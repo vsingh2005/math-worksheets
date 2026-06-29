@@ -1,0 +1,117 @@
+%COMPARING TWO POPULATIONS - WORKSHEET 2
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 8: Sampling \}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.20.2}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A - MEAN ABSOLUTE DEVIATION (MAD)
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Understanding MAD}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Mean Absolute Deviation (MAD) is the average distance of all the data points from the mean. A larger MAD means the data is more spread out.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item Two farmers are comparing the weights of their apples. 
+\begin{itemize}
+    \item \textbf{Farmer A:} Mean weight = $150\text{g}$, MAD = $5\text{g}$
+    \item \textbf{Farmer B:} Mean weight = $150\text{g}$, MAD = $20\text{g}$
+\end{itemize}
+If a grocery store wants to buy apples that are all very uniform in size, which farmer should they buy from? Why?
+
+\item Consider two sets of test scores. Set 1: $\{80, 80, 80, 80, 80\}$. Set 2: $\{60, 70, 80, 90, 100\}$. Without doing any math, which set has a MAD of zero? Why?
+
+\end{enumerate}
+
+\vspace{5cm}
+
+% ==========================================================
+% PART B - DRAWING CONCLUSIONS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Making Inferences}}
+\end{tcolorbox}
+
+\noindent
+Use the data provided to make an inference (a conclusion) about the populations.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item A biologist measures the lengths of fish in two different lakes. 
+\begin{itemize}
+    \item \textbf{Lake Alpha:} Median length = $12\text{ inches}$, Range = $4\text{ inches}$
+    \item \textbf{Lake Beta:} Median length = $8\text{ inches}$, Range = $15\text{ inches}$
+\end{itemize}
+Write one sentence comparing the "typical" size of the fish in both lakes, and one sentence comparing the predictability of the fish sizes in both lakes.
+
+\end{enumerate}
+
+\end{document}

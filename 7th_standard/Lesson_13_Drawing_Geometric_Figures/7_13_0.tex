@@ -1,0 +1,121 @@
+%DRAWING GEOMETRIC FIGURES - WORKSHEET 0
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 6: Scale \& Construction: Drawing Geometric Figures}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.13.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INSTRUCTIONAL SECTION
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Instruction: Triangle Inequality Theorem}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+You cannot just take any three lengths and make a triangle. They must follow the \textbf{Triangle Inequality Theorem}:
+\begin{itemize}
+    \item \textbf{The Rule:} The sum of the two shorter sides of a triangle MUST be \textit{strictly greater than} the longest side.
+\end{itemize}
+
+\vspace{2mm}
+\noindent
+\textbf{Example:} Can you make a triangle with sides $3\text{ cm}$, $4\text{ cm}$, and $8\text{ cm}$?
+\begin{itemize}
+    \item Shorter sides: $3 + 4 = 7$
+    \item Is $7 > 8$? \textbf{No!}
+    \item So, these sides \textbf{cannot} form a triangle. They won't reach each other to close the shape!
+\end{itemize}
+
+\vspace{5mm}
+
+% ==========================================================
+% PRACTICE PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Practice: Will it make a triangle?}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Determine whether each set of side lengths can form a triangle. Show your inequality check and write "Yes" or "No".
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3cm, leftmargin=0.6cm]
+
+\item $5\text{ in}$, $7\text{ in}$, and $10\text{ in}$
+
+\item $12\text{ cm}$, $4\text{ cm}$, and $16\text{ cm}$
+
+\item $8\text{ m}$, $9\text{ m}$, and $15\text{ m}$
+
+\item $2.5\text{ in}$, $3.5\text{ in}$, and $7\text{ in}$
+
+\item $10\text{ cm}$, $10\text{ cm}$, and $10\text{ cm}$
+
+\item $4\text{ ft}$, $6\text{ ft}$, and $2\text{ ft}$
+
+\end{enumerate}
+
+\end{document}

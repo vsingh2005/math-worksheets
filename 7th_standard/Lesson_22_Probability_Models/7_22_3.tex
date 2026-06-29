@@ -1,0 +1,113 @@
+%PROBABILITY MODELS - WORKSHEET 3
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 9: Probability}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.22.3}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A - MISSING PROBABILITIES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Solving for the Unknown}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Use the rule that all probabilities in a model must sum to $1$ to find the missing probabilities.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item A board game spinner has $4$ sections: Move $1$ Space, Move $2$ Spaces, Move $3$ Spaces, and Lose a Turn.
+\begin{itemize}
+    \item $P(\text{Move 1}) = 0.40$
+    \item $P(\text{Move 2}) = 0.25$
+    \item $P(\text{Lose a Turn}) = 0.15$
+    \item What is the probability of landing on Move $3$ Spaces? \blank
+\end{itemize}
+
+\item You roll an unfair, weighted die. The probability of rolling a $1$, $2$, $3$, $4$, or $5$ are all identical: $0.10$ each. What is the probability of rolling a $6$?
+
+\end{enumerate}
+
+\vspace{4.5cm}
+
+% ==========================================================
+% PART B - CHALLENGE DESIGN
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Design Your Own Game}}
+\end{tcolorbox}
+
+\noindent
+Create a game based on specific mathematical rules.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item You want to design a carnival game where players pick a colored rubber duck from a pond. You want the probability of winning a Large Prize to be exactly $5\%$, a Small Prize to be $20\%$, and No Prize to be $75\%$. If you have exactly $200$ ducks in the pond, how many of them should have the Large Prize marking, the Small Prize marking, and the No Prize marking? 
+
+\end{enumerate}
+
+\end{document}

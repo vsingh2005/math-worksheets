@@ -1,0 +1,122 @@
+%VOLUME OF PRISMS - WORKSHEET 0
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 7: Measurement \& Angles: Volume of Prisms}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.18.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INSTRUCTIONAL SECTION
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Instruction: The Universal Volume Formula}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+To find the volume of \textit{any} right prism (rectangular, triangular, hexagonal, etc.), you only need one master formula:
+\[ \mathbf{V = B \times h} \]
+\begin{itemize}
+    \item \textbf{V:} Volume (how much space is inside, measured in cubic units like $\text{cm}^3$)
+    \item \textbf{B:} Area of the BASE shape (Notice it is a capital 'B')
+    \item \textbf{h:} Height of the prism (the distance between the two parallel bases)
+\end{itemize}
+
+\vspace{2mm}
+\noindent
+\textbf{Steps to solve:}
+\begin{enumerate}
+    \item Identify the base shape (e.g., triangle, rectangle).
+    \item Find the area of that 2D base shape ($B$).
+    \item Multiply that area by the height of the 3D prism ($h$).
+\end{enumerate}
+
+\vspace{5mm}
+
+% ==========================================================
+% PRACTICE PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Practice: Rectangular Prisms}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Find the volume of each rectangular prism. Show your work.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=4cm, leftmargin=0.6cm]
+
+\item A moving box has a length of $10\text{ in}$, a width of $5\text{ in}$, and a height of $8\text{ in}$.
+\begin{itemize}
+    \item Area of the Base ($B$): \blanklong
+    \item Volume ($V = B \times h$): \blanklong
+\end{itemize}
+
+\item A rectangular fish tank has a base area of $450\text{ cm}^2$ and a height of $30\text{ cm}$. What is the volume of the tank?
+
+\item A cube has a side length of $4\text{ meters}$. What is its volume?
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,230 @@
+% Equations of Proportional Relationships - Worksheet 3
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Equations of Proportional Relationships}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.3.3}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% LESSON 3: EQUATIONS OF PROPORTIONAL RELATIONSHIPS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Lesson 3: Equations of Proportional Relationships}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+A proportional relationship can be represented by the equation $y = kx$, where $k$ is the constant of proportionality (also known as the unit rate).
+
+\begin{itemize}[label=$\bullet$, itemsep=2mm]
+    \item The point $(0,0)$ on the graph of a proportional relationship always represents the starting point where there is zero of one quantity and zero of the other.
+    \item The point $(1, k)$ on the graph represents the unit rate. It shows that for every 1 unit of $x$, there are $k$ units of $y$.
+\end{itemize}
+
+\vspace{5mm}
+
+% ==========================================================
+% PART A: WRITING EQUATIONS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Writing Equations}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+For each proportional relationship, write an equation in the form $y = kx$. Identify the constant of proportionality ($k$) and explain what it means in the context of the problem.
+
+\vspace{3mm}
+
+\begin{enumerate}[label=\arabic*., itemsep=3.0cm, leftmargin=0.6cm]
+
+\item A bakery uses 3 cups of flour for every 2 cups of sugar in a recipe. Let $x$ be the number of cups of sugar and $y$ be the number of cups of flour.
+    \begin{tcolorbox}[colback=customteal!10, colframe=customteal!50]
+    Equation: \blanklong
+    Constant of Proportionality ($k$): \blankshorter
+    Meaning of $k$: \blanklong
+    \end{tcolorbox}
+
+\item A car travels at a constant speed. After 2 hours, it has traveled 120 miles. Let $x$ be the time in hours and $y$ be the distance in miles.
+    \begin{tcolorbox}[colback=customteal!10, colframe=customteal!50]
+    Equation: \blanklong
+    Constant of Proportionality ($k$): \blankshorter
+    Meaning of $k$: \blanklong
+    \end{tcolorbox}
+
+\item The number of pages read is proportional to the time spent reading. If you read 50 pages in 2 hours, let $x$ be the time in hours and $y$ be the number of pages read.
+    \begin{tcolorbox}[colback=customteal!10, colframe=customteal!50]
+    Equation: \blanklong
+    Constant of Proportionality ($k$): \blankshorter
+    Meaning of $k$: \blanklong
+    \end{tcolorbox}
+
+\item A plant grows at a constant rate. After 3 days, it has grown 9 centimeters. Let $x$ be the number of days and $y$ be the height in centimeters.
+    \begin{tcolorbox}[colback=customteal!10, colframe=customteal!50]
+    Equation: \blanklong
+    Constant of Proportionality ($k$): \blankshorter
+    Meaning of $k$: \blanklong
+    \end{tcolorbox}
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART B: INTERPRETING POINTS ON A GRAPH
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Interpreting Points on a Graph}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+The graph below shows the relationship between the number of hours spent working and the amount of money earned. The relationship is proportional.
+
+\begin{center}
+\begin{tikzpicture}
+    % Axes
+    \draw[->] (0,0) -- (6,0) node[right] {$x$ (Hours Worked)};
+    \draw[->] (0,0) -- (0,6) node[above] {$y$ (Money Earned in \$)};
+
+    % Points
+    \fill (1,15) circle (2pt) node[right] {(1, 15)};
+    \fill (2,30) circle (2pt) node[right] {(2, 30)};
+    \fill (3,45) circle (2pt) node[right] {(3, 45)};
+    \fill (0,0) circle (2pt) node[below left] {(0, 0)};
+
+    % Line
+    \draw[customteal, thick] (0,0) -- (3.5, 52.5); % Extend line slightly beyond last point for visual
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{enumerate}[label=\arabic*., itemsep=3.0cm, leftmargin=0.6cm]
+
+\item What is the equation of this proportional relationship? (Hint: Use the point $(1, 15)$ to find $k$.)
+    \begin{tcolorbox}[colback=customteal!10, colframe=customteal!50]
+    Equation: \blanklong
+    \end{tcolorbox}
+
+\item Explain what the point $(0, 0)$ represents in this context.
+    \begin{tcolorbox}[colback=customteal!10, colframe=customteal!50]
+    Explanation: \blanklong
+    \end{tcolorbox}
+
+\item Explain what the point $(1, 15)$ represents in this context.
+    \begin{tcolorbox}[colback=customteal!10, colframe=customteal!50]
+    Explanation: \blanklong
+    \end{tcolorbox}
+
+\item Use the equation to find out how much money is earned after working 5 hours.
+    \begin{tcolorbox}[colback=customteal!10, colframe=customteal!50]
+    Calculation: \blanklong
+    \end{tcolorbox}
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART C: MORE PRACTICE
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part C: More Practice}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Determine the equation of the proportional relationship and interpret the meaning of the constant of proportionality ($k$).
+
+\vspace{3mm}
+
+\begin{enumerate}[label=\arabic*., itemsep=3.0cm, leftmargin=0.6cm]
+
+\item A recipe for lemonade requires $\dfrac{1}{2}$ cup of sugar for every $\dfrac{3}{4}$ cup of lemon juice. Let $x$ be the cups of lemon juice and $y$ be the cups of sugar.
+    \begin{tcolorbox}[colback=customteal!10, colframe=customteal!50]
+    Equation: \blanklong
+    Meaning of $k$: \blanklong
+    \end{tcolorbox}
+
+\item A printer prints 15 pages in 2 minutes. The relationship between minutes spent printing and pages printed is proportional. Let $x$ be the minutes and $y$ be the pages.
+    \begin{tcolorbox}[colback=customteal!10, colframe=customteal!50]
+    Equation: \blanklong
+    Meaning of $k$: \blanklong
+    \end{tcolorbox}
+
+\item The distance a train travels is proportional to the time it travels. If the train travels 105 miles in 1.5 hours, let $x$ be the time in hours and $y$ be the distance in miles.
+    \begin{tcolorbox}[colback=customteal!10, colframe=customteal!50]
+    Equation: \blanklong
+    Meaning of $k$: \blanklong
+    \end{tcolorbox}
+
+\item A cyclist rides at a constant rate. In $\dfrac{1}{3}$ of an hour, the cyclist rides $\dfrac{5}{2}$ miles. Let $x$ be the time in hours and $y$ be the distance in miles.
+    \begin{tcolorbox}[colback=customteal!10, colframe=customteal!50]
+    Equation: \blanklong
+    Meaning of $k$: \blanklong
+    \end{tcolorbox}
+
+\end{enumerate}
+
+\end{document}

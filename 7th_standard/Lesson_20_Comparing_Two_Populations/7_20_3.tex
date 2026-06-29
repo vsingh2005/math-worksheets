@@ -1,0 +1,117 @@
+%COMPARING TWO POPULATIONS - WORKSHEET 3
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 8: Sampling \}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.20.3}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A - OVERLAPPING DATA
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Degree of Overlap}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Sometimes populations overlap. The distance between the means of two populations can be expressed as a multiple of their MAD. 
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item \textbf{Group 1:} Mean = $50$, MAD = $10$ \\
+\textbf{Group 2:} Mean = $70$, MAD = $10$ 
+\begin{itemize}
+    \item What is the difference between the two means? \blank
+    \item How many times larger is this difference than the MAD? (Difference $\div$ MAD) \blank
+\end{itemize}
+
+\item If the difference between two means is $0$, what does that tell you about the two populations? Do they have a high degree of overlap or a low degree of overlap?
+
+\end{enumerate}
+
+\vspace{5cm}
+
+% ==========================================================
+% PART B - REAL WORLD APPLICATION
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Critical Thinking Challenge}}
+\end{tcolorbox}
+
+\noindent
+Use all of your knowledge of statistics to answer this scenario.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item A marathon organizer is comparing the finish times (in minutes) of runners from City A and City B.
+\begin{itemize}
+    \item \textbf{City A Runners:} Mean time = $210\text{ mins}$, Range = $40\text{ mins}$
+    \item \textbf{City B Runners:} Mean time = $250\text{ mins}$, Range = $150\text{ mins}$
+\end{itemize}
+A sponsor wants to give free shoes to the group of runners that is generally faster AND more predictably grouped together in their speeds. Which city should get the shoes and why? Explain using both statistics.
+
+\end{enumerate}
+
+\end{document}

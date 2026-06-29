@@ -1,0 +1,118 @@
+%COMPOUND EVENTS & SAMPLE SPACES - WORKSHEET 0
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 9: Probability}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.23.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INSTRUCTIONAL SECTION
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Instruction: What is a Compound Event?}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+A \textbf{Simple Event} is one action (like rolling a single die). \\
+A \textbf{Compound Event} consists of two or more simple events happening together (like rolling a die AND flipping a coin).
+
+\vspace{2mm}
+\noindent
+\textbf{The Sample Space:}
+The sample space is the list of ALL possible outcomes for a compound event. You can organize the sample space using:
+\begin{itemize}
+    \item \textbf{Organized Lists:} e.g., (Heads, 1), (Heads, 2), etc.
+    \item \textbf{Tables:} Great for exactly two events (e.g., rows for coin flips, columns for die rolls).
+    \item \textbf{Tree Diagrams:} Great for mapping out sequence of choices.
+\end{itemize}
+
+\vspace{5mm}
+
+% ==========================================================
+% PRACTICE PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Practice: Creating Sample Spaces}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Use the requested method to show the sample space.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=6cm, leftmargin=0.6cm]
+
+\item You flip a coin two times. Create an \textbf{organized list} of all possible outcomes. (Use H for Heads and T for Tails).
+\begin{itemize}
+    \item How many total outcomes are there? \blank
+\end{itemize}
+
+\item A restaurant offers a lunch special where you choose one sandwich (Turkey, Ham) and one side (Chips, Apple, Soup). Create a \textbf{tree diagram} to show all possible lunch combinations.
+\begin{itemize}
+    \item How many total lunch combinations are there? \blank
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}

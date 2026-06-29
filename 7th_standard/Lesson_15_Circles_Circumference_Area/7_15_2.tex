@@ -1,0 +1,111 @@
+%CIRCLES: CIRCUMFERENCE AND AREA - WORKSHEET 2
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 7: Measurement \& Angles: Circles: Circumference \& Area}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.15.2}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A - SEMICIRCLES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Semicircles}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+A semicircle is half of a circle. To find the area, calculate the full area and divide by 2. To find the perimeter, you must find half of the circumference \textit{and then add the straight diameter edge}. Use $\pi \approx 3.14$.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item A semicircle has a diameter of $8\text{ cm}$. Find the Area of the semicircle.
+
+\item Find the Perimeter of the same semicircle with a diameter of $8\text{ cm}$. (Remember to add the straight edge!)
+
+\item A semi-circular rug has a radius of $5\text{ feet}$. What is the area of the rug?
+
+\end{enumerate}
+
+\vspace{4.5cm}
+
+% ==========================================================
+% PART B - MULTI-STEP CHALLENGES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Area and Perimeter Challenges}}
+\end{tcolorbox}
+
+\noindent
+Solve each problem. Draw a sketch to help you if needed.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item A circular running track has an inside radius of $20\text{ meters}$. How much distance do you cover if you run around the track exactly $5$ times?
+
+\item A pizza shop sells a small pizza with a $10$-inch diameter for $\$8.00$ and a large pizza with a $14$-inch diameter for $\$14.00$. Which pizza is the better deal? (Hint: Calculate the price per square inch of area for each pizza).
+
+\end{enumerate}
+
+\end{document}

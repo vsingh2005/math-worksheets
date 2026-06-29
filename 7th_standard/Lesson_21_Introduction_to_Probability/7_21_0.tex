@@ -1,0 +1,125 @@
+%INTRODUCTION TO PROBABILITY - WORKSHEET 0
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 9: Probability}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.21.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INSTRUCTIONAL SECTION
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Instruction: The Probability Scale}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+\textbf{Probability} is a measure of how likely an event is to happen. It is always a number between $0$ and $1$ (or $0\%$ to $100\%$).
+\begin{itemize}
+    \item \textbf{0 (or 0\%):} Impossible (will never happen).
+    \item \textbf{0.25 (or 25\%):} Unlikely.
+    \item \textbf{0.5 (or 50\%):} Equally likely as unlikely (a 50/50 chance, like flipping a coin).
+    \item \textbf{0.75 (or 75\%):} Likely.
+    \item \textbf{1 (or 100\%):} Certain (it will absolutely happen).
+\end{itemize}
+
+\vspace{2mm}
+\noindent
+\textbf{How to calculate Theoretical Probability:}
+\[ P(\text{event}) = \dfrac{\text{Number of Favorable Outcomes}}{\text{Total Number of Possible Outcomes}} \]
+
+\vspace{5mm}
+
+% ==========================================================
+% PRACTICE PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Practice: Finding Probability}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Find the probability of each event. Write your answer as a simplified fraction.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=4cm, leftmargin=0.6cm]
+
+\item You roll a standard 6-sided die (numbered 1 through 6).
+\begin{itemize}
+    \item $P(\text{rolling a 3}) =$ \blank
+    \item $P(\text{rolling an even number}) =$ \blank
+    \item $P(\text{rolling a number greater than 4}) =$ \blank
+    \item $P(\text{rolling a 7}) =$ \blank
+\end{itemize}
+
+\item You have a bag containing $4$ red marbles, $5$ blue marbles, and $1$ green marble. You reach in and grab one without looking.
+\begin{itemize}
+    \item What is the total number of marbles? \blank
+    \item $P(\text{Red}) =$ \blank
+    \item $P(\text{Blue}) =$ \blank
+    \item $P(\text{Not Green}) =$ \blank
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}

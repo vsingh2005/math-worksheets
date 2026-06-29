@@ -1,0 +1,238 @@
+%PROPORTIONAL RELATIONSHIPS - WORKSHEET 2
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Proportional Relationships}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.2.2}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A — IDENTIFYING PROPORTIONAL RELATIONSHIPS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Identifying Proportional Relationships}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Determine if the relationship shown in each table represents a proportional relationship. Explain your reasoning. If it is proportional, identify the constant of proportionality ($k$).
+
+\vspace{1.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item \textbf{Table 1:}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$x$ & $y$ \\
+\hline
+1 & 3 \\
+2 & 6 \\
+3 & 9 \\
+4 & 12 \\
+\hline
+\end{tabular}
+\end{center}
+\textbf{Is it proportional?} \blank \\
+\textbf{Reasoning:} \blanklong \\
+\textbf{Constant of Proportionality ($k$):} \blank
+
+\item \textbf{Table 2:}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$x$ & $y$ \\
+\hline
+2 & 4 \\
+4 & 8 \\
+5 & 10 \\
+7 & 14 \\
+\hline
+\end{tabular}
+\end{center}
+\textbf{Is it proportional?} \blank \\
+\textbf{Reasoning:} \blanklong \\
+\textbf{Constant of Proportionality ($k$):} \blank
+
+\item \textbf{Table 3:}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$x$ & $y$ \\
+\hline
+1 & 2 \\
+2 & 4 \\
+3 & 7 \\
+4 & 8 \\
+\hline
+\end{tabular}
+\end{center}
+\textbf{Is it proportional?} \blank \\
+\textbf{Reasoning:} \blanklong \\
+\textbf{Constant of Proportionality ($k$):} \blank
+
+\item \textbf{Table 4:}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$x$ & $y$ \\
+\hline
+3 & 9 \\
+5 & 15 \\
+7 & 21 \\
+10 & 30 \\
+\hline
+\end{tabular}
+\end{center}
+\textbf{Is it proportional?} \blank \\
+\textbf{Reasoning:} \blanklong \\
+\textbf{Constant of Proportionality ($k$):} \blank
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART B — PROPORTIONAL RELATIONSHIPS IN GRAPHS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Proportional Relationships in Graphs}}
+\end{tcolorbox}
+
+\noindent
+Examine each graph. Determine if it represents a proportional relationship. If it is proportional, identify the constant of proportionality ($k$).
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item \textbf{Graph 1:} A straight line passing through the origin (0,0) and the point (2,5).
+\textbf{Is it proportional?} \blank \\
+\textbf{Constant of Proportionality ($k$):} \blank
+
+\item \textbf{Graph 2:} A straight line passing through the point (1,4) and the point (3,12).
+\textbf{Is it proportional?} \blank \\
+\textbf{Constant of Proportionality ($k$):} \blank
+
+\item \textbf{Graph 3:} A straight line that does NOT pass through the origin and goes through (1,2) and (3,6).
+\textbf{Is it proportional?} \blank \\
+\textbf{Constant of Proportionality ($k$):} \blank
+
+\item \textbf{Graph 4:} A straight line passing through the origin (0,0) and the point (4,2).
+\textbf{Is it proportional?} \blank \\
+\textbf{Constant of Proportionality ($k$):} \blank
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================================
+% PART C — CONSTANT OF PROPORTIONALITY IN VARIOUS FORMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part C: Constant of Proportionality in Various Forms}}
+\end{tcolorbox}
+
+\noindent
+Identify the constant of proportionality ($k$) for each situation.
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item \textbf{Equation:} $y = 5x$
+\textbf{Constant of Proportionality ($k$):} \blank
+
+\item \textbf{Equation:} $y = \frac{1}{2}x$
+\textbf{Constant of Proportionality ($k$):} \blank
+
+\item \textbf{Verbal Description:} For every 3 apples, there are 6 oranges. The number of oranges is proportional to the number of apples.
+\textbf{Constant of Proportionality ($k$):} \blank
+
+\item \textbf{Verbal Description:} A car travels at a constant speed of 50 miles per hour. The distance traveled is proportional to the time.
+\textbf{Constant of Proportionality ($k$):} \blank
+
+\item \textbf{Diagram:} A recipe calls for 2 cups of flour for every 3 cups of sugar.
+\textbf{Constant of Proportionality ($k$):} \blank
+
+\item \textbf{Diagram:} A blueprint shows that 1 inch on the paper represents 10 feet in reality.
+\textbf{Constant of Proportionality ($k$):} \blank
+
+\item \textbf{Table:}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Hours & Miles \\
+\hline
+2 & 100 \\
+3 & 150 \\
+5 & 250 \\
+\hline
+\end{tabular}
+\end{center}
+\textbf{Constant of Proportionality ($k$):} \blank
+
+\item \textbf{Graph:} A straight line passing through the origin and the point (4, 8).
+\textbf{Constant of Proportionality ($k$):} \blank
+
+\end{enumerate}
+
+\end{document}

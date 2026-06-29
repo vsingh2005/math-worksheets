@@ -1,0 +1,121 @@
+%SCALE DRAWINGS - WORKSHEET 0
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Unit 6: Scale \& Construction: Scale Drawings}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.12.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% INSTRUCTIONAL SECTION
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Instruction: Understanding Scale Factors}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+A \textbf{scale drawing} is a proportional, two-dimensional drawing of an object. The scale tells you how the drawing's dimensions relate to the actual object's dimensions.
+
+\vspace{2mm}
+\noindent
+\textbf{Setting up a Proportion:} \\
+To find a missing dimension, set up a proportion comparing the \textbf{drawing length} to the \textbf{actual length}.
+\[ \dfrac{\text{Scale Drawing Length}}{\text{Scale Actual Length}} = \dfrac{\text{Measured Drawing Length}}{\text{Actual Target Length}} \]
+
+\vspace{2mm}
+\noindent
+\textbf{Example:} A map has a scale of $1\text{ inch} = 10\text{ miles}$. The distance between two cities on the map is $3.5\text{ inches}$. What is the actual distance?
+\[ \dfrac{1\text{ in}}{10\text{ mi}} = \dfrac{3.5\text{ in}}{x\text{ mi}} \]
+Cross multiply: $1 \times x = 10 \times 3.5 \implies x = 35\text{ miles}$.
+
+\vspace{5mm}
+
+% ==========================================================
+% PRACTICE PROBLEMS
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Practice: Finding Actual Lengths}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+Use the given scale to find the actual length or the drawing length. Show your proportion.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=4cm, leftmargin=0.6cm]
+
+\item \textbf{Scale:} $1\text{ cm} = 5\text{ m}$ \\
+The length of a park on a map is $12\text{ cm}$. What is the actual length of the park?
+
+\item \textbf{Scale:} $2\text{ inches} = 15\text{ feet}$ \\
+The actual height of a building is $90\text{ feet}$. How tall should the building be drawn on the blueprint?
+
+\item \textbf{Scale:} $\dfrac{1}{2}\text{ inch} = 3\text{ miles}$ \\
+On a map, the distance from your house to the beach is $4\dfrac{1}{2}\text{ inches}$. What is the actual distance?
+
+\item \textbf{Scale:} $1\text{ cm} = 50\text{ km}$ \\
+The actual distance between two cities is $325\text{ km}$. How far apart are they on the map?
+
+\end{enumerate}
+
+\end{document}

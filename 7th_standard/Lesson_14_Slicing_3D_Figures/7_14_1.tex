@@ -1,0 +1,115 @@
+%SLICING 3D FIGURES - WORKSHEET 1
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Construction}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{7.14.1}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+% ==========================================================
+% PART A - VISUALIZING SLICES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Visualizing the Cross Section}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\noindent
+For each scenario, describe the 2D shape that is created when the object is sliced. 
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm]
+
+\item A rectangular prism (like a shoebox) has a base of $8\text{ in}$ by $5\text{ in}$ and a height of $12\text{ in}$. It is sliced parallel to the base. Describe the shape and dimensions of the cross section.
+
+\item The same rectangular prism ($8\text{ in}$ by $5\text{ in}$ base, $12\text{ in}$ height) is sliced perpendicular to the base, cutting exactly through the $5\text{ in}$ width. Describe the shape and dimensions of the cross section.
+
+\item A cone is sliced parallel to its base. Describe the shape of the cross section. Is it the same size as the base? Why or why not?
+
+\end{enumerate}
+
+\vspace{4.5cm}
+
+% ==========================================================
+% PART B - MATCHING
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Matching Shapes}}
+\end{tcolorbox}
+
+\noindent
+Match the 3D figure and the slice direction to the resulting 2D cross section shape. Draw a line to connect them.
+
+\vspace{0.5cm}
+
+\begin{enumerate}[itemsep=3.0cm, leftmargin=0.6cm, resume]
+
+\item Cylinder sliced parallel to the base \hfill \textbf{A.} Rectangle
+
+\item Cube sliced perpendicular to the base \hfill \textbf{B.} Circle
+
+\item Square Pyramid sliced perpendicular to the base \hfill \textbf{C.} Square
+
+\item Cone sliced perpendicular through the top point \hfill \textbf{D.} Triangle
+
+\end{enumerate}
+
+\end{document}
