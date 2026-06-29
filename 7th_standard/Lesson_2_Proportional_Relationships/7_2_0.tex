@@ -90,6 +90,47 @@ Two quantities are in a \textbf{proportional relationship} if they have a consta
 
 \vspace{4mm}
 
+\begin{tcolorbox}[colback=yellow!10,colframe=yellow!50!black,boxrule=0.8pt,arc=3mm]
+\textbf{Quick Check: Which one looks proportional?}
+
+Without calculating anything, make a prediction.
+
+\begin{enumerate}[label=\Alph*.]
+\item
+\begin{tabular}{|c|c|}
+\hline
+$x$ & $y$\\
+\hline
+1 & 2\\
+2 & 4\\
+3 & 6\\
+\hline
+\end{tabular}
+
+\vspace{2mm}
+
+\item
+\begin{tabular}{|c|c|}
+\hline
+$x$ & $y$\\
+\hline
+1 & 2\\
+2 & 5\\
+3 & 8\\
+\hline
+\end{tabular}
+\end{enumerate}
+Circle your prediction. Then we'll learn how to prove it.
+\end{tcolorbox}
+\vspace{4mm}
+\begin{tcolorbox}[colback=red!5,colframe=red!60!black,arc=3mm]
+\textbf{Common Mistake}
+
+A relationship is \textbf{not} proportional just because both numbers increase.
+
+The ratio between the quantities must stay the same every time.
+\end{tcolorbox}
+
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 
 \textbf{Example 1: Is it proportional?}
@@ -97,8 +138,7 @@ Two quantities are in a \textbf{proportional relationship} if they have a consta
 \medskip
 
 \noindent
-\textbf{Table A:}
-
+\textbf{Table A:} \\ \\
 \begin{tabular}{|c|c|}
 \hline
 $x$ & $y$ \\
@@ -111,7 +151,7 @@ $x$ & $y$ \\
 
 \medskip
 
-\noindent
+\noindent\\ \\
 \textbf{Calculation:}
 \begin{itemize}
     \item $\frac{y}{x}$ for (2, 4): $\frac{4}{2} = 2$
@@ -122,8 +162,7 @@ Since the ratio $\frac{y}{x}$ is constant ($2$), Table A represents a proportion
 
 \medskip
 \noindent
-\textbf{Table B:}
-
+\textbf{Table B:}\\ \\
 \begin{tabular}{|c|c|}
 \hline
 $x$ & $y$ \\
@@ -136,7 +175,7 @@ $x$ & $y$ \\
 
 \medskip
 
-\noindent
+\noindent\\ \\
 \textbf{Calculation:}
 \begin{itemize}
     \item $\frac{y}{x}$ for (1, 3): $\frac{3}{1} = 3$
@@ -152,12 +191,12 @@ Since the ratio $\frac{y}{x}$ is not constant, Table B does not represent a prop
 % ==========================================================
 % IDENTIFYING PROPORTIONAL RELATIONSHIPS USING GRAPHS
 % ==========================================================
+\newpage
 \begin{tcolorbox}[colback=customteal!10, colframe=customteal, boxrule=1pt, arc=3mm]
     \textbf{Graphs:} A relationship is proportional if its graph is a straight line that passes through the \textbf{origin} (0,0).
 \end{tcolorbox}
 
 \vspace{4mm}
-
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 
 \textbf{Example 2: Graphing Proportional Relationships}
@@ -167,7 +206,7 @@ Since the ratio $\frac{y}{x}$ is not constant, Table B does not represent a prop
 \noindent
 \textbf{Graph A:} (Plotting points from Table A)
 \begin{center}
-\begin{tikzpicture}
+\begin{tikzpicture}[x=0.7cm,y=0.45cm]
     \draw[->] (-1,0) -- (5,0) node[right] {$x$};
     \draw[->] (0,-1) -- (0,9) node[above] {$y$};
     \draw[thick, customteal] (0,0) -- (1,2) -- (2,4) -- (3,6) -- (4,8);
@@ -177,14 +216,13 @@ Since the ratio $\frac{y}{x}$ is not constant, Table B does not represent a prop
     \fill[black] (1,2) circle (1.5pt);
 \end{tikzpicture}
 \end{center}
-This graph is a straight line passing through the origin (0,0). Therefore, it represents a proportional relationship.
 
-\medskip
+This graph is a straight line passing through the origin (0,0). Therefore, it represents a proportional relationship. \\
 
 \noindent
 \textbf{Graph B:} (Plotting points from Table B)
 \begin{center}
-\begin{tikzpicture}
+\begin{tikzpicture}[x=0.7cm,y=0.45cm]
     \draw[->] (-1,0) -- (5,0) node[right] {$x$};
     \draw[->] (0,-1) -- (0,9) node[above] {$y$};
     \draw[thick, red] (0,3) -- (1,3) -- (2,5) -- (3,7);
@@ -193,8 +231,8 @@ This graph is a straight line passing through the origin (0,0). Therefore, it re
     \fill[red] (3,7) circle (1.5pt);
 \end{tikzpicture}
 \end{center}
-This graph is not a straight line and does not pass through the origin. Therefore, it does not represent a proportional relationship.
-
+This graph is not a straight line and does not pass through the origin. Therefore, it does not represent a proportional relationship. 
+\vspace{0.5cm}
 \end{tcolorbox}
 
 \vspace{4mm}
@@ -202,6 +240,7 @@ This graph is not a straight line and does not pass through the origin. Therefor
 % ==========================================================
 % THE CONSTANT OF PROPORTIONALITY (k)
 % ==========================================================
+\newpage
 \begin{tcolorbox}[colback=customteal!20]
 \large\textcolor{black}{\textbf{The Constant of Proportionality (k)}}
 \end{tcolorbox}
@@ -215,10 +254,7 @@ The \textbf{constant of proportionality}, often represented by the letter $k$, i
     \item \textbf{In Tables:} $k = \frac{y}{x}$ for any pair of values $(x, y)$ where $x \neq 0$.
     \item \textbf{In Graphs:} $k$ is the slope of the straight line that passes through the origin.
     \item \textbf{In Equations:} The equation for a proportional relationship is always in the form $y = kx$.
-    \item \textbf{In Diagrams/Verbal Descriptions:} You can often find the ratio of the two quantities to determine $k$.
 \end{itemize}
-
-\vspace{4mm}
 
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 
@@ -239,10 +275,13 @@ The \textbf{constant of proportionality}, often represented by the letter $k$, i
 \textbf{b) Diagram:}
 \begin{center}
 \begin{tikzpicture}
-    \draw (0,0) rectangle (1,3);
-    \node at (0.5, 1.5) {$5$ apples};
-    \draw (2,0) rectangle (3,3);
-    \node at (2.5, 1.5) {$10$ apples};
+    % Left box
+    \draw (0,0) rectangle (2.2,3);
+    \node at (1.1,1.5) {5 apples};
+
+    % Right box
+    \draw (3,0) rectangle (5.2,3);
+    \node at (4.1,1.5) {10 apples};
 \end{tikzpicture}
 \end{center}
 This diagram shows that 5 apples cost $5$ dollars, and 10 apples cost $10$ dollars.
@@ -277,7 +316,7 @@ For each table and graph, determine if the relationship is proportional. If it i
 
 \vspace{3mm}
 
-\begin{enumerate}[itemsep=1.5cm, leftmargin=0.6cm]
+\begin{enumerate}[itemsep=2cm, leftmargin=0.6cm]
 
 \item \textbf{Table C:}
 \begin{tabular}{|c|c|}
@@ -310,6 +349,24 @@ $x$ & $y$ \\
     \item Is it proportional? \blank
     \item If yes, $k = $ \blank
 \end{itemize}
+
+\item \textbf{Table E:}
+\begin{tabular}{|c|c|}
+\hline
+$x$ & $y$ \\
+\hline
+12 & 26 \\
+24 & 52 \\
+36 & 79 \\
+\hline
+\end{tabular}
+
+\begin{itemize}
+    \item Is it proportional? \blank
+    \item If yes, $k = $ \blank
+\end{itemize}
+
+\newpage
 
 \item \textbf{Graph A:} (A straight line passing through the origin)
 \begin{center}
@@ -349,7 +406,7 @@ $x$ & $y$ \\
 
 \end{enumerate}
 
-\newpage
+    \newpage
 
 % ==========================================================
 % PRACTICE 2: FINDING THE CONSTANT OF PROPORTIONALITY
@@ -363,14 +420,14 @@ Find the constant of proportionality ($k$) for each situation.
 
 \vspace{3mm}
 
-\begin{enumerate}[itemsep=1.5cm, leftmargin=0.6cm]
+\begin{enumerate}[itemsep=1cm, leftmargin=0.6cm]
 
 \item \textbf{Verbal Description:} It takes 3 hours to travel 180 miles.
 \begin{itemize}
     \item $k = $ \blank miles per hour
 \end{itemize}
 
-\item \textbf{Verbal Description:} A store sells 5 notebooks for $15.
+\item \textbf{Verbal Description:} A store sells 5 notebooks for \$15.
 \begin{itemize}
     \item $k = $ \blank dollars per notebook
 \end{itemize}
@@ -389,11 +446,6 @@ Minutes & Steps \\
     \item $k = $ \blank steps per minute
 \end{itemize}
 
-\item \textbf{Equation:} $y = 7x$
-\begin{itemize}
-    \item $k = $ \blank
-\end{itemize}
-
 \item \textbf{Equation:} $y = \frac{1}{4}x$
 \begin{itemize}
     \item $k = $ \blank
@@ -402,11 +454,24 @@ Minutes & Steps \\
 \item \textbf{Diagram:}
 \begin{center}
 \begin{tikzpicture}
-    \draw (0,0) rectangle (1,2);
-    \node at (0.5, 1) {$4$ cookies};
-    \draw (2,0) rectangle (3,2);
-    \node at (2.5, 1) {$8$ cookies};
+\node[draw,
+      minimum width=2.5cm,
+      minimum height=3cm,
+      text width=2cm,
+      align=center]
+      at (0,0)
+      {4 cookies\\\$6};
+
+\node[draw,
+      minimum width=2.5cm,
+      minimum height=3cm,
+      text width=2cm,
+      align=center]
+      at (4,0)
+      {8 cookies\\\$12};
+\end{tikzpicture}
 \end{center}
+
 Assume the cost is proportional to the number of cookies.
 \begin{itemize}
     \item $k = $ \blank dollars per cookie
