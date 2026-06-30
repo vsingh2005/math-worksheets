@@ -53,6 +53,7 @@
 % ----------------------------------------------------------
 \begin{document}
 
+
 \textbf{Name:} \underline{\hspace{5cm}}
 \hfill
 \textbf{Date:} \underline{\hspace{3cm}}\\
@@ -76,17 +77,42 @@
 
 \vspace{4mm}
 
-\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Worked Example 1:}
+\begin{tcolorbox}[colback=yellow!5, colframe=orange!70!black, boxrule=0.8pt, title=\textbf{CRITICAL WARNING: The Left-to-Right Tie Breaker}]
+\small
+Multiplication and Division are \textbf{equal-rank partners}, as are Addition and Subtraction. The letters in PEMDAS do \textbf{not} mean multiplication comes before division! You must execute them strictly in the order they appear from left to right.
 
 \medskip
+\begin{minipage}{0.48\textwidth}
+\centering
+\textbf{\color{red}Incorrect Math (The Alphabet Trap)}
+$$12 \div 3 \times 2$$
+$$12 \div 6 = \mathbf{2} \quad \times$$
+\end{minipage}
+\begin{minipage}{0.48\textwidth}
+\centering
+\textbf{\color{green!60!black}Correct Math (Left-to-Right)}
+$$\underline{12 \div 3} \times 2$$
+$$4 \times 2 = \mathbf{8} \quad \checkmark$$
+\end{minipage}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Worked Example 1:}
+\vspace{0.5cm}
+\medskip
 \noindent
+\vspace{0.2cm} \\
 Evaluate the expression: $3 \times 4^2 - (5 + 2 \times 3)$\\
+\vspace{0.5cm}
+
 \textbf{Solution:} \\
 1) Grouping first: $5 + 2 \times 3 = 5 + 6 = 11$. \\
 2) Exponents: $4^2 = 16$. \\
 3) Multiplications/Divisions: $3 \times 16 = 48$. \\
 4) Additions/Subtractions: $48 - 11 = 37$.
+\vspace{0.5cm}
 \end{tcolorbox}
 
 \vspace{4mm}
@@ -94,20 +120,30 @@ Evaluate the expression: $3 \times 4^2 - (5 + 2 \times 3)$\\
 % ==========================================================
 % DEEPER THINKING PROBLEM 1
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 1: Exponents and Parentheses Pitfalls}
 
 \medskip
 
 \noindent
-\textbf{a) A student evaluates $2 \times 3^2$ as $6^2 = 36$. Explain the student's error. What is the correct value, and why?}
+a) A student evaluates $2 \times 3^2$ as $6^2 = 36$. Explain the student's error. What is the correct value, and why?
 
-\vspace{2cm}
+\vspace{3cm}
 
 \noindent
-\textbf{b) Insert grouping symbols (parentheses) to make this equation true: $2 + 3 \times 4^2 - 5 = 75$.}
+b) Insert grouping symbols (parentheses) to make this equation true: $2 + 3 \times 4^2 - 5 = 75$.
 
-\vspace{2cm}
+\vspace{4cm}
+
+\noindent
+\textbf{c)} Insert parentheses to make this statement true: $4 + 8 \times 2^2 \div 4 = 12$. Explain how changing the position of your grouping symbols impacts which operations take priority.
+
+\vspace{3cm}
+
+\noindent
+\textbf{d)} Evaluate the expression $5 \times 2^4$. Identify the \textbf{base} of the exponent, and explain why the 5 is not multiplied by the 2 before evaluating the power.
+
+\vspace{4cm}
 \end{tcolorbox}
 \newpage
 
@@ -143,65 +179,85 @@ Evaluate the expression: $\dfrac{(5 - 2)^3 + 3}{10 - 2^2}$\\
 3) Divide Numerator by Denominator: $\dfrac{30}{6} = 5$.
 \end{tcolorbox}
 
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Worked Example 2:}
+\medskip
+\noindent
+Evaluate the expression: $\dfrac{(5 - 2)^3 + 3}{10 - 2^2}$\\
+\textbf{Solution:} \\
+1) Simplify the Numerator: \\
+- Inside parenthesis: $5 - 2 = 3$. \\
+- Apply exponent: $3^3 = 27$. \\
+- Add: $27 + 3 = 30$. \\
+2) Simplify the Denominator: \\
+- Apply exponent: $2^2 = 4$. \\
+- Subtract: $10 - 4 = 6$. \\
+3) Divide Numerator by Denominator: $\dfrac{30}{6} = 5$.
+\end{tcolorbox}
+
 \vspace{4mm}
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 2
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 2: Comparing Exponential Growth}
 
 \medskip
 
 \noindent
-\textbf{a) Compare $3^4$ and $4^3$. Which is larger? By how much? Show your calculations.}
+a) Compare $3^4$ and $4^3$. Which is larger? By how much? Show your calculations.
 
-\vspace{2.5cm}
+\vspace{3cm}
 
 \noindent
-\textbf{b) Write an expression for the total number of small boxes if there are 3 large crates, each containing 3 boxes, each containing 3 cartons, each containing 3 small boxes. Evaluate it.}
+b) Write an expression for the total number of small boxes if there are 3 large crates, each containing 3 boxes, each containing 3 cartons, each containing 3 small boxes. Evaluate it.
 
-\vspace{2cm}
+\vspace{3cm}
 \end{tcolorbox}
-\newpage
-
+\vspace{0.5cm}
 % ==========================================================
 % DEEPER THINKING PROBLEM 3
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 3: Writing Expressions from Verbal Descriptions}
 
 \medskip
 
 \noindent
-\textbf{a) Translate the phrase ``the sum of 4 squared and the quotient of 12 and 3'' into a numerical expression. Evaluate the expression.}
+a) Translate the phrase ``the sum of 4 squared and the quotient of 12 and 3'' into a numerical expression. Evaluate the expression.
 
-\vspace{2.5cm}
+\vspace{3cm}
 
 \noindent
-\textbf{b) A student is trying to write an expression for ``the product of 5 and the difference between 9 and 2 squared''. They write $5 \times 9 - 2^2$. Explain why this is incorrect, and write the correct expression.}
+b) A student is trying to write an expression for ``the product of 5 and the difference between 9 and 2 squared''. They write $5 \times 9 - 2^2$. Explain why this is incorrect, and write the correct expression.
 
-\vspace{2.5cm}
+\vspace{3cm}
 \end{tcolorbox}
 \newpage
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 4
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 4: Real-World Formulas and Exponents}
-
 \medskip
-
-\noindent
-\textbf{a) The surface area of a cube with side length $s$ is given by the formula $6s^2$. If a cube has a side length of 5 inches, write a numerical expression for its surface area. Evaluate it.}
-
+\noindent \\
+a) The surface area of a cube with side length $s$ is given by the formula $6s^2$. If a cube has a side length of 5 inches, write a numerical expression for its surface area. Evaluate it.
 \vspace{2.5cm}
 
 \noindent
-\textbf{b) A square table has a side length of 4 feet. A larger square table has a side length of 8 feet. Write an expression comparing their areas using exponents. How many times larger is the area of the second table?}
+b) A square table has a side length of 4 feet. A larger square table has a side length of 8 feet. Write an expression comparing their areas using exponents. How many times larger is the area of the second table?
+\vspace{3cm}
 
-\vspace{2.5cm}
+\noindent
+c) A scientist is tracking a bacteria colony that doubles every hour. She starts with $2^1$ bacteria. Write an expression using exponents for how many bacteria there will be after 5 hours. Evaluate it.
+\vspace{3cm}
+
+\noindent
+d) A square garden has a side length of 3 feet. A farmer wants to tile it with $1$-foot square tiles. He then builds a second garden with a side length of $3^2$ feet. Without multiplying out, explain why the second garden needs $3^2$ times as many tiles as the first. Write an expression using exponents to show the total tiles needed for both gardens combined.
+\vspace{3cm}
 \end{tcolorbox}
+
 
 \end{document}

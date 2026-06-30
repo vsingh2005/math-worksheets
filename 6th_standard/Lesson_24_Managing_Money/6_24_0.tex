@@ -53,6 +53,7 @@
 % ----------------------------------------------------------
 \begin{document}
 
+
 \textbf{Name:} \underline{\hspace{5cm}}
 \hfill
 \textbf{Date:} \underline{\hspace{3cm}}\\
@@ -64,120 +65,161 @@
     \large\textcolor{black}{\textbf{Financial Literacy: Budgets, Percents, and Discounts (Foundation)}}
 \end{tcolorbox}
 
-\vspace{3mm}
+\vspace{1mm}
 
 \noindent
-1. \textbf{Budgeting:} A plan to balance income (money earned) and expenses (money spent). \\
-2. \textbf{Percentage Discounts:} To find a discount, convert the percentage to a decimal and multiply by the original price. \\
-- $\text{Discount} = \text{Price} \times \text{Rate}$ \\
-- $\text{Sale Price} = \text{Original Price} - \text{Discount}$ \\
-3. \textbf{Sales Tax:} An additional percentage charged on top of the sale price. \\
-4. \textbf{Simple Interest:} Money earned or paid for borrowing money. $\text{Interest} = \text{Principal} \times \text{Rate} \times \text{Time}$ ($I = Prt$).
+1. \textbf{Budgeting:} Balancing your incoming income against outgoing fixed and variable expenses.\\
+\vspace{0.5cm}
 
-\vspace{4mm}
+\noindent
+2. \textbf{Percentage Discounts \& Increases:} Percentages alter values relative to their immediate base.
+   \begin{itemize}[noitemsep, leftmargin=0.5cm]
+       \item $\text{Discount Value} = \text{Original Price} \times \text{Rate}_{\text{decimal}}$
+       \item $\text{Sale Price} = \text{Original Price} \times (1 - \text{Rate}_{\text{discount\_decimal}})$
+       \item $\text{Total Cost with Tax} = \text{Sale Price} \times (1 + \text{Rate}_{\text{tax\_decimal}})$
+   \end{itemize}
+\vspace{0.5cm}
 
-\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\noindent
+3. \textbf{Simple Interest:} Growth modeled linearly over time: $\text{Interest } (I) = P \cdot r \cdot t$.
+
+\vspace{2mm}
+\vspace{1cm}
+% --- FIXED PERCENTAGE STACKED BAR VISUAL MODEL ---
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+    % Base Layer: Original Price ($20)
+    \draw[thick, fill=black!5] (0,1.2) rectangle (10,1.8);
+    \node[anchor=west, scale=0.75] at (0,2.0) {\textbf{Original Base Value ($100\%$):} $\$20.00$};
+    \draw[dashed] (8.5,1.2) -- (8.5,1.8);
+    \node[scale=0.7] at (4.25,1.5) {Remaining Paid Portion ($85\%$) = $\$17.00$};
+    \node[scale=0.7, red] at (9.25,1.5) {Discount ($15\%$)};
+
+    % Arrow indicating transformation
+    \draw[-latex, thick, black!60] (5, 1.1) -- (5, 0.7);
+
+    % Second Layer: Sale Price ($17) with Tax ($0.85) added on top
+    \draw[thick, fill=black!15] (0,0) rectangle (8.5,0.6);
+    \draw[thick, fill=black!35] (8.5,0) rectangle (8.925,0.6);
+    \node[anchor=west, scale=0.75] at (0,-0.3) {\textbf{New Sale Price Base ($100\%$):} $\$17.00$};
+    \node[anchor=west, scale=0.75, black!70] at (5.8,-0.3) {+ $5\%$ Tax = $\$0.85$};
+    \node[scale=0.7] at (4.25,0.3) {Sale Price $(\$17.00)$};
+    \node[scale=0.6, font=\bfseries] at (8.7125,0.8) {+Tax};
+
+    % Outer Dimension Bounds
+    \draw[latex-latex, thick, blue] (0, -0.7) -- (8.925, -0.7);
+    \node[blue, fill=white, scale=0.75] at (4.4625, -0.7) {\textbf{Final Checkout Cost:} $\$17.85$};
+\end{tikzpicture}
+\end{center}
+\vspace{1cm}
+\vspace{1mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=4mm, bottom=4mm]
+\vspace{0.5cm}
+
 \textbf{Worked Example:}
-
-\medskip
-\noindent
 A book is originally priced at $\$20$. It is on sale for $15\%$ off. If the sales tax is $5\%$, calculate the final price.\\
 \textbf{Solution:}\\
 1) $\text{Discount} = \$20 \times 0.15 = \$3$.\\
 2) $\text{Sale Price} = \$20 - \$3 = \$17$.\\
-3) $\text{Tax} = \$17 \times 0.05 = \$0.85$.\\
-4) $\text{Final Price} = \$17 + \$0.85 = \$17.85$.
+3) $\text{Sales Tax} = \$17 \times 0.05 = \$0.85$.\\
+4) $\text{Final Cost} = \$17 + \$0.85 = \$17.85$.
+\vspace{0.5cm}
 \end{tcolorbox}
 
-\vspace{4mm}
+\newpage
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 1
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 1: Analyzing Discounts and Tax}
 
 \medskip
 
 \noindent
-\textbf{a) A jacket originally costs \$80. It is on sale for $25\%$ off. The sales tax is $8\%$. A shopper calculates the final price by subtracting the discount and then adding the tax. Calculate the final price. Show all steps.}
+\textbf{a)} A jacket originally costs \$80. It is on sale for $25\%$ off. The sales tax is $8\%$. A shopper calculates the final price by subtracting the discount and then adding the tax. Calculate the final price. Show all steps.
 
-\vspace{2.5cm}
+\vspace{3cm}
 
 \noindent
-\textbf{b) Explain whether applying a $20\%$ discount and then a $10\%$ tax is the same as applying the tax first and then the discount. Provide mathematical proof.}
+\textbf{b)} Explain whether applying a $20\%$ discount and then a $10\%$ tax is the same as applying the tax first and then the discount. Provide mathematical proof.
 
-\vspace{2cm}
+\vspace{3cm}
 \end{tcolorbox}
-\newpage
+
+\vspace{3mm}
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 2
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 2: Simple Interest Scenarios}
 
 \medskip
 
 \noindent
-\textbf{a) You deposit \$500 in a savings account that earns $4\%$ simple interest per year. How much interest will you earn in 3 years? What is the total balance of the account?}
+\textbf{a)} You deposit \$500 in a savings account that earns $4\%$ simple interest per year. How much interest will you earn in 3 years? What is the total balance of the account?
 
-\vspace{3.5cm}
+\vspace{3cm}
 
 \noindent
-\textbf{b) Build a simple monthly budget for a student who earns \$120 doing chores. They want to save $25\%$, spend $50\%$ on entertainment, and $25\%$ on school supplies. Show the dollar amount for each category.}
+\textbf{b)} Build a simple monthly budget for a student who earns \$120 doing chores. They want to save $25\%$, spend $50\%$ on entertainment, and $25\%$ on school supplies. Show the dollar amount for each category.
 
-\vspace{3.5cm}
+\vspace{3cm}
 \end{tcolorbox}
+
 \newpage
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 3
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 3: Budgeting with Surplus}
 
 \medskip
 
 \noindent
-\textbf{a) A teenager has a part-time job earning $\$400$ a month. They must budget for fixed expenses: phone bill $(\$50)$ and bus pass $(\$30)$. They want to save $30\%$ of their income. How much money remains for variable spending (food, fun)?}
+\textbf{a)} A teenager has a part-time job earning $\$400$ a month. They must budget for fixed expenses: phone bill $(\$50)$ and bus pass $(\$30)$. They want to save $30\%$ of their income. How much money remains for variable spending (food, fun)?
 
-\vspace{3cm}
-
-\noindent
-\textbf{b) If their phone bill increases by $20\%$ next month, what is the new phone expense, and how does it affect their remaining variable spending amount?}
-
-\vspace{3cm}
+\vspace{5cm}
 
 \noindent
-\textbf{c) What percentage of their total monthly income is spent on the bus pass?}
+\textbf{b)} If their phone bill increases by $20\%$ next month, what is the new phone expense, and how does it affect their remaining variable spending amount?
 
-\vspace{2.5cm}
+\vspace{6cm}
+
+\noindent
+\textbf{c)} What percentage of their total monthly income is spent on the bus pass?
+
+\vspace{5cm}
 \end{tcolorbox}
-\newpage
+
+\vspace{3mm}
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 4
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Deeper Thinking Problem 4: Multiple Discounts}
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 4: Compound Purchasing Shifts}
 
 \medskip
 
 \noindent
-\textbf{a) A department store offers a coupon for ``an additional $10\%$ off the sale price.'' A pair of headphones originally costs $\$120$ and is already marked down by $30\%$. Find the final price using the coupon. Show your calculations.}
+\textbf{a)} A department store offers a coupon for ``an additional $10\%$ off the sale price.'' A pair of headphones originally costs $\$120$ and is already marked down by $30\%$. Find the final price using the coupon. Show your calculations.
 
-\vspace{3cm}
-
-\noindent
-\textbf{b) Is receiving $30\%$ off and then another $10\%$ off the same as receiving a single $40\%$ discount? Show mathematical proofs for both scenarios on the $\$120$ item.}
-
-\vspace{3.0cm}
+\vspace{5cm}
 
 \noindent
-\textbf{c) Explain in words why successive discounts do not add up to their sum percentage.}
+\textbf{b)} Is receiving $30\%$ off and then another $10\%$ off the same as receiving a single $40\%$ discount? Show mathematical proofs for both scenarios on the $\$120$ item.
 
-\vspace{2.5cm}
+\vspace{5cm}
+
+\noindent
+\textbf{c)} New Instruction Prompt: Suppose a store manager mistakenly calculates a price reduction by subtracting $15\%$ from the original cost, and then adding a $15\%$ markup. Write a short conceptual proof explaining whether the item returns to its original price.
+
+\vspace{5cm}
 \end{tcolorbox}
+
 
 \end{document}

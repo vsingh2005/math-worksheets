@@ -53,6 +53,7 @@
 % ----------------------------------------------------------
 \begin{document}
 
+
 \textbf{Name:} \underline{\hspace{5cm}}
 \hfill
 \textbf{Date:} \underline{\hspace{3cm}}\\
@@ -64,28 +65,63 @@
     \large\textcolor{black}{\textbf{Statistical Questions and Distribution Characteristics (Foundation)}}
 \end{tcolorbox}
 
+\vspace{2mm}
+
+\noindent
+1. \textbf{Statistical Question:} A question that anticipates variability in the data (i.e., there is not just one single fixed answer). \\
+- \textit{Non-statistical:} ``How many sides does a triangle have?'' $\rightarrow$ (Exactly 3, no variance) \\
+- \textit{Statistical:} ``How many minutes do students spend on homework?'' $\rightarrow$ (Answers will vary) \\ \\
+\vspace{0.2cm}
+2. \textbf{Data Distribution Summaries:} 
+\begin{itemize}[itemsep=0.3cm, leftmargin=0.5cm]
+    \item \textbf{Center (Typical Value):} Calculated as the \textbf{Mean} (sum of data points divided by count: $\mu = \frac{\sum x_i}{n}$) or the \textbf{Median} (the exact middle value when values are ordered chronologically).
+    \item \textbf{Spread (Variability):} Measures how scattered values are. The simplest index is the $\text{Range} = \text{Maximum} - \text{Minimum}$.
+    \item \textbf{Shape:} Described by how data clusters along a horizontal number line axis.
+\end{itemize}
+
 \vspace{3mm}
+\vspace{1cm}
+% --- VISUAL ANCHOR: DISTRIBUTION SHAPES PANEL ---
+\begin{center}
+\begin{tikzpicture}[scale=0.55]
+    % Symmetric
+    \draw[thick,->] (0,0) -- (6,0);
+    \foreach \x/\y in {1/1, 2/2, 3/4, 4/2, 5/1} {
+        \foreach \i in {1,...,\y} {
+            \fill (0.5 + \x, 0.3 * \i) circle (4pt);
+        }
+    }
+    \node[anchor=north, scale=0.8] at (3.5,-0.2) {\textbf{Symmetric} (Balanced)};
+    
+    % Skewed Left
+    \draw[thick,->] (8,0) -- (14,0);
+    \foreach \x/\y in {9/1, 10/1, 11/2, 12/3, 13/5} {
+        \foreach \i in {1,...,\y} {
+            \fill (0.5 + \x, 0.3 * \i) circle (4pt);
+        }
+    }
+    \node[anchor=north, scale=0.8] at (11.5,-0.2) {\textbf{Skewed Left} (Tail Left)};
 
-\noindent
-1. \textbf{Statistical Question:} A question that anticipates variability in the data (i.e., there is not just one single answer). \\
-- \textit{Non-statistical:} ``How old am I?'' (only 1 answer) \\
-- \textit{Statistical:} ``How old are the students in my class?'' (answers will vary) \\
-2. \textbf{Data Distribution:} Summarized by its: \\
-- \textbf{Center:} The average or middle value (mean, median). \\
-- \textbf{Spread:} How spread out the data is (range, interquartile range). \\
-- \textbf{Shape:} Symmetric (balanced sides), skewed left (tail on left), or skewed right (tail on right).
+    % Skewed Right
+    \draw[thick,->] (16,0) -- (22,0);
+    \foreach \x/\y in {17/5, 18/3, 19/2, 20/1, 21/1} {
+        \foreach \i in {1,...,\y} {
+            \fill (0.5 + \x, 0.3 * \i) circle (4pt);
+        }
+    }
+    \node[anchor=north, scale=0.8] at (19.5,-0.2) {\textbf{Skewed Right} (Tail Right)};
+\end{tikzpicture}
+\end{center}
+\vspace{1cm}
+\vspace{2mm}
 
-\vspace{4mm}
-
-\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=4mm, bottom=4mm]
 \textbf{Worked Example:}
+Identify if ``How many books did each student read last month?'' is statistical, and predict its shape if most read 1--2 books but one student read 20.\\
+\vspace{0.5cm}
 
-\medskip
-\noindent
-Identify if ``How many books did each student read last month?'' is statistical or non-statistical, and predict its shape if most read 1-2 books but one student read 20.\\
 \textbf{Solution:}
-- It is a \textbf{statistical question} because we expect the number of books read by different students to vary.
-- Since most values are small (1-2) and there is a single very high value (20), the distribution will be \textbf{skewed right}.
+It is a \textbf{statistical question} because reading habits vary among students. Since the majority of data points sit at small values (1--2) with a solitary high point pulling a long tail out to 20, the distribution shape is \textbf{skewed right}.
 \end{tcolorbox}
 
 \vspace{4mm}
@@ -93,92 +129,92 @@ Identify if ``How many books did each student read last month?'' is statistical 
 % ==========================================================
 % DEEPER THINKING PROBLEM 1
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 1: Identifying Statistical Questions}
 
 \medskip
 
 \noindent
-\textbf{a) Classify each question as Statistical or Non-statistical. Explain your reasoning: \\
+\textbf{a)} Classify each question as Statistical or Non-statistical. Explain your reasoning: \\
 1) ``How many teeth did each first-grader lose this year?'' \\
-2) ``How many states are in the United States?''}
+2) ``How many states are in the United States?''
 
 \vspace{2.5cm}
 
 \noindent
-\textbf{b) A dot plot showing test scores has a cluster of dots around 90, a few dots down to 60, and no dots below 60. Describe the shape, center, and spread of this data distribution.}
+\textbf{b)} A dot plot showing test scores has a cluster of dots around 90, a few dots trailing down to 60, and no dots below 60. Describe the shape, center, and spread of this data distribution.
 
 \vspace{2cm}
 \end{tcolorbox}
-\newpage
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 2
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 2: Data Bias and Variability}
 
 \medskip
 
 \noindent
-\textbf{a) Explain how a sample group can affect the variability of answers. For example, compare asking ``How many books do you read?'' to members of a book club vs. random shoppers.}
+\textbf{a)} Explain how a sample group can affect the variability of answers. For example, compare asking ``How many books do you read?'' to members of a book club vs. random shoppers.
 
 \vspace{3cm}
 
 \noindent
-\textbf{b) Create a statistical question about your classmates' favorite sports. Describe what data values you might collect and how you expect them to vary.}
+\textbf{b)} Create a statistical question about your classmates' favorite sports. Describe what data values you might collect and how you expect them to vary.
 
-\vspace{3cm}
+\vspace{4cm}
 \end{tcolorbox}
 \newpage
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 3
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 3: Interpreting Dot Plot Data Lists}
 
 \medskip
 
 \noindent
-\textbf{a) A teacher surveys a small group of students on how many pets they have. The data collected is: $0, 1, 1, 1, 2, 2, 3, 5$. Draw a simple textual representation of the dot plot and find the range of the data.}
+\textbf{a)} A teacher surveys a small group of students on how many pets they have. The data collected is: $0, 1, 1, 1, 2, 2, 3, 5$. Draw a simple textual representation of the dot plot and find the range of the data.
 
-\vspace{3cm}
-
-\noindent
-\textbf{b) Describe the distribution's shape (skewed left, skewed right, or symmetric). Explain how the value $5$ impacts the spread and shape of this data.}
-
-\vspace{3cm}
+\vspace{6cm}
 
 \noindent
-\textbf{c) Write a non-statistical question related to pets, and explain why it is non-statistical.}
+\textbf{b)} Describe the distribution's shape (skewed left, skewed right, or symmetric). Explain how the value $5$ impacts the spread and shape of this data.
 
-\vspace{2.5cm}
+\vspace{6cm}
+
+\noindent
+\textbf{c)} Write a non-statistical question related to pets, and explain why it is non-statistical.
+
+\vspace{4cm}
 \end{tcolorbox}
 \newpage
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 4
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 4: Comparing Two Distributions}
 
 \medskip
 
 \noindent
-\textbf{a) Class A has daily recess active minutes of: $20, 20, 20, 20, 20, 20, 20$. Class B has: $10, 15, 20, 20, 20, 25, 30$. Contrast the variability of both classes. Which class has more spread, and why?}
+\textbf{a)} Class A has daily recess active minutes of: $20, 20, 20, 20, 20, 20, 20$. Class B has: $10, 15, 20, 20, 20, 25, 30$. Contrast the variability of both classes. Which class has more spread, and why?
 
-\vspace{3cm}
-
-\noindent
-\textbf{b) Describe the shape of Class A's distribution vs. Class B's distribution. Is Class A skewed, symmetric, or does it have no variability?}
-
-\vspace{3.0cm}
+\vspace{5cm}
 
 \noindent
-\textbf{c) If you wanted to describe the typical active minutes for a 6th grader, would a single number or a distribution of numbers be more informative? Why?}
+\textbf{b)} Describe the shape of Class A's distribution vs. Class B's distribution. Is Class A skewed, symmetric, or does it have no variability? Draw the shape to support your answer.
 
-\vspace{2.5cm}
+\vspace{5.0cm}
+
+\noindent
+\textbf{c)} If you wanted to describe the typical active minutes for a 6th grader, would a single number or a distribution of numbers be more informative? Why?
+
+\vspace{5cm}
 \end{tcolorbox}
+
 
 \end{document}

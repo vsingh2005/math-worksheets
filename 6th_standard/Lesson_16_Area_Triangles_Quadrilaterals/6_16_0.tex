@@ -53,6 +53,7 @@
 % ----------------------------------------------------------
 \begin{document}
 
+
 \textbf{Name:} \underline{\hspace{5cm}}
 \hfill
 \textbf{Date:} \underline{\hspace{3cm}}\\
@@ -72,6 +73,31 @@
 - \textit{Concept:} A triangle is exactly half of a parallelogram with the same base and height.
 
 \vspace{4mm}
+\vspace{1cm}
+% --- INSERT VISUAL FORMULA PROOF GUIDE ---
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+    % Left Shape: Parallelogram to Triangle Proof
+    \draw[thick, fill=blue!5] (0,0) coordinate (A) -- (4,0) coordinate (B) -- (5,2.5) coordinate (C) -- (1,2.5) coordinate (D) -- cycle;
+    \draw[thick, dashed, red] (1,2.5) -- (1,0) node[midway, left] {$h$};
+    \draw[line width=1.2pt, blue, dashed] (A) -- (C);
+    \node[below] at (2,0) {Base ($b$)};
+    \node[above, blue] at (2.5,1.5) {$\text{Area} = \frac{1}{2}bh$};
+    \node[anchor=south] at (2.5,4) {\textbf{Triangle Split}};
+    % Right Shape: Trapezoid Decomposition Proof
+    \draw[thick, fill=green!5] (7,0) coordinate (E) -- (12,0) coordinate (F) -- (11,2.5) coordinate (G) -- (8,2.5) coordinate (H) -- cycle;
+    \draw[thick, dashed, red] (8,2.5) -- (8,0) node[midway, left] {$h$};
+    \draw[thick, dashed, red] (11,2.5) -- (11,0) node[midway, right] {$h$};
+    \node[below] at (9.5,0) {Rectangle};
+    \node[below] at (7.5,0) {\small $\Delta_1$};
+    \node[below] at (11.5,0) {\small $\Delta_2$};
+    \node[above] at (9.5,2.5) {Base 1 ($b_1$)};
+    \node[below] at (9.5,-0.6) {Base 2 ($b_2$)};
+    \node[anchor=south] at (9.5,4) {\textbf{Trapezoid Decomposed}};
+\end{tikzpicture}
+\end{center}
+
+\vspace{1cm}
 
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Worked Example 1:}
@@ -85,23 +111,42 @@ $$\text{Area} = \frac{1}{2} \times 6 \times 4 = 12\text{ cm}^2.$$
 
 \vspace{4mm}
 
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Worked Example 1B: Algebraic Dimension Matching}
+
+\medskip
+\noindent
+\textbf{Problem:} A triangular piece of sheet metal has an area of 36 cm$^2$. Its height is exactly twice its base length. Find both the base and height dimensions.
+
+\medskip
+\noindent
+\textbf{Solution:} \\
+1) Assign variables based on the rule: Let base $= b$, then height $h = 2b$. \\
+2) Substitute these definitions directly into your area formula:
+$$\text{Area} = \frac{1}{2} \cdot b \cdot h \implies 36 = \frac{1}{2} \cdot b \cdot (2b)$$
+3) Simplify the algebraic expression:
+$$36 = 1b^2 \implies b = \sqrt{36} = 6\text{ cm}$$
+4) Calculate the remaining dimension: $h = 2(6) = 12\text{ cm}$.
+\end{tcolorbox}
+\vspace{4mm}
+
 % ==========================================================
 % DEEPER THINKING PROBLEM 1
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 1: Deriving the Triangle Formula}
 
 \medskip
 
 \noindent
-\textbf{a) Draw a parallelogram and draw a diagonal. Explain visually why the area of the resulting triangle is half the area of the parallelogram.}
+\textbf{a)} Draw a parallelogram and draw a diagonal. Explain visually why the area of the resulting triangle is half the area of the parallelogram.
 
-\vspace{2.5cm}
+\vspace{3.5cm}
 
 \noindent
-\textbf{b) A trapezoid has parallel bases of lengths 6 inches and 10 inches, and a height of 5 inches. Show how you can decompose this trapezoid into a rectangle and two triangles to find its area. Compare your result with the formula.}
+\textbf{b)} A trapezoid has parallel bases of lengths 6 inches and 10 inches, and a height of 5 inches. Show how you can decompose this trapezoid into a rectangle and two triangles to find its area. Compare your result with the formula.
 
-\vspace{2cm}
+\vspace{3.5cm}
 \end{tcolorbox}
 \newpage
 
@@ -133,63 +178,88 @@ $$\text{Area} = \frac{1}{2}(8 + 12) \times 5 = \frac{1}{2}(20) \times 5 = 10 \ti
 
 \vspace{4mm}
 
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Worked Example 2B: Decomposition via Subtraction}
+
+\medskip
+\noindent
+\textbf{Problem:} A large wooden rectangular billboard measuring 12 feet by 8 feet has a triangular logo cut out from its center. The triangular cutout has a base of 4 feet and a height of 3 feet. Find the remaining surface area of the solid billboard.
+
+\medskip
+\noindent
+\textbf{Solution:} \\
+1) Calculate the full outer bounding area (Rectangle):
+$$\text{Area}_{\text{rectangle}} = \text{base} \times \text{height} = 12 \times 8 = 96\text{ ft}^2$$
+2) Calculate the inner cutout area (Triangle):
+$$\text{Area}_{\text{triangle}} = \frac{1}{2} \times \text{base} \times \text{height} = \frac{1}{2} \times 4 \times 3 = 6\text{ ft}^2$$
+3) Subtract the cutout from the whole piece to find the remaining surface area:
+$$\text{Area}_{\text{total}} = 96 - 6 = 90\text{ ft}^2$$
+\end{tcolorbox}
+\vspace{4mm}
+
 % ==========================================================
 % DEEPER THINKING PROBLEM 2
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 2: Finding Missing Dimensions}
 
 \medskip
 
 \noindent
-\textbf{a) A triangle has an area of 24 square inches. If its base is 8 inches, write an equation to find its height $h$ and solve it.}
+\textbf{a)} A triangle has an area of 24 square inches. If its base is 8 inches, write an equation to find its height $h$ and solve it.
 
-\vspace{2.5cm}
+\vspace{4cm}
 
 \noindent
-\textbf{b) A parallelogram has an area of 60 square centimeters. If its height is 12 cm, find its base.}
+\textbf{b)} A parallelogram has an area of 60 square centimeters. If its height is 12 cm, find its base.
 
-\vspace{2cm}
+\vspace{5cm}
+
+\noindent
+\textbf{c)} A composite garden pathway consists of a central rectangle (length 10 m, width 4 m) flanked on one side by an attached parallelogram sharing the 4 m edge with a perpendicular height of 3 m. Sketch how you would split this into distinct shapes and compute the complete layout area.
+
+\vspace{6cm}
+
 \end{tcolorbox}
 \newpage
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 3
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 3: Area of Rhombuses and Kites}
 
 \medskip
 
 \noindent
-\textbf{a) A rhombus has diagonals of lengths $d_1 = 8$ cm and $d_2 = 10$ cm. Decompose the rhombus into two triangles along one of its diagonals, and prove that the total area is given by the formula $\text{Area} = \frac{1}{2}d_1 d_2$.}
+\textbf{a)} A rhombus has diagonals of lengths $d_1 = 8$ cm and $d_2 = 10$ cm. Decompose the rhombus into two triangles along one of its diagonals, and prove that the total area is given by the formula $\text{Area} = \frac{1}{2}d_1 d_2$.
 
-\vspace{3cm}
+\vspace{4cm}
 
 \noindent
-\textbf{b) Calculate the area of a kite with diagonals of lengths 12 inches and 16 inches.}
+\textbf{b)} Calculate the area of a kite with diagonals of lengths 12 inches and 16 inches.
 
-\vspace{2cm}
+\vspace{3cm}
 \end{tcolorbox}
-\newpage
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 4
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 4: Real-World Design Constraints}
 
 \medskip
 
 \noindent
-\textbf{a) An accent wall is in the shape of a trapezoid with parallel bases of 10 feet and 14 feet, and a height of 8 feet. Find the total area of the wall in square feet.}
+\textbf{a)} An accent wall is in the shape of a trapezoid with parallel bases of 10 feet and 14 feet, and a height of 8 feet. Find the total area of the wall in square feet.
 
 \vspace{2.5cm}
 
 \noindent
-\textbf{b) If one can of paint covers 50 square feet and costs \$18.50, write a numerical expression to calculate the total cost of paint needed to paint the wall. How many cans must you buy, and what is the total cost?}
+\textbf{b)} If one can of paint covers 50 square feet and costs \$18.50, write a numerical expression to calculate the total cost of paint needed to paint the wall. How many cans must you buy, and what is the total cost?
 
 \vspace{2.5cm}
 \end{tcolorbox}
+
 
 \end{document}

@@ -53,6 +53,7 @@
 % ----------------------------------------------------------
 \begin{document}
 
+
 \textbf{Name:} \underline{\hspace{5cm}}
 \hfill
 \textbf{Date:} \underline{\hspace{3cm}}\\
@@ -67,64 +68,100 @@
 \vspace{3mm}
 
 \noindent
-1. \textbf{Decimal Operations:} Line up decimals for addition and subtraction. For multiplication, count total decimal places. For division, multiply divisor by a power of 10 to make it a whole number. \\
-2. \textbf{GCF (Greatest Common Factor):} The largest factor shared by two numbers. \\
-3. \textbf{LCM (Least Common Multiple):} The smallest multiple shared by two numbers. \\
-4. \textbf{Distributive Property:} Rewrite a sum using GCF. Example: $18 + 24 = 6(3 + 4)$.
+1. \textbf{Decimal Operations:} Line up decimals for addition and subtraction. For multiplication, count total decimal places. For division, multiply divisor by a power of 10 to make it a whole number. \\ \\
+2. \textbf{GCF (Greatest Common Factor):} The largest factor shared by two numbers. \\ \\
+3. \textbf{LCM (Least Common Multiple):} The smallest multiple shared by two numbers. \\ \\
+4. \textbf{Distributive Property:} Rewrite a sum using GCF. Example: $18 + 24 = 6(3 + 4)$. \\
 
-\vspace{4mm}
-
-\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Worked Example:}
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=4mm, bottom=4mm]
+\textbf{Core Model: Why Do We Shift Decimals in Division?}
 
 \medskip
-\noindent
-Find the GCF and LCM of 12 and 18, then write their sum $12 + 18$ using the Distributive Property.\\
-\textbf{Solution:} \\
-Factors of 12: 1, 2, 3, 4, 6, 12. Factors of 18: 1, 2, 3, 6, 9, 18. \textbf{GCF = 6}.\\
-Multiples of 12: 12, 24, 36, 48. Multiples of 18: 18, 36, 54. \textbf{LCM = 36}.\\
-Distributive property: $12 + 18 = 6(2 + 3)$.
+Imagine trying to calculate how many groups of $0.2$ fit into $1.4$. Thinking in tiny pieces is hard! Instead, we can scale \textbf{both} numbers up by multiplying by 10 to make them friendly whole numbers. 
+
+$$\frac{1.4}{0.2} \times \frac{10}{10} = \frac{14}{2}$$
+
+Because we multiplied the top and bottom by the same amount, **$14 \div 2$ has the exact same answer as $1.4 \div 0.2$**. Shifting the decimal point is just a quick shortcut for multiplying by 10!
+
+\medskip
+\textbf{Example Problem: Calculate $13.775 \div 2.5$}
+
+\begin{enumerate}[itemsep=4pt]
+    \item \textbf{Setup the Long Division:} $2.5 \overline{)13.775}$
+    \item \textbf{Make the Outside Number Whole:} Multiply by 10 by moving the decimal point \textbf{one place to the right}. $2.5 \rightarrow 25$.
+    \item \textbf{Keep it Balanced:} Move the inside decimal point \textbf{one place to the right} as well. $13.775 \rightarrow 137.75$.
+    \item \textbf{Divide Normally:} Pop the decimal point straight up into your answer line and run your long division algorithm with whole numbers:
+    $$25 \overline{)137.75} = \mathbf{5.51}$$
+\end{enumerate}
 \end{tcolorbox}
 
 \vspace{4mm}
 
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example:}
+
+\vspace{0.2cm}
+
+\medskip
+\noindent
+Find the GCF and LCM of 12 and 18, then write their sum $12 + 18$ using the Distributive Property.\\ 
+
+
+\textbf{Solution:} 
+
+Factors of 12: 1, 2, 3, 4, 6, 12. \\ Factors of 18: 1, 2, 3, 6, 9, 18. \\ \textbf{GCF = 6}.\\ 
+Multiples of 12: 12, 24, 36, 48. \\ Multiples of 18: 18, 36, 54. \\ \textbf{LCM = 36}.\\ 
+
+Divide each original number by the GCF to get the inside numbers:
+    $$\frac{12}{6} = 2 \qquad \text{and} \qquad \frac{18}{6} = 3$$
+
+Distributive property: $12 + 18 = 6(2 + 3)$.
+\end{tcolorbox}
+
 % ==========================================================
 % DEEPER THINKING PROBLEM 1
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 \textbf{Deeper Thinking Problem 1: GCF vs.\ LCM Word Problems}
 
 \medskip
 
 \noindent
-\textbf{a) A bakery wants to package 36 chocolate chip cookies and 48 sugar cookies into boxes so that each box has the same number of each cookie and no cookies are left over. What is the greatest number of boxes they can make? Explain your reasoning.}
+a) A bakery wants to package 36 chocolate chip cookies and 48 sugar cookies into boxes so that each box has the same number of each cookie and no cookies are left over. What is the greatest number of boxes they can make? Explain your reasoning.
 
-\vspace{2cm}
-
+\vspace{3cm}
 \noindent
-\textbf{b) Hot dogs are sold in packages of 10, and hot dog buns are sold in packages of 8. What is the smallest number of hot dogs and buns you must buy to have an equal number of each?}
+b) Two numbers have a GCF of 6 and an LCM of 72. Find one possible pair of numbers. Then find a different pair of numbers with the same GCF and LCM.
 
-\vspace{2cm}
+\vspace{3cm}
+
 \end{tcolorbox}
 \newpage
 
 % ==========================================================
 % DEEPER THINKING PROBLEM 2
 % ==========================================================
-\begin{tcolorbox}[colback=black!5, colframe=black!50, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Deeper Thinking Problem 2: Decimal Division Insights}
+\begin{tcolorbox}[colback=white, colframe=black, boxrule=1pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+\textbf{Deeper Thinking Problem 3: Connecting Factors, Multiples, and Division}
 
 \medskip
 
 \noindent
-\textbf{a) Why does multiplying the divisor and dividend by the same power of 10 keep the quotient of a decimal division problem unchanged? Explain using fractions.}
+a) A student claims that if one number is a multiple of another number, then the GCF of the two numbers must always be the smaller number. Is the student correct? Explain your reasoning and give an example.
 
-\vspace{2cm}
+\vspace{5cm}
 
 \noindent
-\textbf{b) Express the sum $48 + 72$ in the form $a(b+c)$ where $a$ is the GCF of 48 and 72.}
+b) Without calculating the exact quotient, explain whether $84 \div 0.7$ will be greater than, less than, or equal to $84$. Justify your answer using a model, number sense, or a real-world context.
 
-\vspace{2cm}
+\vspace{5cm}
+\noindent
+c) Two numbers have a GCF of 12 and an LCM of 180. One of the numbers is 36. Determine the other number and explain how you found your answer.
+
+
+\vspace{5cm}
 \end{tcolorbox}
 \newpage
+
 \end{document}
