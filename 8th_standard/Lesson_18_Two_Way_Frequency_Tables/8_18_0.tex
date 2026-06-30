@@ -1,6 +1,9 @@
 % TWO-WAY FREQUENCY TABLES - WORKSHEET 0 (IN-CLASS INSTRUCTION)
 \documentclass[12pt, letterpaper, fleqn]{article}
 
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
@@ -14,11 +17,17 @@
 \usepackage{needspace}
 \usepackage{multicol}
 
-\usetikzlibrary{arrows.meta, calc}
+\usetikzlibrary{arrows.meta, calc, positioning}
 
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
 \usepackage{times}
 \geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
 
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
 \newcommand{\logowidth}{3cm}
 \setlength{\headheight}{20pt}
 \setlength{\footskip}{40pt}
@@ -32,66 +41,211 @@
 
 \renewcommand{\footrulewidth}{0.2pt}
 
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
 \definecolor{customteal}{HTML}{2fbdb9}
 
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
 \newcommand{\blank}{\underline{\hspace{2.2cm}}}
 \newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
 \newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
 
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
 \begin{document}
 
 \textbf{Name:} \underline{\hspace{5cm}}
 \hfill
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
+% ==========================================================
+% SECTION 1: FOUNDATION
+% ==========================================================
 \begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Foundation: Two-Way Frequency Tables}}
+    \large\textcolor{black}{\textbf{Foundation: Reading Two-Way Tables}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
 \noindent
-\textbf{Description:} Construct and interpret two-way tables summarizing bivariate categorical data from a sample. Use relative frequencies to investigate possible associations between two categorical variables.
+A \textbf{two-way frequency table} is used to show relationships between two \textbf{categorical} (word-based) variables. It shows how often different categories occur together.
+
+\begin{itemize}
+    \item \textbf{Rows and Columns:} One variable is on the side (rows), and the other is on the top (columns).
+    \item \textbf{Joint Frequency:} The numbers in the middle of the table. They show where two categories overlap.
+    \item \textbf{Marginal Frequency:} The "Total" column and "Total" row. They show the total for just one category.
+\end{itemize}
 
 \vspace{4mm}
 
-
+% ==========================================================
+% VISUAL REPRESENTATION
+% ==========================================================
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Instructional Guide: Two-Way Frequency Tables}
+
+\textbf{Visual Representation: The Pet Survey}
 
 \medskip
-\textbf{Two-Way Tables:} Used to organize and display categorical data (data that fits into categories, like "Yes/No", "Male/Female", "Dog/Cat") for two different variables at the same time.
 
-\textbf{Frequencies:}
-- \textbf{Joint Frequency:} The numbers in the middle of the table (where a row and column intersect). E.g., The number of 8th graders who like Math.
-- \textbf{Marginal Frequency:} The totals at the end of the rows and columns (in the margins). E.g., The total number of 8th graders.
-- \textbf{Grand Total:} The number in the bottom right corner. The total of everything.
+Eighth graders were surveyed about whether they have a dog or a cat. 
 
-\textbf{Relative Frequencies (Percentages/Decimals):}
-Found by dividing a frequency by a total.
-- \textbf{Row Relative Frequency:} Divide a cell by the \textit{Row Total}.
-- \textbf{Column Relative Frequency:} Divide a cell by the \textit{Column Total}.
-- \textbf{Total Relative Frequency:} Divide a cell by the \textit{Grand Total}.
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ & \textbf{Has a Dog} & \textbf{No Dog} & \textbf{Total} \\
+\hline
+\textbf{Has a Cat} & \textcolor{blue}{12} & \textcolor{blue}{18} & \textcolor{red}{30} \\
+\hline
+\textbf{No Cat} & \textcolor{blue}{40} & \textcolor{blue}{30} & \textcolor{red}{70} \\
+\hline
+\textbf{Total} & \textcolor{red}{52} & \textcolor{red}{48} & \textcolor{green!50!black}{\textbf{100}} \\
+\hline
+\end{tabular}
+\end{center}
 
-\vspace{2mm}
-\textbf{Example:} In a survey of 100 students, 40 play a sport. Out of those 40, 30 also play an instrument. 
-\textit{Question:} What is the relative frequency of playing an instrument, GIVEN that a student plays a sport?
-\textit{Solution:} We only look at the "Play a Sport" total (40). $30 / 40 = 0.75$ or $75\%$.
+\medskip
+\begin{itemize}
+    \item \textcolor{blue}{\textbf{Joint Frequencies:}} $12$ students have BOTH a dog and a cat. $40$ students have a dog but NO cat.
+    \item \textcolor{red}{\textbf{Marginal Frequencies:}} $30$ students total have a cat. $52$ students total have a dog.
+    \item \textcolor{green!50!black}{\textbf{Grand Total:}} $100$ students were surveyed in total. (Notice that $52+48=100$ and $30+70=100$).
+\end{itemize}
+
 \end{tcolorbox}
 
 \vspace{4mm}
 
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Guided Practice (Mixed Difficulty)}
+\newpage
+
+% ==========================================================
+% WORKED EXAMPLES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Relative Frequencies (Percentages)}}
+\end{tcolorbox}
+
+\noindent
+To find a \textbf{relative frequency}, you divide a number in the table by the total to get a decimal or percentage. You can do this out of the grand total, or out of a specific row/column total.
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example 1: Finding Percentages}
 
 \medskip
-\textbf{1.} If the Grand Total is 50, and 10 people fit into a specific category, what is the total relative frequency? \vspace{1cm}
 
-\textbf{2.} A table has 20 boys and 30 girls. 15 boys like pizza. What is the relative frequency of liking pizza among boys? \vspace{1cm}
+\textbf{Problem:} Using the pet table, answer the following:
+\textbf{a)} What percentage of ALL students have both a dog and a cat?
+\textbf{b)} What percentage of students WITH A DOG also have a cat?
 
-\textbf{3.} Using the same data, what is the relative frequency of being a boy who likes pizza out of everyone? \vspace{1cm}
+\medskip
 
-\textbf{4.} How do you find a marginal frequency if it's missing from the table? \vspace{1cm}
+\textbf{Solution:}
+\begin{itemize}
+    \item \textbf{Part A (Out of All Students):} Look at the number for "Dog AND Cat" ($12$). Divide by the Grand Total ($100$). 
+    \[ \frac{12}{100} = 0.12 = 12\% \]
+    \item \textbf{Part B (Out of Dog Owners):} Look at the total number of people who have a dog. The "Total" for the "Dog" column is $52$. Out of those $52$, how many have a cat? It's $12$.
+    \[ \frac{12}{52} \approx 0.23 = 23\% \]
+    \item \textit{Notice the difference! Reading the question carefully is key.}
+\end{itemize}
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% PRACTICE 1
+% ==========================================================
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Guided Practice: Basic Operations}
+
+\medskip
+
+Using the pet table from page 1:
+\vspace{2mm}
+
+\noindent
+\textbf{1.} How many students have no dog and no cat?
+\vspace{1.5cm}
+
+\noindent
+\textbf{2.} What percentage of ALL students surveyed have no dog and no cat?
+\vspace{1.5cm}
+
+\noindent
+\textbf{3.} Of the students who HAVE A CAT, what percentage of them DO NOT have a dog?
+\vspace{2.5cm}
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% THINKING PROBLEM
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Deeper Thinking: Completing Tables and Finding Associations}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 1: Sports and Chores}
+
+\medskip
+
+\noindent
+A middle school surveyed $200$ students about whether they play a sport and whether they do daily chores at home. 
+\begin{itemize}
+    \item $120$ students play a sport.
+    \item Of the students who play a sport, $90$ do daily chores.
+    \item $30$ students do NOT play a sport and do NOT do daily chores.
+\end{itemize}
+
+\vspace{2mm}
+
+\noindent
+\textbf{a)} Fill in the missing values in the two-way table.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ & \textbf{Plays a Sport} & \textbf{No Sport} & \textbf{Total} \\
+\hline
+\textbf{Does Chores} &  &  &  \\
+\hline
+\textbf{No Chores} &  & $30$ &  \\
+\hline
+\textbf{Total} & $120$ &  & $200$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{5mm}
+
+\noindent
+\textbf{b)} Calculate the percentage of athletes (Plays a Sport) who do chores. 
+
+\vspace{2cm}
+
+\noindent
+\textbf{c)} Calculate the percentage of non-athletes (No Sport) who do chores.
+
+\vspace{2cm}
+
+\noindent
+\textbf{d)} Is there an association between playing sports and doing chores? Explain.
+
+\vspace{2cm}
+
 \end{tcolorbox}
 
 \end{document}

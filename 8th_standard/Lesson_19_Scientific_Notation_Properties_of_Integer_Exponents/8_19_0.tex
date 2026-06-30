@@ -1,6 +1,9 @@
-% SCIENTIFIC NOTATION & PROPERTIES OF INTEGER EXPONENTS - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+% PROPERTIES OF INTEGER EXPONENTS - WORKSHEET 0 (IN-CLASS INSTRUCTION)
 \documentclass[12pt, letterpaper, fleqn]{article}
 
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
@@ -14,89 +17,195 @@
 \usepackage{needspace}
 \usepackage{multicol}
 
-\usetikzlibrary{arrows.meta, calc}
+\usetikzlibrary{arrows.meta, calc, positioning}
 
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
 \usepackage{times}
 \geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
 
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
 \newcommand{\logowidth}{3cm}
 \setlength{\headheight}{20pt}
 \setlength{\footskip}{40pt}
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\small\bfseries Scientific Notation & Properties of Integer Exponents}
+\fancyhead[C]{\small\bfseries Properties of Integer Exponents}
 \fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{8.19.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
 
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
 \definecolor{customteal}{HTML}{2fbdb9}
 
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
 \newcommand{\blank}{\underline{\hspace{2.2cm}}}
 \newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
 \newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
 
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
 \begin{document}
 
 \textbf{Name:} \underline{\hspace{5cm}}
 \hfill
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
+% ==========================================================
+% SECTION 1: FOUNDATION
+% ==========================================================
 \begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Foundation: Scientific Notation & Properties of Integer Exponents}}
+    \large\textcolor{black}{\textbf{Foundation: The Five Exponent Rules}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
 \noindent
-\textbf{Description:} Know and apply properties of integer exponents (product, quotient, power, zero, and negative exponent rules) to generate equivalent numerical expressions (e.g., $3^2 \cdot 3^{-5} = 3^{-3} = \tfrac{1}{27}$).
+An \textbf{exponent} tells you how many times to multiply the base by itself. E.g., $x^3 = x \cdot x \cdot x$. When we do math with exponents, we have five major rules that serve as shortcuts!
+
+\begin{itemize}
+    \item \textbf{1. Multiplication Rule:} When multiplying with the same base, ADD the exponents. 
+    \[ x^a \cdot x^b = x^{a+b} \]
+    \item \textbf{2. Division Rule:} When dividing with the same base, SUBTRACT the exponents.
+    \[ \dfrac{x^a}{x^b} = x^{a-b} \]
+    \item \textbf{3. Power of a Power Rule:} When raising a power to another power, MULTIPLY the exponents.
+    \[ (x^a)^b = x^{a \cdot b} \]
+    \item \textbf{4. Zero Exponent Rule:} Anything to the power of zero equals $1$.
+    \[ x^0 = 1 \]
+    \item \textbf{5. Negative Exponent Rule:} A negative exponent means to flip it to the denominator (or numerator) to make it positive.
+    \[ x^{-a} = \dfrac{1}{x^a} \]
+\end{itemize}
 
 \vspace{4mm}
 
+% ==========================================================
+% WORKED EXAMPLES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Applying the Rules}}
+\end{tcolorbox}
+
+\noindent
+If you forget a rule, expand the expression! $x^2 \cdot x^3 = (x \cdot x) \cdot (x \cdot x \cdot x) = x^5$. 
+
+\vspace{3mm}
 
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Instructional Guide: Properties of Integer Exponents}
+
+\textbf{Worked Example 1: Simplifying Expressions}
 
 \medskip
-\textbf{The Rules of Exponents:} (For any non-zero base $x$)
-1. \textbf{Product Rule:} When multiplying the same base, ADD the exponents.
-   $x^a \cdot x^b = x^{a+b}$
-2. \textbf{Quotient Rule:} When dividing the same base, SUBTRACT the exponents.
-   $\frac{x^a}{x^b} = x^{a-b}$
-3. \textbf{Power of a Power:} When raising a power to a power, MULTIPLY the exponents.
-   $(x^a)^b = x^{a \cdot b}$
-4. \textbf{Zero Exponent:} Anything to the power of zero is 1.
-   $x^0 = 1$
-5. \textbf{Negative Exponents:} A negative exponent means "reciprocal". Move it across the fraction line and make it positive.
-   $x^{-a} = \frac{1}{x^a}$  and  $\frac{1}{x^{-a}} = x^a$
 
-\vspace{2mm}
-\textbf{Example 1:} Simplify $3^4 \cdot 3^2$.
-\textit{Solution:} $3^{4+2} = 3^6$.
+\textbf{Problem A:} Simplify $y^4 \cdot y^{-2}$
 
-\textbf{Example 2:} Simplify $\frac{5^3}{5^7}$. Write with a positive exponent.
-\textit{Solution:} $5^{3-7} = 5^{-4} = \frac{1}{5^4}$.
+\medskip
+
+\textbf{Solution A:}
+\begin{itemize}
+    \item Use the Multiplication Rule (add exponents).
+    \item $y^{4 + (-2)} = y^2$
+\end{itemize}
+
+\medskip
+\hrule
+\medskip
+
+\textbf{Problem B:} Simplify $\dfrac{4^5}{4^8}$ and write the answer with a positive exponent.
+
+\medskip
+
+\textbf{Solution B:}
+\begin{itemize}
+    \item Use the Division Rule (subtract exponents).
+    \item $4^{5 - 8} = 4^{-3}$
+    \item Use the Negative Exponent Rule to flip it.
+    \item $\dfrac{1}{4^3}$
+\end{itemize}
+
 \end{tcolorbox}
 
 \vspace{4mm}
 
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Guided Practice (Mixed Difficulty)}
+\newpage
+
+% ==========================================================
+% PRACTICE 1
+% ==========================================================
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Guided Practice: Basic Operations}
 
 \medskip
-\textbf{1.} Simplify $x^5 \cdot x^8$. \vspace{1cm}
 
-\textbf{2.} Simplify $\frac{y^9}{y^4}$. \vspace{1cm}
+Simplify each expression. Write your answers with positive exponents only.
+\vspace{2mm}
 
-\textbf{3.} Simplify $(z^3)^4$. \vspace{1cm}
+\noindent
+\textbf{1.} $x^5 \cdot x^2$ \blanklong
+\vspace{1.5cm}
 
-\textbf{4.} Evaluate $100^0$. \vspace{1cm}
+\noindent
+\textbf{2.} $\dfrac{m^9}{m^4}$ \blanklong
+\vspace{1.5cm}
 
-\textbf{5.} Rewrite $4^{-3}$ with a positive exponent. \vspace{1cm}
+\noindent
+\textbf{3.} $(3^4)^2$ \blanklong
+\vspace{1.5cm}
 
-\textbf{6.} Simplify $2^3 \cdot 2^{-5}$ and write with a positive exponent. \vspace{1cm}
+\noindent
+\textbf{4.} $k^{-5}$ \blanklong
+\vspace{1.5cm}
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% THINKING PROBLEM
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Deeper Thinking: Multi-Step Problems}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 1: Putting it all together}
+
+\medskip
+
+\noindent
+Simplify the following complex expressions. Show your steps clearly and leave your answer with only positive exponents.
+
+\vspace{5mm}
+
+\noindent
+\textbf{a)} $\dfrac{x^3 \cdot x^6}{x^5}$
+
+\vspace{3cm}
+
+\noindent
+\textbf{b)} $(2x^4)^3$ (Hint: The $3$ exponent applies to the $2$ AND the $x^4$).
+
+\vspace{3cm}
+
+\noindent
+\textbf{c)} $\dfrac{a^{-2} \cdot b^4}{a^3 \cdot b^4}$
+
+\vspace{4cm}
+
 \end{tcolorbox}
 
 \end{document}

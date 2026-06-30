@@ -1,6 +1,9 @@
-% VOLUME & UNDERSTANDING FUNCTIONS - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+% UNDERSTANDING FUNCTIONS - WORKSHEET 0 (IN-CLASS INSTRUCTION)
 \documentclass[12pt, letterpaper, fleqn]{article}
 
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
@@ -14,79 +17,237 @@
 \usepackage{needspace}
 \usepackage{multicol}
 
-\usetikzlibrary{arrows.meta, calc}
+\usetikzlibrary{arrows.meta, calc, positioning}
 
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
 \usepackage{times}
 \geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
 
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
 \newcommand{\logowidth}{3cm}
 \setlength{\headheight}{20pt}
 \setlength{\footskip}{40pt}
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\small\bfseries Volume & Understanding Functions}
+\fancyhead[C]{\small\bfseries Understanding Functions}
 \fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{8.13.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
 
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
 \definecolor{customteal}{HTML}{2fbdb9}
 
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
 \newcommand{\blank}{\underline{\hspace{2.2cm}}}
 \newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
 \newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
 
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
 \begin{document}
 
 \textbf{Name:} \underline{\hspace{5cm}}
 \hfill
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
+% ==========================================================
+% SECTION 1: FOUNDATION
+% ==========================================================
 \begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Foundation: Volume & Understanding Functions}}
+    \large\textcolor{black}{\textbf{Foundation: What is a Function?}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
 \noindent
-\textbf{Description:} Understand that a function assigns exactly one output to each input. Represent functions using tables, graphs, and equations; determine whether a relation is a function. Distinguish linear from nonlinear functions.
+A \textbf{function} is a specific type of mathematical relationship where every \textbf{input} has exactly one \textbf{output}. 
+
+\begin{itemize}
+    \item \textbf{Input ($x$):} The independent variable (domain).
+    \item \textbf{Output ($y$):} The dependent variable (range).
+    \item \textbf{The Rule:} An input can only point to ONE output. If an input points to two different outputs, it is \textbf{not} a function.
+    \item \textbf{Vertical Line Test:} When looking at a graph, if you can draw any vertical line that touches the graph more than once, it is \textbf{not} a function.
+\end{itemize}
 
 \vspace{4mm}
 
-
+% ==========================================================
+% VISUAL REPRESENTATION
+% ==========================================================
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Instructional Guide: Understanding Functions}
+
+\textbf{Visual Representation: Function Machines and Mappings}
 
 \medskip
-\textbf{What is a Function?} A function is a specific rule or relationship where every \textbf{input} ($x$-value, domain) has exactly ONE \textbf{output} ($y$-value, range). 
-- Think of it like a machine: if you put a '2' in, it must spit out the exact same answer every single time. If it spits out '5' on Monday and '7' on Tuesday for the same input of '2', it is NOT a function.
 
-\textbf{How to test for a function:}
-- \textbf{Ordered Pairs/Tables:} Look at the $x$-values. If any $x$-value repeats and has a different $y$-value, it is NOT a function. (Repeating $y$-values are perfectly fine!).
-- \textbf{Graphs (The Vertical Line Test):} If you can draw a vertical line anywhere on the graph and it touches the line/curve more than once, it is NOT a function.
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+% Mapping 1 (Function)
+\node[draw, rounded corners, minimum height=3cm, minimum width=1.5cm, fill=blue!10] (D1) at (0,0) {};
+\node[draw, rounded corners, minimum height=3cm, minimum width=1.5cm, fill=red!10] (R1) at (3,0) {};
+\node[above] at (D1.north) {Inputs ($x$)};
+\node[above] at (R1.north) {Outputs ($y$)};
 
-\vspace{2mm}
-\textbf{Example 1:} $\{(1, 2), (3, 4), (5, 6), (1, 8)\}$. NOT a function because the input 1 has two different outputs (2 and 8).
-\textbf{Example 2:} $\{(1, 5), (2, 5), (3, 5)\}$. YES, a function. Each input has only one output. (It's okay that they all equal 5).
+\node (x1) at (0, 1) {$1$};
+\node (x2) at (0, 0) {$2$};
+\node (x3) at (0, -1) {$3$};
+
+\node (y1) at (3, 1) {$4$};
+\node (y2) at (3, -1) {$5$};
+
+\draw[->, thick] (x1) -- (y1);
+\draw[->, thick] (x2) -- (y2);
+\draw[->, thick] (x3) -- (y2);
+
+\node[below, font=\bfseries] at (1.5, -2) {Function! (Each input has 1 output)};
+
+% Mapping 2 (Not a Function)
+\begin{scope}[shift={(8,0)}]
+\node[draw, rounded corners, minimum height=3cm, minimum width=1.5cm, fill=blue!10] (D2) at (0,0) {};
+\node[draw, rounded corners, minimum height=3cm, minimum width=1.5cm, fill=red!10] (R2) at (3,0) {};
+\node[above] at (D2.north) {Inputs ($x$)};
+\node[above] at (R2.north) {Outputs ($y$)};
+
+\node (x4) at (0, 1) {$1$};
+\node (x5) at (0, -0.5) {$2$};
+
+\node (y3) at (3, 1) {$4$};
+\node (y4) at (3, 0) {$5$};
+\node (y5) at (3, -1) {$6$};
+
+\draw[->, thick] (x4) -- (y3);
+\draw[->, thick] (x5) -- (y4);
+\draw[->, thick, dashed, red] (x5) -- (y5);
+
+\node[below, font=\bfseries, red] at (1.5, -2) {NOT a function! ($2$ goes to $5$ AND $6$)};
+\end{scope}
+
+\end{tikzpicture}
+\end{center}
+
 \end{tcolorbox}
 
 \vspace{4mm}
 
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Guided Practice (Mixed Difficulty)}
+\newpage
+
+% ==========================================================
+% WORKED EXAMPLES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Identifying Functions from Tables and Graphs}}
+\end{tcolorbox}
+
+\noindent
+We can identify functions using ordered pairs, tables, or graphs. Look out for repeating $x$-values with different $y$-values!
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example 1: Tables and the Vertical Line Test}
 
 \medskip
-\textbf{1.} Is $\{(0,0), (1,2), (2,4), (3,6)\}$ a function? \vspace{1cm}
 
-\textbf{2.} Is $\{(4,1), (4,2), (4,3)\}$ a function? \vspace{1cm}
+\textbf{Problem A:} Is the table a function?
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{x} & 1 & 2 & 1 & 4 \\
+\hline
+\textbf{y} & 5 & 6 & 7 & 8 \\
+\hline
+\end{tabular}
 
-\textbf{3.} If a graph is a perfect circle, does it pass the vertical line test? \vspace{1cm}
+\medskip
 
-\textbf{4.} A table has $x$-values: 2, 4, 6, 8 and $y$-values 10, 10, 10, 10. Is it a function? \vspace{1.5cm}
+\textbf{Solution A:} \textbf{No.} The input $1$ has two different outputs ($5$ and $7$).
 
-\textbf{5.} Why is it a problem in the real world if a vending machine is NOT a function? (e.g., input button A1). \vspace{1.5cm}
+\medskip
+\hrule
+\medskip
+
+\textbf{Problem B:} Is a circle drawn on a graph a function?
+
+\medskip
+
+\textbf{Solution B:} \textbf{No.} If you draw a vertical line straight down the middle of the circle, it touches the top of the circle and the bottom of the circle. This fails the Vertical Line Test.
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% PRACTICE 1
+% ==========================================================
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Guided Practice: Identifying Functions}
+
+\medskip
+
+\noindent
+\textbf{1.} Look at the ordered pairs: $\{(1, 2), (2, 4), (3, 4), (4, 8)\}$. Is this a function? Why or why not?
+\vspace{1.5cm}
+
+\noindent
+\textbf{2.} Look at the ordered pairs: $\{(5, 10), (6, 12), (5, 14)\}$. Is this a function? Why or why not?
+\vspace{1.5cm}
+
+\noindent
+\textbf{3.} Draw a simple curve on a graph that passes the vertical line test.
+\vspace{2.5cm}
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% THINKING PROBLEM
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Deeper Thinking: Functions in the Real World}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 1: Real-World Scenarios}
+
+\medskip
+
+\noindent
+Determine if the following real-world relationships represent a mathematical function. Explain your reasoning carefully based on inputs and outputs.
+
+\vspace{5mm}
+
+\noindent
+\textbf{a)} \textbf{Input:} A student's ID number. \textbf{Output:} The student's name.
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b)} \textbf{Input:} A student's first name. \textbf{Output:} The student's ID number. (Hint: Think about common names like "John").
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{c)} \textbf{Input:} A person's age. \textbf{Output:} The person's height in inches.
+
+\vspace{2.5cm}
+
 \end{tcolorbox}
 
 \end{document}

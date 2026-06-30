@@ -1,6 +1,9 @@
-% VOLUME & QUALITATIVE GRAPHS & FUNCTIONAL RELATIONSHIPS - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+% QUALITATIVE GRAPHS & FUNCTIONAL RELATIONSHIPS - WORKSHEET 0 (IN-CLASS INSTRUCTION)
 \documentclass[12pt, letterpaper, fleqn]{article}
 
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
@@ -16,78 +19,192 @@
 
 \usetikzlibrary{arrows.meta, calc}
 
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
 \usepackage{times}
 \geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
 
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
 \newcommand{\logowidth}{3cm}
 \setlength{\headheight}{20pt}
 \setlength{\footskip}{40pt}
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\small\bfseries Volume & Qualitative Graphs & Functional Relationships}
+\fancyhead[C]{\small\bfseries Qualitative Graphs \& Functional Relationships}
 \fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{8.14.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
 
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
 \definecolor{customteal}{HTML}{2fbdb9}
 
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
 \newcommand{\blank}{\underline{\hspace{2.2cm}}}
 \newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
 \newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
 
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
 \begin{document}
 
 \textbf{Name:} \underline{\hspace{5cm}}
 \hfill
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
+% ==========================================================
+% SECTION 1: FOUNDATION
+% ==========================================================
 \begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Foundation: Volume & Qualitative Graphs & Functional Relationships}}
+    \large\textcolor{black}{\textbf{Foundation: Qualitative Graphs}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
 \noindent
-\textbf{Description:} Describe qualitatively the functional relationship between two quantities by analyzing a graph (e.g., where it is increasing, decreasing, linear, or nonlinear). Sketch a graph from a verbal description.
+A \textbf{qualitative graph} represents the relationship between two quantities without using specific numbers on the axes. It focuses on the \textit{behavior} or \textit{trend} of the function.
+
+\begin{itemize}
+    \item \textbf{Increasing:} The graph goes UP from left to right (positive slope).
+    \item \textbf{Decreasing:} The graph goes DOWN from left to right (negative slope).
+    \item \textbf{Constant:} The graph is a horizontal flat line (zero slope).
+    \item \textbf{Linear vs. Non-Linear:} A straight line means a constant rate of change. A curve means the rate of change is accelerating or decelerating.
+\end{itemize}
 
 \vspace{4mm}
 
-
+% ==========================================================
+% VISUAL REPRESENTATION
+% ==========================================================
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Instructional Guide: Qualitative Graphs}
+
+\textbf{Visual Representation: A Commute to Work}
 
 \medskip
-\textbf{Qualitative Graphs:} These are graphs without numbers on the axes. They are used to visually describe the relationship between two quantities (how one changes as the other changes). 
-For example: Distance over time, speed over time, or volume over time.
 
-\textbf{Reading the Curve:}
-- \textbf{Straight Line (Linear):} Constant rate of change (e.g., driving at a steady $60\text{ mph}$).
-- \textbf{Curved Line (Non-linear):} Changing rate (e.g., speeding up or slowing down).
-- \textbf{Positive Slope (Going up):} The $y$-value is increasing.
-- \textbf{Negative Slope (Going down):} The $y$-value is decreasing.
-- \textbf{Horizontal Line (Flat):} The $y$-value is \textbf{not changing} (e.g., stopped, or constant speed if the $y$-axis is speed).
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+% Axes
+\draw[thick,->] (-0.5,0) -- (8,0) node[right] {Time};
+\draw[thick,->] (0,-0.5) -- (0,5) node[above] {Distance from Home};
 
-\vspace{2mm}
-\textbf{Example:} A graph shows "Distance from Home" on the $y$-axis and "Time" on the $x$-axis. The line goes up, flattens out, then goes back down to the $x$-axis.
-\textit{Interpretation:} A person walked away from home at a steady pace, stopped for a while (flat line), and then walked back home.
+% Segments
+\draw[thick, blue] (0,0) -- (2,2) node[midway, above left, font=\footnotesize] {Driving};
+\draw[thick, red] (2,2) -- (4,2) node[midway, above, font=\footnotesize] {Stuck in Traffic};
+\draw[thick, green!60!black] (4,2) -- (5,4) node[midway, left, font=\footnotesize] {Highway};
+\draw[thick, orange] (5,4) -- (7,4) node[midway, above, font=\footnotesize] {At Work};
+
+\end{tikzpicture}
+\end{center}
+
+\medskip
+\begin{itemize}
+    \item \textbf{Driving:} Distance is increasing at a steady rate (linear).
+    \item \textbf{Traffic:} Time passes, but distance from home doesn't change (constant/horizontal).
+    \item \textbf{Highway:} Distance increases faster than before (steeper slope).
+    \item \textbf{At Work:} Arrived at destination; distance stays constant.
+\end{itemize}
+
 \end{tcolorbox}
 
 \vspace{4mm}
 
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Guided Practice (Mixed Difficulty)}
+\newpage
+
+% ==========================================================
+% WORKED EXAMPLES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Sketching and Interpreting}}
+\end{tcolorbox}
+
+\noindent
+You can sketch a graph from a story, or tell a story from a graph. Pay attention to whether the change is linear (steady) or non-linear (curved).
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example 1: Filling a Container}
 
 \medskip
-\textbf{1.} If a "Speed vs. Time" graph is a flat horizontal line, what is the car doing? \vspace{1.5cm}
 
-\textbf{2.} If a "Distance vs. Time" graph is a flat horizontal line, what is the car doing? \vspace{1.5cm}
+\textbf{Problem:} Sketch a qualitative graph showing the water level over time as a cylinder is filled by a hose at a steady rate.
 
-\textbf{3.} Draw a quick sketch of a graph showing a bathtub filling up, sitting full for a bath, and then draining. \vspace{2cm}
+\medskip
 
-\textbf{4.} A curve starts flat and gets steeper and steeper going up. Is the rate of change increasing or decreasing? \vspace{1.5cm}
+\textbf{Solution:}
+\begin{itemize}
+    \item Since the container is a uniform cylinder, the water level will rise at a completely steady, unchanging rate.
+    \item The graph will be a straight line starting from zero and going up.
+    \item \textbf{What if it was a cone?} If the cone is narrow at the bottom and wide at the top, it fills fast at first, then slower. The graph would be a curve getting less steep over time!
+\end{itemize}
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% PRACTICE 1
+% ==========================================================
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Guided Practice: Sketching}
+
+\medskip
+
+\noindent
+\textbf{1.} Sketch a graph of a person's speed who starts running, sprints at top speed, tires out and slows to a jog, and then stops to rest. (Axes: Time and Speed).
+\vspace{3cm}
+
+\noindent
+\textbf{2.} If a graph of "Time vs Temperature" is a horizontal line, what is happening to the temperature?
+\vspace{1.5cm}
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% THINKING PROBLEM
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Deeper Thinking: Analyzing Complex Stories}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 1: The Skydiver}
+
+\medskip
+
+\noindent
+A skydiver jumps out of a plane. They free-fall, accelerating rapidly. Then, they open their parachute, which drastically slows their fall. Finally, they drift to the ground at a slow, steady speed.
+
+\vspace{5mm}
+
+\noindent
+\textbf{a)} Sketch a qualitative graph representing the skydiver's \textbf{speed} over time.
+
+\vspace{4cm}
+
+\noindent
+\textbf{b)} Sketch a qualitative graph representing the skydiver's \textbf{altitude (height)} over time. (Hint: Does altitude start at zero or a high number? Is the fall linear or curved at first?)
+
+\vspace{4cm}
+
 \end{tcolorbox}
 
 \end{document}

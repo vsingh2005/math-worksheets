@@ -1,4 +1,4 @@
-% THE PYTHAGOREAN THEOREM - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+% DISTANCE ON THE COORDINATE PLANE - WORKSHEET 0 (IN-CLASS INSTRUCTION)
 \documentclass[12pt, letterpaper, fleqn]{article}
 
 % ----------------------------------------------------------
@@ -34,10 +34,10 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\small\bfseries The Pythagorean Theorem}
+\fancyhead[C]{\small\bfseries Distance on the Coordinate Plane}
 \fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
 \fancyfoot[C]{\thepage}
-\fancyfoot[R]{8.22.0}
+\fancyfoot[R]{8.23.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
 
@@ -66,18 +66,17 @@
 % SECTION 1: FOUNDATION
 % ==========================================================
 \begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Foundation: Right Triangles and the Formula}}
+    \large\textcolor{black}{\textbf{Foundation: Using Pythagorean Theorem on a Grid}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
 \noindent
-The \textbf{Pythagorean Theorem} is a special rule that only applies to \textbf{right triangles} (triangles with one $90^\circ$ angle). It describes the relationship between the three sides.
+To find the distance between any two points on a coordinate plane, you don't need a special new formula! You can just use the \textbf{Pythagorean Theorem} ($a^2 + b^2 = c^2$).
 
 \begin{itemize}
-    \item \textbf{Legs ($a$ and $b$):} The two shorter sides that form the right angle.
-    \item \textbf{Hypotenuse ($c$):} The longest side of the triangle. It is always directly across from the right angle.
-    \item \textbf{The Formula:} $a^2 + b^2 = c^2$. If you square the two legs and add them together, it equals the square of the hypotenuse.
+    \item \textbf{The Hypotenuse ($c$):} The diagonal line connecting the two points is the hypotenuse of an invisible right triangle.
+    \item \textbf{The Legs ($a$ and $b$):} You can find the lengths of the legs by drawing horizontal and vertical lines to connect the two points. The length of the legs is just the difference in the $x$-values and $y$-values!
 \end{itemize}
 
 \vspace{4mm}
@@ -87,39 +86,41 @@ The \textbf{Pythagorean Theorem} is a special rule that only applies to \textbf{
 % ==========================================================
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 
-\textbf{Visual Representation: The 3-4-5 Triangle}
+\textbf{Visual Representation: Drawing the Triangle}
 
 \medskip
 
 \begin{center}
 \begin{tikzpicture}[scale=0.8]
+% Grid
+\draw[step=1cm,gray!30,very thin] (-1,-1) grid (6,5);
+\draw[thick,->] (-1.5,0) -- (6.5,0) node[right] {$x$};
+\draw[thick,->] (0,-1.5) -- (0,5.5) node[above] {$y$};
 
-% Triangle
-\draw[thick, blue] (0,0) -- (4,0) node[midway, below] {$a=4$};
-\draw[thick, red] (0,0) -- (0,3) node[midway, left] {$b=3$};
-\draw[thick, green!60!black] (4,0) -- (0,3) node[midway, above right] {$c=5$};
+% Points
+\filldraw[black] (1,1) circle (3pt) node[below left] {$A(1,1)$};
+\filldraw[black] (4,5) circle (3pt) node[above right] {$B(4,5)$};
 
-% Right angle marker
-\draw (0.3, 0) -- (0.3, 0.3) -- (0, 0.3);
+% Hypotenuse
+\draw[thick, blue] (1,1) -- (4,5) node[midway, above left] {$c$};
 
-% Squares
-\draw[dashed, blue] (0,0) rectangle (4,-4);
-\node[blue] at (2,-2) {$a^2 = 16$};
+% Legs
+\draw[dashed, red, thick] (1,1) -- (4,1) node[midway, below] {$a = 3$};
+\draw[dashed, green!60!black, thick] (4,1) -- (4,5) node[midway, right] {$b = 4$};
 
-\draw[dashed, red] (0,0) rectangle (-3,3);
-\node[red] at (-1.5,1.5) {$b^2 = 9$};
-
-% Hypotenuse Square
-\begin{scope}[shift={(4,0)}, rotate=143.13]
-    \draw[dashed, green!60!black] (0,0) rectangle (5,5);
-    \node[green!60!black, rotate=-143.13] at (2.5, 2.5) {$c^2 = 25$};
-\end{scope}
+% Right angle
+\draw (3.7, 1) -- (3.7, 1.3) -- (4, 1.3);
 
 \end{tikzpicture}
 \end{center}
 
 \medskip
-Notice that $16 + 9 = 25$. The area of the squares on the two legs adds up to the area of the square on the hypotenuse!
+\begin{itemize}
+    \item The horizontal distance ($a$) from $x=1$ to $x=4$ is $3$.
+    \item The vertical distance ($b$) from $y=1$ to $y=5$ is $4$.
+    \item Now use the theorem: $3^2 + 4^2 = c^2 \implies 9 + 16 = 25 \implies c = \sqrt{25} = 5$.
+    \item The distance from $A$ to $B$ is exactly $5$ units.
+\end{itemize}
 
 \end{tcolorbox}
 
@@ -131,34 +132,38 @@ Notice that $16 + 9 = 25$. The area of the squares on the two legs adds up to th
 % WORKED EXAMPLES
 % ==========================================================
 \begin{tcolorbox}[colback=customteal!20]
-\large\textcolor{black}{\textbf{Finding Missing Sides}}
+\large\textcolor{black}{\textbf{Finding Distance Without a Grid}}
 \end{tcolorbox}
 
 \noindent
-We can use the formula to find a missing hypotenuse, or a missing leg. Remember to take the square root as your final step!
+You don't always have to draw a picture. You can calculate the lengths of the legs mathematically by subtracting the coordinates.
 
 \vspace{3mm}
 
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 
-\textbf{Worked Example 1: Finding a Missing Leg}
+\textbf{Worked Example 1: Calculating Distance}
 
 \medskip
 
-\textbf{Problem:} A right triangle has a hypotenuse of $13\text{ cm}$ and one leg of $5\text{ cm}$. Find the length of the other leg.
+\textbf{Problem:} Find the exact distance between $(-3, 2)$ and $(5, -4)$.
 
 \medskip
 
 \textbf{Solution:}
 \begin{itemize}
-    \item \textbf{Step 1 (Identify a, b, c):} $c = 13$, $a = 5$, $b = ?$ (it doesn't matter which leg is a or b).
-    \item \textbf{Step 2 (Plug into formula):} $5^2 + b^2 = 13^2$
-    \item \textbf{Step 3 (Square the numbers):} $25 + b^2 = 169$
-    \item \textbf{Step 4 (Solve for $b^2$):} Subtract $25$ from both sides.
-    \[ b^2 = 144 \]
-    \item \textbf{Step 5 (Square root):} Take the square root of both sides to get just $b$.
-    \[ b = \sqrt{144} = 12 \]
-    \item The missing leg is $12\text{ cm}$.
+    \item \textbf{Step 1 (Find Horizontal Leg $a$):} Subtract the $x$-values. 
+    \[ 5 - (-3) = 8 \]
+    \item \textbf{Step 2 (Find Vertical Leg $b$):} Subtract the $y$-values.
+    \[ 2 - (-4) = 6 \]
+    \item \textbf{Step 3 (Use Pythagorean Theorem):}
+    \begin{align*}
+        a^2 + b^2 &= c^2 \\
+        8^2 + 6^2 &= c^2 \\
+        64 + 36 &= c^2 \\
+        100 &= c^2
+    \end{align*}
+    \item \textbf{Step 4 (Square Root):} $\sqrt{100} = 10$. The distance is $10$ units.
 \end{itemize}
 
 \end{tcolorbox}
@@ -175,16 +180,12 @@ We can use the formula to find a missing hypotenuse, or a missing leg. Remember 
 \medskip
 
 \noindent
-\textbf{1.} Find the hypotenuse if the legs are $6$ and $8$.
+\textbf{1.} Find the distance between $(0, 0)$ and $(5, 12)$.
 \vspace{2cm}
 
 \noindent
-\textbf{2.} Find the missing leg if the hypotenuse is $10$ and one leg is $8$.
-\vspace{2cm}
-
-\noindent
-\textbf{3.} Do the side lengths $5, 12, \text{ and } 14$ form a right triangle? (Hint: Does $a^2 + b^2 = c^2$?)
-\vspace{2cm}
+\textbf{2.} Plot the points $(-2, 1)$ and $(2, 4)$ on a piece of graph paper. Draw the right triangle. What are the lengths of the legs? What is the hypotenuse?
+\vspace{2.5cm}
 
 \end{tcolorbox}
 
@@ -194,36 +195,42 @@ We can use the formula to find a missing hypotenuse, or a missing leg. Remember 
 % THINKING PROBLEM
 % ==========================================================
 \begin{tcolorbox}[colback=customteal!20]
-\large\textcolor{black}{\textbf{Deeper Thinking: Real-World Applications}}
+\large\textcolor{black}{\textbf{Deeper Thinking: Applications on the Grid}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
 \begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
 
-\textbf{Deeper Thinking Problem 1: The Leaning Ladder}
+\textbf{Deeper Thinking Problem 1: The Triangle Perimeter}
 
 \medskip
 
 \noindent
-A $15\text{-foot}$ ladder is leaning against a vertical brick wall. The base of the ladder is exactly $9\text{ feet}$ away from the bottom of the wall. 
+A triangle is drawn on a coordinate plane with vertices at:
+\[ A(-4, -1), \ B(2, -1), \ C(-1, 3) \]
 
 \vspace{5mm}
 
 \noindent
-\textbf{a)} Draw a diagram of this situation. Label the ladder, the wall, and the ground. Which of these represents the hypotenuse?
+\textbf{a)} First, find the length of side $AB$. Notice that this side is perfectly horizontal, so you don't even need the Pythagorean Theorem. What is the distance?
 
-\vspace{4cm}
-
-\noindent
-\textbf{b)} Use the Pythagorean theorem to find how high up the wall the ladder reaches.
-
-\vspace{4cm}
+\vspace{2cm}
 
 \noindent
-\textbf{c)} If you move the base of the ladder so it is only $5\text{ feet}$ away from the wall, will the top of the ladder go higher or lower? (You don't need to calculate the exact number, just explain the logic).
+\textbf{b)} Now, find the length of side $BC$. This is a diagonal, so use the Pythagorean theorem. Find the horizontal and vertical distance from $B$ to $C$ first. 
 
-\vspace{2.5cm}
+\vspace{3cm}
+
+\noindent
+\textbf{c)} Next, find the length of side $AC$. 
+
+\vspace{3cm}
+
+\noindent
+\textbf{d)} Add up all three sides to find the perimeter of Triangle $ABC$. 
+
+\vspace{2cm}
 
 \end{tcolorbox}
 

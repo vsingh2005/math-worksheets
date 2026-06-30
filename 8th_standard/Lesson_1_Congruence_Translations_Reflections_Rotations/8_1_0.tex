@@ -1,6 +1,9 @@
 % CONGRUENCE & TRANSLATIONS, REFLECTIONS & ROTATIONS - WORKSHEET 0 (IN-CLASS INSTRUCTION)
 \documentclass[12pt, letterpaper, fleqn]{article}
 
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
@@ -16,89 +19,235 @@
 
 \usetikzlibrary{arrows.meta, calc}
 
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
 \usepackage{times}
 \geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
 
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
 \newcommand{\logowidth}{3cm}
 \setlength{\headheight}{20pt}
 \setlength{\footskip}{40pt}
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\small\bfseries Congruence & Translations, Reflections & Rotations}
+\fancyhead[C]{\small\bfseries Congruence \& Translations, Reflections \& Rotations}
 \fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{8.1.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
 
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
 \definecolor{customteal}{HTML}{2fbdb9}
 
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
 \newcommand{\blank}{\underline{\hspace{2.2cm}}}
 \newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
 \newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
 
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
 \begin{document}
 
 \textbf{Name:} \underline{\hspace{5cm}}
 \hfill
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
+% ==========================================================
+% SECTION 1: WHAT ARE RIGID MOTIONS?
+% ==========================================================
 \begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Foundation: Congruence & Translations, Reflections & Rotations}}
+    \large\textcolor{black}{\textbf{Foundation: Translations, Reflections \& Rotations}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
 \noindent
-\textbf{Description:} Understand and apply translations, reflections, and rotations on the coordinate plane. Describe the effect of each rigid motion on coordinates and identify preserved properties (distance, angle measure).
+A \textbf{rigid motion} is a transformation that changes the position of a figure but preserves its size and shape (distance and angle measures). The original figure is the \textit{pre-image}, and the new figure is the \textit{image} (often denoted with a prime symbol, like $A'$).
+
+\begin{itemize}
+    \item \textbf{Translation:} A ``slide'' horizontally, vertically, or both. $(x, y) \rightarrow (x+a, y+b)$.
+    \item \textbf{Reflection:} A ``flip'' over a line of symmetry. 
+    \begin{itemize}
+        \item Across $x$-axis: $(x, y) \rightarrow (x, -y)$
+        \item Across $y$-axis: $(x, y) \rightarrow (-x, y)$
+    \end{itemize}
+    \item \textbf{Rotation:} A ``turn'' around a center point (e.g., origin).
+    \begin{itemize}
+        \item $90^\circ$ clockwise: $(x, y) \rightarrow (y, -x)$
+        \item $180^\circ$ rotation: $(x, y) \rightarrow (-x, -y)$
+    \end{itemize}
+\end{itemize}
 
 \vspace{4mm}
 
-
-
+% ==========================================================
+% VISUAL REPRESENTATION
+% ==========================================================
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Instructional Guide: Rigid Transformations}
+
+\textbf{Visual Representation: Rigid Transformations}
 
 \medskip
-\textbf{Translations:} A translation ``slides'' a figure horizontally, vertically, or both. Every point moves the exact same distance and direction. If we translate by $(a, b)$, the rule is $(x, y) \rightarrow (x+a, y+b)$.
 
-\textbf{Reflections:} A reflection ``flips'' a figure over a line (like the $x$-axis or $y$-axis), creating a mirror image.
-- Across $x$-axis: $(x, y) \rightarrow (x, -y)$
-- Across $y$-axis: $(x, y) \rightarrow (-x, y)$
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+% Grid
+\draw[step=1cm,gray!30,very thin] (-5,-5) grid (5,5);
+\draw[thick,->] (-5.5,0) -- (5.5,0) node[right] {$x$};
+\draw[thick,->] (0,-5.5) -- (0,5.5) node[above] {$y$};
 
-\textbf{Rotations:} A rotation ``turns'' a figure around a center point (usually the origin). 
-- $90^\circ$ clockwise: $(x, y) \rightarrow (y, -x)$
-- $90^\circ$ counter-clockwise: $(x, y) \rightarrow (-y, x)$
-- $180^\circ$ rotation: $(x, y) \rightarrow (-x, -y)$
+% Original Triangle A
+\filldraw[fill=blue!30, draw=blue, thick] (1,1) -- (3,1) -- (1,4) -- cycle;
+\node[blue] at (1.5, 2) {Pre-image};
 
-\textbf{Rigid Motion:} All of these are \textit{rigid motions} because they preserve the size and shape (angle measures and side lengths) of the original figure. The image is \textbf{congruent} to the pre-image.
+% Translation (Right 2, Down 4)
+\filldraw[fill=green!30, draw=green!70!black, thick] (3,-3) -- (5,-3) -- (3,0) -- cycle;
+\node[green!70!black] at (4, -1.5) {Translate};
+\draw[->, thick, dashed, green!70!black] (1.5, 1) -- (3.5, -2);
 
-\vspace{2mm}
-\textbf{Example 1:} Translate $A(-2, 3)$ right 4 units and down 5 units.
-\textit{Solution:} $(x, y) \rightarrow (x+4, y-5)$. So, $A' = (-2+4, 3-5) = (2, -2)$.
+% Reflection (Across y-axis)
+\filldraw[fill=red!30, draw=red, thick] (-1,1) -- (-3,1) -- (-1,4) -- cycle;
+\node[red] at (-1.5, 2) {Reflect};
+\draw[->, thick, dashed, red] (-0.5, 2.5) arc (60:120:2);
 
-\textbf{Example 2:} Reflect $B(4, -1)$ across the $y$-axis.
-\textit{Solution:} $(x, y) \rightarrow (-x, y)$. So, $B' = (-4, -1)$.
+% Rotation (180 degrees)
+\filldraw[fill=orange!30, draw=orange, thick] (-1,-1) -- (-3,-1) -- (-1,-4) -- cycle;
+\node[orange] at (-1.5, -2) {Rotate};
+\draw[->, thick, dashed, orange] (-0.5, -0.5) arc (135:315:0.5);
+
+\end{tikzpicture}
+\end{center}
+
 \end{tcolorbox}
 
 \vspace{4mm}
 
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Guided Practice (Mixed Difficulty)}
+\newpage
+
+% ==========================================================
+% WORKED EXAMPLES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Applying Transformations}}
+\end{tcolorbox}
+
+\noindent
+Let's look at how coordinates change when we apply transformations.
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example 1: Translation and Reflection}
 
 \medskip
-\textbf{1.} Translate the point $(3, 4)$ left 2 units and up 1 unit. What is the new coordinate? \vspace{1cm}
 
-\textbf{2.} Reflect the point $(-5, -6)$ across the $x$-axis. \vspace{1cm}
+\textbf{Problem:} A point $P(-4, 5)$ is translated right 6 units and down 2 units to become $P'$. It is then reflected across the $x$-axis to become $P''$. Find the coordinates of $P''$.
 
-\textbf{3.} Rotate the point $(2, 7)$ by $180^\circ$ around the origin. \vspace{1cm}
+\medskip
 
-\textbf{4.} A triangle has vertices at $X(1, 1)$, $Y(4, 1)$, and $Z(4, 5)$. If you reflect it across the $y$-axis and then translate it up 3 units, what are the coordinates of $X''$, $Y''$, and $Z''$? \vspace{2.5cm}
+\textbf{Solution:}
+\begin{itemize}
+    \item \textbf{Step 1 (Translation):} Right 6 means $x + 6$. Down 2 means $y - 2$.
+    \item $P' = (-4 + 6, 5 - 2) = (2, 3)$.
+    \item \textbf{Step 2 (Reflection):} Across the $x$-axis means we negate the $y$-value: $(x, y) \rightarrow (x, -y)$.
+    \item $P'' = (2, -3)$.
+\end{itemize}
 
-\textbf{5.} Why do we call translations, reflections, and rotations "rigid motions"? \vspace{1.5cm}
+\end{tcolorbox}
 
-\textbf{6.} True or False: Rotating a shape changes its perimeter. \vspace{1cm}
+\vspace{4mm}
+
+% ==========================================================
+% PRACTICE 1
+% ==========================================================
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Guided Practice: Basic Operations}
+
+\medskip
+
+\noindent
+\textbf{1.} Translate the point $(3, 4)$ left 2 units and up 1 unit. What is the new coordinate? 
+\vspace{1.5cm}
+
+\noindent
+\textbf{2.} Reflect the point $(-5, -6)$ across the $x$-axis. 
+\vspace{1.5cm}
+
+\noindent
+\textbf{3.} Rotate the point $(2, 7)$ by $180^\circ$ around the origin. 
+\vspace{1.5cm}
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% THINKING PROBLEM
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Deeper Thinking: Sequences \& Properties}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 1: Sequences of Transformations}
+
+\medskip
+
+\noindent
+A triangle has vertices at $X(1, 1)$, $Y(4, 1)$, and $Z(4, 5)$. 
+
+\vspace{5mm}
+
+\noindent
+\textbf{a)} If you reflect the triangle across the $y$-axis, what are the intermediate coordinates $X'$, $Y'$, and $Z'$?
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b)} Now translate that new triangle up 3 units. What are the final coordinates of $X''$, $Y''$, and $Z''$?
+
+\vspace{2.5cm}
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 2: Finding the Rule}
+
+\medskip
+
+\noindent
+A drone maps a rectangular field. A corner of the field is originally recorded at $H(-3, 4)$. Due to a software update, the corner is now mapped to $H'(5, -1)$.
+
+\vspace{5mm}
+
+\noindent
+\textbf{a)} Find the algebraic translation rule $(x+a, y+b)$ that maps $H$ onto $H'$.
+
+\vspace{3cm}
+
+\noindent
+\textbf{b)} Are the physical dimensions (perimeter and area) of the field affected by this mapping? Explain why or why not using the term "rigid motion."
+
+\vspace{3cm}
+
 \end{tcolorbox}
 
 \end{document}

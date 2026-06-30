@@ -1,6 +1,9 @@
 % PROPORTIONAL RELATIONSHIPS & SLOPE - WORKSHEET 0 (IN-CLASS INSTRUCTION)
 \documentclass[12pt, letterpaper, fleqn]{article}
 
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
@@ -16,77 +19,214 @@
 
 \usetikzlibrary{arrows.meta, calc}
 
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
 \usepackage{times}
 \geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
 
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
 \newcommand{\logowidth}{3cm}
 \setlength{\headheight}{20pt}
 \setlength{\footskip}{40pt}
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\small\bfseries Proportional Relationships & Slope}
+\fancyhead[C]{\small\bfseries Proportional Relationships \& Slope}
 \fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{8.7.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
 
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
 \definecolor{customteal}{HTML}{2fbdb9}
 
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
 \newcommand{\blank}{\underline{\hspace{2.2cm}}}
 \newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
 \newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
 
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
 \begin{document}
 
 \textbf{Name:} \underline{\hspace{5cm}}
 \hfill
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
+% ==========================================================
+% SECTION 1: FOUNDATION
+% ==========================================================
 \begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Foundation: Proportional Relationships & Slope}}
+    \large\textcolor{black}{\textbf{Foundation: Proportions \& Slope}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
 \noindent
-\textbf{Description:} Graph proportional relationships; interpret the unit rate as the slope of the graph. Compare two proportional relationships represented in different ways (table, graph, equation, verbal).
+A \textbf{proportional relationship} is a special kind of linear relationship where the ratio of $y$ to $x$ is constant for all values. The graph of a proportional relationship is always a straight line that passes through the \textbf{origin $(0,0)$}.
+
+\begin{itemize}
+    \item \textbf{Unit Rate and Slope:} In a proportional relationship, the \textbf{unit rate} (the constant of proportionality) is exactly the same as the \textbf{slope} of the line.
+    \item \textbf{Equation:} The equation of a proportional relationship is written as $y = mx$, where $m$ is the slope.
+\end{itemize}
 
 \vspace{4mm}
 
-
+% ==========================================================
+% VISUAL REPRESENTATION
+% ==========================================================
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Instructional Guide: Proportional Relationships \& Slope}
+
+\textbf{Visual Representation: Graphing $y = 3x$}
 
 \medskip
-\textbf{Proportional Relationships:} A relationship where two quantities always have the same ratio. On a graph, this is a straight line that \textbf{always passes through the origin $(0,0)$}. The equation is always of the form $y = mx$.
 
-\textbf{Unit Rate and Slope:} In a proportional relationship, the \textbf{unit rate} (the value of $y$ when $x=1$) is exactly the same as the \textbf{slope} ($m$) of the line.
-$$ \text{Slope } m = \frac{\text{Change in } y}{\text{Change in } x} = \text{Unit Rate} $$
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+% Grid
+\draw[step=1cm,gray!30,very thin] (-1,-1) grid (5,10);
+\draw[thick,->] (-1.5,0) -- (5.5,0) node[right] {$x$ (Hours)};
+\draw[thick,->] (0,-1.5) -- (0,10.5) node[above] {$y$ (Miles)};
 
-\textbf{Comparing Relationships:} You can compare the slopes of two different proportional relationships even if they are presented in different formats (e.g., comparing a graph to an equation or a table).
+% Line
+\draw[thick, blue, ->] (0, 0) -- (3.33, 10);
 
-\vspace{2mm}
-\textbf{Example:} Car A travels $120\text{ miles}$ in 2 hours (from a table). Car B's distance is given by $y = 55x$ (where $x$ is hours). Which car is faster?
-\textit{Solution:} Car A's slope/unit rate is $120/2 = 60\text{ mph}$. Car B's slope/unit rate is $55\text{ mph}$. Car A is faster because its slope is steeper.
+% Points
+\filldraw[blue] (0,0) circle (3pt) node[below right, black] {$(0,0)$};
+\filldraw[blue] (1,3) circle (3pt) node[below right, black] {$(1,3)$};
+\filldraw[blue] (2,6) circle (3pt) node[below right, black] {$(2,6)$};
+\filldraw[blue] (3,9) circle (3pt) node[below right, black] {$(3,9)$};
+
+\end{tikzpicture}
+\end{center}
+
+\medskip
+\begin{itemize}
+    \item This graph passes through $(0,0)$. This means if you travel for $0$ hours, you go $0$ miles.
+    \item The unit rate is $3$ miles per hour.
+    \item The slope ($\dfrac{\text{Rise}}{\text{Run}}$) is $\dfrac{3}{1} = 3$.
+    \item The equation is $y = 3x$.
+\end{itemize}
+
 \end{tcolorbox}
 
 \vspace{4mm}
 
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Guided Practice (Mixed Difficulty)}
+\newpage
+
+% ==========================================================
+% WORKED EXAMPLES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Comparing Proportional Relationships}}
+\end{tcolorbox}
+
+\noindent
+We can compare proportional relationships represented in different ways (graphs, tables, equations, words) by finding the slope (unit rate) of each.
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example 1: Comparing Speeds}
 
 \medskip
-\textbf{1.} An equation is $y = 4.5x$. What is the slope? What is the unit rate? \vspace{1cm}
 
-\textbf{2.} A table shows $x=2, y=10$ and $x=4, y=20$. Is it proportional? What is $m$? \vspace{1.5cm}
+\textbf{Problem:} Car A's distance is given by the equation $y = 55x$ (where $x$ is hours and $y$ is miles). Car B's distance is shown in a table where $(2\text{ hours}) = 100\text{ miles}$. Which car is faster?
 
-\textbf{3.} Graph $y = \frac{1}{2}x$. Does it pass through the origin? \vspace{1cm}
+\medskip
 
-\textbf{4.} Brand A costs $\$15$ for 3 shirts. Brand B is represented by $y = 4x$. Which is more expensive per shirt? \vspace{1.5cm}
+\textbf{Solution:}
+\begin{itemize}
+    \item \textbf{Step 1 (Find speed of Car A):} The equation is $y = 55x$. The slope (unit rate) is $55$. So Car A travels $55$ mph.
+    \item \textbf{Step 2 (Find speed of Car B):} The table gives $(2, 100)$. Because it's a proportional relationship (distance traveled), it passes through $(0,0)$. 
+    \item $m = \dfrac{100 - 0}{2 - 0} = \dfrac{100}{2} = 50$. So Car B travels $50$ mph.
+    \item \textbf{Step 3 (Compare):} $55 > 50$, so Car A is faster.
+\end{itemize}
 
-\textbf{5.} Why must a proportional graph pass through $(0,0)$? \vspace{1.0cm}
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% PRACTICE 1
+% ==========================================================
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Guided Practice: Basic Operations}
+
+\medskip
+
+\noindent
+\textbf{1.} A plumber charges $\$75$ for $2$ hours of work, and $\$150$ for $4$ hours of work. What is their hourly rate (slope)?
+\vspace{1.5cm}
+
+\noindent
+\textbf{2.} Write the equation for the plumber's charges in the form $y = mx$.
+\vspace{1.5cm}
+
+\noindent
+\textbf{3.} Does the plumber's graph pass through the origin $(0,0)$? Explain what that means in this context.
+\vspace{1.5cm}
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% THINKING PROBLEM
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Deeper Thinking: Cross-Representational Analysis}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 1: Gas Mileage}
+
+\medskip
+
+\noindent
+You are comparing the gas mileage of three different cars. 
+
+\vspace{5mm}
+
+\noindent
+\textbf{Car X:} The gas mileage is represented by the equation $y = 24x$, where $y$ is miles and $x$ is gallons of gas.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Car Y:} Uses $3$ gallons to drive $75$ miles.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Car Z:} Is represented by a graph that passes through the origin and the point $(4, 96)$.
+
+\vspace{5mm}
+
+\noindent
+\textbf{a)} Calculate the unit rate (miles per gallon) for all three cars.
+
+\vspace{3.5cm}
+
+\noindent
+\textbf{b)} Which car has the worst gas mileage? Explain your reasoning.
+
+\vspace{2.5cm}
+
 \end{tcolorbox}
 
 \end{document}

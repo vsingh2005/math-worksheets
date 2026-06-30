@@ -1,6 +1,9 @@
-% VOLUME & VOLUME OF CYLINDERS, CONES & SPHERES - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+% VOLUME OF CYLINDERS, CONES, SPHERES - WORKSHEET 0 (IN-CLASS INSTRUCTION)
 \documentclass[12pt, letterpaper, fleqn]{article}
 
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
@@ -14,86 +17,240 @@
 \usepackage{needspace}
 \usepackage{multicol}
 
-\usetikzlibrary{arrows.meta, calc}
+\usetikzlibrary{arrows.meta, calc, shapes.geometric}
 
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
 \usepackage{times}
 \geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
 
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
 \newcommand{\logowidth}{3cm}
 \setlength{\headheight}{20pt}
 \setlength{\footskip}{40pt}
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\small\bfseries Volume & Volume of Cylinders, Cones & Spheres}
+\fancyhead[C]{\small\bfseries Volume of Cylinders, Cones, and Spheres}
 \fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{8.15.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
 
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
 \definecolor{customteal}{HTML}{2fbdb9}
 
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
 \newcommand{\blank}{\underline{\hspace{2.2cm}}}
 \newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
 \newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
 
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
 \begin{document}
 
 \textbf{Name:} \underline{\hspace{5cm}}
 \hfill
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
+% ==========================================================
+% SECTION 1: FOUNDATION
+% ==========================================================
 \begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Foundation: Volume & Volume of Cylinders, Cones & Spheres}}
+    \large\textcolor{black}{\textbf{Foundation: Volume Formulas}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
 \noindent
-\textbf{Description:} Know and apply the formulas for volumes of cylinders ($V{=}\pi r^2 h$), cones ($V{=}\tfrac{1}{3}\pi r^2 h$), and spheres ($V{=}\tfrac{4}{3}\pi r^3$). Solve real-world and mathematical problems.
+\textbf{Volume} is the amount of 3-dimensional space an object occupies. We use $V$ for volume, $r$ for the radius of the circular base, and $h$ for the height of the object.
+
+\begin{itemize}
+    \item \textbf{Cylinder:} A prism with a circular base. Formula: $V = \pi r^2 h$
+    \item \textbf{Cone:} Comes to a single point. It fits perfectly into a cylinder with the same base and height, but it only takes up one-third of the space! Formula: $V = \dfrac{1}{3}\pi r^2 h$
+    \item \textbf{Sphere:} A perfectly round 3D ball. Formula: $V = \dfrac{4}{3}\pi r^3$
+\end{itemize}
 
 \vspace{4mm}
 
-
+% ==========================================================
+% VISUAL REPRESENTATION
+% ==========================================================
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Instructional Guide: Volume of Cylinders, Cones, \& Spheres}
+
+\textbf{Visual Representation: The Three Shapes}
 
 \medskip
-\textbf{The Cylinder:} A cylinder has a circular base and straight sides. 
-$$ V_{\text{cylinder}} = \pi r^2 h $$
-(Area of the base $\times$ height).
 
-\textbf{The Cone:} A cone fits perfectly inside a cylinder with the same radius and height, but it takes up exactly $\frac{1}{3}$ of the space.
-$$ V_{\text{cone}} = \frac{1}{3} \pi r^2 h $$
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
 
-\textbf{The Sphere:} A perfectly round 3D object. The volume depends only on its radius.
-$$ V_{\text{sphere}} = \frac{4}{3} \pi r^3 $$
+% Cylinder
+\begin{scope}[shift={(0,0)}]
+    \draw[thick] (0,3) ellipse (1.5 and 0.4);
+    \draw[thick] (-1.5,0) -- (-1.5,3);
+    \draw[thick] (1.5,0) -- (1.5,3);
+    \draw[thick] (-1.5,0) arc (180:360:1.5 and 0.4);
+    \draw[dashed, thick] (1.5,0) arc (0:180:1.5 and 0.4);
+    \draw[dashed, blue] (0,0) -- (1.5,0) node[midway, below] {$r$};
+    \draw[dashed, red] (0,0) -- (0,3) node[midway, right] {$h$};
+    \node at (0, -1) {Cylinder};
+\end{scope}
 
-\textbf{Exact vs. Approximate:} 
-- \textbf{Exact form:} Leave the symbol $\pi$ in the answer (e.g., $12\pi\text{ cm}^3$).
-- \textbf{Approximate form:} Multiply by $3.14$ or use the $\pi$ button on a calculator (e.g., $37.68\text{ cm}^3$).
+% Cone
+\begin{scope}[shift={(5,0)}]
+    \draw[thick] (0,3) -- (-1.5,0);
+    \draw[thick] (0,3) -- (1.5,0);
+    \draw[thick] (-1.5,0) arc (180:360:1.5 and 0.4);
+    \draw[dashed, thick] (1.5,0) arc (0:180:1.5 and 0.4);
+    \draw[dashed, blue] (0,0) -- (1.5,0) node[midway, below] {$r$};
+    \draw[dashed, red] (0,0) -- (0,3) node[midway, right] {$h$};
+    \node at (0, -1) {Cone};
+\end{scope}
 
-\vspace{2mm}
-\textbf{Example:} Find the exact volume of a cone with radius $3$ and height $10$.
-\textit{Solution:} $V = \frac{1}{3} \pi (3^2)(10) = \frac{1}{3} \pi (9)(10) = 30\pi$.
+% Sphere
+\begin{scope}[shift={(10,1.5)}]
+    \draw[thick] (0,0) circle (1.5);
+    \draw[thick, dashed] (1.5,0) arc (0:180:1.5 and 0.4);
+    \draw[thick] (-1.5,0) arc (180:360:1.5 and 0.4);
+    \draw[dashed, blue] (0,0) -- (1.5,0) node[midway, above] {$r$};
+    \filldraw (0,0) circle (1.5pt);
+    \node at (0, -2.5) {Sphere};
+\end{scope}
+
+\end{tikzpicture}
+\end{center}
+
 \end{tcolorbox}
 
 \vspace{4mm}
 
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Guided Practice (Mixed Difficulty)}
+\newpage
+
+% ==========================================================
+% WORKED EXAMPLES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Calculating Volume in Terms of Pi}}
+\end{tcolorbox}
+
+\noindent
+Often, you will be asked to leave your answer "in terms of $\pi$". This means you treat $\pi$ like a variable and don't multiply it out using $3.14$.
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example 1: Volume of a Cylinder}
 
 \medskip
-\textbf{1.} Find the exact volume of a cylinder with $r=2, h=5$. \vspace{1cm}
 
-\textbf{2.} Find the exact volume of a cone with $r=2, h=5$. \vspace{1cm}
+\textbf{Problem:} Find the volume of a cylinder with a radius of $4\text{ cm}$ and a height of $10\text{ cm}$. Leave your answer in terms of $\pi$.
 
-\textbf{3.} Find the exact volume of a sphere with $r=3$. \vspace{1cm}
+\medskip
 
-\textbf{4.} If a diameter is 10, what is the radius? \vspace{1cm}
+\textbf{Solution:}
+\begin{itemize}
+    \item \textbf{Step 1 (Write Formula):} $V = \pi r^2 h$
+    \item \textbf{Step 2 (Substitute values):} $V = \pi \cdot (4)^2 \cdot 10$
+    \item \textbf{Step 3 (Square the radius):} $V = \pi \cdot 16 \cdot 10$
+    \item \textbf{Step 4 (Multiply numbers):} $V = 160\pi\text{ cm}^3$
+\end{itemize}
 
-\textbf{5.} A cylinder and a cone have the same base and height. The cylinder holds $90\text{ mL}$ of water. How much does the cone hold? \vspace{1cm}
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% PRACTICE 1
+% ==========================================================
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Guided Practice: Basic Operations}
+
+\medskip
+
+\noindent
+\textbf{1.} Find the volume of a cone with a radius of $3\text{ in}$ and a height of $8\text{ in}$. (In terms of $\pi$).
+\vspace{2.5cm}
+
+\noindent
+\textbf{2.} Find the volume of a sphere with a radius of $6\text{ mm}$. (In terms of $\pi$).
+\vspace{2.5cm}
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% THINKING PROBLEM
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Deeper Thinking: Missing Dimensions and Composites}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 1: Working Backwards}
+
+\medskip
+
+\noindent
+A cylinder has a volume of $300\pi\text{ cm}^3$ and a height of $12\text{ cm}$. 
+
+\vspace{5mm}
+
+\noindent
+\textbf{a)} Set up an equation using the volume formula.
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b)} Solve for the radius $r$.
+
+\vspace{3cm}
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 2: Ice Cream Cone}
+
+\medskip
+
+\noindent
+An ice cream treat is shaped like a cone completely filled with ice cream, and a perfectly spherical half-scoop (a hemisphere) resting on top. The radius of the cone is $3\text{ cm}$, and the height of the cone is $10\text{ cm}$. The hemisphere has the same radius.
+
+\vspace{5mm}
+
+\noindent
+\textbf{a)} Calculate the volume of the cone part.
+
+\vspace{2cm}
+
+\noindent
+\textbf{b)} Calculate the volume of the hemisphere part. (Hint: Find the sphere, then divide by 2).
+
+\vspace{2cm}
+
+\noindent
+\textbf{c)} What is the total volume of ice cream?
+
+\vspace{1.5cm}
+
 \end{tcolorbox}
 
 \end{document}

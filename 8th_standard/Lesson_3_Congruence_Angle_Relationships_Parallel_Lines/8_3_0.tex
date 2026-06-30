@@ -1,6 +1,9 @@
 % CONGRUENCE & ANGLE RELATIONSHIPS & PARALLEL LINES - WORKSHEET 0 (IN-CLASS INSTRUCTION)
 \documentclass[12pt, letterpaper, fleqn]{article}
 
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
@@ -14,83 +17,257 @@
 \usepackage{needspace}
 \usepackage{multicol}
 
-\usetikzlibrary{arrows.meta, calc}
+\usetikzlibrary{arrows.meta, calc, angles, quotes}
 
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
 \usepackage{times}
 \geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
 
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
 \newcommand{\logowidth}{3cm}
 \setlength{\headheight}{20pt}
 \setlength{\footskip}{40pt}
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\small\bfseries Congruence & Angle Relationships & Parallel Lines}
+\fancyhead[C]{\small\bfseries Congruence \& Angle Relationships \& Parallel Lines}
 \fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{8.3.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
 
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
 \definecolor{customteal}{HTML}{2fbdb9}
 
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
 \newcommand{\blank}{\underline{\hspace{2.2cm}}}
 \newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
 \newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
 
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
 \begin{document}
 
 \textbf{Name:} \underline{\hspace{5cm}}
 \hfill
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
+% ==========================================================
+% SECTION 1: FOUNDATION
+% ==========================================================
 \begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Foundation: Congruence & Angle Relationships & Parallel Lines}}
+    \large\textcolor{black}{\textbf{Foundation: Angle Relationships \& Parallel Lines}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
 \noindent
-\textbf{Description:} Use informal arguments and transformation reasoning to establish facts about angles formed when parallel lines are cut by a transversal (alternate interior, corresponding angles) and the angle-sum of triangles.
+When two parallel lines are intersected by a third line (called a \textbf{transversal}), special angle relationships are created. Understanding these relationships allows us to solve for unknown angles.
+
+\begin{itemize}
+    \item \textbf{Corresponding Angles:} Angles in the same relative position at each intersection where the straight line crosses the parallel lines. They are \textbf{equal}.
+    \item \textbf{Alternate Interior Angles:} Angles on opposite sides of the transversal and between the parallel lines. They are \textbf{equal}.
+    \item \textbf{Alternate Exterior Angles:} Angles on opposite sides of the transversal and outside the parallel lines. They are \textbf{equal}.
+    \item \textbf{Same-Side Interior Angles:} Angles on the same side of the transversal and between the parallel lines. They add up to $180^\circ$ (\textbf{supplementary}).
+\end{itemize}
 
 \vspace{4mm}
 
-
-
+% ==========================================================
+% VISUAL REPRESENTATION
+% ==========================================================
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Instructional Guide: Angles \& Parallel Lines}
+
+\textbf{Visual Representation: Transversals and Parallel Lines}
 
 \medskip
-\textbf{Transversals:} When two parallel lines are cut by a third line (the transversal), eight angles are formed. These angles have special relationships:
-- \textbf{Corresponding Angles:} In the same position at each intersection. They are \textbf{congruent} ($=$).
-- \textbf{Alternate Interior Angles:} On opposite sides of the transversal and between the parallel lines. They are \textbf{congruent} ($=$).
-- \textbf{Alternate Exterior Angles:} On opposite sides of the transversal and outside the parallel lines. They are \textbf{congruent} ($=$).
-- \textbf{Same-Side Interior Angles:} On the same side of the transversal, between the lines. They are \textbf{supplementary} (add to $180^\circ$).
 
-\textbf{Triangles:} 
-- The sum of the interior angles of any triangle is exactly $180^\circ$.
-- \textbf{Exterior Angle Theorem:} The measure of an exterior angle of a triangle is equal to the sum of the measures of its two remote interior angles.
+\begin{center}
+\begin{tikzpicture}[scale=1]
 
-\vspace{2mm}
-\textbf{Example:} Parallel lines $l$ and $m$ are cut by transversal $t$. If one acute angle is $50^\circ$, what are the other angles?
-\textit{Solution:} All acute angles will be $50^\circ$. All obtuse angles will be $180^\circ - 50^\circ = 130^\circ$.
+% Parallel lines
+\draw[thick, <->] (-3, 1) -- (3, 1) node[right] {$Line\ 1$};
+\draw[thick, <->] (-3, -1) -- (3, -1) node[right] {$Line\ 2$};
+
+% Transversal
+\draw[thick, <->] (-1.5, -2.5) -- (1.5, 2.5) node[right] {$Transversal$};
+
+% Nodes for angles
+\coordinate (A) at (-0.3, 1);
+\coordinate (B) at (0.3, -1);
+
+% Draw angles and labels for top intersection
+\draw (0.3, 1) arc (0:60:0.6);
+\node at (0.6, 1.3) {$2$};
+
+\draw (-0.3, 1) arc (180:60:0.6);
+\node at (-0.4, 1.5) {$1$};
+
+\draw (-0.3, 1) arc (180:240:0.6);
+\node at (-0.6, 0.7) {$3$};
+
+\draw (0.3, 1) arc (360:240:0.6);
+\node at (0.4, 0.5) {$4$};
+
+% Draw angles and labels for bottom intersection
+\draw (0.9, -1) arc (0:60:0.6);
+\node at (1.2, -0.7) {$6$};
+
+\draw (0.3, -1) arc (180:60:0.6);
+\node at (0.2, -0.5) {$5$};
+
+\draw (0.3, -1) arc (180:240:0.6);
+\node at (0.0, -1.3) {$7$};
+
+\draw (0.9, -1) arc (360:240:0.6);
+\node at (1.0, -1.5) {$8$};
+
+\end{tikzpicture}
+\end{center}
+
+\medskip
+\begin{itemize}
+    \item \textbf{Corresponding:} (1 and 5), (2 and 6), (3 and 7), (4 and 8)
+    \item \textbf{Alternate Interior:} (3 and 6), (4 and 5)
+    \item \textbf{Alternate Exterior:} (1 and 8), (2 and 7)
+    \item \textbf{Same-Side Interior:} (3 and 5) $\rightarrow \angle 3 + \angle 5 = 180^\circ$
+\end{itemize}
+
 \end{tcolorbox}
 
 \vspace{4mm}
 
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Guided Practice (Mixed Difficulty)}
+\newpage
+
+% ==========================================================
+% WORKED EXAMPLES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Applying Angle Relationships}}
+\end{tcolorbox}
+
+\noindent
+We can use algebraic expressions to solve for missing angles.
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example 1: Finding Missing Variables}
 
 \medskip
-\textbf{1.} If two corresponding angles are $(2x)^\circ$ and $80^\circ$, find $x$. \vspace{1.5cm}
 
-\textbf{2.} If two same-side interior angles are $100^\circ$ and $(y+20)^\circ$, find $y$. \vspace{1.5cm}
+\textbf{Problem:} Two parallel lines are cut by a transversal. The alternate interior angles are given as $(3x + 10)^\circ$ and $(5x - 20)^\circ$. Find the value of $x$ and the measure of the angles.
 
-\textbf{3.} In a triangle, two angles measure $40^\circ$ and $70^\circ$. What is the third angle? \vspace{1.5cm}
+\medskip
 
-\textbf{4.} An exterior angle of a triangle is $110^\circ$. One remote interior angle is $40^\circ$. What is the other remote interior angle? \vspace{1.5cm}
+\textbf{Solution:}
+\begin{itemize}
+    \item \textbf{Step 1 (Identify Relationship):} Alternate interior angles are equal.
+    \item \textbf{Step 2 (Set up equation):} $3x + 10 = 5x - 20$.
+    \item \textbf{Step 3 (Solve for $x$):} 
+    \begin{align*}
+        10 &= 2x - 20 \\
+        30 &= 2x \\
+        15 &= x
+    \end{align*}
+    \item \textbf{Step 4 (Find the angle):} Plug $x=15$ back into either expression. $3(15) + 10 = 45 + 10 = 55^\circ$.
+\end{itemize}
 
-\textbf{5.} Why do same-side interior angles add up to $180^\circ$? \vspace{1.5cm}
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% PRACTICE 1
+% ==========================================================
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Guided Practice: Basic Operations}
+
+\medskip
+
+\noindent
+\textbf{1.} If two parallel lines are cut by a transversal and one corresponding angle measures $120^\circ$, what is the measure of the other corresponding angle?
+\vspace{1.5cm}
+
+\noindent
+\textbf{2.} Same-side interior angles are $(2x)^\circ$ and $(4x - 30)^\circ$. Find $x$.
+\vspace{2.5cm}
+
+\noindent
+\textbf{3.} What is the relationship between alternate exterior angles?
+\vspace{1.5cm}
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% THINKING PROBLEM
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Deeper Thinking: Proofs \& Triangles}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 1: Exterior Angle of a Triangle}
+
+\medskip
+
+\noindent
+A triangle has two interior angles measuring $40^\circ$ and $60^\circ$. 
+
+\vspace{5mm}
+
+\noindent
+\textbf{a)} What is the measure of the third interior angle?
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b)} An exterior angle is formed by extending the side adjacent to the third interior angle. What is the measure of this exterior angle? How does it relate to the $40^\circ$ and $60^\circ$ angles?
+
+\vspace{3cm}
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 2: Real-World Design}
+
+\medskip
+
+\noindent
+A bridge truss features a large outer triangle divided into smaller triangles. One large exterior angle is measured at $145^\circ$. Inside, the two remote interior angles are $(3x + 10)^\circ$ and $(2x + 15)^\circ$.
+
+\vspace{5mm}
+
+\noindent
+\textbf{a)} Write an equation using the Exterior Angle Theorem.
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b)} Solve for $x$ and determine the exact measures of the two interior angles.
+
+\vspace{3cm}
+
 \end{tcolorbox}
 
 \end{document}

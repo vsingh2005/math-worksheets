@@ -1,6 +1,9 @@
 % LINES OF BEST FIT & PREDICTIONS - WORKSHEET 0 (IN-CLASS INSTRUCTION)
 \documentclass[12pt, letterpaper, fleqn]{article}
 
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
@@ -14,84 +17,226 @@
 \usepackage{needspace}
 \usepackage{multicol}
 
-\usetikzlibrary{arrows.meta, calc}
+\usetikzlibrary{arrows.meta, calc, positioning}
 
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
 \usepackage{times}
 \geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
 
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
 \newcommand{\logowidth}{3cm}
 \setlength{\headheight}{20pt}
 \setlength{\footskip}{40pt}
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\small\bfseries Lines of Best Fit & Predictions}
+\fancyhead[C]{\small\bfseries Lines of Best Fit \& Predictions}
 \fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{8.17.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
 
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
 \definecolor{customteal}{HTML}{2fbdb9}
 
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
 \newcommand{\blank}{\underline{\hspace{2.2cm}}}
 \newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
 \newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
 
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
 \begin{document}
 
 \textbf{Name:} \underline{\hspace{5cm}}
 \hfill
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
+% ==========================================================
+% SECTION 1: FOUNDATION
+% ==========================================================
 \begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Foundation: Lines of Best Fit & Predictions}}
+    \large\textcolor{black}{\textbf{Foundation: The Line of Best Fit}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
 \noindent
-\textbf{Description:} Informally fit a straight line to data suggesting a linear association. Interpret slope and intercept in context; use the line of best fit to make predictions and assess model fit.
+When data in a scatter plot shows a linear association, we can draw a \textbf{Line of Best Fit} (or trend line). This line helps us model the data with a linear equation ($y=mx+b$) and make predictions.
+
+\begin{itemize}
+    \item \textbf{Drawing the Line:} A good line of best fit should go straight through the "middle" of the data cluster. It should follow the trend, with roughly half the points above the line and half below it. It \textit{does not} need to start at $(0,0)$.
+    \item \textbf{Making Predictions:} Once you have the equation of the line, you can plug in an $x$-value to predict a $y$-value, or vice versa.
+\end{itemize}
 
 \vspace{4mm}
 
-
+% ==========================================================
+% VISUAL REPRESENTATION
+% ==========================================================
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Instructional Guide: Lines of Best Fit}
+
+\textbf{Visual Representation: Good vs. Bad Lines}
 
 \medskip
-\textbf{Line of Best Fit (Trend Line):} When data in a scatter plot shows a linear association, we can draw a straight line through the center of the data cloud. This line models the trend of the data.
-- The line should have about the same number of points above it as below it.
-- It does NOT have to touch every point (or any point at all!).
 
-\textbf{Writing the Equation:} 
-Once the line is drawn, you can write its equation in $y = mx + b$ form by picking two points \textbf{ON THE DRAWN LINE} (not necessarily data points) to find the slope $m$ and $y$-intercept $b$.
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
 
-\textbf{Making Predictions:}
-- \textbf{Interpolation:} Predicting a value \textit{inside} the range of your data.
-- \textbf{Extrapolation:} Predicting a value \textit{outside} the range of your data (less reliable).
+% Good Line Plot
+\begin{scope}[shift={(0,0)}]
+\draw[thick,->] (-0.5,0) -- (5,0);
+\draw[thick,->] (0,-0.5) -- (0,5);
+\filldraw (1, 1.2) circle (2pt);
+\filldraw (1.5, 2.0) circle (2pt);
+\filldraw (2, 1.5) circle (2pt);
+\filldraw (2.5, 2.5) circle (2pt);
+\filldraw (3, 3.2) circle (2pt);
+\filldraw (3.5, 2.8) circle (2pt);
+\filldraw (4, 4.0) circle (2pt);
+% Good Line
+\draw[thick, blue] (0.5, 1) -- (4.5, 4.2);
+\node[below] at (2.5, -0.5) {Good Fit};
+\end{scope}
 
-\vspace{2mm}
-\textbf{Example:} A line of best fit for "Hours Studied" ($x$) and "Score" ($y$) is $y = 5x + 60$. 
-\textit{Prediction:} If a student studies for 4 hours, what score do we expect?
-$y = 5(4) + 60 = 20 + 60 = 80$. We predict a score of 80.
+% Bad Line Plot 1 (Too Low)
+\begin{scope}[shift={(7,0)}]
+\draw[thick,->] (-0.5,0) -- (5,0);
+\draw[thick,->] (0,-0.5) -- (0,5);
+\filldraw (1, 1.2) circle (2pt);
+\filldraw (1.5, 2.0) circle (2pt);
+\filldraw (2, 1.5) circle (2pt);
+\filldraw (2.5, 2.5) circle (2pt);
+\filldraw (3, 3.2) circle (2pt);
+\filldraw (3.5, 2.8) circle (2pt);
+\filldraw (4, 4.0) circle (2pt);
+% Bad Line
+\draw[thick, red] (0.5, 0.5) -- (4.5, 2.5);
+\node[below] at (2.5, -0.5) {Bad Fit (Too Low)};
+\end{scope}
+
+\end{tikzpicture}
+\end{center}
+
+\medskip
+\begin{itemize}
+    \item The blue line models the trend perfectly.
+    \item The red line is too low. Almost all the data points are above it, so it won't make good predictions.
+\end{itemize}
+
 \end{tcolorbox}
 
 \vspace{4mm}
 
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Guided Practice (Mixed Difficulty)}
+\newpage
+
+% ==========================================================
+% WORKED EXAMPLES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Writing the Equation and Predicting}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example 1: Predicting Weight from Height}
 
 \medskip
-\textbf{1.} If a scatter plot has a negative association, will the line of best fit have a positive or negative slope? \vspace{1cm}
 
-\textbf{2.} Line of best fit is $y = 2x + 10$. Predict $y$ when $x = 5$. \vspace{1cm}
+\textbf{Problem:} A line of best fit for a set of data regarding dog height ($x$ in inches) and dog weight ($y$ in pounds) passes through the points $(10, 25)$ and $(20, 55)$. 
+\textbf{a)} Write the equation of the line.
+\textbf{b)} Predict the weight of a dog that is $15$ inches tall.
 
-\textbf{3.} Line of best fit is $y = -3x + 50$. Predict $y$ when $x = 10$. \vspace{1cm}
+\medskip
 
-\textbf{4.} Why might extrapolation be dangerous or inaccurate? \vspace{1.5cm}
+\textbf{Solution:}
+\begin{itemize}
+    \item \textbf{Step 1 (Find $m$):} $m = \dfrac{55 - 25}{20 - 10} = \dfrac{30}{10} = 3$. (The dog gains $3$ lbs per inch of height).
+    \item \textbf{Step 2 (Find $b$):} Use $y = mx + b$ and point $(10, 25)$.
+    \begin{align*}
+        25 &= 3(10) + b \\
+        25 &= 30 + b \\
+        -5 &= b
+    \end{align*}
+    \item \textbf{Equation:} $y = 3x - 5$.
+    \item \textbf{Step 3 (Predict):} The dog is $15$ inches tall ($x = 15$). Plug it in.
+    \[ y = 3(15) - 5 \implies y = 45 - 5 = 40 \]
+    \item \textbf{Answer:} The predicted weight is $40$ lbs.
+\end{itemize}
 
-\textbf{5.} Can you draw a line of best fit for a scatter plot with "No Association"? \vspace{1cm}
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% PRACTICE 1
+% ==========================================================
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Guided Practice: Basic Operations}
+
+\medskip
+
+\noindent
+\textbf{1.} The equation for a line of best fit predicting test score ($y$) based on hours studied ($x$) is $y = 5x + 60$. Predict the test score of someone who studies for $4$ hours.
+\vspace{2.5cm}
+
+\noindent
+\textbf{2.} Using the same equation $y = 5x + 60$, predict how many hours someone studied if they got an $85$ on the test.
+\vspace{2.5cm}
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% THINKING PROBLEM
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Deeper Thinking: Interpreting the Equation}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 1: Coffee Shop Sales}
+
+\medskip
+
+\noindent
+A coffee shop owner tracks the temperature outside ($x$, in degrees Fahrenheit) and the number of hot coffees sold ($y$). She draws a line of best fit and finds the equation:
+\[ y = -4x + 350 \]
+
+\vspace{5mm}
+
+\noindent
+\textbf{a)} What does the slope ($-4$) mean in the context of this problem?
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b)} What does the $y$-intercept ($350$) mean in the context of this problem?
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{c)} If the temperature outside is $80^\circ$F, how many hot coffees should the owner expect to sell? Show your work.
+
+\vspace{3cm}
+
 \end{tcolorbox}
 
 \end{document}

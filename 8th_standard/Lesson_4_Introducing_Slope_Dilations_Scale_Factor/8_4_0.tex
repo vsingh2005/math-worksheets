@@ -1,6 +1,9 @@
 % INTRODUCING SLOPE & DILATIONS & SCALE FACTOR - WORKSHEET 0 (IN-CLASS INSTRUCTION)
 \documentclass[12pt, letterpaper, fleqn]{article}
 
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
@@ -16,84 +19,230 @@
 
 \usetikzlibrary{arrows.meta, calc}
 
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
 \usepackage{times}
 \geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
 
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
 \newcommand{\logowidth}{3cm}
 \setlength{\headheight}{20pt}
 \setlength{\footskip}{40pt}
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\small\bfseries Introducing Slope & Dilations & Scale Factor}
+\fancyhead[C]{\small\bfseries Introducing Slope \& Dilations \& Scale Factor}
 \fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{8.4.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
 
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
 \definecolor{customteal}{HTML}{2fbdb9}
 
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
 \newcommand{\blank}{\underline{\hspace{2.2cm}}}
 \newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
 \newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
 
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
 \begin{document}
 
 \textbf{Name:} \underline{\hspace{5cm}}
 \hfill
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
+% ==========================================================
+% SECTION 1: FOUNDATION
+% ==========================================================
 \begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Foundation: Introducing Slope & Dilations & Scale Factor}}
+    \large\textcolor{black}{\textbf{Foundation: Dilations \& Scale Factor}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
 \noindent
-\textbf{Description:} Understand dilations as transformations that scale figures from a center point by a scale factor. Identify the effect on coordinates and determine whether the image is larger, smaller, or congruent.
+Unlike translations, reflections, and rotations, a \textbf{dilation} is NOT a rigid motion because it changes the size of the figure. However, it preserves the shape. 
+
+\begin{itemize}
+    \item \textbf{Scale Factor ($k$):} The ratio of the lengths of the image to the corresponding lengths of the pre-image.
+    \item \textbf{Enlargement:} If $k > 1$, the figure gets bigger.
+    \item \textbf{Reduction:} If $0 < k < 1$, the figure gets smaller.
+    \item \textbf{Coordinate Rule:} When dilating from the origin $(0,0)$, multiply both $x$ and $y$ coordinates by the scale factor: $(x, y) \rightarrow (kx, ky)$.
+\end{itemize}
 
 \vspace{4mm}
 
-
-
+% ==========================================================
+% VISUAL REPRESENTATION
+% ==========================================================
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Instructional Guide: Dilations \& Scale Factor}
+
+\textbf{Visual Representation: Dilation from the Origin}
 
 \medskip
-\textbf{Dilations:} A dilation is a transformation that changes the \textit{size} of a figure but not its \textit{shape}. It produces a \textbf{similar} figure, not a congruent one.
-- The \textbf{center of dilation} is the fixed point from which the shape shrinks or expands (often the origin).
-- The \textbf{scale factor ($k$)} determines how much the figure grows or shrinks.
 
-\textbf{Scale Factor Rules:}
-- If $k > 1$, the figure represents an \textbf{enlargement}.
-- If $0 < k < 1$, the figure represents a \textbf{reduction}.
-- If $k = 1$, the figure stays the exact same size (congruent).
-- Coordinate rule for dilations centered at the origin: $(x, y) \rightarrow (kx, ky)$.
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+% Grid
+\draw[step=1cm,gray!30,very thin] (-1,-1) grid (7,7);
+\draw[thick,->] (-1.5,0) -- (7.5,0) node[right] {$x$};
+\draw[thick,->] (0,-1.5) -- (0,7.5) node[above] {$y$};
 
-\vspace{2mm}
-\textbf{Example 1:} Dilate $A(4, -6)$ by a scale factor of $k = \frac{1}{2}$ from the origin.
-\textit{Solution:} Multiply coordinates by $\frac{1}{2}$. $A' = (2, -3)$.
+% Origin
+\filldraw (0,0) circle (2pt) node[below left] {$O(0,0)$};
 
-\textbf{Example 2:} A line segment is $5\text{ cm}$ long. It is dilated by $k = 3$. New length?
-\textit{Solution:} $5 \times 3 = 15\text{ cm}$.
+% Pre-image Triangle (Scale Factor 1)
+\filldraw[fill=blue!30, draw=blue, thick] (1,1) -- (3,1) -- (1,2) -- cycle;
+\node[blue] at (2, 0.5) {Pre-image};
+\node[blue, font=\footnotesize] at (1.5, 1.3) {$A(1,1)$};
+
+% Image Triangle (Scale Factor 2)
+\filldraw[fill=red!30, draw=red, thick, fill opacity=0.5] (2,2) -- (6,2) -- (2,4) -- cycle;
+\node[red] at (4, 1.5) {Image ($k=2$)};
+\node[red, font=\footnotesize] at (2.7, 2.5) {$A'(2,2)$};
+
+% Lines from origin
+\draw[dashed, gray] (0,0) -- (7,7);
+\draw[dashed, gray] (0,0) -- (6.5,2.16);
+\draw[dashed, gray] (0,0) -- (3.5,7);
+
+\end{tikzpicture}
+\end{center}
+
+\medskip
+Notice how the distance from the origin to $A'$ is exactly twice the distance from the origin to $A$.
+
 \end{tcolorbox}
 
 \vspace{4mm}
 
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Guided Practice (Mixed Difficulty)}
+\newpage
+
+% ==========================================================
+% WORKED EXAMPLES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Applying Dilations}}
+\end{tcolorbox}
+
+\noindent
+We can find the coordinates of a dilated figure by multiplying by the scale factor.
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example 1: Finding the Image}
 
 \medskip
-\textbf{1.} Point $P(2, -6)$ is dilated from the origin by $k=0.5$. Find $P'$. \vspace{1.5cm}
 
-\textbf{2.} A square has side length 4. What is its side length after a dilation of $k=2.5$? \vspace{1.5cm}
+\textbf{Problem:} A triangle has vertices at $X(2, 4)$, $Y(4, 6)$, and $Z(6, -2)$. It is dilated by a scale factor of $\dfrac{1}{2}$ with the center of dilation at the origin. What are the new coordinates?
 
-\textbf{3.} If $A(3, 4)$ dilates to $A'(12, 16)$, what is the scale factor? \vspace{1.5cm}
+\medskip
 
-\textbf{4.} True or False: Dilations preserve the angle measures of a triangle. \vspace{1.5cm}
+\textbf{Solution:}
+\begin{itemize}
+    \item \textbf{Rule:} $(x, y) \rightarrow (\dfrac{1}{2}x, \dfrac{1}{2}y)$
+    \item $X'(2 \cdot \dfrac{1}{2}, 4 \cdot \dfrac{1}{2}) = (1, 2)$
+    \item $Y'(4 \cdot \dfrac{1}{2}, 6 \cdot \dfrac{1}{2}) = (2, 3)$
+    \item $Z'(6 \cdot \dfrac{1}{2}, -2 \cdot \dfrac{1}{2}) = (3, -1)$
+\end{itemize}
 
-\textbf{5.} A rectangle with area $10\text{ cm}^2$ is dilated by $k=3$. Is the new area $30\text{ cm}^2$? Why or why not? \vspace{1.5cm}
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% PRACTICE 1
+% ==========================================================
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Guided Practice: Basic Operations}
+
+\medskip
+
+\noindent
+\textbf{1.} Point $P(-3, 5)$ is dilated by a scale factor of 3. What is $P'$?
+\vspace{1.5cm}
+
+\noindent
+\textbf{2.} The side length of a square is $4\text{ cm}$. After a dilation, the new side length is $12\text{ cm}$. What is the scale factor?
+\vspace{1.5cm}
+
+\noindent
+\textbf{3.} If a scale factor is $k = 0.25$, is the dilation an enlargement or a reduction?
+\vspace{1.5cm}
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% THINKING PROBLEM
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Deeper Thinking: Real World Applications}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 1: Area and Scale Factor}
+
+\medskip
+
+\noindent
+You create a custom sticker that is $2\text{ inches}$ wide and $3\text{ inches}$ tall. You want to print a large decal using a scale factor of $5$.
+
+\vspace{5mm}
+
+\noindent
+\textbf{a)} What are the dimensions of the new large decal?
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b)} What is the area of the original sticker? What is the area of the large decal? How does the area scale compared to the scale factor?
+
+\vspace{3cm}
+
+\end{tcolorbox}
+
+\vspace{4mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 2: Finding the Scale Factor}
+
+\medskip
+
+\noindent
+An architect creates a blueprint. On the blueprint, a bedroom is $5\text{ inches}$ long. In real life, the bedroom is $120\text{ inches}$ long ($10\text{ feet}$).
+
+\vspace{5mm}
+
+\noindent
+\textbf{a)} What is the scale factor from the blueprint to the real room?
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b)} If a desk is $60\text{ inches}$ long in the real room, how long should it be drawn on the blueprint?
+
+\vspace{3cm}
+
 \end{tcolorbox}
 
 \end{document}

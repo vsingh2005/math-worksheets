@@ -1,6 +1,9 @@
 % INTRODUCING SLOPE & SIMILAR FIGURES - WORKSHEET 0 (IN-CLASS INSTRUCTION)
 \documentclass[12pt, letterpaper, fleqn]{article}
 
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
@@ -16,83 +19,193 @@
 
 \usetikzlibrary{arrows.meta, calc}
 
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
 \usepackage{times}
 \geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
 
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
 \newcommand{\logowidth}{3cm}
 \setlength{\headheight}{20pt}
 \setlength{\footskip}{40pt}
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\small\bfseries Introducing Slope & Similar Figures}
+\fancyhead[C]{\small\bfseries Introducing Slope \& Similar Figures}
 \fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{8.5.0}
 
 \renewcommand{\footrulewidth}{0.2pt}
 
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
 \definecolor{customteal}{HTML}{2fbdb9}
 
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
 \newcommand{\blank}{\underline{\hspace{2.2cm}}}
 \newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
 \newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
 
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
 \begin{document}
 
 \textbf{Name:} \underline{\hspace{5cm}}
 \hfill
 \textbf{Date:} \underline{\hspace{3cm}}\\
 
+% ==========================================================
+% SECTION 1: FOUNDATION
+% ==========================================================
 \begin{tcolorbox}[colback=customteal!20]
-    \large\textcolor{black}{\textbf{Foundation: Introducing Slope & Similar Figures}}
+    \large\textcolor{black}{\textbf{Foundation: Similar Figures}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
 \noindent
-\textbf{Description:} Understand that two figures are similar if one can be obtained from the other by a sequence of rigid motions and a dilation. Use similarity to set up and solve proportions for unknown side lengths and angles.
+Two figures are \textbf{similar} if one can be obtained from the other by a sequence of rigid motions (translations, reflections, rotations) and a \textbf{dilation}.
+
+\begin{itemize}
+    \item \textbf{Angles:} Corresponding angles in similar figures are \textbf{congruent} (exactly the same measure).
+    \item \textbf{Side Lengths:} Corresponding side lengths in similar figures are \textbf{proportional}. They have the same ratio (the scale factor).
+    \item \textbf{Symbol:} The symbol for similarity is $\sim$. If Triangle $ABC$ is similar to Triangle $DEF$, we write $\Delta ABC \sim \Delta DEF$.
+\end{itemize}
 
 \vspace{4mm}
 
-
-
+% ==========================================================
+% VISUAL REPRESENTATION
+% ==========================================================
 \begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Instructional Guide: Similar Figures}
+
+\textbf{Visual Representation: Similar Triangles}
 
 \medskip
-\textbf{Similarity ($\sim$):} Two figures are similar if one can be mapped onto the other using a sequence of rigid motions and/or \textbf{dilations}. 
-- \textbf{Corresponding Angles} are exactly EQUAL (congruent).
-- \textbf{Corresponding Sides} are PROPORTIONAL (they have the same ratio or scale factor).
 
-\textbf{Checking for Similarity:} To prove two triangles are similar, you only need to show that two angles of one triangle are congruent to two angles of the other triangle. This is called the \textbf{AA Similarity Criterion} (Angle-Angle).
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+% Small Triangle
+\draw[thick, blue] (0,0) -- (3,0) node[midway, below] {$3$} -- (0,4) node[midway, left] {$4$} -- cycle;
+\node[blue] at (1.5, 2.5) {$5$};
+\node[blue] at (1, -1) {Small Triangle};
 
-\textbf{Setting up Proportions:} If $\triangle ABC \sim \triangle DEF$, then the ratios of their sides are equal: 
-$$ \frac{AB}{DE} = \frac{BC}{EF} = \frac{AC}{DF} $$
+% Big Triangle
+\draw[thick, red] (5,0) -- (11,0) node[midway, below] {$6$} -- (5,8) node[midway, left] {$8$} -- cycle;
+\node[red] at (8, 4.5) {$10$};
+\node[red] at (7, -1) {Large Triangle};
 
-\vspace{2mm}
-\textbf{Example 1:} Triangle A has angles $40^\circ, 60^\circ, 80^\circ$. Triangle B has angles $40^\circ$ and $80^\circ$. Are they similar?
-\textit{Solution:} Yes, by AA Similarity, they share at least two equal angles.
+% Angle markers
+\draw (0.4, 0) arc (0:90:0.4);
+\draw (5.4, 0) arc (0:90:0.4);
 
-\textbf{Example 2:} A rectangle is $2\times4$. Another is $6\times12$. Are they similar?
-\textit{Solution:} Check ratios: $\frac{6}{2} = 3$ and $\frac{12}{4} = 3$. Yes, proportional!
+\end{tikzpicture}
+\end{center}
+
+\medskip
+Notice that the angles are the same (e.g., the $90^\circ$ angle), but the side lengths of the large triangle are exactly twice the side lengths of the small triangle. The ratio of corresponding sides is $\dfrac{6}{3} = \dfrac{8}{4} = \dfrac{10}{5} = 2$.
+
 \end{tcolorbox}
 
 \vspace{4mm}
 
-\begin{tcolorbox}[colback=yellow!15, colframe=orange, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-\textbf{Guided Practice (Mixed Difficulty)}
+\newpage
+
+% ==========================================================
+% WORKED EXAMPLES
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Solving for Missing Sides}}
+\end{tcolorbox}
+
+\noindent
+Because corresponding sides are proportional, we can set up equivalent ratios (proportions) to solve for missing side lengths.
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Worked Example 1: Using Proportions}
 
 \medskip
-\textbf{1.} Triangle $XYZ \sim$ Triangle $LMN$. If $\angle X = 50^\circ$, what is $\angle L$? \vspace{1.5cm}
 
-\textbf{2.} Rectangle $A$ is $3\text{ cm}$ by $5\text{ cm}$. Rectangle $B$ is $9\text{ cm}$ by $x\text{ cm}$. If they are similar, find $x$. \vspace{1.5cm}
+\textbf{Problem:} $\Delta ABC \sim \Delta DEF$. Side $AB = 4$, $BC = 6$. Side $DE = 10$, and $EF = x$. Find $x$.
 
-\textbf{3.} A 5-ft tall student casts a 2-ft shadow. A flagpole casts a 10-ft shadow. How tall is the flagpole? \vspace{1.5cm}
+\medskip
 
-\textbf{4.} Do all similar figures have the same perimeter? \vspace{1.0cm}
+\textbf{Solution:}
+\begin{itemize}
+    \item \textbf{Step 1 (Identify Corresponding Sides):} $AB$ corresponds to $DE$. $BC$ corresponds to $EF$.
+    \item \textbf{Step 2 (Set up Proportion):} $\dfrac{\text{Small Side 1}}{\text{Large Side 1}} = \dfrac{\text{Small Side 2}}{\text{Large Side 2}}$
+    \item $\dfrac{4}{10} = \dfrac{6}{x}$
+    \item \textbf{Step 3 (Cross-Multiply):} $4 \cdot x = 10 \cdot 6$
+    \item $4x = 60$
+    \item $x = 15$
+\end{itemize}
 
-\textbf{5.} State the AA Similarity rule in your own words. \vspace{1.5cm}
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ==========================================================
+% PRACTICE 1
+% ==========================================================
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Guided Practice: Basic Operations}
+
+\medskip
+
+\noindent
+\textbf{1.} Two rectangles are similar. Rectangle A is $3\text{ cm}$ by $5\text{ cm}$. Rectangle B is $9\text{ cm}$ by $y\text{ cm}$. Find $y$.
+\vspace{2cm}
+
+\noindent
+\textbf{2.} Triangle $X$ has angles $40^\circ, 60^\circ, 80^\circ$. Triangle $Y$ is similar to Triangle $X$. What are the angles of Triangle $Y$?
+\vspace{1.5cm}
+
+\end{tcolorbox}
+
+\newpage
+
+% ==========================================================
+% THINKING PROBLEM
+% ==========================================================
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Deeper Thinking: Shadows and Indirect Measurement}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=white!15, colframe=black, boxrule=1.5pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
+
+\textbf{Deeper Thinking Problem 1: Measuring a Tree}
+
+\medskip
+
+\noindent
+A student who is $5\text{ feet}$ tall casts a $4\text{ foot}$ shadow. At the exact same time, a nearby tree casts a $20\text{ foot}$ shadow. 
+
+\vspace{5mm}
+
+\noindent
+\textbf{a)} Why can we assume the triangle formed by the student and their shadow is similar to the triangle formed by the tree and its shadow?
+
+\vspace{2.5cm}
+
+\noindent
+\textbf{b)} Set up a proportion and solve for the height of the tree.
+
+\vspace{3cm}
+
 \end{tcolorbox}
 
 \end{document}
