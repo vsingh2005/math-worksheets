@@ -65,299 +65,74 @@
 % ==========================================================
 % SECTION 1: REPRESENTING PROPORTIONAL RELATIONSHIPS
 % ==========================================================
-\begin{tcolorbox}[colback=customteal!20, 
-    colframe=customteal, 
-    boxrule=1pt, 
-    arc=4mm, 
-    left=6mm, 
-    right=6mm, 
-    top=5mm, 
-    bottom=5mm]
-    \large\textcolor{black}{\textbf{Representing Proportional Relationships with Equations}}
+% --- PART A ---
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part A: Representing Proportional Relationships with Equations}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
-\noindent
-A \textbf{proportional relationship} is a relationship between two quantities where the ratio of the quantities is constant. This constant ratio is called the \textbf{constant of proportionality}, often denoted by the letter $k$.
-
-\noindent
-We can represent proportional relationships with the equation:
-\[
-y = kx
-\]
-where:
-\begin{itemize}
-    \item $y$ is the dependent variable (often the total amount or cost).
-    \item $x$ is the independent variable (often the number of items or units).
-    \item $k$ is the constant of proportionality (the unit rate).
-\end{itemize}
-
-\vspace{4mm}
-
-\noindent
-The graph of a proportional relationship is a straight line that passes through the origin $(0,0)$.
-
-\vspace{4mm}
-
-% ==========================================================
-% EXAMPLE 1: UNDERSTANDING THE GRAPH
-% ==========================================================
-\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-
-\textbf{Example: Buying Apples}
-
-\medskip
-
-\noindent
-Suppose apples cost $\$2$ per pound. We can represent this relationship with the equation $y = 2x$, where $y$ is the total cost and $x$ is the number of pounds of apples.
-
-\medskip
-
-\noindent
-Let's look at some points on the graph of this relationship:
-
-\begin{center}
-\begin{tikzpicture}
-    \draw[->] (-0.5,0) -- (5.5,0) node[right] {$x$ (pounds)};
-    \draw[->] (0,-0.5) -- (0,7.5) node[above] {$y$ (cost in \$)};
-    \draw[thick, blue] (0,0) -- (3.5,7); % Line y=2x
-    \fill[red] (0,0) circle (2pt) node[below right] {(0,0)};
-    \fill[red] (1,2) circle (2pt) node[below right] {(1,2)};
-    \fill[red] (2,4) circle (2pt) node[below right] {(2,4)};
-    \fill[red] (3,6) circle (2pt) node[below right] {(3,6)};
-\end{tikzpicture}
-\end{center}
-
-\medskip
-
-\noindent
-\textbf{Understanding the Points:}
-\begin{itemize}
-    \item \textbf{$(0,0)$:} This point means that if you buy $0$ pounds of apples, the cost is $\$0$. This is true for all proportional relationships. The origin represents "nothing" of both quantities.
-    \item \textbf{$(1, k)$:} This point is especially important. Here, $(1, 2)$ means that $1$ pound of apples costs $\$2$. The value $k=2$ is the \textbf{unit rate} (cost per pound).
-    \item \textbf{Other points (e.g., $(2,4)$, $(3,6)$):} These points show other valid combinations. For instance, $2$ pounds of apples cost $\$4$, and $3$ pounds cost $\$6$. Notice that the ratio $\frac{y}{x}$ is always $2$ for these points: $\frac{4}{2}=2$ and $\frac{6}{3}=2$.
-\end{itemize}
-
-\end{tcolorbox}
-
-\vspace{4mm}
-
-% ==========================================================
-% PRACTICE 1: IDENTIFYING AND INTERPRETING POINTS
-% ==========================================================
-\begin{tcolorbox}[colback=customteal!20, 
-    colframe=customteal, 
-    boxrule=1pt, 
-    arc=4mm, 
-    left=6mm, 
-    right=6mm, 
-    top=5mm, 
-    bottom=5mm]
-    \large\textcolor{black}{\textbf{Practice: Understanding Proportional Relationships}}
-\end{tcolorbox}
-
-\noindent
-For each proportional relationship, write the equation in the form $y=kx$ and explain what the points $(0,0)$ and $(1, k)$ mean in the context of the problem.
-
-\vspace{3mm}
-
-\begin{enumerate}[itemsep=1.5cm, leftmargin=0.6cm]
-
+\begin{enumerate}[itemsep=2.2cm, leftmargin=0.6cm]
 \item \textbf{Baking Cookies:} A recipe calls for $3$ cups of flour for every $12$ cookies. The relationship between the number of cookies ($x$) and the cups of flour ($y$) is proportional.
 \begin{itemize}
-    \item What is the constant of proportionality ($k$)? \blankshorter
-    \item Write the equation: $y = \blank x$
-    \item Explain the meaning of $(0,0)$: \blanklong
-    \item Explain the meaning of $(1, k)$: \blanklong
+\item What is the constant of proportionality ($k$)? \blankshorter
+\item Write the equation: $y = \blank x$
+\item Explain the meaning of $(0,0)$: \blanklong
+\item Explain the meaning of $(1, k)$: \blanklong
 \end{itemize}
-
-\item \textbf{Walking Speed:} A person walks $4$ miles in $2$ hours. The relationship between the time in hours ($x$) and the distance in miles ($y$) is proportional.
-\begin{itemize}
-    \item What is the constant of proportionality ($k$)? \blankshorter
-    \item Write the equation: $y = \blank x$
-    \item Explain the meaning of $(0,0)$: \blanklong
-    \item Explain the meaning of $(1, k)$: \blanklong
-\end{itemize}
-
-\item \textbf{Painting a Fence:} A painter can paint $\dfrac{1}{2}$ of a fence in $3$ hours. The relationship between the time in hours ($x$) and the fraction of the fence painted ($y$) is proportional.
-\begin{itemize}
-    \item What is the constant of proportionality ($k$)? \blankshorter
-    \item Write the equation: $y = \blank x$
-    \item Explain the meaning of $(0,0)$: \blanklong
-    \item Explain the meaning of $(1, k)$: \blanklong
-\end{itemize}
-
 \end{enumerate}
 
 \newpage
 
-% ==========================================================
-% SECTION 2: WRITING EQUATIONS FROM GRAPHS AND TABLES
-% ==========================================================
-\begin{tcolorbox}[colback=customteal!20, 
-    colframe=customteal, 
-    boxrule=1pt, 
-    arc=4mm, 
-    left=6mm, 
-    right=6mm, 
-    top=5mm, 
-    bottom=5mm]
-    \large\textcolor{black}{\textbf{Writing Equations from Graphs and Tables}}
+% --- PART B ---
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part B: Representing Proportional Relationships with Equations}}
 \end{tcolorbox}
 
 \vspace{3mm}
 
-\noindent
-To write the equation $y=kx$ for a proportional relationship, we need to find the value of $k$, the constant of proportionality.
-
-\medskip
-
-\noindent
-\textbf{From a Table:}
-If a table of values represents a proportional relationship, we can find $k$ by calculating the ratio $\frac{y}{x}$ for any non-zero pair of values $(x, y)$.
-\[ k = \frac{y}{x} \]
-
-\medskip
-
-\noindent
-\textbf{From a Graph:}
-If a graph represents a proportional relationship, it will be a straight line passing through the origin $(0,0)$. To find $k$:
-\begin{enumerate}
-    \item Find a point on the line other than $(0,0)$.
-    \item Let this point be $(x_1, y_1)$.
-    \item Calculate $k = \frac{y_1}{x_1}$.
+\begin{enumerate}[itemsep=2.2cm, leftmargin=0.6cm, resume]
+\item \textbf{Walking Speed:} A person walks $4$ miles in $2$ hours. The relationship between the time in hours ($x$) and the distance in miles ($y$) is proportional.
+\begin{itemize}
+\item What is the constant of proportionality ($k$)? \blankshorter
+\item Write the equation: $y = \blank x$
+\item Explain the meaning of $(0,0)$: \blanklong
+\item Explain the meaning of $(1, k)$: \blanklong
+\end{itemize}
 \end{enumerate}
-The point $(1, k)$ on the graph represents the unit rate.
 
-\vspace{4mm}
+\newpage
 
-% ==========================================================
-% EXAMPLE 2: FROM TABLE TO EQUATION
-% ==========================================================
-\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-
-\textbf{Example: Distance Traveled}
-
-\medskip
-
-\noindent
-The table below shows the distance a train travels over time. The relationship is proportional.
-
-\medskip
-
-\begin{center}
-\begin{tabular}{|c|c|}
-\hline
-Time (hours), $x$ & Distance (miles), $y$ \\
-\hline
-$2$ & $150$ \\
-$4$ & $300$ \\
-$6$ & $450$ \\
-\hline
-\end{tabular}
-\end{center}
-
-\medskip
-
-\noindent
-\textbf{Step 1: Find the constant of proportionality, $k$. }
-We can use any row from the table. Let's use the first row $(x=2, y=150)$.
-\[ k = \frac{y}{x} = \frac{150 \text{ miles}}{2 \text{ hours}} = 75 \text{ miles per hour} \]
-The unit rate is $75$ miles per hour.
-
-\medskip
-
-\noindent
-\textbf{Step 2: Write the equation.}
-Using the form $y=kx$, we substitute $k=75$:
-\[ y = 75x \]
-
-\medskip
-
-\noindent
-\textbf{Interpretation:} The equation $y = 75x$ means that the distance $y$ (in miles) the train travels is equal to $75$ times the time $x$ (in hours). The point $(1, 75)$ on the graph would represent that the train travels $75$ miles in $1$ hour.
-
+% --- PART C ---
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part C: Representing Proportional Relationships with Equations}}
 \end{tcolorbox}
-
-\vspace{4mm}
-
-% ==========================================================
-% EXAMPLE 3: FROM GRAPH TO EQUATION
-% ==========================================================
-\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm, left=6mm, right=6mm, top=5mm, bottom=5mm]
-
-\textbf{Example: Cost of Bananas}
-
-\medskip
-
-\noindent
-The graph shows the cost of bananas based on their weight. The relationship is proportional.
-
-\medskip
-
-\begin{center}
-\begin{tikzpicture}
-    \draw[->] (-0.5,0) -- (4.5,0) node[right] {$x$ (pounds)};
-    \draw[->] (0,-0.5) -- (0,5.5) node[above] {$y$ (cost in \$)};
-    \draw[thick, blue] (0,0) -- (4,5); % Line y=1.25x
-    \fill[red] (0,0) circle (2pt) node[below right] {(0,0)};
-    \fill[red] (1,1.25) circle (2pt) node[below right] {(1, 1.25)};
-    \fill[red] (2,2.5) circle (2pt) node[below right] {(2, 2.5)};
-    \fill[red] (4,5) circle (2pt) node[below right] {(4, 5)};
-\end{tikzpicture}
-\end{center}
-
-\medskip
-
-\noindent
-\textbf{Step 1: Find a point on the graph (other than the origin).}
-We can see the point $(4, 5)$ is on the line. This means $4$ pounds of bananas cost $\$5$.
-
-\medskip
-
-\noindent
-\textbf{Step 2: Find the constant of proportionality, $k$. }
-\[ k = \frac{y}{x} = \frac{\$5}{4 \text{ pounds}} = \$1.25 \text{ per pound} \]
-The unit rate is $\$1.25$ per pound.
-
-\medskip
-
-\noindent
-\textbf{Step 3: Write the equation.}
-Using the form $y=kx$, we substitute $k=1.25$:
-\[ y = 1.25x \]
-
-\medskip
-
-\noindent
-\textbf{Interpretation:} The equation $y = 1.25x$ means that the cost $y$ (in dollars) is $1.25$ times the weight $x$ (in pounds). The point $(1, 1.25)$ on the graph shows that $1$ pound of bananas costs $\$1.25$.
-
-\end{tcolorbox}
-
-\vspace{4mm}
-
-% ==========================================================
-% PRACTICE 2: WRITING EQUATIONS
-% ==========================================================
-\begin{tcolorbox}[colback=customteal!20, 
-    colframe=customteal, 
-    boxrule=1pt, 
-    arc=4mm, 
-    left=6mm, 
-    right=6mm, 
-    top=5mm, 
-    bottom=5mm]
-    \large\textcolor{black}{\textbf{Practice: Writing Equations of Proportional Relationships}}
-\end{tcolorbox}
-
-\noindent
-Write the equation $y=kx$ for each proportional relationship.
 
 \vspace{3mm}
 
-\begin{enumerate}[itemsep=1.5cm, leftmargin=0.6cm]
+\begin{enumerate}[itemsep=2.2cm, leftmargin=0.6cm, resume]
+\item \textbf{Painting a Fence:} A painter can paint $\dfrac{1}{2}$ of a fence in $3$ hours. The relationship between the time in hours ($x$) and the fraction of the fence painted ($y$) is proportional.
+\begin{itemize}
+\item What is the constant of proportionality ($k$)? \blankshorter
+\item Write the equation: $y = \blank x$
+\item Explain the meaning of $(0,0)$: \blanklong
+\item Explain the meaning of $(1, k)$: \blanklong
+\end{itemize}
+\end{enumerate}
 
+\newpage
+
+% --- PART D ---
+\begin{tcolorbox}[colback=customteal!20]
+\large\textcolor{black}{\textbf{Part D: Representing Proportional Relationships with Equations}}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+\begin{enumerate}[itemsep=2.2cm, leftmargin=0.6cm, resume]
+\item Find a point on the line other than $(0,0)$.
+\item Let this point be $(x_1, y_1)$.
+\item Calculate $k = \frac{y_1}{x_1}$.
 \item \textbf{Table:}
 \begin{center}
 \begin{tabular}{|c|c|}
@@ -371,7 +146,6 @@ $8$ & $120$ \\
 \end{tabular}
 \end{center}
 Equation: $y = \blank x$
-
 \item \textbf{Table:}
 \begin{center}
 \begin{tabular}{|c|c|}
@@ -385,7 +159,6 @@ $6$ & $21$ \\
 \end{tabular}
 \end{center}
 Equation: $y = \blank x$
-
 \item \textbf{Graph:}
 \begin{center}
 \begin{tikzpicture}
@@ -399,7 +172,6 @@ Equation: $y = \blank x$
 \end{tikzpicture}
 \end{center}
 Equation: $y = \blank x$
-
 \item \textbf{Graph:}
 \begin{center}
 \begin{tikzpicture}
@@ -413,7 +185,6 @@ Equation: $y = \blank x$
 \end{tikzpicture}
 \end{center}
 Equation: $y = \blank x$
-
 \end{enumerate}
 
 \end{document}

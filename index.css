@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  --sky-blue: #4DA8FF;
+  --soft-green: #5ECF7A;
+  --warm-yellow: #FFD75E;
+  --coral-orange: #FF8B6A;
+  --background-gray: #F7F9FC;
+  --dark-navy: #263238;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--dark-navy);
+  background-color: #FFFFFF;
+}
+
+.rounded-card {
+  border-radius: 16px;
+}
+
+.card-shadow {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-step {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-blue-gradient {
+  background: linear-gradient(135deg, #4DA8FF 0%, #357ABD 100%);
+  color: #FFFFFF;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(77, 168, 255, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-blue-gradient:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(77, 168, 255, 0.4);
+}
+
+/* Confetti animation styles */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: fall 3s linear infinite;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
