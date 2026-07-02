@@ -917,6 +917,9 @@ function updateStepView() {
     
     document.getElementById("placement-recommendation").innerText = recommendedLevel;
     document.getElementById("score-details").innerText = `You answered ${state.score} out of 15 questions correctly.`;
+    const minutes = Math.floor(state.timeElapsed / 60);
+    const seconds = state.timeElapsed % 60;
+    document.getElementById("time-details").innerText = `Time elapsed: ${minutes} minute${minutes !== 1 ? 's' : ''} and ${seconds} second${seconds !== 1 ? 's' : ''}.`;
   }
 }
 
