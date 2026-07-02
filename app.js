@@ -74,7 +74,104 @@ const questions = [
       { text: "8", correct: false }
     ]
   },
-  
+  {
+    id: 19,
+    grade: 6,
+    domain: "Negative Numbers",
+    text: "Which of the following numbers has the greatest absolute value?",
+    type: "multiple-choice",
+    options: [
+      { text: "-12", correct: true },
+      { text: "8", correct: false },
+      { text: "-3", correct: false },
+      { text: "0", correct: false }
+    ]
+  },
+  {
+    id: 20,
+    grade: 6,
+    domain: "Basic Equations",
+    text: "Solve for x: x + 15.4 = 20",
+    type: "numeric-response",
+    correctAnswer: "4.6",
+    placeholder: "Enter value of x..."
+  },
+  {
+    id: 21,
+    grade: 6,
+    domain: "Data & Statistics",
+    text: "Find the mean of the numbers: 5, 8, 12, 15.",
+    type: "numeric-response",
+    correctAnswer: "10",
+    placeholder: "Enter the average..."
+  },
+  {
+    id: 22,
+    grade: 6,
+    domain: "Area of Triangles",
+    text: "Find the area of a triangle with a base of 6 cm and a height of 5 cm.",
+    type: "numeric-response",
+    correctAnswer: "15",
+    placeholder: "Enter area in square cm..."
+  },
+  {
+    id: 29,
+    grade: 6,
+    domain: "Prime Numbers",
+    text: "Identify the prime number from the following options:",
+    type: "multiple-choice",
+    options: [
+      { text: "15", correct: false },
+      { text: "21", correct: false },
+      { text: "29", correct: true },
+      { text: "33", correct: false }
+    ]
+  },
+  {
+    id: 30,
+    grade: 6,
+    domain: "Factors & Multiples",
+    text: "Find the greatest common factor (GCF) of 24 and 36.",
+    type: "numeric-response",
+    correctAnswer: "12",
+    placeholder: "Enter GCF..."
+  },
+  {
+    id: 31,
+    grade: 6,
+    domain: "Fraction Arithmetic",
+    text: "Calculate: 3/4 + 1/8",
+    type: "multiple-choice",
+    options: [
+      { text: "4/12", correct: false },
+      { text: "7/8", correct: true },
+      { text: "5/8", correct: false },
+      { text: "1/2", correct: false }
+    ]
+  },
+  {
+    id: 32,
+    grade: 6,
+    domain: "Decimal to Fraction",
+    text: "Write 0.75 as a fraction in simplest form.",
+    type: "multiple-choice",
+    options: [
+      { text: "75/100", correct: false },
+      { text: "3/4", correct: true },
+      { text: "1/2", correct: false },
+      { text: "2/3", correct: false }
+    ]
+  },
+  {
+    id: 33,
+    grade: 6,
+    domain: "Perimeter",
+    text: "Find the perimeter of a rectangle with length 8 cm and width 5 cm.",
+    type: "numeric-response",
+    correctAnswer: "26",
+    placeholder: "Enter perimeter in cm..."
+  },
+
   // --- GRADE 7 (MEDIUM) ---
   {
     id: 5,
@@ -119,7 +216,7 @@ const questions = [
     id: 8,
     grade: 7,
     domain: "Geometry: Area of Circles",
-    text: "Find the area of a circle with a radius of 6 cm. (Leave your answer in terms of π, e.g. write 36π as 36pi)",
+    text: "Find the area of a circle with a radius of 6 cm. (Leave your answer in terms of π, e.g. write 36pi)",
     type: "numeric-response",
     correctAnswer: "36pi",
     placeholder: "Enter area (e.g. 36pi)..."
@@ -148,6 +245,104 @@ const questions = [
       { text: "-23.75", correct: false },
       { text: "7.25", correct: false },
       { text: "-7.5", correct: false }
+    ]
+  },
+  {
+    id: 23,
+    grade: 7,
+    domain: "Unit Rates",
+    text: "A car travels 180 miles on 6 gallons of gas. What is the unit rate in miles per gallon?",
+    type: "numeric-response",
+    correctAnswer: "30",
+    placeholder: "Enter miles per gallon..."
+  },
+  {
+    id: 24,
+    grade: 7,
+    domain: "Angles",
+    text: "Angles A and B are complementary. If angle A is 35°, find the measure of angle B in degrees.",
+    type: "numeric-response",
+    correctAnswer: "55",
+    placeholder: "Enter angle measure..."
+  },
+  {
+    id: 25,
+    grade: 7,
+    domain: "Percent Increase",
+    text: "An item costs $50. If the price increases by 10%, what is the new price in dollars?",
+    type: "numeric-response",
+    correctAnswer: "55",
+    placeholder: "Enter new price..."
+  },
+  {
+    id: 34,
+    grade: 7,
+    domain: "One-Step Equations",
+    text: "Solve for x: -4x = 28",
+    type: "numeric-response",
+    correctAnswer: "-7",
+    placeholder: "Enter value of x..."
+  },
+  {
+    id: 35,
+    grade: 7,
+    domain: "Circle Circumference",
+    text: "Find the circumference of a circle with a diameter of 10 cm in terms of π. (e.g. write 10pi)",
+    type: "numeric-response",
+    correctAnswer: "10pi",
+    placeholder: "Enter circumference (e.g. 10pi)..."
+  },
+  {
+    id: 36,
+    grade: 7,
+    domain: "Probability Calculations",
+    text: "A box contains 4 red, 6 blue, and 5 yellow balls. What is the probability of selecting a blue ball?",
+    type: "multiple-choice",
+    options: [
+      { text: "2/5", correct: true },
+      { text: "6/10", correct: false },
+      { text: "1/3", correct: false },
+      { text: "4/15", correct: false }
+    ]
+  },
+  {
+    id: 37,
+    grade: 7,
+    domain: "Two-Step Equations",
+    text: "Solve for x: x/3 - 4 = 2",
+    type: "numeric-response",
+    correctAnswer: "18",
+    placeholder: "Enter value of x..."
+  },
+  {
+    id: 38,
+    grade: 7,
+    domain: "Simple Interest",
+    text: "Calculate the simple interest earned on $200 at a 5% interest rate for 3 years.",
+    type: "numeric-response",
+    correctAnswer: "30",
+    placeholder: "Enter interest in dollars..."
+  },
+  {
+    id: 39,
+    grade: 7,
+    domain: "Discount Word Problems",
+    text: "A jacket originally costs $80 and is on sale for 25% off. What is the sale price in dollars?",
+    type: "numeric-response",
+    correctAnswer: "60",
+    placeholder: "Enter sale price..."
+  },
+  {
+    id: 40,
+    grade: 7,
+    domain: "Expression Simplification",
+    text: "Simplify the expression: 3x - 5 + 2x + 9",
+    type: "multiple-choice",
+    options: [
+      { text: "5x + 4", correct: true },
+      { text: "5x - 4", correct: false },
+      { text: "x + 4", correct: false },
+      { text: "5x + 14", correct: false }
     ]
   },
 
@@ -221,82 +416,10 @@ const questions = [
     id: 18,
     grade: 8,
     domain: "Volume of Cylinders",
-    text: "Find the volume of a cylinder with radius 3 cm and height 10 cm. (Leave in terms of π)",
-    type: "multiple-choice",
-    options: [
-      { text: "90π cm³", correct: true },
-      { text: "30π cm³", correct: false },
-      { text: "60π cm³", correct: false },
-      { text: "120π cm³", correct: false }
-    ]
-  },
-  // --- ADDITIONAL MCQ QUESTIONS ---
-  {
-    id: 19,
-    grade: 6,
-    domain: "Negative Numbers",
-    text: "Which of the following numbers has the greatest absolute value?",
-    type: "multiple-choice",
-    options: [
-      { text: "-12", correct: true },
-      { text: "8", correct: false },
-      { text: "-3", correct: false },
-      { text: "0", correct: false }
-    ]
-  },
-  {
-    id: 20,
-    grade: 6,
-    domain: "Basic Equations",
-    text: "Solve for x: x + 15.4 = 20",
+    text: "Find the volume of a cylinder with radius 3 cm and height 10 cm. (Leave in terms of π, e.g. write 90pi)",
     type: "numeric-response",
-    correctAnswer: "4.6",
-    placeholder: "Enter value of x..."
-  },
-  {
-    id: 21,
-    grade: 6,
-    domain: "Data & Statistics",
-    text: "Find the mean of the numbers: 5, 8, 12, 15.",
-    type: "numeric-response",
-    correctAnswer: "10",
-    placeholder: "Enter the average..."
-  },
-  {
-    id: 22,
-    grade: 6,
-    domain: "Area of Triangles",
-    text: "Find the area of a triangle with a base of 6 cm and a height of 5 cm.",
-    type: "numeric-response",
-    correctAnswer: "15",
-    placeholder: "Enter area in square cm..."
-  },
-  {
-    id: 23,
-    grade: 7,
-    domain: "Unit Rates",
-    text: "A car travels 180 miles on 6 gallons of gas. What is the unit rate in miles per gallon?",
-    type: "numeric-response",
-    correctAnswer: "30",
-    placeholder: "Enter miles per gallon..."
-  },
-  {
-    id: 24,
-    grade: 7,
-    domain: "Angles",
-    text: "Angles A and B are complementary. If angle A is 35°, find the measure of angle B in degrees.",
-    type: "numeric-response",
-    correctAnswer: "55",
-    placeholder: "Enter angle measure..."
-  },
-  {
-    id: 25,
-    grade: 7,
-    domain: "Percent Increase",
-    text: "An item costs $50. If the price increases by 10%, what is the new price in dollars?",
-    type: "numeric-response",
-    correctAnswer: "55",
-    placeholder: "Enter new price..."
+    correctAnswer: "90pi",
+    placeholder: "Enter volume (e.g. 90pi)..."
   },
   {
     id: 26,
@@ -332,6 +455,68 @@ const questions = [
       { text: "48π cm³", correct: false },
       { text: "18π cm³", correct: false }
     ]
+  },
+  {
+    id: 41,
+    grade: 8,
+    domain: "Systems of Equations",
+    text: "Solve the system of equations: y = 2x + 1 and y = -x + 4. Find the coordinate pair (x, y).",
+    type: "multiple-choice",
+    options: [
+      { text: "(1, 3)", correct: true },
+      { text: "(2, 5)", correct: false },
+      { text: "(0, 1)", correct: false },
+      { text: "(-1, -1)", correct: false }
+    ]
+  },
+  {
+    id: 42,
+    grade: 8,
+    domain: "Solving Linear Equations",
+    text: "Find the value of x: 3x + 4 = x + 12",
+    type: "numeric-response",
+    correctAnswer: "4",
+    placeholder: "Enter value of x..."
+  },
+  {
+    id: 43,
+    grade: 8,
+    domain: "Large Scientific Notation",
+    text: "Write the number 6,200,000 in scientific notation.",
+    type: "multiple-choice",
+    options: [
+      { text: "6.2 × 10⁶", correct: true },
+      { text: "6.2 × 10⁵", correct: false },
+      { text: "62 × 10⁵", correct: false },
+      { text: "6.2 × 10⁷", correct: false }
+    ]
+  },
+  {
+    id: 44,
+    grade: 8,
+    domain: "Roots & Radicals",
+    text: "Determine the value of √64 + ∛27",
+    type: "numeric-response",
+    correctAnswer: "11",
+    placeholder: "Enter value..."
+  },
+  {
+    id: 45,
+    grade: 8,
+    domain: "Volume of Cones",
+    text: "Find the volume of a cone with radius 3 cm and height 4 cm in terms of π. (V = 1/3 π r² h)",
+    type: "numeric-response",
+    correctAnswer: "12pi",
+    placeholder: "Enter volume (e.g. 12pi)..."
+  },
+  {
+    id: 46,
+    grade: 8,
+    domain: "Multi-Step Linear Equations",
+    text: "Find the value of x in the equation: 2(x - 3) = 4x + 8",
+    type: "numeric-response",
+    correctAnswer: "-7",
+    placeholder: "Enter value of x..."
   }
 ];
 
@@ -501,7 +686,7 @@ function nextQuestion() {
   const currentQ = state.questionsServed[state.currentQuestionIndex];
   const userAns = state.userAnswers[state.currentQuestionIndex];
 
-  if (userAns === undefined) {
+  if (userAns === undefined || String(userAns).trim() === "") {
     alert("Please answer the question before moving next!");
     return;
   }
@@ -511,10 +696,10 @@ function nextQuestion() {
   if (currentQ.type === "multiple-choice") {
     isCorrect = currentQ.options[userAns].correct;
   } else if (currentQ.type === "numeric-response") {
-    isCorrect = userAns.trim() === currentQ.correctAnswer;
+    isCorrect = String(userAns).trim().toLowerCase() === currentQ.correctAnswer.toLowerCase();
   }
 
-  // Adjust difficulty grade
+  // Adjust difficulty grade dynamically
   if (isCorrect) {
     if (state.activeDifficulty < 8) state.activeDifficulty++;
   } else {
@@ -522,7 +707,6 @@ function nextQuestion() {
   }
 
   if (state.currentQuestionIndex === 14) {
-    // End of exam
     finishExam();
   } else {
     state.currentQuestionIndex++;
@@ -544,7 +728,7 @@ function finishExam() {
   stopTimer();
   state.currentStep = 4;
   
-  // Calculate recommended level
+  // Calculate recommended level based on standard ratios and scoring
   let correctCount = 0;
   state.questionsServed.forEach((q, idx) => {
     const userAns = state.userAnswers[idx];
@@ -552,7 +736,7 @@ function finishExam() {
       if (q.type === "multiple-choice") {
         if (q.options[userAns] && q.options[userAns].correct) correctCount++;
       } else if (q.type === "numeric-response") {
-        if (userAns.trim() === q.correctAnswer) correctCount++;
+        if (String(userAns).trim().toLowerCase() === q.correctAnswer.toLowerCase()) correctCount++;
       }
     }
   });
@@ -603,7 +787,7 @@ function updateStepView() {
     }
   }
 
-  // Toggle header action button (Turn into Home button or hide if inside the test)
+  // Toggle header action button
   const headerBtn = document.getElementById("header-action-btn");
   if (headerBtn) {
     if (state.currentStep === 3) {
@@ -684,12 +868,42 @@ function updateStepView() {
   } else if (state.currentStep === 4) {
     document.getElementById("results-screen").classList.remove("hidden");
     
-    // Compute recommendations
+    // Group and calculate correct ratios by grade for advanced recommendation
+    const grade8Served = state.questionsServed.filter(q => q.grade === 8);
+    const grade7Served = state.questionsServed.filter(q => q.grade === 7);
+    
+    const getCorrectRatio = (servedList) => {
+      if (servedList.length === 0) return 0;
+      let correct = 0;
+      servedList.forEach(q => {
+        const idx = state.questionsServed.indexOf(q);
+        const userAns = state.userAnswers[idx];
+        if (userAns !== undefined) {
+          if (q.type === "multiple-choice") {
+            if (q.options[userAns] && q.options[userAns].correct) correct++;
+          } else if (q.type === "numeric-response") {
+            if (String(userAns).trim().toLowerCase() === q.correctAnswer.toLowerCase()) correct++;
+          }
+        }
+      });
+      return correct / servedList.length;
+    };
+
+    const g8Ratio = getCorrectRatio(grade8Served);
+    const g7Ratio = getCorrectRatio(grade7Served);
+
     let recommendedLevel = "6th Grade Foundation";
-    if (state.score >= 12) {
+    if (grade8Served.length >= 3 && g8Ratio >= 0.7) {
       recommendedLevel = "8th Grade Rigorous Math";
-    } else if (state.score >= 7) {
+    } else if (grade7Served.length >= 3 && g7Ratio >= 0.7) {
       recommendedLevel = "7th Grade Standard Math";
+    } else {
+      // Fallback based on total score
+      if (state.score >= 11) {
+        recommendedLevel = "8th Grade Rigorous Math";
+      } else if (state.score >= 7) {
+        recommendedLevel = "7th Grade Standard Math";
+      }
     }
     
     document.getElementById("placement-recommendation").innerText = recommendedLevel;
