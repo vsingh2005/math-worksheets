@@ -750,6 +750,8 @@ function triggerConfetti() {
   const container = document.getElementById("confetti-container");
   if (!container) return;
   container.innerHTML = "";
+  container.style.opacity = "1";
+  container.style.transition = "opacity 1s ease";
 
   const colors = ["#4DA8FF", "#5ECF7A", "#FFD75E", "#FF8B6A"];
   for (let i = 0; i < 80; i++) {
@@ -761,6 +763,13 @@ function triggerConfetti() {
     confetti.style.animationDuration = `${2 + Math.random() * 3}s`;
     container.appendChild(confetti);
   }
+
+  setTimeout(() => {
+    container.style.opacity = "0";
+    setTimeout(() => {
+      container.innerHTML = "";
+    }, 1000);
+  }, 5000);
 }
 
 function updateStepView() {
