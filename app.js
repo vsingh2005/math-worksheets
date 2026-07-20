@@ -529,7 +529,8 @@ let state = {
   questionsServed: [], // List of question objects served dynamically
   score: 0,
   timeElapsed: 0,
-  timerInterval: null
+  timerInterval: null,
+  isExiting: false
 };
 
 // Start Assessment
@@ -927,3 +928,45 @@ function updateStepView() {
 window.onload = function() {
   updateStepView();
 };
+
+window.addEventListener('beforeunload', (e) => {
+  if (state.currentStep === 3 && !state.isExiting) {
+    e.preventDefault();
+    e.returnValue = '';
+  }
+});
+
+// Intercept all hyperlink clicks during assessment
+document.addEventListener('click', (e) => {
+  const anchor = e.target.closest('a');
+  if (anchor && state.currentStep === 3) {
+    e.preventDefault();
+    state.pendingNavigationUrl = anchor.href;
+    state.pendingNavigationTarget = anchor.target;
+    openModal('exit-confirm-modal');
+  }
+});
+
+function handleLogoClick() {
+  if (state.currentStep === 3) {
+    openModal('exit-confirm-modal');
+  } else {
+    location.reload();
+  }
+}
+
+function handleExit() {
+  state.isExiting = true;
+  if (state.pendingNavigationUrl) {
+    if (state.pendingNavigationTarget === '_blank') {
+      window.open(state.pendingNavigationUrl, '_blank');
+      closeModal('exit-confirm-modal');
+      state.pendingNavigationUrl = null;
+      state.pendingNavigationTarget = null;
+    } else {
+      window.location.href = state.pendingNavigationUrl;
+    }
+  } else {
+    location.reload();
+  }
+}
