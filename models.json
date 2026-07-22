@@ -1,0 +1,61 @@
+{
+  "schemas": {
+    "User": {
+      "username": "string (unique identifier)",
+      "email": "string",
+      "passwordHash": "string (SHA-256 hashed)",
+      "salt": "string (hex salt)",
+      "createdAt": "ISO date string",
+      "attempts": "array of attempt IDs"
+    },
+    "ExamAttempt": {
+      "id": "string (unique uuid)",
+      "username": "string",
+      "timestamp": "ISO date string",
+      "score": "number (0-15)",
+      "totalQuestions": "number (15)",
+      "timeElapsedSeconds": "number",
+      "recommendedLevel": "string",
+      "answers": [
+        {
+          "questionId": "number",
+          "grade": "number",
+          "domain": "string",
+          "questionText": "string",
+          "userAnswer": "string or number",
+          "correctAnswerText": "string",
+          "isCorrect": "boolean",
+          "explanation": "string"
+        }
+      ]
+    },
+    "Question": {
+      "id": "number",
+      "grade": "number",
+      "domain": "string",
+      "text": "string",
+      "type": "string (multiple-choice | numeric-response)",
+      "options": "array",
+      "correctAnswer": "string",
+      "explanation": "string"
+    }
+  },
+  "defaultUsers": [
+    {
+      "username": "student1",
+      "email": "student1@kidsstemstudio.com",
+      "passwordHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "salt": "kss_salt_demo_1",
+      "createdAt": "2026-01-15T09:00:00.000Z",
+      "attempts": []
+    },
+    {
+      "username": "parent_demo",
+      "email": "parent@kidsstemstudio.com",
+      "passwordHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "salt": "kss_salt_demo_2",
+      "createdAt": "2026-02-01T10:30:00.000Z",
+      "attempts": []
+    }
+  ]
+}

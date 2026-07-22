@@ -1,0 +1,5 @@
+Kids STEM Studio Math Placement Portal
+Demo Login Credentials
+
+Username: student1
+Password: password123
