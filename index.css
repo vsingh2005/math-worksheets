@@ -53,7 +53,11 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.btn-blue-gradient:hover {
+.btn-blue-gradient:hover,
+.btn-blue-gradient:active,
+.btn-blue-gradient:focus {
+  background: linear-gradient(135deg, #4DA8FF 0%, #357ABD 100%) !important;
+  color: #FFFFFF !important;
   transform: scale(1.03);
   box-shadow: 0 6px 20px rgba(77, 168, 255, 0.4);
 }
@@ -72,6 +76,7 @@ body {
   0% {
     transform: translateY(-10px) rotate(0deg);
   }
+
   100% {
     transform: translateY(100vh) rotate(360deg);
   }
@@ -113,11 +118,13 @@ body {
   .ml-container {
     flex-direction: column;
   }
+
   .ml-container .ml-extra-div,
   .ml-container .ml-form-container {
     width: 100% !important;
     border-radius: 16px;
   }
+
   .ml-container .ml-extra-div {
     min-height: 220px;
   }
@@ -149,7 +156,9 @@ body {
   margin: 0 auto;
 }
 
-#loginform, #registerform, #lostpasswordform {
+#loginform,
+#registerform,
+#lostpasswordform {
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 1);
   padding: 24px 20px;
@@ -158,11 +167,15 @@ body {
   border: 1px solid #e2e8f0;
 }
 
-#loginform p, #registerform p, #lostpasswordform p {
+#loginform p,
+#registerform p,
+#lostpasswordform p {
   margin-bottom: 14px;
 }
 
-#loginform label, #registerform label, #lostpasswordform label {
+#loginform label,
+#registerform label,
+#lostpasswordform label {
   color: rgba(52, 57, 62, 1);
   font-weight: 700;
   font-size: 13px;
@@ -170,7 +183,10 @@ body {
   margin-bottom: 4px;
 }
 
-.login form .input, .login input[type="text"], .login input[type="email"], .login input[type="password"] {
+.login form .input,
+.login input[type="text"],
+.login input[type="email"],
+.login input[type="password"] {
   width: 100%;
   padding: 10px 12px;
   border-radius: 6px;
@@ -184,7 +200,10 @@ body {
   transition: border-color 0.2s ease;
 }
 
-.login form .input:focus, .login input[type="text"]:focus, .login input[type="email"]:focus, .login input[type="password"]:focus {
+.login form .input:focus,
+.login input[type="text"]:focus,
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
   border-color: rgba(47, 189, 185, 1);
   box-shadow: 0 0 0 3px rgba(47, 189, 185, 0.2) !important;
 }
@@ -260,9 +279,10 @@ input::-ms-clear {
   transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.wp-core-ui .button-primary:hover, .wp-core-ui .button-primary:focus {
-  background: rgba(4, 140, 138, 1);
-  border-color: rgba(4, 140, 138, 1);
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary:focus {
+  background: rgba(4, 140, 138, 1) !important;
+  border-color: rgba(4, 140, 138, 1) !important;
 }
 
 .login #nav {
@@ -272,13 +292,15 @@ input::-ms-clear {
   font-weight: 600;
 }
 
-.login #nav a, .login #backtoblog a {
+.login #nav a,
+.login #backtoblog a {
   color: rgba(52, 57, 62, 1);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.login #nav a:hover, .login #backtoblog a:hover {
+.login #nav a:hover,
+.login #backtoblog a:hover {
   color: rgba(47, 189, 185, 1);
 }
 
@@ -308,4 +330,93 @@ input::-ms-clear {
   border-radius: 12px;
   padding: 16px;
   margin-top: 12px;
+}
+
+/* =========================================================
+   WORDPRESS THEME & ELEMENTOR OVERRIDES (CLEAN RESETS)
+   ========================================================= */
+
+/* Prevent theme stylesheets from adding red outlines or borders to links and buttons */
+a {
+  border: none !important;
+  outline: none !important;
+}
+
+button:not([class*="border"]):not(.border-2):not(.border) {
+  border: none !important;
+  outline: none !important;
+}
+
+/* Force specific Tailwind hover backgrounds to override WordPress theme defaults */
+button.hover\:bg-slate-100:hover, button.hover\:bg-slate-100:active, button.hover\:bg-slate-100:focus { background-color: #f1f5f9 !important; }
+button.hover\:bg-slate-50:hover, button.hover\:bg-slate-50:active, button.hover\:bg-slate-50:focus { background-color: #f8fafc !important; }
+button.hover\:bg-slate-200:hover, button.hover\:bg-slate-200:active, button.hover\:bg-slate-200:focus { background-color: #e2e8f0 !important; }
+button.hover\:bg-sky-400:hover, button.hover\:bg-sky-400:active, button.hover\:bg-sky-400:focus { background-color: #38bdf8 !important; }
+button.hover\:bg-rose-100:hover, button.hover\:bg-rose-100:active, button.hover\:bg-rose-100:focus { background-color: #fee2e2 !important; }
+button.hover\:bg-rose-600:hover, button.hover\:bg-rose-600:active, button.hover\:bg-rose-600:focus { background-color: #e11d48 !important; }
+button.hover\:bg-white\/50:hover, button.hover\:bg-white\/50:active, button.hover\:bg-white\/50:focus { background-color: rgba(255, 255, 255, 0.5) !important; }
+
+/* Override active, selected option styles and prevent them turning red on hover/click */
+button.border-sky-500:hover, button.border-sky-500:active, button.border-sky-500:focus {
+  background-color: #f0f9ff !important;
+  border-color: #3b82f6 !important;
+  color: #0369a1 !important;
+}
+
+/* Force KSS Logos to remain compact (overriding global WordPress theme img styles) */
+img[src*="KSS_Logo"],
+img[src*="logo"],
+.kss-header-logo {
+  height: 40px !important;
+  max-height: 40px !important;
+  width: auto !important;
+  display: inline-block !important;
+}
+
+/* Explicitly restore the larger footer logo size and soften corners */
+footer img[src*="KSS_Logo"],
+footer img[src*="logo"] {
+  height: 80px !important;
+  max-height: 80px !important;
+  width: auto !important;
+  border-radius: 20px !important;
+}
+
+/* Prevent user header widget text-only buttons from getting red backgrounds on hover/active/focus */
+#user-header-widget button,
+#user-header-widget button:hover,
+#user-header-widget button:active,
+#user-header-widget button:focus {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+#user-header-widget button.text-sky-600:hover,
+#user-header-widget button.text-sky-600:active,
+#user-header-widget button.text-sky-600:focus {
+  color: #0284c7 !important;
+  text-decoration: underline !important;
+}
+
+#user-header-widget button.text-rose-500:hover,
+#user-header-widget button.text-rose-500:active,
+#user-header-widget button.text-rose-500:focus {
+  color: #f43f5e !important;
+  text-decoration: underline !important;
+}
+
+/* Success celebration image size override to prevent theme scaling overrides */
+.success-celebration-img {
+  max-width: 160px !important;
+  width: 160px !important;
+  height: auto !important;
+}
+
+@media (min-width: 768px) {
+  .success-celebration-img {
+    max-width: 180px !important;
+    width: 180px !important;
+  }
 }

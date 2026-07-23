@@ -606,29 +606,44 @@ class AuthenticationManager {
     if (storedUsers) {
       this.users = JSON.parse(storedUsers);
     } else {
-      const salt1 = 'kss_salt_demo_1';
-      const hash1 = await this.hashPassword('password123', salt1);
-      const salt2 = 'kss_salt_demo_2';
-      const hash2 = await this.hashPassword('stemstudio2026', salt2);
+      this.users = [];
+    }
 
-      this.users = [
-        {
-          username: 'student1',
-          email: 'student1@kidsstemstudio.com',
-          passwordHash: hash1,
-          salt: salt1,
-          createdAt: new Date().toISOString(),
-          attempts: []
-        },
-        {
-          username: 'parent_demo',
-          email: 'parent@kidsstemstudio.com',
-          passwordHash: hash2,
-          salt: salt2,
-          createdAt: new Date().toISOString(),
-          attempts: []
-        }
-      ];
+    // Ensure default demo users are always present
+    const salt1 = 'kss_salt_demo_1';
+    const hash1 = await this.hashPassword('password123', salt1);
+    const salt2 = 'kss_salt_demo_2';
+    const hash2 = await this.hashPassword('stemstudio2026', salt2);
+
+    const demoUser = {
+      username: 'student1',
+      email: 'student1@kidsstemstudio.com',
+      passwordHash: hash1,
+      salt: salt1,
+      createdAt: new Date().toISOString(),
+      attempts: []
+    };
+
+    const parentUser = {
+      username: 'parent_demo',
+      email: 'parent@kidsstemstudio.com',
+      passwordHash: hash2,
+      salt: salt2,
+      createdAt: new Date().toISOString(),
+      attempts: []
+    };
+
+    let needsSave = false;
+    if (!this.users.some(u => u.username.toLowerCase() === 'student1')) {
+      this.users.push(demoUser);
+      needsSave = true;
+    }
+    if (!this.users.some(u => u.username.toLowerCase() === 'parent_demo')) {
+      this.users.push(parentUser);
+      needsSave = true;
+    }
+
+    if (needsSave) {
       this.saveUsersToStorage();
     }
 
@@ -642,6 +657,7 @@ class AuthenticationManager {
       const found = this.users.find(u => u.username.toLowerCase() === session.toLowerCase());
       if (found) {
         this.currentUser = found;
+        this.currentUser.token = localStorage.getItem('kss_jwt_token') || sessionStorage.getItem('kss_jwt_token');
       }
     }
 
@@ -694,6 +710,7 @@ class AuthenticationManager {
       throw new Error('Username/Email and Password are required.');
     }
 
+    let wpError = null;
     try {
       // 1. Try authenticating with WordPress JWT REST API
       const response = await fetch('/wp-json/jwt-auth/v1/token', {
@@ -707,65 +724,74 @@ class AuthenticationManager {
         })
       });
 
-      const data = await response.json();
+      const contentType = response.headers.get('content-type') || '';
+      if (contentType.includes('application/json')) {
+        const data = await response.json();
+        if (response.ok && data.token) {
+          // Success: Create/Load user session linked to WordPress
+          let user = this.users.find(u => u.username.toLowerCase() === data.user_nicename.toLowerCase());
+          if (!user) {
+            user = {
+              username: data.user_nicename,
+              email: data.user_email,
+              createdAt: new Date().toISOString(),
+              attempts: []
+            };
+            this.users.push(user);
+            this.saveUsersToStorage();
+          }
 
-      if (response.ok && data.token) {
-        // Success: Create/Load user session linked to WordPress
-        let user = this.users.find(u => u.username.toLowerCase() === data.user_nicename.toLowerCase());
-        if (!user) {
-          user = {
-            username: data.user_nicename,
-            email: data.user_email,
-            createdAt: new Date().toISOString(),
-            attempts: []
-          };
-          this.users.push(user);
-          this.saveUsersToStorage();
-        }
+          this.currentUser = user;
+          if (rememberMe) {
+            localStorage.setItem('kss_session', user.username);
+            localStorage.setItem('kss_jwt_token', data.token);
+          } else {
+            sessionStorage.setItem('kss_session', user.username);
+            sessionStorage.setItem('kss_jwt_token', data.token);
+          }
 
-        this.currentUser = user;
-        if (rememberMe) {
-          localStorage.setItem('kss_session', user.username);
+          this.updateHeaderUI();
+          return user;
         } else {
-          sessionStorage.setItem('kss_session', user.username);
+          wpError = data.message || 'WordPress authentication failed.';
         }
-
-        this.updateHeaderUI();
-        return user;
       } else {
-        // If API returned error message, throw it to check fallback next
-        throw new Error(data.message || 'WordPress authentication failed.');
+        wpError = 'WordPress REST API is not responding with JSON.';
       }
     } catch (err) {
-      // 2. Fallback: Authenticate locally for offline testing or demo logins (e.g., student1)
-      const fallbackUser = this.users.find(u => 
-        u.username.toLowerCase() === usernameOrEmail.toLowerCase() || 
-        u.email.toLowerCase() === usernameOrEmail.toLowerCase()
-      );
-
-      if (fallbackUser && fallbackUser.salt) {
-        const computedHash = await this.hashPassword(password, fallbackUser.salt);
-        if (computedHash === fallbackUser.passwordHash) {
-          this.currentUser = fallbackUser;
-          if (rememberMe) {
-            localStorage.setItem('kss_session', fallbackUser.username);
-          } else {
-            sessionStorage.setItem('kss_session', fallbackUser.username);
-          }
-          this.updateHeaderUI();
-          return fallbackUser;
-        }
-      }
-
-      // If both fail, throw the original authentication error
-      throw new Error(err.message || 'Invalid username or password.');
+      wpError = err.message || 'WordPress connection failed.';
     }
+
+    // 2. Fallback: Authenticate locally for offline testing or demo logins (e.g., student1)
+    const fallbackUser = this.users.find(u =>
+      u.username.toLowerCase() === usernameOrEmail.toLowerCase() ||
+      u.email.toLowerCase() === usernameOrEmail.toLowerCase()
+    );
+
+    if (fallbackUser && fallbackUser.salt) {
+      const computedHash = await this.hashPassword(password, fallbackUser.salt);
+      if (computedHash === fallbackUser.passwordHash) {
+        this.currentUser = fallbackUser;
+        if (rememberMe) {
+          localStorage.setItem('kss_session', fallbackUser.username);
+        } else {
+          sessionStorage.setItem('kss_session', fallbackUser.username);
+        }
+        this.updateHeaderUI();
+        return fallbackUser;
+      }
+    }
+
+    // If both fail, throw the validation error
+    throw new Error('Invalid username or password.');
   }
 
   logoutUser() {
     this.currentUser = null;
     localStorage.removeItem('kss_session');
     sessionStorage.removeItem('kss_session');
+    localStorage.removeItem('kss_jwt_token');
+    sessionStorage.removeItem('kss_jwt_token');
     state.currentStep = 1;
     this.updateHeaderUI();
   }
@@ -792,6 +818,29 @@ class AuthenticationManager {
         if (!userObj.attempts) userObj.attempts = [];
         userObj.attempts.push(attempt.id);
         this.saveUsersToStorage();
+      }
+
+      // Sync attempt with WordPress REST API
+      const token = this.currentUser.token || localStorage.getItem('kss_jwt_token') || sessionStorage.getItem('kss_jwt_token');
+      if (token) {
+        fetch('/wp-json/kss-math/v1/save-attempt', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+          },
+          body: JSON.stringify(attempt)
+        })
+        .then(res => {
+          if (!res.ok) console.warn('WordPress test logging failed.');
+          return res.json();
+        })
+        .then(data => {
+          console.log('Successfully saved to WordPress:', data);
+        })
+        .catch(err => {
+          console.error('Error syncing attempt to WordPress:', err);
+        });
       }
     }
     return attempt;
@@ -892,22 +941,22 @@ function switchAuthTab(tabName) {
   const navLoginLinks = document.getElementById('nav-login-links');
   const navBackToLogin = document.getElementById('nav-back-to-login');
 
-  loginForm.classList.add('hidden');
-  regForm.classList.add('hidden');
-  lostForm.classList.add('hidden');
+  if (loginForm) loginForm.classList.add('hidden');
+  if (regForm) regForm.classList.add('hidden');
+  if (lostForm) lostForm.classList.add('hidden');
 
   if (tabName === 'login') {
-    loginForm.classList.remove('hidden');
-    navLoginLinks.classList.remove('hidden');
-    navBackToLogin.classList.add('hidden');
+    if (loginForm) loginForm.classList.remove('hidden');
+    if (navLoginLinks) navLoginLinks.classList.remove('hidden');
+    if (navBackToLogin) navBackToLogin.classList.add('hidden');
   } else if (tabName === 'register') {
-    regForm.classList.remove('hidden');
-    navLoginLinks.classList.add('hidden');
-    navBackToLogin.classList.remove('hidden');
+    if (regForm) regForm.classList.remove('hidden');
+    if (navLoginLinks) navLoginLinks.classList.add('hidden');
+    if (navBackToLogin) navBackToLogin.classList.remove('hidden');
   } else if (tabName === 'lostpassword') {
-    lostForm.classList.remove('hidden');
-    navLoginLinks.classList.add('hidden');
-    navBackToLogin.classList.remove('hidden');
+    if (lostForm) lostForm.classList.remove('hidden');
+    if (navLoginLinks) navLoginLinks.classList.add('hidden');
+    if (navBackToLogin) navBackToLogin.classList.remove('hidden');
   }
 }
 
@@ -980,19 +1029,19 @@ function startExam() {
   state.currentQuestionIndex = 0;
   state.userAnswers = {};
   state.timeElapsed = 0;
-  
+
   const g6 = questions.filter(q => q.grade === 6);
   const g7 = questions.filter(q => q.grade === 7);
   const g8 = questions.filter(q => q.grade === 8);
-  
+
   const shuffle = arr => arr.slice().sort(() => Math.random() - 0.5);
-  
+
   const set6 = shuffle(g6).slice(0, 5);
   const set7 = shuffle(g7).slice(0, 5);
   const set8 = shuffle(g8).slice(0, 5);
-  
+
   state.questionsServed = [...set6, ...set7, ...set8];
-  
+
   updateStepView();
   startTimer();
 }
@@ -1019,7 +1068,7 @@ function serveNextQuestion(difficulty) {
   if (state.questionsServed.length >= 15) return;
   const servedIds = state.questionsServed.map(q => q.id);
   const pool = questions.filter(q => q.grade === difficulty && !servedIds.includes(q.id));
-  
+
   if (pool.length > 0) {
     const nextQ = pool[Math.floor(Math.random() * pool.length)];
     state.questionsServed.push(nextQ);
@@ -1042,7 +1091,7 @@ function renderQuestion() {
   if (!currentQ) return;
 
   document.getElementById("question-number-display").innerText = `Question ${state.currentQuestionIndex + 1} of 15`;
-  
+
   const progressPercent = ((state.currentQuestionIndex + 1) / 15) * 100;
   document.getElementById("progress-bar-fill").style.width = `${progressPercent}%`;
 
@@ -1057,10 +1106,10 @@ function renderQuestion() {
     htmlContent += `<div class="space-y-4">`;
     currentQ.options.forEach((opt, idx) => {
       const isSelected = state.userAnswers[state.currentQuestionIndex] === idx;
-      const optionClass = isSelected 
-        ? "border-sky-500 bg-sky-50 ring-2 ring-sky-500/20" 
+      const optionClass = isSelected
+        ? "border-sky-500 bg-sky-50 ring-2 ring-sky-500/20"
         : "border-slate-100 hover:bg-slate-50";
-      
+
       htmlContent += `
         <button onclick="selectOption(${idx})" class="w-full text-left p-4 rounded-xl border-2 ${optionClass} transition-all duration-200 focus:outline-none flex items-center justify-between">
           <span class="text-slate-700 font-semibold">${opt.text}</span>
@@ -1101,7 +1150,7 @@ function renderSidebar() {
   for (let i = 0; i < 15; i++) {
     const isCurrent = i === state.currentQuestionIndex;
     const isAnswered = state.userAnswers[i] !== undefined && String(state.userAnswers[i]).trim() !== "";
-    
+
     let btnClass = "bg-slate-100 text-slate-400";
     if (isCurrent) {
       btnClass = "bg-sky-500 text-white ring-4 ring-sky-500/20";
@@ -1168,7 +1217,7 @@ function previousQuestion() {
 function finishExam() {
   stopTimer();
   state.currentStep = 4;
-  
+
   // Ensure state.questionsServed contains 15 questions even if ended early
   while (state.questionsServed.length < 15) {
     const servedIds = state.questionsServed.map(q => q.id);
@@ -1223,7 +1272,7 @@ function finishExam() {
 
   const grade8Served = state.questionsServed.filter(q => q.grade === 8);
   const grade7Served = state.questionsServed.filter(q => q.grade === 7);
-  
+
   const getCorrectRatio = (servedList) => {
     if (servedList.length === 0) return 0;
     let correct = 0;
@@ -1344,7 +1393,7 @@ function renderFluidBreakdown() {
   items.forEach((item) => {
     const isCorrect = item.isCorrect;
     const borderClass = isCorrect ? "correct-card" : "incorrect-card";
-    const statusBadge = isCorrect 
+    const statusBadge = isCorrect
       ? `<span class="px-2.5 py-1 text-xs font-extrabold rounded-full bg-emerald-100 text-emerald-800">Correct ✓</span>`
       : `<span class="px-2.5 py-1 text-xs font-extrabold rounded-full bg-rose-100 text-rose-800">Incorrect ✗</span>`;
 
@@ -1475,7 +1524,7 @@ function updateStepView() {
     renderQuestion();
   } else if (state.currentStep === 4) {
     if (resultsScreen) resultsScreen.classList.remove("hidden");
-    
+
     document.getElementById("placement-recommendation").innerText = state.recommendedLevel;
     document.getElementById("score-details").innerText = `You answered ${state.score} out of 15 questions correctly.`;
     const minutes = Math.floor(state.timeElapsed / 60);
@@ -1491,7 +1540,7 @@ function updateStepView() {
   }
 }
 
-window.onload = function() {
+window.onload = function () {
   updateStepView();
 };
 
