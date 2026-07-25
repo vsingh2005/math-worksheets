@@ -348,16 +348,61 @@ button:not([class*="border"]):not(.border-2):not(.border) {
 }
 
 /* Force specific Tailwind hover backgrounds to override WordPress theme defaults */
-button.hover\:bg-slate-100:hover, button.hover\:bg-slate-100:active, button.hover\:bg-slate-100:focus { background-color: #f1f5f9 !important; }
-button.hover\:bg-slate-50:hover, button.hover\:bg-slate-50:active, button.hover\:bg-slate-50:focus { background-color: #f8fafc !important; }
-button.hover\:bg-slate-200:hover, button.hover\:bg-slate-200:active, button.hover\:bg-slate-200:focus { background-color: #e2e8f0 !important; }
-button.hover\:bg-sky-400:hover, button.hover\:bg-sky-400:active, button.hover\:bg-sky-400:focus { background-color: #38bdf8 !important; }
-button.hover\:bg-rose-100:hover, button.hover\:bg-rose-100:active, button.hover\:bg-rose-100:focus { background-color: #fee2e2 !important; }
-button.hover\:bg-rose-600:hover, button.hover\:bg-rose-600:active, button.hover\:bg-rose-600:focus { background-color: #e11d48 !important; }
-button.hover\:bg-white\/50:hover, button.hover\:bg-white\/50:active, button.hover\:bg-white\/50:focus { background-color: rgba(255, 255, 255, 0.5) !important; }
+button.hover\:bg-slate-100:hover,
+button.hover\:bg-slate-100:active,
+button.hover\:bg-slate-100:focus {
+  background-color: #f1f5f9 !important;
+}
+
+button.hover\:bg-slate-50:hover,
+button.hover\:bg-slate-50:active,
+button.hover\:bg-slate-50:focus {
+  background-color: #f8fafc !important;
+}
+
+button.hover\:bg-slate-200:hover,
+button.hover\:bg-slate-200:active,
+button.hover\:bg-slate-200:focus {
+  background-color: #e2e8f0 !important;
+  color: #475569 !important;
+}
+
+button.hover\:bg-sky-400:hover,
+button.hover\:bg-sky-400:active,
+button.hover\:bg-sky-400:focus {
+  background-color: #38bdf8 !important;
+}
+
+button.hover\:bg-rose-100:hover,
+button.hover\:bg-rose-100:active,
+button.hover\:bg-rose-100:focus {
+  background-color: #fee2e2 !important;
+  color: #e11d48 !important;
+}
+
+button.hover\:bg-rose-600:hover,
+button.hover\:bg-rose-600:active,
+button.hover\:bg-rose-600:focus {
+  background-color: #e11d48 !important;
+}
+
+button.hover\:bg-emerald-600:hover,
+button.hover\:bg-emerald-600:active,
+button.hover\:bg-emerald-600:focus {
+  background-color: #059669 !important;
+  color: #FFFFFF !important;
+}
+
+button.hover\:bg-white\/50:hover,
+button.hover\:bg-white\/50:active,
+button.hover\:bg-white\/50:focus {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
 
 /* Override active, selected option styles and prevent them turning red on hover/click */
-button.border-sky-500:hover, button.border-sky-500:active, button.border-sky-500:focus {
+button.border-sky-500:hover,
+button.border-sky-500:active,
+button.border-sky-500:focus {
   background-color: #f0f9ff !important;
   border-color: #3b82f6 !important;
   color: #0369a1 !important;

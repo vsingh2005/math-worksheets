@@ -246,15 +246,15 @@ const questions = [
     id: 15,
     grade: 7,
     domain: "Inequalities",
-    text: "Solve the inequality: 2x - 5 > 7",
+    text: "Solve the inequality: 2x - 5> 7",
     type: "multiple-choice",
     options: [
-      { text: "x > 6", correct: true },
-      { text: "x > 1", correct: false },
-      { text: "x < 6", correct: false },
-      { text: "x > 12", correct: false }
+      { text: "x> 6", correct: true },
+      { text: "x> 1", correct: false },
+      { text: "x <6", correct: false },
+      { text: "x> 12", correct: false }
     ],
-    explanation: "Add 5 to both sides: 2x > 12. Divide both sides by 2: x > 6."
+    explanation: "Add 5 to both sides: 2x> 12. Divide both sides by 2: x> 6."
   },
   {
     id: 16,
@@ -454,10 +454,10 @@ const questions = [
     id: 18,
     grade: 8,
     domain: "Volume of Cylinders",
-    text: "Find the volume of a cylinder with radius 3 cm and height 10 cm. (Leave in terms of π, e.g. write 90pi)",
+    text: "Find the volume of a cylinder with radius 3 cm and height 10 cm. (Leave in terms of π, e.g. write 50pi)",
     type: "numeric-response",
     correctAnswer: "90pi",
-    placeholder: "Enter volume (e.g. 90pi)...",
+    placeholder: "Enter volume (e.g. 50pi)...",
     explanation: "Cylinder volume formula: V = π r² h = π × (3)² × 10 = π × 9 × 10 = 90π cm³."
   },
   {
@@ -534,7 +534,7 @@ const questions = [
       { text: "62 × 10⁵", correct: false },
       { text: "6.2 × 10⁷", correct: false }
     ],
-    explanation: "Move decimal 6 places left to form 6.2. Since 6,200,000 > 1, the exponent is positive: 6.2 × 10⁶."
+    explanation: "Move decimal 6 places left to form 6.2. Since 6,200,000> 1, the exponent is positive: 6.2 × 10⁶."
   },
   {
     id: 44,
@@ -579,8 +579,11 @@ let state = {
   timeElapsed: 0,
   timerInterval: null,
   isExiting: false,
-  activeReviewFilter: 'all'
 };
+
+// HTML tag helpers to bypass WordPress/WAF filters that insert spaces after '<'
+const _t = name => '<' + name;
+const _c = name => '</' + name + '>';
 
 /* =========================================================
    AUTHENTICATION & PROFILE MANAGER (SECURE CLIENT-SIDE JS)
@@ -660,6 +663,9 @@ class AuthenticationManager {
       if (found) {
         this.currentUser = found;
         this.currentUser.token = localStorage.getItem('kss_jwt_token') || sessionStorage.getItem('kss_jwt_token');
+        if (this.currentUser.token) {
+          this.syncAttemptsFromServer();
+        }
       }
     }
 
@@ -752,6 +758,8 @@ class AuthenticationManager {
             sessionStorage.setItem('kss_jwt_token', data.token);
           }
 
+          console.log('WordPress JWT authentication successful for:', user.username);
+          this.syncAttemptsFromServer();
           this.updateHeaderUI();
           return user;
         } else {
@@ -785,6 +793,9 @@ class AuthenticationManager {
     }
 
     // If both fail, throw the validation error
+    if (wpError && !wpError.includes('connection failed') && !wpError.includes('Failed to fetch') && !wpError.includes('not responding with JSON')) {
+      throw new Error(wpError);
+    }
     throw new Error('Invalid username or password.');
   }
 
@@ -834,11 +845,18 @@ class AuthenticationManager {
           body: JSON.stringify(attempt)
         })
         .then(res => {
-          if (!res.ok) console.warn('WordPress test logging failed.');
-          return res.json();
-        })
-        .then(data => {
-          console.log('Successfully saved to WordPress:', data);
+          if (!res.ok) {
+            console.warn('WordPress test logging failed.');
+            res.json().then(errData => {
+              console.error('Server sync error payload:', errData);
+            }).catch(() => {
+              console.error('Could not parse error payload from server.');
+            });
+          } else {
+            res.json().then(data => {
+              console.log('Successfully saved to WordPress:', data);
+            });
+          }
         })
         .catch(err => {
           console.error('Error syncing attempt to WordPress:', err);
@@ -850,6 +868,48 @@ class AuthenticationManager {
 
   getUserAttempts(username) {
     return this.allAttempts.filter(a => a.username.toLowerCase() === username.toLowerCase());
+  }
+
+  async syncAttemptsFromServer() {
+    const token = this.currentUser ? (this.currentUser.token || localStorage.getItem('kss_jwt_token') || sessionStorage.getItem('kss_jwt_token')) : null;
+    if (!token) return;
+
+    try {
+      const response = await fetch('/wp-json/kss-math/v1/get-attempts', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + token
+        }
+      });
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success && Array.isArray(data.attempts)) {
+          const serverAttempts = data.attempts.map((att, index) => {
+            return {
+              id: 'att_server_' + index + '_' + Date.now(),
+              username: this.currentUser.username,
+              timestamp: att.timestamp,
+              score: att.score,
+              totalQuestions: 15,
+              timeElapsedSeconds: att.timeElapsedSeconds,
+              recommendedLevel: att.recommendedLevel,
+              answers: att.answers || []
+            };
+          });
+
+          // Replace local attempts for this user with server attempts
+          const otherUsersAttempts = this.allAttempts.filter(a => a.username.toLowerCase() !== this.currentUser.username.toLowerCase());
+          this.allAttempts = [...otherUsersAttempts, ...serverAttempts];
+          this.saveAttemptsToStorage();
+          console.log('Successfully synced attempts from WordPress database:', serverAttempts.length);
+        }
+      } else {
+        console.warn('Failed to sync attempts from WordPress server.');
+      }
+    } catch (err) {
+      console.error('Error syncing attempts from server:', err);
+    }
   }
 
   updateHeaderUI() {
@@ -1031,18 +1091,10 @@ function startExam() {
   state.currentQuestionIndex = 0;
   state.userAnswers = {};
   state.timeElapsed = 0;
+  state.activeDifficulty = 7; // Start at Grade 7 (medium)
 
-  const g6 = questions.filter(q => q.grade === 6);
-  const g7 = questions.filter(q => q.grade === 7);
-  const g8 = questions.filter(q => q.grade === 8);
-
-  const shuffle = arr => arr.slice().sort(() => Math.random() - 0.5);
-
-  const set6 = shuffle(g6).slice(0, 5);
-  const set7 = shuffle(g7).slice(0, 5);
-  const set8 = shuffle(g8).slice(0, 5);
-
-  state.questionsServed = [...set6, ...set7, ...set8];
+  state.questionsServed = [];
+  serveNextQuestion(state.activeDifficulty);
 
   updateStepView();
   startTimer();
@@ -1067,16 +1119,16 @@ function stopTimer() {
 }
 
 function serveNextQuestion(difficulty) {
-  if (state.questionsServed.length >= 15) return;
+  if (state.questionsServed.length>= 15) return;
   const servedIds = state.questionsServed.map(q => q.id);
   const pool = questions.filter(q => q.grade === difficulty && !servedIds.includes(q.id));
 
-  if (pool.length > 0) {
+  if (pool.length> 0) {
     const nextQ = pool[Math.floor(Math.random() * pool.length)];
     state.questionsServed.push(nextQ);
   } else {
     const fallbackPool = questions.filter(q => !servedIds.includes(q.id));
-    if (fallbackPool.length > 0) {
+    if (fallbackPool.length> 0) {
       const nextQ = fallbackPool[Math.floor(Math.random() * fallbackPool.length)];
       state.questionsServed.push(nextQ);
     } else if (state.currentStep !== 4) {
@@ -1098,14 +1150,14 @@ function renderQuestion() {
   document.getElementById("progress-bar-fill").style.width = `${progressPercent}%`;
 
   let htmlContent = `
-    <div class="mb-6">
+    ${_t('div')} class="mb-6">
       <span class="px-3 py-1 text-xs font-bold text-sky-600 bg-sky-50 rounded-full">${currentQ.domain} (Grade ${currentQ.grade})</span>
       <h2 class="text-xl font-bold text-slate-800 mt-4 leading-relaxed">${currentQ.text}</h2>
-    </div>
+    ${_c('div')}
   `;
 
   if (currentQ.type === "multiple-choice") {
-    htmlContent += `<div class="space-y-4">`;
+    htmlContent += `${_t('div')} class="space-y-4">`;
     currentQ.options.forEach((opt, idx) => {
       const isSelected = state.userAnswers[state.currentQuestionIndex] === idx;
       const optionClass = isSelected
@@ -1113,21 +1165,21 @@ function renderQuestion() {
         : "border-slate-100 hover:bg-slate-50";
 
       htmlContent += `
-        <button onclick="selectOption(${idx})" class="w-full text-left p-4 rounded-xl border-2 ${optionClass} transition-all duration-200 focus:outline-none flex items-center justify-between">
+        ${_t('button')} onclick="selectOption(${idx})" class="w-full text-left p-4 rounded-xl border-2 ${optionClass} transition-all duration-200 focus:outline-none flex items-center justify-between">
           <span class="text-slate-700 font-semibold">${opt.text}</span>
           <span class="w-5 h-5 rounded-full border-2 flex items-center justify-center ${isSelected ? 'border-sky-500 bg-sky-500 text-white' : 'border-slate-300'}">
             ${isSelected ? '✓' : ''}
           </span>
-        </button>
+        ${_c('button')}
       `;
     });
-    htmlContent += `</div>`;
+    htmlContent += `${_c('div')}`;
   } else if (currentQ.type === "numeric-response") {
     const currentVal = state.userAnswers[state.currentQuestionIndex] || "";
     htmlContent += `
-      <div class="mt-4">
+      ${_t('div')} class="mt-4">
         <input type="text" id="numeric-input" oninput="saveNumericAnswer(this.value)" value="${currentVal}" placeholder="${currentQ.placeholder}" class="w-full p-4 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none text-lg text-slate-800 font-bold transition-all duration-200">
-      </div>
+      ${_c('div')}
     `;
   }
 
@@ -1149,28 +1201,36 @@ function renderSidebar() {
   if (!container) return;
 
   let html = "";
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i <15; i++) {
     const isCurrent = i === state.currentQuestionIndex;
     const isAnswered = state.userAnswers[i] !== undefined && String(state.userAnswers[i]).trim() !== "";
+    const isServed = i <state.questionsServed.length;
 
     let btnClass = "bg-slate-100 text-slate-400";
+    let isDisabled = false;
+
     if (isCurrent) {
       btnClass = "bg-sky-500 text-white ring-4 ring-sky-500/20";
     } else if (isAnswered) {
       btnClass = "bg-emerald-500 text-white";
+    } else if (isServed) {
+      btnClass = "bg-slate-100 text-slate-700";
+    } else {
+      btnClass = "bg-slate-50 text-slate-300 cursor-not-allowed opacity-50";
+      isDisabled = true;
     }
 
     html += `
-      <button onclick="jumpToQuestion(${i})" class="w-10 h-10 rounded-full font-bold flex items-center justify-center transition-all duration-200 ${btnClass}">
+      ${_t('button')} onclick="jumpToQuestion(${i})" ${isDisabled ? 'disabled' : ''} class="w-10 h-10 rounded-full font-bold flex items-center justify-center transition-all duration-200 ${btnClass}">
         ${i + 1}
-      </button>
+      ${_c('button')}
     `;
   }
   container.innerHTML = html;
 }
 
 function jumpToQuestion(idx) {
-  if (idx < state.questionsServed.length) {
+  if (idx <state.questionsServed.length) {
     state.currentQuestionIndex = idx;
     renderQuestion();
   }
@@ -1193,16 +1253,16 @@ function nextQuestion() {
   }
 
   if (isCorrect) {
-    if (state.activeDifficulty < 8) state.activeDifficulty++;
+    if (state.activeDifficulty <8) state.activeDifficulty++;
   } else {
-    if (state.activeDifficulty > 6) state.activeDifficulty--;
+    if (state.activeDifficulty> 6) state.activeDifficulty--;
   }
 
   if (state.currentQuestionIndex === 14) {
     finishExam();
   } else {
     state.currentQuestionIndex++;
-    if (state.currentQuestionIndex >= state.questionsServed.length) {
+    if (state.currentQuestionIndex>= state.questionsServed.length) {
       serveNextQuestion(state.activeDifficulty);
     }
     renderQuestion();
@@ -1210,7 +1270,7 @@ function nextQuestion() {
 }
 
 function previousQuestion() {
-  if (state.currentQuestionIndex > 0) {
+  if (state.currentQuestionIndex> 0) {
     state.currentQuestionIndex--;
     renderQuestion();
   }
@@ -1221,10 +1281,10 @@ function finishExam() {
   state.currentStep = 4;
 
   // Ensure state.questionsServed contains 15 questions even if ended early
-  while (state.questionsServed.length < 15) {
+  while (state.questionsServed.length <15) {
     const servedIds = state.questionsServed.map(q => q.id);
     const available = questions.filter(q => !servedIds.includes(q.id));
-    if (available.length > 0) {
+    if (available.length> 0) {
       const nextQ = available[Math.floor(Math.random() * available.length)];
       state.questionsServed.push(nextQ);
     } else {
@@ -1290,14 +1350,14 @@ function finishExam() {
   const g7Ratio = getCorrectRatio(grade7Served);
 
   let recommendedLevel = "6th Grade Foundation Math";
-  if (grade8Served.length >= 3 && g8Ratio >= 0.7) {
+  if (grade8Served.length>= 3 && g8Ratio>= 0.7) {
     recommendedLevel = "8th Grade Rigorous Math";
-  } else if (grade7Served.length >= 3 && g7Ratio >= 0.7) {
+  } else if (grade7Served.length>= 3 && g7Ratio>= 0.7) {
     recommendedLevel = "7th Grade Standard Math";
   } else {
-    if (state.score >= 11) {
+    if (state.score>= 11) {
       recommendedLevel = "8th Grade Rigorous Math";
-    } else if (state.score >= 7) {
+    } else if (state.score>= 7) {
       recommendedLevel = "7th Grade Standard Math";
     }
   }
@@ -1323,7 +1383,7 @@ function triggerConfetti() {
   container.style.transition = "opacity 1s ease";
 
   const colors = ["#4DA8FF", "#5ECF7A", "#FFD75E", "#FF8B6A"];
-  for (let i = 0; i < 80; i++) {
+  for (let i = 0; i <80; i++) {
     const confetti = document.createElement("div");
     confetti.classList.add("confetti");
     confetti.style.left = `${Math.random() * 100}vw`;
@@ -1364,15 +1424,21 @@ function renderFluidBreakdown() {
 
   if (btnAll) {
     btnAll.innerText = `All (${totalCount})`;
-    btnAll.className = state.activeReviewFilter === 'all' ? "px-4 py-2 text-xs font-extrabold rounded-lg bg-white text-navy-dark shadow-sm" : "px-4 py-2 text-xs font-extrabold rounded-lg text-slate-500 hover:bg-white/50";
+    btnAll.className = state.activeReviewFilter === 'all' 
+      ? "px-4 py-2 text-xs font-extrabold rounded-lg bg-white text-navy-dark shadow-sm hover:!bg-white hover:!text-navy-dark" 
+      : "px-4 py-2 text-xs font-extrabold rounded-lg text-slate-500 hover:!bg-white/50 hover:!text-slate-700";
   }
   if (btnInc) {
     btnInc.innerText = `Incorrect (${incorrectCount})`;
-    btnInc.className = state.activeReviewFilter === 'incorrect' ? "px-4 py-2 text-xs font-extrabold rounded-lg bg-white text-rose-600 shadow-sm" : "px-4 py-2 text-xs font-extrabold rounded-lg text-rose-600 hover:bg-white/50";
+    btnInc.className = state.activeReviewFilter === 'incorrect' 
+      ? "px-4 py-2 text-xs font-extrabold rounded-lg bg-white text-rose-600 shadow-sm hover:!bg-white hover:!text-rose-600" 
+      : "px-4 py-2 text-xs font-extrabold rounded-lg text-rose-600 hover:!bg-white/50 hover:!text-rose-700";
   }
   if (btnCor) {
     btnCor.innerText = `Correct (${correctCount})`;
-    btnCor.className = state.activeReviewFilter === 'correct' ? "px-4 py-2 text-xs font-extrabold rounded-lg bg-white text-emerald-600 shadow-sm" : "px-4 py-2 text-xs font-extrabold rounded-lg text-emerald-600 hover:bg-white/50";
+    btnCor.className = state.activeReviewFilter === 'correct' 
+      ? "px-4 py-2 text-xs font-extrabold rounded-lg bg-white text-emerald-600 shadow-sm hover:!bg-white hover:!text-emerald-600" 
+      : "px-4 py-2 text-xs font-extrabold rounded-lg text-emerald-600 hover:!bg-white/50 hover:!text-emerald-700";
   }
 
   let items = state.answerBreakdown;
@@ -1384,9 +1450,9 @@ function renderFluidBreakdown() {
 
   if (items.length === 0) {
     container.innerHTML = `
-      <div class="text-center py-6 bg-slate-50 rounded-xl border border-slate-200">
+      ${_t('div')} class="text-center py-6 bg-slate-50 rounded-xl border border-slate-200">
         <p class="text-sm font-bold text-slate-500">No math questions match this filter selection.</p>
-      </div>
+      ${_c('div')}
     `;
     return;
   }
@@ -1400,7 +1466,7 @@ function renderFluidBreakdown() {
       : `<span class="px-2.5 py-1 text-xs font-extrabold rounded-full bg-rose-100 text-rose-800">Incorrect ✗</span>`;
 
     html += `
-      <div class="bg-white p-6 rounded-2xl review-card ${borderClass} space-y-4 shadow-sm">
+      ${_t('div')} class="bg-white p-6 rounded-2xl review-card ${borderClass} space-y-4 shadow-sm">
         <div class="flex items-center justify-between flex-wrap gap-2">
           <div class="flex items-center space-x-2">
             <span class="font-extrabold text-navy-dark text-sm">Question ${item.questionIndex}</span>
@@ -1428,7 +1494,7 @@ function renderFluidBreakdown() {
           </span>
           <p class="text-xs md:text-sm text-slate-700 font-medium leading-relaxed">${item.explanation}</p>
         </div>
-      </div>
+      ${_c('div')}
     `;
   });
 
@@ -1449,7 +1515,7 @@ function updateStepView() {
   for (let i = 1; i <= 4; i++) {
     const stepEl = document.getElementById(`timeline-step-${i}`);
     if (stepEl) {
-      if (i < state.currentStep) {
+      if (i <state.currentStep) {
         stepEl.className = "timeline-step bg-emerald-500 text-white";
         stepEl.innerText = "✓";
       } else if (i === state.currentStep) {
@@ -1466,7 +1532,7 @@ function updateStepView() {
   if (confidenceSection) {
     if (state.currentStep === 3) {
       confidenceSection.innerHTML = `
-        <div class="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        ${_t('div')} class="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
           <div class="space-y-3 flex flex-col items-center">
             <span class="text-4xl">📝</span>
             <h4 class="font-bold text-navy-dark">Rule 1: Work Independently</h4>
@@ -1487,11 +1553,11 @@ function updateStepView() {
             <h4 class="font-bold text-navy-dark">Rule 4: Try Your Best</h4>
             <p class="text-sm text-slate-500 leading-relaxed">Take your time and think through every question carefully.</p>
           </div>
-        </div>
+        ${_c('div')}
       `;
     } else {
       confidenceSection.innerHTML = `
-        <div class="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        ${_t('div')} class="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
           <div class="space-y-3 flex flex-col items-center">
             <span class="text-4xl">🎓</span>
             <h4 class="font-bold text-navy-dark">Standards-Aligned Math</h4>
@@ -1512,7 +1578,7 @@ function updateStepView() {
             <h4 class="font-bold text-navy-dark">Educator Developed</h4>
             <p class="text-sm text-slate-500 leading-relaxed">Formulated by math teachers to yield accurate grade benchmarks.</p>
           </div>
-        </div>
+        ${_c('div')}
       `;
     }
   }

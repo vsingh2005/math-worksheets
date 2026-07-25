@@ -279,7 +279,27 @@ add_action('rest_api_init', function () {
         'callback'            => 'kss_save_math_attempt',
         'permission_callback' => 'is_user_logged_in', // Restricts to logged-in sessions/JWT
     ));
+
+    register_rest_route('kss-math/v1', '/get-attempts', array(
+        'methods'             => 'GET',
+        'callback'            => 'kss_get_math_attempts',
+        'permission_callback' => 'is_user_logged_in', // Restricts to logged-in sessions/JWT
+    ));
 });
+
+function kss_get_math_attempts(WP_REST_Request $request) {
+    $user_id = get_current_user_id();
+    if (!$user_id) {
+        return new WP_Error('no_user', 'Unauthorized access', array('status' => 401));
+    }
+
+    $attempts = get_user_meta($user_id, 'kss_math_attempts', true);
+    if (!is_array($attempts)) {
+        $attempts = array();
+    }
+
+    return new WP_REST_Response(array('success' => true, 'attempts' => $attempts), 200);
+}
 
 function kss_save_math_attempt(WP_REST_Request $request) {
     $user_id = get_current_user_id();

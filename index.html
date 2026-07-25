@@ -182,8 +182,8 @@
       </div>
 
       <nav class="hidden md:flex items-center space-x-8 text-slate-500 font-semibold">
-        <button onclick="openModal('faq-modal')" class="hover:text-sky-blue transition-colors">FAQ</button>
-        <button onclick="openModal('contact-modal')" class="hover:text-sky-blue transition-colors">Contact</button>
+        <button onclick="openModal('faq-modal')" class="hover:!text-sky-blue hover:!bg-transparent hover:!shadow-none transition-colors">FAQ</button>
+        <button onclick="openModal('contact-modal')" class="hover:!text-sky-blue hover:!bg-transparent hover:!shadow-none transition-colors">Contact</button>
       </nav>
 
       <div id="user-header-widget" class="flex items-center space-x-4">
@@ -360,7 +360,7 @@
 
             <div class="flex items-center justify-between">
               <span id="question-number-display" class="font-bold text-slate-500">Question 1 of 15</span>
-              <button onclick="finishExam()"
+              <button onclick="openModal('save-exit-confirm-modal')"
                 class="px-4 py-2 bg-rose-50 text-rose-600 rounded-full font-bold text-sm hover:bg-rose-100 transition-colors">
                 Save & Exit
               </button>
@@ -558,7 +558,7 @@
     class="fixed inset-0 bg-navy-dark/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
     <div class="bg-white max-w-2xl w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl relative">
       <button onclick="closeModal('faq-modal')"
-        class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-2xl font-bold">×</button>
+        class="absolute top-4 right-4 text-slate-400 hover:!text-slate-600 hover:!bg-transparent hover:!shadow-none text-2xl font-bold">×</button>
       <h3 class="text-2xl font-extrabold text-navy-dark border-b pb-3">Frequently Asked Questions</h3>
       <div class="space-y-6 max-h-[450px] overflow-y-auto pr-2 text-slate-600 font-medium">
         <div>
@@ -594,7 +594,7 @@
     class="fixed inset-0 bg-navy-dark/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
     <div class="bg-white max-w-lg w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl relative">
       <button onclick="closeModal('contact-modal')"
-        class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-2xl font-bold">×</button>
+        class="absolute top-4 right-4 text-slate-400 hover:!text-slate-600 hover:!bg-transparent hover:!shadow-none text-2xl font-bold">×</button>
       <h3 class="text-2xl font-extrabold text-navy-dark">Contact Kids STEM Studio</h3>
       <div class="space-y-4 text-slate-600 font-medium">
         <p>If you have any questions or would like to learn more about our math, coding, and science enrichment classes,
@@ -629,12 +629,32 @@
     </div>
   </div>
 
+  <!-- SAVE & EXIT CONFIRMATION MODAL -->
+  <div id="save-exit-confirm-modal"
+    class="fixed inset-0 bg-navy-dark/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white max-w-md w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl text-center">
+      <span class="text-4xl">💾</span>
+      <h3 class="text-2xl font-extrabold text-navy-dark">Are you sure you want to Save & Exit?</h3>
+      <p class="text-slate-500 font-semibold leading-relaxed">Your answers will be saved and your recommended math placement level will be calculated based on your answers so far.</p>
+      <div class="flex items-center justify-center space-x-4 pt-2">
+        <button onclick="closeModal('save-exit-confirm-modal')"
+          class="px-6 py-3 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-slate-200 transition-colors">
+          No, Continue Test
+        </button>
+        <button onclick="closeModal('save-exit-confirm-modal'); finishExam();"
+          class="px-6 py-3 bg-emerald-500 text-white font-bold rounded-xl hover:bg-emerald-600 transition-colors hover:!bg-emerald-600 hover:!text-white shadow-md shadow-emerald-500/20">
+          Yes, Save & Exit
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- USER HISTORY MODAL -->
   <div id="history-modal"
     class="fixed inset-0 bg-navy-dark/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
     <div class="bg-white max-w-2xl w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl relative">
       <button onclick="closeModal('history-modal')"
-        class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-2xl font-bold">×</button>
+        class="absolute top-4 right-4 text-slate-400 hover:!text-slate-600 hover:!bg-transparent hover:!shadow-none text-2xl font-bold">×</button>
       <h3 class="text-2xl font-extrabold text-navy-dark border-b pb-3 flex items-center gap-2">
         <span>📜</span> Math Placement History
       </h3>
