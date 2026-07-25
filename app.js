@@ -1,4 +1,539 @@
 const questions = [
+  // --- GRADE 3 (ELEMENTARY EASY) ---
+  {
+    id: 101,
+    grade: 3,
+    domain: "Multiplication Concepts",
+    text: "A bakery boxes donuts in groups of 6. If a customer buys 4 boxes, how many donuts do they get in total?",
+    type: "multiple-choice",
+    options: [
+      { text: "24", correct: true },
+      { text: "10", correct: false },
+      { text: "18", correct: false },
+      { text: "12", correct: false }
+    ],
+    explanation: "Multiply the number of boxes by the number of donuts per box: 4 x 6 = 24."
+  },
+  {
+    id: 102,
+    grade: 3,
+    domain: "Multiplication Properties",
+    text: "Which equation shows the Commutative Property of Multiplication?",
+    type: "multiple-choice",
+    options: [
+      { text: "4 x 5 = 5 x 4", correct: true },
+      { text: "4 x 5 = 20", correct: false },
+      { text: "(4 x 2) x 5 = 4 x (2 x 5)", correct: false },
+      { text: "4 x 0 = 0", correct: false }
+    ],
+    explanation: "The Commutative Property of Multiplication states that changing the order of factors does not change the product: a x b = b x a."
+  },
+  {
+    id: 103,
+    grade: 3,
+    domain: "Division Concepts",
+    text: "If 32 books are shared equally among 4 shelves, how many books go on each shelf?",
+    type: "numeric-response",
+    correctAnswer: "8",
+    placeholder: "Enter number of books...",
+    explanation: "Divide the total books by the number of shelves: 32 / 4 = 8 books per shelf."
+  },
+  {
+    id: 104,
+    grade: 3,
+    domain: "Multiplication Facts",
+    text: "Find the product: 7 x 8",
+    type: "numeric-response",
+    correctAnswer: "56",
+    placeholder: "Enter product...",
+    explanation: "Using multiplication facts, 7 groups of 8 is equal to 56."
+  },
+  {
+    id: 105,
+    grade: 3,
+    domain: "Multi-Step Word Problems",
+    text: "Jack has 5 boxes of pencils with 8 pencils in each box. He gives 12 pencils to his sister. How many pencils does Jack have left?",
+    type: "multiple-choice",
+    options: [
+      { text: "28", correct: true },
+      { text: "40", correct: false },
+      { text: "20", correct: false },
+      { text: "32", correct: false }
+    ],
+    explanation: "First find total pencils: 5 x 8 = 40. Then subtract what he gave away: 40 - 12 = 28."
+  },
+  {
+    id: 106,
+    grade: 3,
+    domain: "Rounding Numbers",
+    text: "Round 283 to the nearest hundred.",
+    type: "numeric-response",
+    correctAnswer: "300",
+    placeholder: "Round to nearest hundred...",
+    explanation: "The tens digit of 283 is 8 (which is 5 or more), so round up to the next hundred: 300."
+  },
+  {
+    id: 107,
+    grade: 3,
+    domain: "Base-Ten Arithmetic",
+    text: "Solve: 456 + 287",
+    type: "numeric-response",
+    correctAnswer: "743",
+    placeholder: "Enter sum...",
+    explanation: "Perform standard addition: 456 + 287 = 743."
+  },
+  {
+    id: 108,
+    grade: 3,
+    domain: "Multiplying by Multiples of 10",
+    text: "Multiply: 6 x 40",
+    type: "numeric-response",
+    correctAnswer: "240",
+    placeholder: "Enter product...",
+    explanation: "Multiply 6 by the tens digit (4) to get 24, then append the zero: 240."
+  },
+  {
+    id: 109,
+    grade: 3,
+    domain: "Fraction Concepts",
+    text: "A pizza is cut into 8 equal slices. If Emily eats 3 slices, what fraction of the pizza did she eat?",
+    type: "multiple-choice",
+    options: [
+      { text: "3/8", correct: true },
+      { text: "1/8", correct: false },
+      { text: "5/8", correct: false },
+      { text: "3/5", correct: false }
+    ],
+    explanation: "Emily ate 3 out of the 8 total equal parts, which is represented by the fraction 3/8."
+  },
+  {
+    id: 110,
+    grade: 3,
+    domain: "Fractions as Whole Numbers",
+    text: "Which fraction is equivalent to 1 whole?",
+    type: "multiple-choice",
+    options: [
+      { text: "4/4", correct: true },
+      { text: "1/4", correct: false },
+      { text: "4/1", correct: false },
+      { text: "2/4", correct: false }
+    ],
+    explanation: "A fraction where the numerator matches the denominator represents all parts of a single whole: 4/4 = 1."
+  },
+  {
+    id: 111,
+    grade: 3,
+    domain: "Comparing Fractions",
+    text: "Which comparison is true?",
+    type: "multiple-choice",
+    options: [
+      { text: "1/3 > 1/4", correct: true },
+      { text: "1/3 < 1/4", correct: false },
+      { text: "1/3 = 1/4", correct: false },
+      { text: "2/3 < 2/4", correct: false }
+    ],
+    explanation: "When comparing unit fractions (with a numerator of 1), the fraction with the smaller denominator has larger parts: 1/3 > 1/4."
+  },
+  {
+    id: 112,
+    grade: 3,
+    domain: "Elapsed Time",
+    text: "A movie starts at 4:15 PM and ends at 5:05 PM. How many minutes long was the movie?",
+    type: "numeric-response",
+    correctAnswer: "50",
+    placeholder: "Enter duration in minutes...",
+    explanation: "From 4:15 PM to 5:00 PM is 45 minutes. From 5:00 PM to 5:05 PM is 5 minutes. 45 + 5 = 50 minutes."
+  },
+  {
+    id: 113,
+    grade: 3,
+    domain: "Measurement Units",
+    text: "Which metric unit is best to measure the mass of a single paperclip?",
+    type: "multiple-choice",
+    options: [
+      { text: "Grams (g)", correct: true },
+      { text: "Kilograms (kg)", correct: false },
+      { text: "Liters (L)", correct: false },
+      { text: "Meters (m)", correct: false }
+    ],
+    explanation: "A single paperclip is very light, making Grams (g) the most appropriate metric unit of mass."
+  },
+  {
+    id: 114,
+    grade: 3,
+    domain: "Area of Rectangles",
+    text: "Find the area of a rectangle with a length of 7 cm and a width of 5 cm.",
+    type: "numeric-response",
+    correctAnswer: "35",
+    placeholder: "Enter area in sq cm...",
+    explanation: "Area of a rectangle is length times width: 7 cm x 5 cm = 35 square cm."
+  },
+  {
+    id: 115,
+    grade: 3,
+    domain: "Perimeter of Polygons",
+    text: "A square garden has a side length of 6 meters. What is its perimeter in meters?",
+    type: "numeric-response",
+    correctAnswer: "24",
+    placeholder: "Enter perimeter in meters...",
+    explanation: "A square has 4 equal sides. Perimeter = 4 x 6 meters = 24 meters."
+  },
+
+  // --- GRADE 4 (ELEMENTARY MEDIUM) ---
+  {
+    id: 201,
+    grade: 4,
+    domain: "Multiplicative Comparison",
+    text: "A red hat costs $8. A blue jacket costs 6 times as much as the red hat. How much does the blue jacket cost in dollars?",
+    type: "numeric-response",
+    correctAnswer: "48",
+    placeholder: "Enter price in dollars...",
+    explanation: "Multiply the hat price by 6: 8 x 6 = $48."
+  },
+  {
+    id: 202,
+    grade: 4,
+    domain: "Multi-Step Word Problems",
+    text: "A classroom has 3 rows of desks with 8 desks in each row. The teacher adds 4 more desks. If the desks are grouped into sets of 4, how many sets are there?",
+    type: "multiple-choice",
+    options: [
+      { text: "7", correct: true },
+      { text: "8", correct: false },
+      { text: "6", correct: false },
+      { text: "9", correct: false }
+    ],
+    explanation: "Initial desks: 3 x 8 = 24. Total desks after adding 4: 24 + 4 = 28. Divided into sets of 4: 28 / 4 = 7 sets."
+  },
+  {
+    id: 203,
+    grade: 4,
+    domain: "Factors & Multiples",
+    text: "Identify the prime number from the following choices:",
+    type: "multiple-choice",
+    options: [
+      { text: "17", correct: true },
+      { text: "15", correct: false },
+      { text: "9", correct: false },
+      { text: "21", correct: false }
+    ],
+    explanation: "A prime number has only 1 and itself as factors. 17 is prime. 15 (3x5), 9 (3x3), and 21 (3x7) are composite."
+  },
+  {
+    id: 204,
+    grade: 4,
+    domain: "Place Value Structures",
+    text: "In the number 5,420, the value of the digit 5 is how many times larger than the digit 5 in the number 520?",
+    type: "numeric-response",
+    correctAnswer: "10",
+    placeholder: "Enter multiplier...",
+    explanation: "The 5 in 5,420 is in the thousands place (5,000) and the 5 in 520 is in the hundreds place (500). 5,000 is 10 times 500."
+  },
+  {
+    id: 205,
+    grade: 4,
+    domain: "Rounding Large Numbers",
+    text: "Round 45,782 to the nearest thousand.",
+    type: "numeric-response",
+    correctAnswer: "46000",
+    placeholder: "Round to nearest thousand...",
+    explanation: "The hundreds digit is 7 (which is >= 5), so round the thousands digit up: 46,000."
+  },
+  {
+    id: 206,
+    grade: 4,
+    domain: "Multi-Digit Arithmetic",
+    text: "Solve: 12,459 - 8,634",
+    type: "numeric-response",
+    correctAnswer: "3825",
+    placeholder: "Enter difference...",
+    explanation: "Perform standard multi-digit subtraction: 12,459 - 8,634 = 3,825."
+  },
+  {
+    id: 207,
+    grade: 4,
+    domain: "Multi-Digit Multiplication",
+    text: "Multiply: 24 x 15",
+    type: "numeric-response",
+    correctAnswer: "360",
+    placeholder: "Enter product...",
+    explanation: "24 x 15 = 360."
+  },
+  {
+    id: 208,
+    grade: 4,
+    domain: "Division with Remainders",
+    text: "Find the quotient and remainder: 125 divided by 4.",
+    type: "multiple-choice",
+    options: [
+      { text: "31 R1", correct: true },
+      { text: "31", correct: false },
+      { text: "30 R5", correct: false },
+      { text: "32 R1", correct: false }
+    ],
+    explanation: "4 goes into 125 exactly 31 times (31 x 4 = 124), with a remainder of 1 (125 - 124 = 1)."
+  },
+  {
+    id: 209,
+    grade: 4,
+    domain: "Fraction Equivalence",
+    text: "Which fraction is equivalent to 2/3?",
+    type: "multiple-choice",
+    options: [
+      { text: "8/12", correct: true },
+      { text: "4/9", correct: false },
+      { text: "6/8", correct: false },
+      { text: "5/6", correct: false }
+    ],
+    explanation: "Multiply the numerator and denominator of 2/3 by 4: (2 x 4) / (3 x 4) = 8/12."
+  },
+  {
+    id: 210,
+    grade: 4,
+    domain: "Comparing Fractions",
+    text: "Compare the fractions: 3/5 and 2/3. Which statement is correct?",
+    type: "multiple-choice",
+    options: [
+      { text: "3/5 < 2/3", correct: true },
+      { text: "3/5 > 2/3", correct: false },
+      { text: "3/5 = 2/3", correct: false },
+      { text: "2/3 < 3/5", correct: false }
+    ],
+    explanation: "Using a common denominator of 15: 3/5 = 9/15 and 2/3 = 10/15. Since 9/15 < 10/15, 3/5 < 2/3."
+  },
+  {
+    id: 211,
+    grade: 4,
+    domain: "Decimal Fractions",
+    text: "Add: 2/10 + 35/100. Write your answer as a decimal.",
+    type: "numeric-response",
+    correctAnswer: "0.55",
+    placeholder: "Enter decimal value...",
+    explanation: "Convert 2/10 to 20/100. Add: 20/100 + 35/100 = 55/100 = 0.55."
+  },
+  {
+    id: 212,
+    grade: 4,
+    domain: "Fraction Multiplication",
+    text: "A recipe requires 3/4 cup of sugar. If you make 5 batches, how many cups of sugar do you need?",
+    type: "multiple-choice",
+    options: [
+      { text: "3 3/4", correct: true },
+      { text: "15/4", correct: false },
+      { text: "2 1/4", correct: false },
+      { text: "3 1/4", correct: false }
+    ],
+    explanation: "Multiply 5 by 3/4: 5 x 3/4 = 15/4. Convert to a mixed number: 15/4 = 3 3/4."
+  },
+  {
+    id: 213,
+    grade: 4,
+    domain: "Measurement Conversions",
+    text: "Convert 4 kilometers into meters.",
+    type: "numeric-response",
+    correctAnswer: "4000",
+    placeholder: "Enter meters...",
+    explanation: "Since 1 kilometer = 1,000 meters, multiply 4 by 1,000: 4,000 meters."
+  },
+  {
+    id: 214,
+    grade: 4,
+    domain: "Complementary Angles",
+    text: "Angle A and Angle B are complementary (sum to 90 degrees). If Angle A is 27 degrees, what is the measure of Angle B in degrees?",
+    type: "numeric-response",
+    correctAnswer: "63",
+    placeholder: "Enter degrees...",
+    explanation: "Complementary angles sum to 90 degrees. So, Angle B = 90 - 27 = 63 degrees."
+  },
+  {
+    id: 215,
+    grade: 4,
+    domain: "Geometric Terms",
+    text: "Which geometric term describes lines that cross each other at a perfect 90-degree angle?",
+    type: "multiple-choice",
+    options: [
+      { text: "Perpendicular lines", correct: true },
+      { text: "Parallel lines", correct: false },
+      { text: "Intersecting lines", correct: false },
+      { text: "Ray lines", correct: false }
+    ],
+    explanation: "Lines that cross and form right (90-degree) angles are perpendicular."
+  },
+
+  // --- GRADE 5 (ELEMENTARY HARD) ---
+  {
+    id: 301,
+    grade: 5,
+    domain: "Numerical Expressions",
+    text: "Evaluate the numerical expression: 3 x (8 - 2) + 4",
+    type: "numeric-response",
+    correctAnswer: "22",
+    placeholder: "Enter value...",
+    explanation: "Perform operations inside parentheses first: 8 - 2 = 6. Next, multiply: 3 x 6 = 18. Finally, add: 18 + 4 = 22."
+  },
+  {
+    id: 302,
+    grade: 5,
+    domain: "Powers of 10",
+    text: "What is the value of 10³?",
+    type: "multiple-choice",
+    options: [
+      { text: "1,000", correct: true },
+      { text: "100", correct: false },
+      { text: "10,000", correct: false },
+      { text: "30", correct: false }
+    ],
+    explanation: "10 raised to the power of 3 means multiplying 10 by itself three times: 10 x 10 x 10 = 1,000."
+  },
+  {
+    id: 303,
+    grade: 5,
+    domain: "Rounding Decimals",
+    text: "Round the decimal 14.568 to the nearest hundredth.",
+    type: "numeric-response",
+    correctAnswer: "14.57",
+    placeholder: "Enter rounded decimal...",
+    explanation: "The thousandths digit is 8 (which is >= 5), so round the hundredths digit up from 6 to 7: 14.57."
+  },
+  {
+    id: 304,
+    grade: 5,
+    domain: "Multi-Digit Multiplication",
+    text: "Find the product: 135 x 24",
+    type: "numeric-response",
+    correctAnswer: "3240",
+    placeholder: "Enter product...",
+    explanation: "Multiply the numbers: 135 x 24 = 3,240."
+  },
+  {
+    id: 305,
+    grade: 5,
+    domain: "Multi-Digit Division",
+    text: "Divide: 1,512 divided by 12",
+    type: "numeric-response",
+    correctAnswer: "126",
+    placeholder: "Enter quotient...",
+    explanation: "Perform long division: 1512 / 12 = 126."
+  },
+  {
+    id: 306,
+    grade: 5,
+    domain: "Decimals Addition",
+    text: "Solve: 24.5 + 8.76",
+    type: "numeric-response",
+    correctAnswer: "33.26",
+    placeholder: "Enter sum...",
+    explanation: "Align place values and add: 24.50 + 8.76 = 33.26."
+  },
+  {
+    id: 307,
+    grade: 5,
+    domain: "Decimals Division",
+    text: "Divide: 4.8 divided by 0.6",
+    type: "numeric-response",
+    correctAnswer: "8",
+    placeholder: "Enter quotient...",
+    explanation: "4.8 / 0.6 is equivalent to 48 / 6, which equals 8."
+  },
+  {
+    id: 308,
+    grade: 5,
+    domain: "Adding Fractions",
+    text: "Solve: 1/2 + 2/5",
+    type: "multiple-choice",
+    options: [
+      { text: "9/10", correct: true },
+      { text: "3/7", correct: false },
+      { text: "3/10", correct: false },
+      { text: "4/5", correct: false }
+    ],
+    explanation: "Find a common denominator of 10: 1/2 = 5/10 and 2/5 = 4/10. Add: 5/10 + 4/10 = 9/10."
+  },
+  {
+    id: 309,
+    grade: 5,
+    domain: "Subtracting Mixed Numbers",
+    text: "Subtract: 3 1/4 - 1 1/2",
+    type: "multiple-choice",
+    options: [
+      { text: "1 3/4", correct: true },
+      { text: "2 1/4", correct: false },
+      { text: "1 1/4", correct: false },
+      { text: "2 3/4", correct: false }
+    ],
+    explanation: "Convert to improper fractions: 13/4 - 3/2 = 13/4 - 6/4 = 7/4. Convert back to mixed number: 1 3/4."
+  },
+  {
+    id: 310,
+    grade: 5,
+    domain: "Fractions as Division",
+    text: "Three friends share 4 identical sub sandwiches equally. How much sandwich does each friend receive?",
+    type: "multiple-choice",
+    options: [
+      { text: "4/3 sandwich", correct: true },
+      { text: "3/4 sandwich", correct: false },
+      { text: "1 1/4 sandwich", correct: false },
+      { text: "1/3 sandwich", correct: false }
+    ],
+    explanation: "Dividing 4 sandwich wholes among 3 people is represented by the division problem 4 / 3, which is 4/3 sandwiches."
+  },
+  {
+    id: 311,
+    grade: 5,
+    domain: "Multiplying Fractions",
+    text: "Multiply: 2/3 x 4/5. Write your answer as a fraction (e.g., 8/15).",
+    type: "numeric-response",
+    correctAnswer: "8/15",
+    placeholder: "Enter fraction...",
+    explanation: "Multiply numerators and multiply denominators: (2 x 4) / (3 x 5) = 8/15."
+  },
+  {
+    id: 312,
+    grade: 5,
+    domain: "Dividing Fractions",
+    text: "Divide: 1/3 divided by 4. Write your answer as a fraction (e.g., 1/12).",
+    type: "numeric-response",
+    correctAnswer: "1/12",
+    placeholder: "Enter fraction...",
+    explanation: "Dividing by 4 is the same as multiplying by 1/4: (1/3) x (1/4) = 1/12."
+  },
+  {
+    id: 313,
+    grade: 5,
+    domain: "Volume of Prisms",
+    text: "A rectangular jewelry box has a length of 8 cm, a width of 5 cm, and a height of 3 cm. Find its volume in cubic cm.",
+    type: "numeric-response",
+    correctAnswer: "120",
+    placeholder: "Enter volume...",
+    explanation: "Volume is length x width x height: 8 cm x 5 cm x 3 cm = 120 cubic cm."
+  },
+  {
+    id: 314,
+    grade: 5,
+    domain: "Coordinate Geometry",
+    text: "What are the coordinates of the origin on the coordinate plane?",
+    type: "multiple-choice",
+    options: [
+      { text: "(0, 0)", correct: true },
+      { text: "(1, 1)", correct: false },
+      { text: "(0, 1)", correct: false },
+      { text: "(1, 0)", correct: false }
+    ],
+    explanation: "The origin is where the horizontal x-axis and vertical y-axis intersect, defined by coordinates (0, 0)."
+  },
+  {
+    id: 315,
+    grade: 5,
+    domain: "Classifying 2D Shapes",
+    text: "Which statement is true?",
+    type: "multiple-choice",
+    options: [
+      { text: "All squares are rectangles", correct: true },
+      { text: "All rectangles are squares", correct: false },
+      { text: "No trapezoid is a quadrilateral", correct: false },
+      { text: "All rhombuses are squares", correct: false }
+    ],
+    explanation: "A square is defined as a regular quadrilateral having 4 equal sides and 4 right angles. Since a rectangle requires 4 right angles, all squares are rectangles."
+  },
   // --- GRADE 6 (EASY) ---
   {
     id: 1,
@@ -577,6 +1112,7 @@ let state = {
   timeElapsed: 0,
   timerInterval: null,
   isExiting: false,
+  selectedTrack: '7-8',
 };
 
 // HTML tag helpers to bypass WordPress/WAF filters that insert spaces after '<'
@@ -978,7 +1514,7 @@ class AuthenticationManager {
         container.innerHTML = html;
       }
     }
-    historyModal.classList.remove('hidden');
+    openModal('history-modal');
   }
 }
 
@@ -1080,6 +1616,18 @@ function handleLostPasswordSubmit(e) {
    ========================================================= */
 
 function startAssessmentFlow() {
+  // Show track selection page on the landing screen instead of immediately transitioning to Instructions
+  document.getElementById('landing-main-content').classList.add('hidden');
+  document.getElementById('track-selection-panel').classList.remove('hidden');
+}
+
+function showLandingMain() {
+  document.getElementById('landing-main-content').classList.remove('hidden');
+  document.getElementById('track-selection-panel').classList.add('hidden');
+}
+
+function selectTrack(track) {
+  state.selectedTrack = track;
   state.currentStep = 2;
   updateStepView();
 }
@@ -1089,7 +1637,15 @@ function startExam() {
   state.currentQuestionIndex = 0;
   state.userAnswers = {};
   state.timeElapsed = 0;
-  state.activeDifficulty = 7; // Start at Grade 7 (medium)
+
+  // Initialize starting difficulty based on the chosen track
+  let minGrade = 7;
+  if (state.selectedTrack === '3-4') {
+    minGrade = 3;
+  } else if (state.selectedTrack === '5-6') {
+    minGrade = 5;
+  }
+  state.activeDifficulty = minGrade;
 
   state.questionsServed = [];
   serveNextQuestion(state.activeDifficulty);
@@ -1239,7 +1795,7 @@ function nextQuestion() {
   const userAns = state.userAnswers[state.currentQuestionIndex];
 
   if (userAns === undefined || String(userAns).trim() === "") {
-    alert("Please answer the math question before moving next!");
+    openModal('answer-required-modal');
     return;
   }
 
@@ -1250,17 +1806,27 @@ function nextQuestion() {
     isCorrect = String(userAns).trim().toLowerCase() === currentQ.correctAnswer.toLowerCase();
   }
 
+  let minGrade = 7;
+  let maxGrade = 8;
+  if (state.selectedTrack === '3-4') {
+    minGrade = 3;
+    maxGrade = 4;
+  } else if (state.selectedTrack === '5-6') {
+    minGrade = 5;
+    maxGrade = 6;
+  }
+
   if (isCorrect) {
-    if (state.activeDifficulty <8) state.activeDifficulty++;
+    if (state.activeDifficulty < maxGrade) state.activeDifficulty++;
   } else {
-    if (state.activeDifficulty> 6) state.activeDifficulty--;
+    if (state.activeDifficulty > minGrade) state.activeDifficulty--;
   }
 
   if (state.currentQuestionIndex === 14) {
     finishExam();
   } else {
     state.currentQuestionIndex++;
-    if (state.currentQuestionIndex>= state.questionsServed.length) {
+    if (state.currentQuestionIndex >= state.questionsServed.length) {
       serveNextQuestion(state.activeDifficulty);
     }
     renderQuestion();
@@ -1279,10 +1845,19 @@ function finishExam() {
   state.currentStep = 4;
 
   // Ensure state.questionsServed contains 15 questions even if ended early
-  while (state.questionsServed.length <15) {
+  let minGrade = 7;
+  let maxGrade = 8;
+  if (state.selectedTrack === '3-4') {
+    minGrade = 3;
+    maxGrade = 4;
+  } else if (state.selectedTrack === '5-6') {
+    minGrade = 5;
+    maxGrade = 6;
+  }
+  while (state.questionsServed.length < 15) {
     const servedIds = state.questionsServed.map(q => q.id);
-    const available = questions.filter(q => !servedIds.includes(q.id));
-    if (available.length> 0) {
+    const available = questions.filter(q => (q.grade === minGrade || q.grade === maxGrade) && !servedIds.includes(q.id));
+    if (available.length > 0) {
       const nextQ = available[Math.floor(Math.random() * available.length)];
       state.questionsServed.push(nextQ);
     } else {
@@ -1348,15 +1923,46 @@ function finishExam() {
   const g7Ratio = getCorrectRatio(grade7Served);
 
   let recommendedLevel = "6th Grade Foundation Math";
-  if (grade8Served.length>= 3 && g8Ratio>= 0.7) {
-    recommendedLevel = "8th Grade Rigorous Math";
-  } else if (grade7Served.length>= 3 && g7Ratio>= 0.7) {
-    recommendedLevel = "7th Grade Standard Math";
+  if (state.selectedTrack === '3-4') {
+    const grade4Served = state.questionsServed.filter(q => q.grade === 4);
+    const g4Ratio = getCorrectRatio(grade4Served);
+    if (grade4Served.length >= 3 && g4Ratio >= 0.7) {
+      recommendedLevel = "4th Grade Standard Math";
+    } else {
+      if (state.score >= 10) {
+        recommendedLevel = "4th Grade Standard Math";
+      } else {
+        recommendedLevel = "3rd Grade Foundation Math";
+      }
+    }
+  } else if (state.selectedTrack === '5-6') {
+    const grade6Served = state.questionsServed.filter(q => q.grade === 6);
+    const g6Ratio = getCorrectRatio(grade6Served);
+    if (grade6Served.length >= 3 && g6Ratio >= 0.7) {
+      recommendedLevel = "6th Grade Foundation Math";
+    } else {
+      if (state.score >= 10) {
+        recommendedLevel = "6th Grade Foundation Math";
+      } else {
+        recommendedLevel = "5th Grade Standard Math";
+      }
+    }
   } else {
-    if (state.score>= 11) {
+    // default 7-8 track
+    const grade8Served = state.questionsServed.filter(q => q.grade === 8);
+    const g8Ratio = getCorrectRatio(grade8Served);
+    if (grade8Served.length >= 3 && g8Ratio >= 0.7) {
       recommendedLevel = "8th Grade Rigorous Math";
-    } else if (state.score>= 7) {
+    } else if (grade7Served.length >= 3 && g7Ratio >= 0.7) {
       recommendedLevel = "7th Grade Standard Math";
+    } else {
+      if (state.score >= 11) {
+        recommendedLevel = "8th Grade Rigorous Math";
+      } else if (state.score >= 7) {
+        recommendedLevel = "7th Grade Standard Math";
+      } else {
+        recommendedLevel = "6th Grade Foundation Math";
+      }
     }
   }
 
@@ -1583,6 +2189,7 @@ function updateStepView() {
 
   if (state.currentStep === 1) {
     if (landingScreen) landingScreen.classList.remove("hidden");
+    showLandingMain();
   } else if (state.currentStep === 2) {
     if (instructionsScreen) instructionsScreen.classList.remove("hidden");
   } else if (state.currentStep === 3) {
@@ -1648,6 +2255,61 @@ function handleExit() {
       window.location.href = state.pendingNavigationUrl;
     }
   } else {
-    finishExam();
+    // Exit to Home Screen and clear exam states
+    state.currentStep = 1;
+    state.currentQuestionIndex = 0;
+    state.userAnswers = {};
+    state.questionsServed = [];
+    updateStepView();
   }
 }
+
+// Global modal handlers that dynamically inject missing HTML modal layouts on WordPress
+const safeOpenModal = function(id) {
+  let modal = document.getElementById(id);
+  if (!modal && id === 'answer-required-modal') {
+    const modalHtml = `
+      ${_t('div')} id="answer-required-modal"
+        class="fixed inset-0 bg-navy-dark/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        ${_t('div')} class="bg-white max-w-md w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl text-center">
+          ${_t('span')} class="text-4xl">📝${_c('span')}
+          ${_t('h3')} class="text-2xl font-extrabold text-navy-dark">Answer Required${_c('h3')}
+          ${_t('p')} class="text-slate-500 font-semibold leading-relaxed">Please select or enter an answer for the math question before moving on.${_c('p')}
+          ${_t('div')} class="flex items-center justify-center pt-2">
+            ${_t('button')} onclick="closeModal('answer-required-modal')"
+              class="px-8 py-3 bg-sky-500 text-white font-bold rounded-xl hover:bg-sky-600 transition-colors shadow-md shadow-sky-500/20 hover:!bg-sky-600 hover:!text-white">
+              OK
+            ${_c('button')}
+          ${_c('div')}
+        ${_c('div')}
+      ${_c('div')}
+    `;
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = modalHtml;
+    const modalNode = tempDiv.firstElementChild;
+    document.body.appendChild(modalNode);
+    modal = modalNode;
+  }
+  if (modal) {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+};
+
+const safeCloseModal = function(id) {
+  const modal = document.getElementById(id);
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+};
+
+window.openModal = safeOpenModal;
+window.closeModal = safeCloseModal;
+try {
+  openModal = safeOpenModal;
+  closeModal = safeCloseModal;
+} catch (e) {
+  // Ignore if read-only in strict contexts
+}
+

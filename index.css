@@ -360,6 +360,13 @@ button.hover\:bg-slate-50:focus {
   background-color: #f8fafc !important;
 }
 
+button.hover\:bg-slate-100:hover,
+button.hover\:bg-slate-100:active,
+button.hover\:bg-slate-100:focus {
+  background-color: #f1f5f9 !important;
+  color: #334155 !important;
+}
+
 button.hover\:bg-slate-200:hover,
 button.hover\:bg-slate-200:active,
 button.hover\:bg-slate-200:focus {
