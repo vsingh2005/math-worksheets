@@ -1,0 +1,76 @@
+%AREA \& PERIMETER OF RECTANGLES - WORKSHEET 3
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc, shapes.geometric}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Area \& Perimeter of Rectangles}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{4.20.3}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Quiz: Area \& Perimeter}}
+\end{tcolorbox}
+\begin{enumerate}[itemsep=3.5cm, leftmargin=0.6cm]
+\item Find the area of a square that has a perimeter of 28 inches. (Hint: find the side length first).
+\vspace{3.5cm}
+\item A rectangular park has a length of 12 meters and a width of 7 meters. How many meters of fencing are needed to go all the way around?
+\vspace{3.5cm}
+\item Find the missing length of a rectangle if the perimeter is 30 cm and the width is 5 cm.
+\end{enumerate}
+
+\end{document}

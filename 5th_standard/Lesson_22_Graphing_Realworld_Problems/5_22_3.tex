@@ -1,0 +1,76 @@
+%GRAPHING REAL-WORLD PROBLEMS - WORKSHEET 3
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc, shapes.geometric}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Graphing Real-World Problems}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{5.22.3}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Quiz: Real-World Graphs}}
+\end{tcolorbox}
+\begin{enumerate}[itemsep=3.5cm, leftmargin=0.6cm]
+\item A taxi service charges a flat fee of $\$3$ plus $\$2$ per mile. Graph the cost for 0, 1, 2, 3, 4 miles.
+\vspace{4cm}
+\item If a customer travels 5 miles, what is the cost according to your graph?
+\vspace{3cm}
+\item Find the coordinate $(x,y)$ where $y = 2x + 1$ intersects $y = 5$.
+\end{enumerate}
+
+\end{document}

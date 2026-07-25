@@ -1,0 +1,106 @@
+%MEASURING \& ADDING ANGLES - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc, shapes.geometric}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Measuring \& Adding Angles}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{4.23.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Measuring and Adding Angles}}
+\end{tcolorbox}
+
+\vspace{3mm}
+\noindent
+\begin{itemize}
+    \item An angle is measured in **degrees ($^\circ$)** using a **protractor**.
+    \item A straight angle is $180^\circ$. A right angle is $90^\circ$.
+    \item Angles can be added together to find a larger angle.
+\end{itemize}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+\draw[thick, ->] (0,0) -- (3,0) node[right] {A};
+\draw[thick, ->] (0,0) -- (2.12, 2.12) node[above right] {B};
+\draw[thick, ->] (0,0) -- (0, 2.5) node[above] {C};
+\draw[domain=0:45, ->, red] plot ({0.6*cos(\x)}, {0.6*sin(\x)});
+\draw[domain=45:90, ->, blue] plot ({0.8*cos(\x)}, {0.8*sin(\x)});
+\node[red] at (0.8, 0.3) {$45^\circ$};
+\node[blue] at (0.5, 1.0) {$45^\circ$};
+\end{tikzpicture}
+\end{center}
+Here, $\angle AOC = \angle AOB + \angle BOC = 45^\circ + 45^\circ = 90^\circ$.
+
+\newpage
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Guided Practice}}
+\end{tcolorbox}
+
+\vspace{5mm}
+\begin{enumerate}[itemsep=3cm, leftmargin=0.6cm]
+\item Angle $X$ is $35^\circ$ and Angle $Y$ is $60^\circ$. They are joined together without overlapping. What is their combined measurement?
+\\
+Equation: \blank $+$ \blank $=$ \blank $^\circ$
+
+\item A straight angle ($180^\circ$) is split into two angles. One of the angles is $110^\circ$. What is the measurement of the other angle?
+\\
+Equation: $180^\circ - 110^\circ =$ \blank $^\circ$
+\end{enumerate}
+
+\end{document}

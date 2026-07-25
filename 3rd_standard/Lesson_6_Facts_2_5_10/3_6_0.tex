@@ -1,0 +1,100 @@
+%FACTS FOR 2S, 5S, AND 10S - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc, shapes.geometric}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Facts for 2s, 5s, and 10s}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{3.6.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Multiplication and Division Facts: 2s, 5s, and 10s}}
+\end{tcolorbox}
+
+\vspace{3mm}
+\noindent
+Learning your facts helps you solve harder math problems much faster!
+We can skip count to find answers:
+\begin{itemize}
+  \item For 2s: 2, 4, 6, 8, 10, 12...
+  \item For 5s: 5, 10, 15, 20, 25, 30...
+  \item For 10s: 10, 20, 30, 40, 50, 60...
+\end{itemize}
+
+\newpage
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Guided Practice}}
+\end{tcolorbox}
+
+\vspace{5mm}
+\noindent
+Fill in the skip counting sequences:
+
+\vspace{5mm}
+\begin{enumerate}[itemsep=2cm, leftmargin=0.6cm]
+\item Count by 3s: 3, 6, 9, \blank, 15, \blank, 21, \blank
+\item Count by 4s: 4, 8, 12, \blank, 20, \blank, 28, \blank
+\item Solve these division facts using what you know about multiplication:
+\begin{itemize}[itemsep=0.8cm]
+  \item $20 \div 5 =$ \blank \quad (Hint: $5 \times \textsf{?} = 20$)
+  \item $32 \div 4 =$ \blank \quad (Hint: $4 \times \textsf{?} = 32$)
+  \item $42 \div 6 =$ \blank \quad (Hint: $6 \times \textsf{?} = 42$)
+\end{itemize}
+\end{enumerate}
+
+\end{document}

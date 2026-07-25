@@ -1,0 +1,95 @@
+%FACTS FOR 2S, 5S, AND 10S - WORKSHEET 2
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc, shapes.geometric}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Facts for 2s, 5s, and 10s}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{3.6.2}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Practice 2: Fluency for 2s, 5s, and 10s}}
+\end{tcolorbox}
+
+\vspace{5mm}
+\noindent
+\textbf{Solve as quickly as you can!}
+
+\vspace{5mm}
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=1.2cm]
+\item $3 \times 5 =$ \blank
+\item $4 \times 6 =$ \blank
+\item $2 \times 9 =$ \blank
+\item $10 \times 7 =$ \blank
+\item $15 \div 5 =$ \blank
+\item $24 \div 4 =$ \blank
+\item $18 \div 2 =$ \blank
+\item $70 \div 10 =$ \blank
+\end{enumerate}
+\end{multicols}
+
+\vspace{1.5cm}
+\noindent
+\textbf{Word Problem:}
+\\
+\noindent
+There are 8 boxes of cupcakes. Each box has 5 cupcakes inside. How many cupcakes are there in total? Show your calculation below.
+\vspace{3cm}
+
+\end{document}

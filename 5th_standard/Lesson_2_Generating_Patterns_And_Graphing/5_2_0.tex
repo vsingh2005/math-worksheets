@@ -1,0 +1,90 @@
+%GENERATING PATTERNS \& GRAPHING - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc, shapes.geometric}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Generating Patterns \& Graphing}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{5.2.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Generating & Graphing Number Patterns}}
+\end{tcolorbox}
+\vspace{3mm}
+Given rules:
+\begin{itemize}
+    \item Rule X: Start at 0, add 2.
+    \item Rule Y: Start at 0, add 3.
+\end{itemize}
+Ordered pairs: $(0,0), \quad (2,3), \quad (4,6), \quad (6,9) \dots$
+\newpage
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Guided Examples}}
+\end{tcolorbox}
+\begin{enumerate}[itemsep=3.5cm, leftmargin=0.6cm]
+\item Fill in the table:
+\\
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{X} & 0 & 2 & 4 & 6 \\ \hline
+\textbf{Y} & 0 & 3 & \blank & \blank \\ \hline
+\end{tabular}
+\item Graph the ordered pairs on the coordinate plane.
+\end{enumerate}
+
+\end{document}

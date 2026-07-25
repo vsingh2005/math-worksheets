@@ -1,0 +1,114 @@
+%WRITING \& EVALUATING EXPRESSIONS - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc, shapes.geometric}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Writing \& Evaluating Expressions}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{5.1.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Writing & Evaluating Numerical Expressions}}
+\end{tcolorbox}
+
+\vspace{3mm}
+\noindent
+To evaluate expressions with parentheses, follow the **Order of Operations** (PEMDAS):
+\begin{enumerate}
+    \item **P**arentheses first: $()$, $[]$, $\{\}$
+    \item **E**xponents
+    \item **M**ultiplication and **D**ivision (left to right)
+    \item **A**ddition and **S**ubtraction (left to right)
+\end{enumerate}
+
+\vspace{3mm}
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm]
+\textbf{Example:}
+\[
+3 \times (4 + 6) - 5
+\]
+First, parentheses: $4 + 6 = 10$.
+\[
+3 \times 10 - 5
+\]
+Next, multiply: $3 \times 10 = 30$.
+\[
+30 - 5 = 25
+\]
+\end{tcolorbox}
+
+\newpage
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Guided Practice}}
+\end{tcolorbox}
+
+\vspace{5mm}
+\begin{enumerate}[itemsep=2.5cm, leftmargin=0.6cm]
+\item Evaluate:
+  \begin{itemize}[itemsep=0.8cm]
+    \item $12 \div (3 + 1) =$ \blank
+    \item $(8 - 2) \times 4 =$ \blank
+    \item $20 - (3 \times 5) =$ \blank
+  \end{itemize}
+
+\item Write a numerical expression for the phrase: "Multiply 4 by the sum of 5 and 3."
+\\
+Expression: \blanklong
+\end{enumerate}
+
+\end{document}

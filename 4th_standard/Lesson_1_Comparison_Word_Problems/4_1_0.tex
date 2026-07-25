@@ -1,0 +1,109 @@
+%COMPARISON WORD PROBLEMS - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc, shapes.geometric}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Comparison Word Problems}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{4.1.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Introduction: Multiplicative Comparisons}}
+\end{tcolorbox}
+
+\vspace{3mm}
+\noindent
+A **multiplicative comparison** compares two quantities by showing that one quantity is a certain number of times larger than the other.
+\begin{itemize}
+    \item **Addition comparison:** "Sara has 5 apples and John has 3 more than Sara." ($5 + 3 = 8$)
+    \item **Multiplicative comparison:** "Sara has 5 apples and John has 3 times as many as Sara." ($5 \times 3 = 15$)
+\end{itemize}
+
+\vspace{3mm}
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm]
+\textbf{Tape Diagram Representation:}
+\\
+Sara's apples: \tikz[baseline=-0.5ex]{\draw[thick, fill=blue!20] (0,0) rectangle (1,0.4); \node at (0.5,0.2) {5};}
+\\
+John's apples: \tikz[baseline=-0.5ex]{
+  \draw[thick, fill=blue!20] (0,0) rectangle (1,0.4); \node at (0.5,0.2) {5};
+  \draw[thick, fill=blue!20] (1,0) rectangle (2,0.4); \node at (1.5,0.2) {5};
+  \draw[thick, fill=blue!20] (2,0) rectangle (3,0.4); \node at (2.5,0.2) {5};
+}
+\\ \\
+Equation: $3 \times 5 = 15$. John has 15 apples.
+\end{tcolorbox}
+
+\newpage
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Guided Practice}}
+\end{tcolorbox}
+
+\vspace{5mm}
+\begin{enumerate}[itemsep=3cm, leftmargin=0.6cm]
+\item A red ribbon is 6 inches long. A blue ribbon is 4 times as long as the red ribbon. How long is the blue ribbon? Draw a tape diagram and write the equation.
+\vspace{3cm}
+
+\item Translate the comparison sentence into an equation:
+  \begin{itemize}[itemsep=0.8cm]
+    \item "24 is 6 times as many as 4" $\rightarrow$ \blanklong
+    \item "35 is 5 times as many as 7" $\rightarrow$ \blanklong
+  \end{itemize}
+\end{enumerate}
+
+\end{document}

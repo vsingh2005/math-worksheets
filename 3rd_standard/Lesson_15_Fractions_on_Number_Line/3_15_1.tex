@@ -1,0 +1,93 @@
+%FRACTIONS ON A NUMBER LINE - WORKSHEET 1
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc, shapes.geometric}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Fractions on a Number Line}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{3.15.1}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Practice 1: Fractions on a Number Line}}
+\end{tcolorbox}
+
+\vspace{5mm}
+\begin{enumerate}[itemsep=3.5cm, leftmargin=0.6cm]
+\item Plot the fraction $\dfrac{2}{3}$ on the number line below. 
+\\
+\begin{tikzpicture}[scale=1.2]
+\draw[latex-latex, thick] (-0.5,0) -- (3.5,0);
+\draw[thick] (0,0.15) -- (0,-0.15) node[below] {0};
+\draw[thick] (1.0,0.1) -- (1.0,-0.1);
+\draw[thick] (2.0,0.1) -- (2.0,-0.1);
+\draw[thick] (3,0.15) -- (3,-0.15) node[below] {1};
+\end{tikzpicture}
+
+\item Plot the fraction $\dfrac{5}{6}$ on the number line below.
+\\
+\begin{tikzpicture}[scale=1.2]
+\draw[latex-latex, thick] (-0.5,0) -- (6.5,0);
+\draw[thick] (0,0.15) -- (0,-0.15) node[below] {0};
+\draw[thick] (6,0.15) -- (6,-0.15) node[below] {1};
+\foreach \x in {1,2,3,4,5} {
+  \draw[thick] (\x, 0.1) -- (\x, -0.1);
+}
+\end{tikzpicture}
+\end{enumerate}
+
+\end{document}

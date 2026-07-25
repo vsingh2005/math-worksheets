@@ -1,0 +1,129 @@
+%ADDITION \\& SUBTRACTION WITHIN 1000 - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc, shapes.geometric}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Addition \\& Subtraction within 1000}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{3.12.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Addition \& Subtraction within 1000}}
+\end{tcolorbox}
+
+\vspace{3mm}
+\noindent
+Be sure to line up your place values (ones, tens, hundreds) when adding or subtracting vertically.
+
+\begin{multicols}{2}
+\textbf{Addition Example (with regrouping):}
+\[
+\begin{array}{r@{\quad}c}
+1 & (\text{carry}) \\
+385 \\
++\;\; 249 \\
+\hline
+634
+\end{array}
+\]
+
+\columnbreak
+\textbf{Subtraction Example (with borrowing):}
+\[
+\begin{array}{r@{\quad}c}
+4\not{5}\,^1 2 \\
+-\;\; 137 \\
+\hline
+315
+\end{array}
+\]
+\end{multicols}
+
+\newpage
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Guided Practice}}
+\end{tcolorbox}
+
+\vspace{5mm}
+\noindent
+Solve the vertical problems. Show your regrouping.
+
+\vspace{8mm}
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=3.5cm, leftmargin=0.6cm]
+\item 
+\[
+\begin{array}{r}
+456 \\
++\;\; 289 \\
+\hline
+\end{array}
+\]
+
+\item 
+\[
+\begin{array}{r}
+712 \\
+-\;\; 345 \\
+\hline
+\end{array}
+\]
+\end{enumerate}
+\end{multicols}
+
+\end{document}

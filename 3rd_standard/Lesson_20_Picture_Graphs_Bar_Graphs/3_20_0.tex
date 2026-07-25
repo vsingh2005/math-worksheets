@@ -1,0 +1,107 @@
+%PICTURE GRAPHS \\& BAR GRAPHS - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc, shapes.geometric}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Picture Graphs \\& Bar Graphs}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{3.20.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Picture Graphs \& Bar Graphs}}
+\end{tcolorbox}
+
+\vspace{3mm}
+\noindent
+**Picture Graphs** use icons to represent data. The **Key** tells you what each icon is worth.
+**Bar Graphs** use rectangular bars to show data scales.
+
+\begin{tcolorbox}[colback=white, colframe=black!25, boxrule=0.6pt, arc=4mm]
+\textbf{Picture Graph Example:}
+\\
+Key: 1 smiley face = 2 students.
+\\
+\begin{tabular}{ll}
+Apple: & $\odot \quad \odot \quad \odot$ \\
+Banana: & $\odot \quad \odot$ \\
+\end{tabular}
+\\ \\
+* Apple has 3 faces $\rightarrow 3 \times 2 = 6$ students.
+* Banana has 2 faces $\rightarrow 2 \times 2 = 4$ students.
+\end{tcolorbox}
+
+\newpage
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Guided Practice}}
+\end{tcolorbox}
+
+\vspace{5mm}
+\noindent
+Use the graph information to answer:
+
+\vspace{8mm}
+\begin{enumerate}[itemsep=3cm, leftmargin=0.6cm]
+\item How many more students prefer Apples than Bananas?
+\\
+Calculation: \blank $-$ \blank $=$ \blank
+
+\item Draw a bar graph sketch showing the Apple (6) and Banana (4) data.
+\vspace{4cm}
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,119 @@
+%COORDINATE PLANE INTRO - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc, shapes.geometric}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Coordinate Plane Intro}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{5.21.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Introduction to the Coordinate Plane}}
+\end{tcolorbox}
+
+\vspace{3mm}
+\noindent
+A **coordinate plane** is formed by two intersecting lines:
+\begin{itemize}
+    \item The horizontal axis is the **x-axis**.
+    \item The vertical axis is the **y-axis**.
+    \item The intersection point $(0,0)$ is the **origin**.
+\end{itemize}
+Points are identified as **ordered pairs** $(x, y)$, where $x$ is the distance along the horizontal axis, and $y$ is the distance along the vertical axis.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\draw[step=1cm,gray,very thin] (0,0) grid (5,5);
+\draw[thick, ->] (0,0) -- (5.5,0) node[right] {x};
+\draw[thick, ->] (0,0) -- (0,5.5) node[above] {y};
+\foreach \x in {0,1,2,3,4,5} {
+  \draw (\x,0.1) -- (\x,-0.1) node[below] {\x};
+  \draw (0.1,\x) -- (-0.1,\x) node[left] {\x};
+}
+\filldraw[red] (3,2) circle(2pt) node[above right] {P (3,2)};
+\end{tikzpicture}
+\end{center}
+
+\newpage
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Guided Practice}}
+\end{tcolorbox}
+
+\vspace{5mm}
+\begin{enumerate}[itemsep=4.5cm, leftmargin=0.6cm]
+\item Find the ordered pairs for points plotted on the coordinate plane in class:
+  \begin{itemize}[itemsep=0.8cm]
+    \item Point A: ( \blank, \blank )
+    \item Point B: ( \blank, \blank )
+  \end{itemize}
+
+\item Plot the following points on the grid below: $X(1, 4)$ and $Y(4, 2)$.
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\draw[step=1cm,gray,very thin] (0,0) grid (5,5);
+\draw[thick, ->] (0,0) -- (5.5,0) node[right] {x};
+\draw[thick, ->] (0,0) -- (0,5.5) node[above] {y};
+\foreach \x in {0,1,2,3,4,5} {
+  \draw (\x,0.1) -- (\x,-0.1) node[below] {\x};
+  \draw (0.1,\x) -- (-0.1,\x) node[left] {\x};
+}
+\end{tikzpicture}
+\end{center}
+\end{enumerate}
+
+\end{document}

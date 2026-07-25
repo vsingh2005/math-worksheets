@@ -1,0 +1,102 @@
+%COMMUTATIVE \& ASSOCIATIVE PROPERTIES - WORKSHEET 0 (IN-CLASS INSTRUCTION)
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc, shapes.geometric}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Commutative \& Associative Properties}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{3.3.0}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Commutative & Associative Properties}}
+\end{tcolorbox}
+
+\vspace{3mm}
+\noindent
+\textbf{Commutative Property:} You can multiply numbers in any order, and the answer is the same!
+\[
+3 \times 4 = 12 \quad \text{and} \quad 4 \times 3 = 12
+\]
+
+\textbf{Associative Property:} You can group numbers in different ways to multiply them.
+\[
+(2 \times 3) \times 4 = 6 \times 4 = 24
+\]
+\[
+2 \times (3 \times 4) = 2 \times 12 = 24
+\]
+
+\newpage
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Guided Examples}}
+\end{tcolorbox}
+
+\vspace{5mm}
+\noindent
+Fill in the blanks using the properties of multiplication.
+
+\vspace{8mm}
+\begin{enumerate}[itemsep=2cm, leftmargin=0.6cm]
+\item $5 \times 6 = 6 \times$ \blank
+\item $9 \times 3 = $ \blank $\times 9$
+\item $(2 \times 2) \times 5 = 2 \times ($ \blank $\times 5)$
+\item Explain why an array of $2 \times 4$ blocks has the same area as $4 \times 2$ blocks.
+\vspace{2cm}
+\end{enumerate}
+
+\end{document}

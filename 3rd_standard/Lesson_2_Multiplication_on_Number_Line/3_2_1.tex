@@ -1,0 +1,94 @@
+%MULTIPLICATION ON A NUMBER LINE - WORKSHEET 1
+\documentclass[12pt, letterpaper, fleqn]{article}
+
+% ----------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\usetikzlibrary{arrows.meta, calc, shapes.geometric}
+
+% ----------------------------------------------------------
+% PAGE SETUP
+% ----------------------------------------------------------
+\usepackage{times}
+\geometry{letterpaper, top=1.25in, bottom=1.25in, marginpar=0.5in}
+
+% ----------------------------------------------------------
+% HEADER / FOOTER
+% ----------------------------------------------------------
+\newcommand{\logowidth}{3cm}
+\setlength{\headheight}{20pt}
+\setlength{\footskip}{40pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Multiplication on a Number Line}
+\fancyfoot[L]{\raisebox{2pt}{\includegraphics[width=\logowidth]{../kss.png}}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{3.2.1}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ----------------------------------------------------------
+% THEME COLOR
+% ----------------------------------------------------------
+\definecolor{customteal}{HTML}{2fbdb9}
+
+% ----------------------------------------------------------
+% HELPER MACROS
+% ----------------------------------------------------------
+\newcommand{\blank}{\underline{\hspace{2.2cm}}}
+\newcommand{\blanklong}{\underline{\hspace{6.5cm}}}
+\newcommand{\blankshorter}{\underline{\hspace{1.5cm}}}
+
+% ----------------------------------------------------------
+% DOCUMENT
+% ----------------------------------------------------------
+\begin{document}
+
+\textbf{Name:} \underline{\hspace{5cm}}
+\hfill
+\textbf{Date:} \underline{\hspace{3cm}}\\
+
+\begin{tcolorbox}[colback=customteal!20]
+    \large\textcolor{black}{\textbf{Practice 1: Multiplication Jumps}}
+\end{tcolorbox}
+
+\vspace{5mm}
+\noindent
+\textbf{Draw the jumps on each number line to solve the equation:}
+
+\vspace{8mm}
+\begin{enumerate}[itemsep=3cm, leftmargin=0.6cm]
+\item $3 \times 2 = \textsf{?}$
+\\
+\begin{tikzpicture}[scale=0.9]
+\draw[latex-latex, thick] (-0.5,0) -- (10.5,0);
+\foreach \x in {0,1,2,3,4,5,6,7,8,9,10} {
+  \draw[thick] (\x, 0.1) -- (\x, -0.1) node[below] {\x};
+}
+\end{tikzpicture}
+
+\item $2 \times 4 = \textsf{?}$
+\\
+\begin{tikzpicture}[scale=0.9]
+\draw[latex-latex, thick] (-0.5,0) -- (10.5,0);
+\foreach \x in {0,1,2,3,4,5,6,7,8,9,10} {
+  \draw[thick] (\x, 0.1) -- (\x, -0.1) node[below] {\x};
+}
+\end{tikzpicture}
+\end{enumerate}
+
+\end{document}
