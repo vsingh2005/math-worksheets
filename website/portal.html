@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1,user-scalable=no,width=device-width">
+  <title>Portal Dashboard &lsaquo; Kids STEM Studio Math Placement Assessment</title>
+
+  <meta name="dc.title" content="Kids STEM Studio Math Assessment Portal Dashboard">
+  <meta name="dc.description" content="Select your math placement track and manage assessment profile.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Dashicons CSS -->
+  <link rel="stylesheet" id="dashicons-css" href="https://learn.kidsstemstudio.com/wp-includes/css/dashicons.min.css?ver=7.0.2" media="all" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'sky-blue': '#4DA8FF',
+            'soft-green': '#5ECF7A',
+            'warm-yellow': '#FFD75E',
+            'coral-orange': '#FF8B6A',
+            'navy-dark': '#263238',
+            'kss-teal': '#2fbdb9',
+            'kss-teal-dark': '#048c8a'
+          }
+        }
+      }
+    }
+  </script>
+  <script src="auth.js"></script>
+</head>
+
+<body class="bg-slate-50 min-h-screen flex flex-col justify-between overflow-x-hidden relative">
+
+  <!-- HEADER -->
+  <header class="w-full bg-white border-b border-slate-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
+    <div class="flex items-center space-x-3 cursor-pointer" onclick="window.location.href='portal.html'">
+      <img src="https://kidsstemstudio.com/wp-content/uploads/2020/05/KSS_Logo.png" alt="Kids STEM Studio Logo"
+        class="h-10 w-auto kss-header-logo">
+      <span class="text-xl font-extrabold text-navy-dark tracking-tight">Math Placement Portal</span>
+    </div>
+
+    <nav class="hidden md:flex items-center space-x-8 text-slate-500 font-semibold">
+      <button onclick="openModal('faq-modal')" class="hover:!text-sky-blue hover:!bg-transparent hover:!shadow-none transition-colors">FAQ</button>
+      <button onclick="openModal('contact-modal')" class="hover:!text-sky-blue hover:!bg-transparent hover:!shadow-none transition-colors">Contact</button>
+    </nav>
+
+    <div id="user-header-widget" class="flex items-center space-x-4">
+      <!-- Rendered by AuthManager.updateHeaderUI() -->
+    </div>
+  </header>
+
+  <!-- PROGRESS TIMELINE BAR -->
+  <section class="max-w-4xl w-full mx-auto px-6 mt-8">
+    <div class="bg-white rounded-2xl p-4 flex items-center justify-between shadow-sm border border-slate-100">
+      <div class="flex items-center space-x-3">
+        <div id="timeline-step-1" class="timeline-step bg-sky-500 text-white ring-4 ring-sky-500/20">1</div>
+        <span class="text-xs md:text-sm font-bold text-slate-700">Student Info</span>
+      </div>
+      <div class="h-[2px] flex-1 bg-slate-200 mx-4"></div>
+      <div class="flex items-center space-x-3">
+        <div id="timeline-step-2" class="timeline-step bg-slate-200 text-slate-400">2</div>
+        <span class="text-xs md:text-sm font-bold text-slate-700">Instructions</span>
+      </div>
+      <div class="h-[2px] flex-1 bg-slate-200 mx-4"></div>
+      <div class="flex items-center space-x-3">
+        <div id="timeline-step-3" class="timeline-step bg-slate-200 text-slate-400">3</div>
+        <span class="text-xs md:text-sm font-bold text-slate-700">Placement Test</span>
+      </div>
+      <div class="h-[2px] flex-1 bg-slate-200 mx-4"></div>
+      <div class="flex items-center space-x-3">
+        <div id="timeline-step-4" class="timeline-step bg-slate-200 text-slate-400">4</div>
+        <span class="text-xs md:text-sm font-bold text-slate-700">Results</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN BODY CONTAINER -->
+  <main class="flex-1 max-w-6xl w-full mx-auto px-6 py-12 flex flex-col justify-center">
+
+    <!-- LANDING & HERO SECTION -->
+    <div id="landing-screen" class="space-y-16">
+      <div id="landing-main-content" class="space-y-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 space-y-6">
+            <div class="flex items-center space-x-3">
+              <img src="https://kidsstemstudio.com/wp-content/uploads/2020/05/KSS_Logo.png" alt="KSS Mini Logo" class="h-6 w-auto">
+              <span class="px-4 py-1.5 bg-amber-50 text-amber-600 rounded-full font-bold text-xs uppercase tracking-wider">
+                Kids STEM Studio Math Assessment Center
+              </span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-navy-dark leading-tight">
+              Discover Your <span class="text-sky-blue">Math Level</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-500 font-medium max-w-xl leading-relaxed">
+              Complete a short 45–60 minute adaptive math placement assessment developed by Kids STEM Studio to evaluate baseline skills across Grade 3–8 math standards. <strong>Before starting, please make sure you have scratch paper and a pencil ready!</strong>
+            </p>
+            <div class="pt-4 flex items-center space-x-4">
+              <button onclick="showTrackSelection()" class="px-8 py-4 rounded-2xl btn-blue-gradient text-lg">
+                Begin Math Assessment
+              </button>
+              <button onclick="AuthManager.renderHistoryModal()" class="px-6 py-4 rounded-2xl border-2 border-slate-200 text-slate-700 font-extrabold hover:bg-slate-100 transition-colors text-base">
+                📜 View Past Results
+              </button>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex justify-center">
+            <img src="https://math.kidsstemstudio.com/wp-content/uploads/2026/07/hero_kids_math_classroom_1783004330739.png"
+              alt="Math Placement Portal Illustration" class="max-w-full h-auto rounded-3xl card-shadow">
+          </div>
+        </div>
+
+        <!-- INFORMATION CARDS -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4">
+            <div class="w-16 h-16 rounded-2xl bg-sky-100 flex items-center justify-center text-3xl">📐</div>
+            <h3 class="text-xl font-bold text-navy-dark">Adaptive Math Levels</h3>
+            <p class="text-slate-500 leading-relaxed">Questions automatically adapt between Grade 3 and 8 difficulty to locate exact competency.</p>
+          </div>
+          <div class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4">
+            <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl">⏱</div>
+            <h3 class="text-xl font-bold text-navy-dark">45–60 Minutes</h3>
+            <p class="text-slate-500 leading-relaxed">Self-paced assessment so students can solve mathematical problems without stress.</p>
+          </div>
+          <div class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4">
+            <div class="w-16 h-16 rounded-2xl bg-amber-100 flex items-center justify-center text-3xl">🏆</div>
+            <h3 class="text-xl font-bold text-navy-dark">Personalized Placement</h3>
+            <p class="text-slate-500 leading-relaxed">Receive a customized starting level recommended by experienced STEM & math educators.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRACK SELECTION PANEL -->
+      <div id="track-selection-panel" class="hidden space-y-8">
+        <div class="text-center space-y-3">
+          <h2 class="text-3xl font-extrabold text-navy-dark">Select Your Placement Test</h2>
+          <p class="text-slate-500 font-semibold max-w-lg mx-auto">Choose the grade level track that matches the student's upcoming or current school grade. The test will dynamically adapt within these grade levels.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Track 1: Grades 3-4 -->
+          <button onclick="selectTrack('3-4')" class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4 cursor-pointer focus:outline-none hover:bg-slate-50">
+            <div class="w-16 h-16 rounded-2xl bg-sky-100 flex items-center justify-center text-3xl">🎒</div>
+            <h3 class="text-xl font-bold text-navy-dark">Grades 3–4 Test</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">Elementary Track. Covers multiplication, division, fractions, rounding, and geometry basics.</p>
+            <span class="text-sky-600 font-bold text-xs uppercase tracking-wider">Start Track &rarr;</span>
+          </button>
+
+          <!-- Track 2: Grades 5-6 -->
+          <button onclick="selectTrack('5-6')" class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4 cursor-pointer focus:outline-none hover:bg-slate-50">
+            <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl">📐</div>
+            <h3 class="text-xl font-bold text-navy-dark">Grades 5–6 Test</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">Intermediate Track. Covers decimals, fraction math, volume, measurements, and line plots.</p>
+            <span class="text-emerald-600 font-bold text-xs uppercase tracking-wider">Start Track &rarr;</span>
+          </button>
+
+          <!-- Track 3: Grades 7-8 -->
+          <button onclick="selectTrack('7-8')" class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4 cursor-pointer focus:outline-none hover:bg-slate-50">
+            <div class="w-16 h-16 rounded-2xl bg-amber-100 flex items-center justify-center text-3xl">🎓</div>
+            <h3 class="text-xl font-bold text-navy-dark">Grades 7–8 Test</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">Middle School Track. Covers ratios, linear equations, functions, Pythagorean theorem, and spheres/cones.</p>
+            <span class="text-amber-600 font-bold text-xs uppercase tracking-wider">Start Track &rarr;</span>
+          </button>
+        </div>
+
+        <div class="text-center pt-4">
+          <button onclick="showLandingMain()" class="text-slate-500 hover:text-navy-dark font-extrabold text-sm flex items-center justify-center gap-1 mx-auto hover:underline">
+            &larr; Back to Portal Home
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- PARENT CONFIDENCE SECTION -->
+  <section class="bg-white border-t border-slate-100 py-12 px-6">
+    <div class="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+      <div class="space-y-3 flex flex-col items-center">
+        <span class="text-4xl">🎓</span>
+        <h4 class="font-bold text-navy-dark">Standards-Aligned Math</h4>
+        <p class="text-sm text-slate-500 leading-relaxed">Covers fundamental core math domains from standard curricula.</p>
+      </div>
+      <div class="space-y-3 flex flex-col items-center">
+        <span class="text-4xl">🔒</span>
+        <h4 class="font-bold text-navy-dark">Secure Assessment</h4>
+        <p class="text-sm text-slate-500 leading-relaxed">Encrypted student sessions, private math assessment, safe learning environment.</p>
+      </div>
+      <div class="space-y-3 flex flex-col items-center">
+        <span class="text-4xl">💡</span>
+        <h4 class="font-bold text-navy-dark">Personalized Results</h4>
+        <p class="text-sm text-slate-500 leading-relaxed">Instant level mapping with clear mathematical feedback for parents.</p>
+      </div>
+      <div class="space-y-3 flex flex-col items-center">
+        <span class="text-4xl">🏫</span>
+        <h4 class="font-bold text-navy-dark">Educator Developed</h4>
+        <p class="text-sm text-slate-500 leading-relaxed">Formulated by math teachers to yield accurate grade benchmarks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-[#1e272e] text-white border-t border-slate-800 py-12 px-6 md:px-12">
+    <div class="max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="space-y-4">
+        <h4 class="text-lg font-black text-sky-blue">Curriculum</h4>
+        <ul class="space-y-2 text-slate-300 font-semibold text-sm">
+          <li><a href="https://kidsstemstudio.com/our-approach" target="_blank" class="hover:text-sky-blue transition-colors">Our Approach</a></li>
+          <li><a href="https://kidsstemstudio.com/robotics" target="_blank" class="hover:text-sky-blue transition-colors">Robotics</a></li>
+          <li><a href="https://kidsstemstudio.com/coding-and-game-design" target="_blank" class="hover:text-sky-blue transition-colors">Coding & Game Design</a></li>
+          <li><a href="https://kidsstemstudio.com/minecraft" target="_blank" class="hover:text-sky-blue transition-colors">Minecraft</a></li>
+          <li><a href="https://kidsstemstudio.com/engineering" target="_blank" class="hover:text-sky-blue transition-colors">Engineering</a></li>
+        </ul>
+      </div>
+      <div class="space-y-4">
+        <h4 class="text-lg font-black text-sky-blue">Programs</h4>
+        <ul class="space-y-2 text-slate-300 font-semibold text-sm">
+          <li><a href="https://kidsstemstudio.com/learningpods" target="_blank" class="hover:text-sky-blue transition-colors">Learning Pods</a></li>
+          <li><a href="https://kidsstemstudio.com/weekly-classes/" target="_blank" class="hover:text-sky-blue transition-colors">Weekly Classes</a></li>
+          <li><a href="https://kidsstemstudio.com/field-trips" target="_blank" class="hover:text-sky-blue transition-colors">Field Trips</a></li>
+          <li><a href="https://kidsstemstudio.com/birthday-parties" target="_blank" class="hover:text-sky-blue transition-colors">Parties</a></li>
+          <li><a href="https://kidsstemstudio.com/camps/" target="_blank" class="hover:text-sky-blue transition-colors">Camps</a></li>
+          <li><a href="https://kidsstemstudio.com/afterschool-enrichment/" target="_blank" class="hover:text-sky-blue transition-colors">Afterschool Enrichment</a></li>
+        </ul>
+      </div>
+      <div class="space-y-4">
+        <h4 class="text-lg font-black text-sky-blue">Locations</h4>
+        <ul class="space-y-2 text-slate-300 font-semibold text-sm">
+          <li><a href="https://kidsstemstudio.com/chicago/" target="_blank" class="hover:text-sky-blue transition-colors">Chicago</a></li>
+          <li><a href="https://kidsstemstudio.com/evanston" target="_blank" class="hover:text-sky-blue transition-colors">Evanston / Skokie</a></li>
+          <li><a href="https://kidsstemstudio.com/" target="_blank" class="hover:text-sky-blue transition-colors">Naperville</a></li>
+        </ul>
+      </div>
+      <div class="space-y-4 flex flex-col items-start">
+        <a href="https://kidsstemstudio.com/" target="_blank">
+          <img src="https://kidsstemstudio.com/wp-content/uploads/2020/05/KSS_Logo.png" alt="Kids STEM Studio Logo" class="h-20 w-auto bg-white p-3 rounded-[20px]">
+        </a>
+        <p class="text-slate-400 text-xs font-semibold pt-2">© 2026 Kids STEM Studio. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALS -->
+  <div id="faq-modal" class="fixed inset-0 bg-navy-dark/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white max-w-2xl w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl relative">
+      <button onclick="closeModal('faq-modal')" class="absolute top-4 right-4 text-slate-400 hover:!text-slate-600 text-2xl font-bold">×</button>
+      <h3 class="text-2xl font-extrabold text-navy-dark border-b pb-3">Frequently Asked Questions</h3>
+      <div class="space-y-6 max-h-[450px] overflow-y-auto pr-2 text-slate-600 font-medium">
+        <div>
+          <h5 class="font-bold text-navy-dark text-base">What is Kids STEM Studio?</h5>
+          <p class="text-sm mt-1 leading-relaxed">Kids STEM Studio (KSS) provides hands-on, interactive programs in coding, game design, robotics, engineering, and math.</p>
+        </div>
+        <div>
+          <h5 class="font-bold text-navy-dark text-base">How does the math placement test help my child?</h5>
+          <p class="text-sm mt-1 leading-relaxed">This math placement portal assesses your child's math capabilities across grades 3 to 8 to identify their strengths and recommend the perfect math level matching their skill profile.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact-modal" class="fixed inset-0 bg-navy-dark/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white max-w-lg w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl relative">
+      <button onclick="closeModal('contact-modal')" class="absolute top-4 right-4 text-slate-400 hover:!text-slate-600 text-2xl font-bold">×</button>
+      <h3 class="text-2xl font-extrabold text-navy-dark">Contact Kids STEM Studio</h3>
+      <div class="space-y-4 text-slate-600 font-medium">
+        <p>If you have any questions or would like to learn more about our math, coding, and science enrichment classes, please reach out to us:</p>
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 space-y-2">
+          <p class="text-sm">📧 Email: info@kidsstemstudio.com</p>
+          <p class="text-sm">🌐 Website: <a href="https://kidsstemstudio.com/" target="_blank" class="text-sky-blue underline font-bold">kidsstemstudio.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="history-modal" class="fixed inset-0 bg-navy-dark/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white max-w-2xl w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl relative">
+      <button onclick="closeModal('history-modal')" class="absolute top-4 right-4 text-slate-400 hover:!text-slate-600 text-2xl font-bold">×</button>
+      <h3 class="text-2xl font-extrabold text-navy-dark border-b pb-3 flex items-center gap-2">
+        <span>📜</span> Math Placement History
+      </h3>
+      <div id="user-history-content" class="space-y-4 max-h-[420px] overflow-y-auto pr-2">
+        <!-- Rendered by AuthManager.renderHistoryModal() -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      AuthManager.requireAuth();
+      AuthManager.updateHeaderUI();
+    });
+
+    function showTrackSelection() {
+      const main = document.getElementById('landing-main-content');
+      const panel = document.getElementById('track-selection-panel');
+      if (main) main.classList.add('hidden');
+      if (panel) panel.classList.remove('hidden');
+    }
+
+    function showLandingMain() {
+      const main = document.getElementById('landing-main-content');
+      const panel = document.getElementById('track-selection-panel');
+      if (main) main.classList.remove('hidden');
+      if (panel) panel.classList.add('hidden');
+    }
+
+    function selectTrack(track) {
+      sessionStorage.setItem('selectedTrack', track);
+      window.location.href = 'instructions.html';
+    }
+
+    function openModal(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.remove('hidden');
+        el.classList.add('flex');
+      }
+    }
+
+    function closeModal(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.add('hidden');
+        el.classList.remove('flex');
+      }
+    }
+  </script>
+
+</body>
+</html>

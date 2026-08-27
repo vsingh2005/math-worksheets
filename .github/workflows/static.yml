@@ -30,6 +30,12 @@ jobs:
         run: |
           mkdir dist
           cp website/index.html dist/
+          cp website/login.html dist/
+          cp website/portal.html dist/
+          cp website/instructions.html dist/
+          cp website/exam.html dist/
+          cp website/results.html dist/
+          cp website/auth.js dist/
           cp website/app.js dist/
           cp website/index.css dist/
           cp website/hero_kids_math_classroom_1783004330739.png dist/

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1,user-scalable=no,width=device-width">
+  <title>Log In &lsaquo; Kids STEM Studio Math Placement Assessment — WordPress</title>
+
+  <meta name="dc.title" content="Kids STEM Studio Math Assessment Portal Login">
+  <meta name="dc.description" content="Log in to Kids STEM Studio Math Placement Portal to access adaptive Grade 3–8 math placement exams.">
+  <meta name="dc.relation" content="https://kidsstemstudio.com/">
+  <meta name="dc.source" content="https://kidsstemstudio.com/">
+  <meta name="dc.language" content="en_US">
+  <meta name="description" content="Log in to Kids STEM Studio Math Placement Portal to access adaptive Grade 3–8 math placement exams.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kidsstemstudio.com/">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Dashicons CSS for WordPress fidelity -->
+  <link rel="stylesheet" id="dashicons-css" href="https://learn.kidsstemstudio.com/wp-includes/css/dashicons.min.css?ver=7.0.2" media="all" />
+  <!-- Custom CSS for font design systems and WP Login scheme -->
+  <link rel="stylesheet" href="index.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'sky-blue': '#4DA8FF',
+            'soft-green': '#5ECF7A',
+            'warm-yellow': '#FFD75E',
+            'coral-orange': '#FF8B6A',
+            'navy-dark': '#263238',
+            'kss-teal': '#2fbdb9',
+            'kss-teal-dark': '#048c8a'
+          }
+        }
+      }
+    }
+  </script>
+  <script src="auth.js"></script>
+</head>
+
+<body class="bg-slate-50 min-h-screen flex flex-col justify-between overflow-x-hidden relative">
+
+  <!-- =========================================================
+       SECTION 1: MANDATORY FULL-PAGE MATH LOGIN GATE SCREEN
+       ========================================================= -->
+  <div id="mandatory-login-screen" class="min-h-screen w-full flex items-center justify-center p-4 bg-[#0f172a]">
+    <div class="max-w-4xl w-full bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200 my-8">
+
+      <!-- WP Login Container Structure matching provided source HTML -->
+      <div class="ml-container login wp-core-ui">
+        <!-- Left Side Cover / Math Info Section -->
+        <div class="ml-extra-div relative p-8 flex flex-col justify-between text-white">
+          <div class="space-y-4 relative z-10">
+            <span class="px-3.5 py-1.5 bg-amber-400 text-slate-900 font-extrabold text-xs uppercase tracking-wider rounded-full inline-block">
+              📐 Kids STEM Studio Math Center
+            </span>
+            <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">
+              Math Placement <br>Assessment Portal
+            </h2>
+            <p class="text-slate-200 text-sm font-medium leading-relaxed max-w-sm">
+              Log in to access your adaptive Grade 3–8 Math Assessments, track completed placement tests, and receive detailed step-by-step solution breakdowns.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Side Form Container -->
+        <div class="ml-form-container">
+          <div id="login">
+            <h1 role="presentation" class="wp-login-logo">
+              <a href="https://learn.kidsstemstudio.com"></a>
+            </h1>
+
+            <div class="text-center mb-4">
+              <h3 class="text-lg font-extrabold text-navy-dark">Sign In to Math Portal</h3>
+              <p class="text-xs text-slate-500 font-semibold">Enter your Kids STEM Studio credentials to begin</p>
+            </div>
+
+            <!-- Form Error / Success Alert -->
+            <div id="auth-alert" class="hidden mb-4 p-3 rounded-lg text-xs font-bold text-center"></div>
+
+            <!-- LOGIN FORM -->
+            <form name="loginform" id="loginform" onsubmit="handleLoginFormSubmit(event)" method="post">
+              <p>
+                <label for="user_login">Username or Email Address</label>
+                <input type="text" name="log" id="user_login" class="input ltr" value="" size="20" autocapitalize="off"
+                  autocomplete="username" required="required" placeholder="e.g. student1" />
+              </p>
+
+              <div class="user-pass-wrap">
+                <label for="user_pass">Password</label>
+                <div class="wp-pwd">
+                  <input type="password" name="pwd" id="user_pass" class="input password-input ltr" value="" size="20"
+                    autocomplete="current-password" spellcheck="false" required="required" placeholder="••••••••" />
+                  <button type="button" class="wp-hide-pw" onclick="togglePasswordVisibility('user_pass', this)"
+                    aria-label="Show password">
+                    <span class="dashicons dashicons-visibility" aria-hidden="true"></span>
+                  </button>
+                </div>
+              </div>
+
+              <p class="forgetmenot mt-3">
+                <input name="rememberme" type="checkbox" id="rememberme" value="forever" checked />
+                <label for="rememberme" class="inline cursor-pointer">Remember Me</label>
+              </p>
+
+              <p class="submit mt-4">
+                <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large"
+                  value="Log In to Math Portal" />
+              </p>
+            </form>
+
+            <!-- LOST PASSWORD FORM (HIDDEN BY DEFAULT) -->
+            <form name="lostpasswordform" id="lostpasswordform" class="hidden"
+              onsubmit="handleLostPasswordSubmit(event)" method="post">
+              <p class="text-xs text-slate-600 mb-3">Please enter your username or email address. You will receive an instant code to reset your Math Portal password.</p>
+              <p>
+                <label for="user_reset">Username or Email</label>
+                <input type="text" name="user_reset" id="user_reset" class="input ltr" required
+                  placeholder="Enter username or email" />
+              </p>
+              <p class="submit mt-4">
+                <input type="submit" id="wp-submit-reset" class="button button-primary button-large"
+                  value="Get New Password" />
+              </p>
+            </form>
+
+            <!-- AUTH NAVIGATION LINKS -->
+            <p id="nav">
+              <span id="nav-login-links">
+                <a class="wp-login-lost-password" href="javascript:void(0)" onclick="switchAuthTab('lostpassword')">Lost your password?</a>
+              </span>
+              <span id="nav-back-to-login" class="hidden">
+                <a href="javascript:void(0)" onclick="switchAuthTab('login')">← Back to Log In</a>
+              </span>
+            </p>
+
+            <p id="backtoblog">
+              <a href="https://kidsstemstudio.com/" target="_blank">&larr; Go to Kids STEM Studio Main Website</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Auto-redirect if already authenticated
+    window.addEventListener('DOMContentLoaded', () => {
+      const session = localStorage.getItem('kss_session') || sessionStorage.getItem('kss_session');
+      if (session) {
+        window.location.href = 'portal.html';
+      }
+    });
+
+    function togglePasswordVisibility(inputId, btnEl) {
+      const input = document.getElementById(inputId);
+      const icon = btnEl.querySelector('.dashicons');
+      if (input.type === 'password') {
+        input.type = 'text';
+        if (icon) {
+          icon.classList.remove('dashicons-visibility');
+          icon.classList.add('dashicons-hidden');
+        }
+      } else {
+        input.type = 'password';
+        if (icon) {
+          icon.classList.remove('dashicons-hidden');
+          icon.classList.add('dashicons-visibility');
+        }
+      }
+    }
+
+    function showAuthAlert(msg, type = 'error') {
+      const alert = document.getElementById('auth-alert');
+      if (!alert) return;
+      alert.innerText = msg;
+      alert.className = type === 'error'
+        ? 'mb-4 p-3 rounded-lg text-xs font-bold text-center bg-rose-100 text-rose-800 border border-rose-200'
+        : 'mb-4 p-3 rounded-lg text-xs font-bold text-center bg-emerald-100 text-emerald-800 border border-emerald-200';
+      alert.classList.remove('hidden');
+    }
+
+    function switchAuthTab(tab) {
+      const loginForm = document.getElementById('loginform');
+      const lostForm = document.getElementById('lostpasswordform');
+      const navLogin = document.getElementById('nav-login-links');
+      const navBack = document.getElementById('nav-back-to-login');
+      const alert = document.getElementById('auth-alert');
+
+      if (alert) alert.classList.add('hidden');
+
+      if (tab === 'lostpassword') {
+        if (loginForm) loginForm.classList.add('hidden');
+        if (lostForm) lostForm.classList.remove('hidden');
+        if (navLogin) navLogin.classList.add('hidden');
+        if (navBack) navBack.classList.remove('hidden');
+      } else {
+        if (loginForm) loginForm.classList.remove('hidden');
+        if (lostForm) lostForm.classList.add('hidden');
+        if (navLogin) navLogin.classList.remove('hidden');
+        if (navBack) navBack.classList.add('hidden');
+      }
+    }
+
+    async function handleLoginFormSubmit(e) {
+      e.preventDefault();
+      const loginInput = document.getElementById('user_login').value;
+      const passInput = document.getElementById('user_pass').value;
+      const rememberMe = document.getElementById('rememberme').checked;
+      const submitBtn = document.getElementById('wp-submit');
+
+      try {
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.value = 'Authenticating...';
+        }
+
+        await AuthManager.loginUser(loginInput, passInput, rememberMe);
+        showAuthAlert('Login successful! Redirecting to portal...', 'success');
+
+        setTimeout(() => {
+          window.location.href = 'portal.html';
+        }, 500);
+
+      } catch (err) {
+        showAuthAlert(err.message || 'Invalid credentials.', 'error');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.value = 'Log In to Math Portal';
+        }
+      }
+    }
+
+    function handleLostPasswordSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('user_reset').value.trim();
+      if (!input) return;
+      showAuthAlert('Password reset instructions sent to ' + input, 'success');
+      setTimeout(() => switchAuthTab('login'), 2500);
+    }
+  </script>
+
+</body>
+</html>

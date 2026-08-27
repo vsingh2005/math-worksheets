@@ -1975,8 +1975,14 @@ function finishExam() {
     answers: answerBreakdown
   });
 
-  updateStepView();
-  triggerConfetti();
+  sessionStorage.setItem('lastExamResult', JSON.stringify({
+    score: state.score,
+    timeElapsed: state.timeElapsed,
+    recommendedLevel: recommendedLevel,
+    answerBreakdown: answerBreakdown
+  }));
+
+  window.location.href = 'results.html';
 }
 
 function triggerConfetti() {
