@@ -1,4 +1,4 @@
-const questions = [
+let questions = [
   // --- GRADE 3 (ELEMENTARY EASY) ---
   {
     id: 101,
@@ -1632,7 +1632,23 @@ function selectTrack(track) {
   updateStepView();
 }
 
-function startExam() {
+async function loadQuestionBankFromWordPress() {
+  try {
+    const res = await fetch('/wp-json/kss-math/v1/questions');
+    if (res.ok) {
+      const data = await res.json();
+      if (Array.isArray(data) && data.length > 0) {
+        questions = data;
+        console.log('Successfully loaded custom question bank from WordPress admin panel:', questions.length);
+      }
+    }
+  } catch (e) {
+    console.log('Using default local question bank.');
+  }
+}
+
+async function startExam() {
+  await loadQuestionBankFromWordPress();
   state.currentStep = 3;
   state.currentQuestionIndex = 0;
   state.userAnswers = {};
