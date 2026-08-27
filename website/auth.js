@@ -9,6 +9,22 @@ class AuthenticationManager {
     this.currentUser = null;
     this.allAttempts = JSON.parse(localStorage.getItem('kss_attempts')) || [];
     this.initDemoUsers();
+    this.loadCustomSettings();
+  }
+
+  async loadCustomSettings() {
+    try {
+      const res = await fetch('/wp-json/kss-math/v1/settings');
+      if (res.ok) {
+        const s = await res.json();
+        if (s.primary_color) document.documentElement.style.setProperty('--color-primary', s.primary_color);
+        if (s.secondary_color) document.documentElement.style.setProperty('--color-secondary', s.secondary_color);
+        if (s.brand_teal_color) document.documentElement.style.setProperty('--color-brand', s.brand_teal_color);
+        if (s.navy_dark_color) document.documentElement.style.setProperty('--color-dark', s.navy_dark_color);
+      }
+    } catch (e) {
+      // Use standard default CSS variables
+    }
   }
 
   async hashPassword(password, salt) {

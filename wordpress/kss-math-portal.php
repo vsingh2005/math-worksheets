@@ -2,8 +2,8 @@
 /**
  * Plugin Name: KSS Math Portal & Question Bank Manager
  * Plugin URI: https://kidsstemstudio.com/
- * Description: Integrates the Kids STEM Studio Math Placement Assessment Portal into WordPress. Features an Admin Panel Question Bank Editor, Toggleable Settings, Elementor Shortcodes, and REST API endpoints.
- * Version: 2.1.0
+ * Description: Integrates the Kids STEM Studio Math Placement Assessment Portal into WordPress. Features an Admin Panel Question Bank Editor, Color Scheme Customizer, Elementor Shortcodes, and REST API endpoints.
+ * Version: 2.2.0
  * Author: Kids STEM Studio
  * Author URI: https://kidsstemstudio.com/
  * License: GPLv2 or later
@@ -16,13 +16,8 @@ if (!defined('ABSPATH')) {
 class KSS_Math_Portal_Plugin {
 
     public function __construct() {
-        // Activation hook to populate initial default questions and settings
         register_activation_hook(__FILE__, array($this, 'plugin_activate'));
-
-        // Admin menu
         add_action('admin_menu', array($this, 'register_admin_menu'));
-
-        // REST API routes
         add_action('rest_api_init', array($this, 'register_rest_routes'));
 
         // Elementor / Theme Shortcodes
@@ -32,7 +27,6 @@ class KSS_Math_Portal_Plugin {
         add_shortcode('kss_math_exam', array($this, 'render_exam_shortcode'));
         add_shortcode('kss_math_results', array($this, 'render_results_shortcode'));
 
-        // Enqueue Assets
         add_action('wp_enqueue_scripts', array($this, 'enqueue_frontend_assets'));
     }
 
@@ -85,7 +79,7 @@ class KSS_Math_Portal_Plugin {
         } elseif (isset($_POST['kss_save_settings'])) {
             check_admin_referer('kss_settings_action', 'kss_settings_nonce');
             $this->handle_save_settings($_POST);
-            $message = 'Portal settings and toggleable configurations updated successfully!';
+            $message = 'Portal color theme and settings updated successfully!';
         }
 
         $raw_questions = get_option('kss_math_question_bank', '[]');
@@ -110,7 +104,7 @@ class KSS_Math_Portal_Plugin {
                 <span class="dashicons dashicons-calculator" style="font-size:32px; width:32px; height:32px;"></span>
                 Kids STEM Studio Math Assessment — Admin Control Center
             </h1>
-            <p>Easily manage the Question Bank, toggle portal features, change test settings, and configure branding without editing code.</p>
+            <p>Manage the Question Bank, customize portal accent colors, and configure exam settings easily.</p>
 
             <?php if (!empty($message)): ?>
                 <div class="notice notice-success is-dismissible"><p><?php echo esc_html($message); ?></p></div>
@@ -122,7 +116,7 @@ class KSS_Math_Portal_Plugin {
                     <span class="dashicons dashicons-list-view" style="vertical-align:text-top; margin-right:4px;"></span> Question Bank Manager
                 </a>
                 <a href="?page=kss-math-portal&tab=settings" class="nav-tab <?php echo $active_tab === 'settings' ? 'nav-tab-active' : ''; ?>">
-                    <span class="dashicons dashicons-admin-settings" style="vertical-align:text-top; margin-right:4px;"></span> Portal Settings & Feature Toggles
+                    <span class="dashicons dashicons-color-picker" style="vertical-align:text-top; margin-right:4px;"></span> Color Customizer & Exam Settings
                 </a>
             </h2>
 
@@ -258,31 +252,78 @@ class KSS_Math_Portal_Plugin {
                 </div>
 
             <?php else: ?>
-                <!-- TAB 2: TOGGLEABLE PORTAL SETTINGS & CONFIGURATIONS -->
+                <!-- TAB 2: COLOR SCHEME CUSTOMIZER & EXAM SETTINGS -->
                 <div style="max-w: 900px; background: #fff; border: 1px solid #ccd0d4; padding: 25px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-top: 20px;">
                     <form method="post">
                         <?php wp_nonce_field('kss_settings_action', 'kss_settings_nonce'); ?>
                         <input type="hidden" name="kss_save_settings" value="1">
 
-                        <h2>⚙️ Assessment & Exam Rules Toggles</h2>
+                        <h2>🎨 Portal Color Scheme & Theme Customizer</h2>
+                        <p class="description">Easily customize the primary accent colors, buttons, and dark header themes of the portal.</p>
+
+                        <!-- COLOR PRESETS -->
+                        <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:15px; border-radius:8px; margin-bottom:20px;">
+                            <label><strong>Quick Color Presets:</strong></label><br>
+                            <select id="kss_color_preset" onchange="applyColorPreset()" style="width:100%; max-w:350px; margin-top:5px;">
+                                <option value="">-- Choose a Preset Theme --</option>
+                                <option value="kss_classic">Kids STEM Studio Classic (Sky Blue & Teal)</option>
+                                <option value="indigo_violet">Modern Indigo & Violet</option>
+                                <option value="emerald_mint">Emerald & Mint Energy</option>
+                                <option value="coral_sunset">Warm Sunset (Coral & Amber)</option>
+                                <option value="sleek_dark">Sleek Dark Mode Accent</option>
+                            </select>
+                        </div>
+
+                        <table class="form-table">
+                            <tr>
+                                <th scope="row"><label for="primary_color">Primary Accent Color:</label></th>
+                                <td>
+                                    <input type="color" name="primary_color" id="primary_color" value="<?php echo esc_attr($settings['primary_color']); ?>" style="width:50px; height:35px; vertical-align:middle; cursor:pointer;">
+                                    <input type="text" id="primary_color_hex" value="<?php echo esc_attr($settings['primary_color']); ?>" onchange="syncColorInput('primary_color', this.value)" class="regular-text" style="width:100px; font-weight:bold;">
+                                    <p class="description">Main highlight color used for active timeline steps, links, and headers (Default: #4DA8FF).</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="secondary_color">Secondary Accent Color:</label></th>
+                                <td>
+                                    <input type="color" name="secondary_color" id="secondary_color" value="<?php echo esc_attr($settings['secondary_color']); ?>" style="width:50px; height:35px; vertical-align:middle; cursor:pointer;">
+                                    <input type="text" id="secondary_color_hex" value="<?php echo esc_attr($settings['secondary_color']); ?>" onchange="syncColorInput('secondary_color', this.value)" class="regular-text" style="width:100px; font-weight:bold;">
+                                    <p class="description">Used for success metrics, recommendations, and badges (Default: #5ECF7A).</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="brand_teal_color">Brand Button Gradient Color:</label></th>
+                                <td>
+                                    <input type="color" name="brand_teal_color" id="brand_teal_color" value="<?php echo esc_attr($settings['brand_teal_color']); ?>" style="width:50px; height:35px; vertical-align:middle; cursor:pointer;">
+                                    <input type="text" id="brand_teal_color_hex" value="<?php echo esc_attr($settings['brand_teal_color']); ?>" onchange="syncColorInput('brand_teal_color', this.value)" class="regular-text" style="width:100px; font-weight:bold;">
+                                    <p class="description">Main action button color (Default: #2fbdb9).</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="navy_dark_color">Header & Dark Background Color:</label></th>
+                                <td>
+                                    <input type="color" name="navy_dark_color" id="navy_dark_color" value="<?php echo esc_attr($settings['navy_dark_color']); ?>" style="width:50px; height:35px; vertical-align:middle; cursor:pointer;">
+                                    <input type="text" id="navy_dark_color_hex" value="<?php echo esc_attr($settings['navy_dark_color']); ?>" onchange="syncColorInput('navy_dark_color', this.value)" class="regular-text" style="width:100px; font-weight:bold;">
+                                    <p class="description">Used for main typography, login background, and footer (Default: #263238).</p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <hr style="margin:25px 0;">
+
+                        <h2>⚙️ Assessment Rules & Track Toggles</h2>
                         <table class="form-table">
                             <tr>
                                 <th scope="row"><label for="questions_per_exam">Questions Per Exam:</label></th>
                                 <td>
                                     <input type="number" name="questions_per_exam" id="questions_per_exam" value="<?php echo esc_attr($settings['questions_per_exam']); ?>" min="5" max="50" style="width:100px;">
-                                    <p class="description">Total number of questions served during each placement assessment (Default: 15).</p>
+                                    <p class="description">Number of questions served during each assessment (Default: 15).</p>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">Countdown / Elapsed Timer:</th>
                                 <td>
                                     <label><input type="checkbox" name="enable_timer" value="1" <?php checked($settings['enable_timer']); ?>> Display Live Timer during exam</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Mandatory Student Login:</th>
-                                <td>
-                                    <label><input type="checkbox" name="require_login" value="1" <?php checked($settings['require_login']); ?>> Require students to sign in before taking a test</label>
                                 </td>
                             </tr>
                             <tr>
@@ -293,55 +334,16 @@ class KSS_Math_Portal_Plugin {
                                     <label><input type="checkbox" name="enable_track_7_8" value="1" <?php checked($settings['enable_track_7_8']); ?>> Grades 7–8 Track</label>
                                 </td>
                             </tr>
-                        </table>
-
-                        <hr style="margin:25px 0;">
-
-                        <h2>🎉 Results & Feedback Toggles</h2>
-                        <table class="form-table">
                             <tr>
                                 <th scope="row">Instant Results & Solutions:</th>
                                 <td>
                                     <label><input type="checkbox" name="show_instant_results" value="1" <?php checked($settings['show_instant_results']); ?>> Show score and step-by-step breakdown immediately after exam</label>
                                 </td>
                             </tr>
-                            <tr>
-                                <th scope="row">Confetti Celebration:</th>
-                                <td>
-                                    <label><input type="checkbox" name="enable_confetti" value="1" <?php checked($settings['enable_confetti']); ?>> Trigger confetti animation on exam completion</label>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <hr style="margin:25px 0;">
-
-                        <h2>🏷️ Branding & Contact Information</h2>
-                        <table class="form-table">
-                            <tr>
-                                <th scope="row"><label for="portal_title">Portal Banner Title:</label></th>
-                                <td>
-                                    <input type="text" name="portal_title" id="portal_title" value="<?php echo esc_attr($settings['portal_title']); ?>" class="regular-text">
-                                    <p class="description">Organization header displayed on login and dashboard cards.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><label for="support_email">Support / Contact Email:</label></th>
-                                <td>
-                                    <input type="email" name="support_email" id="support_email" value="<?php echo esc_attr($settings['support_email']); ?>" class="regular-text">
-                                    <p class="description">Email address displayed in the Contact modal for inquiries.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><label for="main_website_url">Main Website Link:</label></th>
-                                <td>
-                                    <input type="url" name="main_website_url" id="main_website_url" value="<?php echo esc_url($settings['main_website_url']); ?>" class="regular-text">
-                                    <p class="description">URL for the "Back to Main Website" navigation link.</p>
-                                </td>
-                            </tr>
                         </table>
 
                         <p class="submit" style="margin-top:20px;">
-                            <button type="submit" class="button button-primary button-large">Save All Settings & Toggles</button>
+                            <button type="submit" class="button button-primary button-large">Save All Colors & Settings</button>
                         </p>
                     </form>
                 </div>
@@ -361,6 +363,41 @@ class KSS_Math_Portal_Plugin {
                 }
             }
             toggleQuestionTypeFields();
+
+            function syncColorInput(id, hex) {
+                var picker = document.getElementById(id);
+                if (picker) picker.value = hex;
+            }
+
+            function applyColorPreset() {
+                var val = document.getElementById('kss_color_preset').value;
+                var presets = {
+                    'kss_classic': { primary: '#4DA8FF', secondary: '#5ECF7A', brand: '#2fbdb9', dark: '#263238' },
+                    'indigo_violet': { primary: '#6366f1', secondary: '#10b981', brand: '#4f46e5', dark: '#1e1b4b' },
+                    'emerald_mint': { primary: '#059669', secondary: '#34d399', brand: '#047857', dark: '#064e3b' },
+                    'coral_sunset': { primary: '#f97316', secondary: '#fbbf24', brand: '#ea580c', dark: '#431407' },
+                    'sleek_dark': { primary: '#38bdf8', secondary: '#4ade80', brand: '#0284c7', dark: '#0f172a' }
+                };
+
+                if (presets[val]) {
+                    var p = presets[val];
+                    document.getElementById('primary_color').value = p.primary;
+                    document.getElementById('primary_color_hex').value = p.primary;
+                    document.getElementById('secondary_color').value = p.secondary;
+                    document.getElementById('secondary_color_hex').value = p.secondary;
+                    document.getElementById('brand_teal_color').value = p.brand;
+                    document.getElementById('brand_teal_color_hex').value = p.brand;
+                    document.getElementById('navy_dark_color').value = p.dark;
+                    document.getElementById('navy_dark_color_hex').value = p.dark;
+                }
+            }
+
+            document.querySelectorAll('input[type="color"]').forEach(function(picker) {
+                picker.addEventListener('input', function() {
+                    var hexInput = document.getElementById(this.id + '_hex');
+                    if (hexInput) hexInput.value = this.value;
+                });
+            });
         </script>
         <?php
     }
@@ -426,17 +463,16 @@ class KSS_Math_Portal_Plugin {
 
     private function handle_save_settings($data) {
         $settings = array(
+            'primary_color' => sanitize_hex_color($data['primary_color']) ?: '#4DA8FF',
+            'secondary_color' => sanitize_hex_color($data['secondary_color']) ?: '#5ECF7A',
+            'brand_teal_color' => sanitize_hex_color($data['brand_teal_color']) ?: '#2fbdb9',
+            'navy_dark_color' => sanitize_hex_color($data['navy_dark_color']) ?: '#263238',
             'questions_per_exam' => intval($data['questions_per_exam']),
             'enable_timer' => isset($data['enable_timer']),
-            'require_login' => isset($data['require_login']),
             'enable_track_3_4' => isset($data['enable_track_3_4']),
             'enable_track_5_6' => isset($data['enable_track_5_6']),
             'enable_track_7_8' => isset($data['enable_track_7_8']),
-            'show_instant_results' => isset($data['show_instant_results']),
-            'enable_confetti' => isset($data['enable_confetti']),
-            'portal_title' => sanitize_text_field($data['portal_title']),
-            'support_email' => sanitize_email($data['support_email']),
-            'main_website_url' => esc_url_raw($data['main_website_url'])
+            'show_instant_results' => isset($data['show_instant_results'])
         );
         update_option('kss_math_portal_settings', json_encode($settings));
     }
@@ -509,17 +545,16 @@ class KSS_Math_Portal_Plugin {
 
     private function get_default_settings() {
         return array(
+            'primary_color' => '#4DA8FF',
+            'secondary_color' => '#5ECF7A',
+            'brand_teal_color' => '#2fbdb9',
+            'navy_dark_color' => '#263238',
             'questions_per_exam' => 15,
             'enable_timer' => true,
-            'require_login' => true,
             'enable_track_3_4' => true,
             'enable_track_5_6' => true,
             'enable_track_7_8' => true,
-            'show_instant_results' => true,
-            'enable_confetti' => true,
-            'portal_title' => 'Kids STEM Studio Math Center',
-            'support_email' => 'info@kidsstemstudio.com',
-            'main_website_url' => 'https://kidsstemstudio.com/'
+            'show_instant_results' => true
         );
     }
 
