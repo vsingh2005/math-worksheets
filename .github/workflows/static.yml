@@ -29,12 +29,12 @@ jobs:
       - name: Build Web App (Exclude Tex/PDF)
         run: |
           mkdir dist
-          cp index.html dist/
-          cp app.js dist/
-          cp index.css dist/
-          cp hero_kids_math_classroom_1783004330739.png dist/
-          cp kss.png dist/
-          cp success_celebration_illustration_1782954288674.png dist/
+          cp website/index.html dist/
+          cp website/app.js dist/
+          cp website/index.css dist/
+          cp website/hero_kids_math_classroom_1783004330739.png dist/
+          cp website/kss.png dist/
+          cp website/success_celebration_illustration_1782954288674.png dist/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

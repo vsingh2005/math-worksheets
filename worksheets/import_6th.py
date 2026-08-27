@@ -3,7 +3,8 @@ import re
 import shutil
 
 ext_dir = r"C:\Users\singh\Downloads\KSS_6th_Grade_Curriculum"
-loc_dir = r"c:\Users\singh\Downloads\math_worksheets_repo\6th_standard"
+script_dir = os.path.dirname(os.path.abspath(__file__))
+loc_dir = os.path.join(script_dir, "6th_standard")
 
 def extract_body(tex_content):
     match = re.search(r'\\begin\{document\}(.*?)\\end\{document\}', tex_content, re.DOTALL)

@@ -1,6 +1,8 @@
+import os
 import re
 
-file_path = r"c:\Users\singh\Downloads\math_worksheets_repo\6th_standard\Placement Exam.tex"
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(script_dir, "6th_standard", "Placement Exam.tex")
 
 with open(file_path, 'r', encoding='utf-8') as f:
     content = f.read()

@@ -6,7 +6,7 @@
       "type": "firefox",
       "request": "launch",
       "reOpenOnLiveReload": true,
-      "file": "${workspaceFolder}/index.html"
+      "file": "${workspaceFolder}/website/index.html"
     }
   ]
 }
