@@ -1,11 +1,13 @@
 # Math Worksheets Generator
 
-Programmatic arithmetic worksheet and answer key generator built for STEM Studio Chicago.
+A script and web layout for generating randomized math practice worksheets and answer keys for STEM Studio in Chicago.
 
-## Overview
+## What it does
 
-Generates randomized math practice sheets across arithmetic operations and fractional computation with configurable difficulty ranges and automated answer key synthesis for instructors.
+- Programmatically generates math problems across basic arithmetic and fractions.
+- Produces matching answer keys for instructors.
+- Formats worksheets for clean printing and PDF export.
 
-## Tech Stack
+## Stack
 
 Python, JavaScript, HTML/CSS
