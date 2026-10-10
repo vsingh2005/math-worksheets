@@ -16,14 +16,15 @@ Step 2: Upload Web App Assets
 -----------------------------
 1. Inside public_html/wp-content/plugins/kss-math-portal/, create a folder named "assets".
 2. Upload all files from your repository's "website/" directory into public_html/wp-content/plugins/kss-math-portal/assets/:
-   - login.html
-   - portal.html
-   - instructions.html
-   - exam.html
-   - results.html
+   - login.html & login.js
+   - portal.html & portal.js
+   - instructions.html & instructions.js
+   - exam.html & exam.js
+   - results.html & results.js
+   - questions.js
    - auth.js
-   - app.js
    - index.css
+   - index.html
    - hero_kids_math_classroom_1783004330739.png
    - success_celebration_illustration_1782954288674.png
    - kss.png
